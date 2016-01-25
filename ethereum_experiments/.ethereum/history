@@ -1,0 +1,8 @@
+.loadScript('scripts/balances.js');
+loadScript('./scripts/balances.js');
+checkAllBalances()
+miner
+miner.start(1)
+miner.hashrate
+miner.getHashrate()
+miner.stop()
