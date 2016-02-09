@@ -1,0 +1,30 @@
+{
+  "code": "contract SimpleDataFeed {\n  // note: best used in conjunction with /examples/SimpleDataFeed\n  uint lastPrice;\n\n  function update(uint newPrice) {\n    lastPrice = newPrice;\n  }\n}\n",
+  "name": "SimpleDataFeed",
+  "vmCode": "606060405260568060116000396000f30060606040526000357c01000000000000000000000000000000000000000000000000000000009004806382ab890a146037576035565b005b60466004803590602001506048565b005b806000600050819055505b5056",
+  "symTab": {
+    "lastPrice": {
+      "atStorageKey": "0",
+      "bytesUsed": "20",
+      "jsType": "Int",
+      "solidityType": "uint256"
+    },
+    "update": {
+      "functionDomain": [
+        {
+          "atStorageKey": "0",
+          "bytesUsed": "20",
+          "jsType": "Int",
+          "solidityType": "uint256"
+        }
+      ],
+      "functionArgs": [
+        "newPrice"
+      ],
+      "functionHash": "82ab890a",
+      "bytesUsed": "0",
+      "jsType": "Function",
+      "solidityType": "function(uint256) returns ()"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "test_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jack",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.0.5",
+    "body-parser": "^1.14.1",
+    "bootstrap": "^3.3.6",
+    "cookie-parser": "^1.4.0",
+    "deepmerge": "^0.2.10",
+    "event-stream": "^3.3.2",
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
+    "express-session": "^1.12.1",
+    "gulp": "^3.9.0",
+    "gulp-express": "^0.3.5",
+    "gulp-nodemon": "^2.0.4",
+    "jquery": "^2.2.0",
+    "js-yaml": "^3.4.3",
+    "map-stream": "0.0.6",
+    "marko": "^2.8.0",
+    "morgan": "^1.6.1",
+    "tiny-lr": "^0.2.1",
+    "vinyl-fs": "^2.2.1"
+  }
+}

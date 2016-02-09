@@ -1,0 +1,93 @@
+{
+  "code": "contract Array {\n  mapping (address => uint) stake; // percentages by address (basically)\n  address[] stakeHolders; // to iterate over\n  address holdingTheBag; // last arrival to the party\n\n  uint numStakeHolders;\n  uint currentStake;\n  uint sumStake;\n  \n  function Stake() {\n    currentStake = 100;  /* the number doesn't really matter, payout computed by ratio anyway */\n    sumStake = 0;\n    numStakeHolders = 0;\n  }\n\n  function addStakeHolder(address stakeholder) {\n    stake[stakeholder] = currentStake;\n\n    stakeHolders.length = numStakeHolders+1;\n    stakeHolders[numStakeHolders] = stakeholder;\n    numStakeHolders++;\n\n    holdingTheBag = stakeholder;\n\n    sumStake += currentStake;\n    currentStake = currentStake / 2; // note that this is not a get what you put in sort of scheme\n  }\n\n  function payout() { \n    uint bal = this.balance;    \n    uint j;\n\n    for (j = 0; j < stakeHolders.length; j++)\n    {\n      stakeHolders[j].send(bal * stake[stakeHolders[j]] / sumStake);\n    }\n  }\n}",
+  "name": "Array",
+  "vmCode": "6060604052610309806100136000396000f30060606040526000357c01000000000000000000000000000000000000000000000000000000009004806311a76f371461004f57806363bd1d4a14610062578063de20bc921461006f5761004d565b005b6100606004803590602001506100a0565b005b61006d6004506101e5565b005b61007a60045061007c565b005b6064600460005081905550600060056000508190555060006003600050819055505b565b600460005054600060005060008373ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000508190555060016003600050540160016000508181548183558181151161012d5781836000526020600020918201910161012c919061010e565b80821115610128576000818150600090555060010161010e565b5090565b5b50505050806001600050600360005054815481101561000257906000526020600020900160006101000a81548173ffffffffffffffffffffffffffffffffffffffff02191690830217905550600360008181505480929190600101919050555080600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff0219169083021790555060046000505460056000828282505401925050819055506002600460005054046004600050819055505b50565b600060003073ffffffffffffffffffffffffffffffffffffffff163191506000905080505b60016000505481101561030457600160005081815481101561000257906000526020600020900160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16600060056000505460006000506000600160005086815481101561000257906000526020600020900160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060005054850204604051809050600060405180830381858888f19350505050505b808060010191505061020a565b5b505056",
+  "symTab": {
+    "holdingTheBag": {
+      "atStorageKey": "2",
+      "bytesUsed": "14",
+      "jsType": "Address",
+      "solidityType": "address"
+    },
+    "numStakeHolders": {
+      "atStorageKey": "3",
+      "bytesUsed": "20",
+      "jsType": "Int",
+      "solidityType": "uint256"
+    },
+    "Stake": {
+      "functionDomain": [],
+      "functionArgs": [],
+      "functionHash": "de20bc92",
+      "bytesUsed": "0",
+      "jsType": "Function",
+      "solidityType": "function() returns ()"
+    },
+    "stake": {
+      "atStorageKey": "0",
+      "mappingKey": {
+        "bytesUsed": "14",
+        "jsType": "Address",
+        "solidityType": "address"
+      },
+      "bytesUsed": "20",
+      "jsType": "Mapping",
+      "mappingValue": {
+        "bytesUsed": "20",
+        "jsType": "Int",
+        "solidityType": "uint256"
+      },
+      "solidityType": "mapping (address => uint256)"
+    },
+    "sumStake": {
+      "atStorageKey": "5",
+      "bytesUsed": "20",
+      "jsType": "Int",
+      "solidityType": "uint256"
+    },
+    "stakeHolders": {
+      "atStorageKey": "1",
+      "bytesUsed": "20",
+      "jsType": "Array",
+      "arrayElement": {
+        "bytesUsed": "14",
+        "jsType": "Address",
+        "solidityType": "address"
+      },
+      "arrayNewKeyEach": "1",
+      "arrayDataStart": "b10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf6",
+      "solidityType": "address[]"
+    },
+    "payout": {
+      "functionDomain": [],
+      "functionArgs": [],
+      "functionHash": "63bd1d4a",
+      "bytesUsed": "0",
+      "jsType": "Function",
+      "solidityType": "function() returns ()"
+    },
+    "addStakeHolder": {
+      "functionDomain": [
+        {
+          "atStorageKey": "0",
+          "bytesUsed": "14",
+          "jsType": "Address",
+          "solidityType": "address"
+        }
+      ],
+      "functionArgs": [
+        "stakeholder"
+      ],
+      "functionHash": "11a76f37",
+      "bytesUsed": "0",
+      "jsType": "Function",
+      "solidityType": "function(address) returns ()"
+    },
+    "currentStake": {
+      "atStorageKey": "4",
+      "bytesUsed": "20",
+      "jsType": "Int",
+      "solidityType": "uint256"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+
+<div id="loginDiv"  style="border: 1px solid black; padding: 10px; margin-bottom: 1em;">
+    <p> Login Status </p>
+    <ul class="nav nav-pills">
+    <li class="active" if="notEmpty(data.globalPassword)"><a href="#"> <font color="black"> Logged in! </b> </font> </a></li>
+    <li else> <a href="#"> Possibly not logged in! </b> </a> 
+    </ul>
+    <login apiURL="${data.apiURL}"/>
+    
+</div>

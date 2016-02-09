@@ -1,0 +1,59 @@
+.container
+    .row
+      .col-xs-10.col-xs-offset-1
+        h1= title
+        p Welcome to #{title}!
+        p.text-info A geth (go ethereum miner) instance is running at .... It has a JSON RPC interface that this web app is interacting with to deploy and call contract code. The geth node is a single private instance of the Ethereum network. A test genesis block is being used with an easy block diffculty.
+        p.text-info This page is being served from a node web server at ...
+        p.text-info Purpose of DemoDapp is to prototype a web application interfacing with ethereum peer node. Next steps are discussed at the end.
+        hr
+    .row
+      .col-xs-5.col-xs-offset-1
+        p Block Number: {{blockNo}}
+        p Coinbase: {{coinbase}}
+        
+      .col-xs-5
+        p.text-info Note: block number is last block mined by geth node. Coinbase is the address used by the miner, it is also the addressed that deploys the contract.
+      
+      .col-xs-10.col-xs-offset-1
+        hr
+      
+    .row
+      .col-xs-10.col-xs-offset-1
+        h2 Test Contract
+        .well(style="white-space: pre")
+          {{source}}
+        p.text-info Note: pretty boring atm. Next step should be to interact with stateful contract and then to add the first delegative voting contract.
+      .col-xs-10.col-xs-offset-1
+        hr
+
+    .row
+      .col-xs-6.col-xs-offset-1
+        button.btn.btn-default(on-click="deploy") Deploy
+        p
+        p Transaction Hash: {{transaction_hash}}
+        p Contract Address: {{contract_address}}
+      .col-xs-4
+        p.text-info Note: Once contract creation transaction has been mined, the address of the contract account is returned.
+      .col-xs-10.col-xs-offset-1 
+        hr
+    .row
+      .col-xs-5.col-xs-offset-1
+        h3 Methods
+        .form-inline
+          p multiply
+          input.form-control(type="text" placeholder="argument" value="{{arg}}")
+          button.btn.btn-default(on-click="callMultiply:{{arg}}") Call
+        p 
+        p Result: {{result}}
+      .col-xs-5
+        p.text-info Note: Currently hard coded interface for this contract. Need to generalise UI so it can be generated for arbitrary contract definitions. 
+      .col-xs-10.col-xs-offset-1
+        hr
+
+    .row
+      .col-xs-10.col-xs-offset-1
+        h2 Explanation
+        ul
+         li 
+   

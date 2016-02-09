@@ -1,0 +1,13 @@
+<p> will this appear in contractFunctions </p>
+<div for="contract in data.contractMeta">
+  <div for="(symbol,symbolObj) in contract.symTab">
+    <div if="symbolObj.jsType == 'Function'">
+      <b>${symbol}</b>
+        <div for="(key,val) in symbolObj">
+            <b>${key}</b>: ${val}
+        </div> 
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<header />
+<globalKeystore keys="${data.keys}" />
+
+<contractJS apiURL="${data.apiURL}"
+            contractMeta="${data.contractMeta}"
+            txFailedHandlerName="${data.txFailedHandlerName}"
+            txFailedHandlerCode="${data.txFailedHandlerCode}" 
+            globalPassword="${data.globalPassword}" />
+
+<body>
+  <contractStatus contractMeta ="${data.contractMeta}"/>
+  <loginStatus globalPassword="${data.globalPassword}"/>
+  <div class="col-md-9" id="functionsDiv">
+     <contractFunctionsCall contractMeta="${data.contractMeta}">
+  </div>
+
+</body>
+<script>
+$( document ).ready( afterTX() );
+</script>
+</html>
+
+
+
+
+
+

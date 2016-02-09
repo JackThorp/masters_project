@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="form-group">
+    <label for="sel1">Select Keystore by Address</label>
+    <select class="form-control" id="globalKeystoreId" onchange="keyChangeHandler(this.value)">
+      <option for="key in data.keys"> $key.addresses </option>
+    </select>
+  </div>
+</div>
+
+<script>
+function keyChangeHandler(address) { 
+  console.log('address is currently: ' + address);
+  keyArray = ${JSON.stringify(data.keys)};
+  globalKeystore = keyArray.filter(function (key)  {
+     return (key.addresses[0] == address);
+  });
+  console.log('global keystore set: ' + JSON.stringify(globalKeystore));
+  $('#passwordModal').modal('show'); 
+  afterTX();
+}
+
+$( document ).ready( function () {
+  keyChangeHandler(globalKeystoreId.value);
+});
+</script>

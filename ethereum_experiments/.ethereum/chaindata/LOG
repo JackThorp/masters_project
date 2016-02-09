@@ -1,7 +1,15 @@
-=============== Jan 25, 2016 (GMT) ===============
-09:44:23.529334 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-09:44:23.530044 db@open opening
-09:44:23.548184 db@janitor F·2 G·0
-09:44:23.548231 db@open done T·18.16707ms
-10:02:06.712064 db@close closing
-10:02:06.712321 db@close done T·244.823µs
+=============== Feb 9, 2016 (GMT) ===============
+18:20:30.879068 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+18:20:31.127337 db@open opening
+18:20:31.127554 journal@recovery F·1
+18:20:31.127854 journal@recovery recovering @10
+18:20:31.807697 mem@flush created L0@13 N·18550 S·743KiB "\x00\x03\xb4..\x98\x90\xb7,v9293":"\xff\xfb\x85..&\xf7\x96,v21630"
+18:20:31.810724 db@janitor F·4 G·0
+18:20:31.810755 db@open done T·683.380859ms
+18:41:58.600474 table@compaction L0·1 -> L1·1 S·880KiB Q·25750
+18:41:58.664380 table@build created L1@16 N·8734 S·677KiB "\x00\x03\xb4..\x98\x90\xb7,v9293":"\xff\xfb\x85..&\xf7\x96,v21630"
+18:41:58.664644 table@compaction committed F-1 S-202KiB Ke·0 D·11807 T·64.111047ms
+18:41:58.664830 table@remove removed @13
+18:41:58.665010 table@remove removed @12
+19:26:45.416484 db@close closing
+19:26:45.416708 db@close done T·218.046µs

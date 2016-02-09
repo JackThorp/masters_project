@@ -1,0 +1,60 @@
+{
+  "name": "ethlightjs",
+  "version": "0.0.2",
+  "description": "A light weight ethereum javascript wallet.",
+  "main": "index.js",
+  "scripts": {
+    "build-js": "browserify index.js --s ethlightjs | uglifyjs -mc > ethlightjs.min.js",
+    "build-dev": "browserify index.js -o ethlightjs.js --s ethlightjs",
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "coverage": "istanbul cover _mocha -- -R spec; open coverage/lcov-report/index.html"
+  },
+  "keywords": [
+    "ethereum",
+    "blockchain",
+    "transactions",
+    "contracts"
+  ],
+  "contributors": [
+    {
+      "name": "Christian Lundkvist",
+      "email": "christian.lundkvist@gmail.com"
+    },
+    {
+      "name": "Tyler Clark",
+      "email": "tysclark@gmail.com"
+    },
+    {
+      "name": "Joel Torstensson",
+      "email": "me@joeltorstensson.se"
+    },
+    {
+      "name": "Zach Ferland",
+      "email": "zachferland@gmail.com"
+    },
+    {
+      "name": "Kevin Jiao",
+      "email": "kevin.jiao@berkeley.edu"
+    }
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "bitcore": "^0.12.8",
+    "bitcore-mnemonic": "^0.11.0",
+    "crypto-js": "^3.1.5",
+    "elliptic": "^3.1.0",
+    "rlp": "^1.0.0",
+    "web3": "^0.6.0",
+    "ethereumjs-tx": "kejace/ethereumjs-tx",
+    "ethereumjs-util": "kejace/ethereumjs-util",
+    "bignumber.js": "debris/bignumber.js#master",
+    "xhr2" : "*"
+  },
+  "devDependencies": {
+    "browserify": "^10.2.4",
+    "chai": "^3.0.0",
+    "istanbul": "^0.3.15",
+    "mocha": "^2.2.5",
+    "uglify-js": "^2.4.23"
+  }
+}

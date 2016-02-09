@@ -1,0 +1,9 @@
+appName: test_app
+developer: Jack
+email: jackthorp13@gmail.com
+appURL: test_app.com
+repo: ''
+apiURL: 'http://strato-dev2.blockapps.net'
+transferGasLimit: '21000'
+contractGasLimit: '10000000'
+gasPrice: '50000000000'
