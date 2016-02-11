@@ -1,9 +1,0 @@
-<div id="developerStatus" class="developerStatus col-md-3">
-  <h5>Account Status:</h5>
-  {{#if globalPassword}}
-    <p> {{{isLoggedInMessage}}} </p>
-  {{else}}
-    <p> {{{isNotLoggedInMessage}}} </p>
-    <button class="btn btn-success" onclick="$('#passwordModal').modal('show')">Log In!</button>
-  {{/if}}
-</div>
