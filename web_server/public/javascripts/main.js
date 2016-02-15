@@ -11,20 +11,12 @@ var web3
   
 web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 
-// Contract source code
-source = '' +
-  'contract test {\n' +
-  '   function multiply(uint a) returns(uint d) { \n' +
-  '     return a * 7;\n' +
-  '   }\n' + 
-  '}';
-
 ractive =  new Ractive({
   el: "#ractive-index",
   template: "#ractive-index-template",
   data: {
     blockNo: 'N/A',
-    source: source,
+    source: '',
     coinbase: 'N/A',
     transaction_hash: '<contract has not been deployed>',
     contract_address: '<contract transaction has not yet been processed>'
@@ -35,11 +27,8 @@ window.setInterval(printBlockNumber, 1000);
 
 function printBlockNumber() {
   web3.eth.getBlockNumber(function (err, res) {
-    //console.log("Got Block Number:");
-    console.log(res);
-    ractive.set({
-      blockNo: res
-    });
+    //console.log(res);
+    ractive.set({ blockNo: res });
   });
 };
 
@@ -56,22 +45,29 @@ function getCoinbase() {
 
 function deploy_contract() {
 
+  var abiDefinition;
+
   console.log('Deploying Contract');
 
   // Compile contract
-  compiled = web3.eth.compile.solidity(source);
+  compiled = web3.eth.compile.solidity(ractive.get('source'));
   
   console.log(compiled);
 
+  contract = compiled[Object.keys(compiled)[0]];
+
+  ractive.set('abiDefinition', contract.info.abiDefinition);
+  
   // Create a contract class 'handle'
-  Contract = web3.eth.contract(compiled.test.info.abiDefinition)
+  Contract = web3.eth.contract(contract.info.abiDefinition)
+
 
   // Unlock account?
   // Currently running with coinbase unlocked on geth node
 
   // Deploy contract, get address
   Contract.new({
-    data: compiled.test.code, 
+    data: contract.code, 
     from: ractive.get('coinBase'), 
     gas: 1000000
   }, function (err, myContract) {
@@ -93,27 +89,19 @@ function deploy_contract() {
   });
 }
 
-// Creates a contract instance that methods can be called on.
-function callMultiply(Contract, addr, arg) {
-  
-  // 
-  var contractInstance = Contract.at(addr);
-
-  console.log(contractInstance);
-
-  var result = contractInstance.multiply.call(arg);
-
-  ractive.set('result', result);
-
-}
-
 ractive.on('deploy', function(e) {
   getCoinbase();
 });
 
-ractive.on('callMultiply', function(e, arg) {
+ractive.on('callMethod', function(e, method, inputs) {
+  console.log(method);
+  console.log(inputs);
+
   if(addr) {
-    callMultiply(Contract, addr, arg); 
+    contractInstance = Contract.at(addr);
+    
+    // Use underscore to extract 
+    result = contractInstance[method]();
   }
 });
 

@@ -1,15 +1,48 @@
-=============== Feb 9, 2016 (GMT) ===============
-18:20:30.879068 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-18:20:31.127337 db@open opening
-18:20:31.127554 journal@recovery F·1
-18:20:31.127854 journal@recovery recovering @10
-18:20:31.807697 mem@flush created L0@13 N·18550 S·743KiB "\x00\x03\xb4..\x98\x90\xb7,v9293":"\xff\xfb\x85..&\xf7\x96,v21630"
-18:20:31.810724 db@janitor F·4 G·0
-18:20:31.810755 db@open done T·683.380859ms
-18:41:58.600474 table@compaction L0·1 -> L1·1 S·880KiB Q·25750
-18:41:58.664380 table@build created L1@16 N·8734 S·677KiB "\x00\x03\xb4..\x98\x90\xb7,v9293":"\xff\xfb\x85..&\xf7\x96,v21630"
-18:41:58.664644 table@compaction committed F-1 S-202KiB Ke·0 D·11807 T·64.111047ms
-18:41:58.664830 table@remove removed @13
-18:41:58.665010 table@remove removed @12
-19:26:45.416484 db@close closing
-19:26:45.416708 db@close done T·218.046µs
+=============== Feb 14, 2016 (GMT) ===============
+15:50:54.077293 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:50:54.094872 db@open opening
+15:50:54.094983 journal@recovery F·1
+15:50:54.095151 journal@recovery recovering @18
+15:50:54.096845 mem@flush created L0@20 N·11 S·475B "blo..um-,v44500":"\xc5\xd2F..\x85\xa4p,v44492"
+15:50:54.098570 db@janitor F·5 G·0
+15:50:54.098600 db@open done T·3.701939ms
+16:13:36.192704 table@compaction L0·2 -> L1·1 S·1MiB Q·46230
+16:13:36.352194 table@build created L1@23 N·16026 S·1MiB "\x00\x03\x95..^5\x9a,v33407":"\xff\xfb\x85..&\xf7\x96,v21630"
+16:13:36.378783 table@compaction committed F-2 S-143KiB Ke·0 D·12787 T·170.305583ms
+16:13:36.378946 table@remove removed @20
+16:13:36.379125 table@remove removed @17
+16:13:36.417176 table@remove removed @16
+17:39:59.276370 mem@flush N·24941 S·3MiB
+17:39:59.349191 mem@flush created L0@25 N·24941 S·1MiB "\x00\x04\x1b..\xfb\x0f\xf8,v55401":"\xff\xb2X..\xc4;6,v62353"
+17:39:59.386617 mem@flush committed F·1 T·92.491825ms
+17:39:59.400523 journal@remove removed @21
+17:45:01.805506 table@compaction L0·1 -> L1·1 S·2MiB Q·70748
+17:45:01.887516 table@build created L1@26 N·22961 S·2MiB "\x00\x03\x95..^5\x9a,v33407":"\xc5\xea\xa8..\x19\x80\xa1,v48643"
+17:45:01.896127 table@build created L1@27 N·2142 S·313KiB "\xc5\xea\xad..q\xff\xf1,v28038":"\xff\xfb\x85..&\xf7\x96,v21630"
+17:45:01.896438 table@compaction committed F~ S-186KiB Ke·0 D·15864 T·90.876125ms
+17:45:01.896676 table@remove removed @25
+17:45:01.896883 table@remove removed @23
+21:56:43.059939 mem@flush N·24881 S·3MiB
+21:56:43.135232 mem@flush created L0@29 N·24881 S·1MiB "\x00%c..\xe3\x8be,v90533":"\xff\xc8\x1c..\xec\x05\xc6,v90467"
+21:56:43.192122 mem@flush committed F·1 T·63.541542ms
+21:56:43.213006 journal@remove removed @24
+22:08:21.621835 table@compaction L0·1 -> L1·2 S·3MiB Q·95667
+22:08:21.840172 table@build created L1@30 N·23404 S·2MiB "\x00\x03\x95..^5\x9a,v33407":"rec..\x05%G,v17973"
+22:08:21.888383 table@build created L1@31 N·10747 S·1MiB "rec..\xa2X\xe6,v77524":"\xff\xfb\x85..&\xf7\x96,v21630"
+22:08:21.914650 table@compaction committed F-1 S-214KiB Ke·0 D·15833 T·259.049575ms
+22:08:21.914897 table@remove removed @29
+22:08:21.958593 table@remove removed @26
+22:08:21.958852 table@remove removed @27
+=============== Feb 15, 2016 (GMT) ===============
+18:14:48.708429 mem@flush N·24900 S·3MiB
+18:14:48.816403 mem@flush created L0@33 N·24900 S·1MiB "\x00\x14C..e\a\x00,v110337":"\xff\xf9\xaa..\xae_\xc4,v101381"
+18:14:48.838574 mem@flush committed F·1 T·59.050946ms
+18:14:48.839052 journal@remove removed @28
+18:23:27.810004 table@compaction L0·1 -> L1·2 S·4MiB Q·120509
+18:23:27.915106 table@build created L1@34 N·22892 S·2MiB "\x00\x03\x95..^5\x9a,v33407":"blo..der,v114721"
+18:23:27.992323 table@build created L1@35 N·19923 S·2MiB "blo..-td,v114719":"\xf9\xb3h..\x0f\xfaz,v117355"
+18:23:27.994340 table@build created L1@36 N·402 S·63KiB "\xf9\xb6Y..\xb9$[,v43481":"\xff\xfb\x85..&\xf7\x96,v21630"
+18:23:27.994596 table@compaction committed F~ S-219KiB Ke·0 D·15834 T·184.543952ms
+18:23:27.994814 table@remove removed @33
+18:23:27.995028 table@remove removed @30
+18:23:27.995182 table@remove removed @31

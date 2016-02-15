@@ -1,9 +1,9 @@
-=============== Feb 9, 2016 (GMT) ===============
-11:52:52.011669 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
-11:52:52.027568 db@open opening
-11:52:52.027680 journal@recovery F·1
-11:52:52.027843 journal@recovery recovering @4
-11:52:52.029494 db@janitor F·2 G·0
-11:52:52.029525 db@open done T·1.932874ms
-12:28:15.801636 db@close closing
-12:28:15.801716 db@close done T·77.236µs
+=============== Feb 14, 2016 (GMT) ===============
+15:45:51.306671 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+15:45:51.336454 db@open opening
+15:45:51.336649 journal@recovery F·1
+15:45:51.336848 journal@recovery recovering @8
+15:45:51.339105 db@janitor F·2 G·0
+15:45:51.339161 db@open done T·2.652335ms
+15:50:42.089207 db@close closing
+15:50:42.089474 db@close done T·259.209µs

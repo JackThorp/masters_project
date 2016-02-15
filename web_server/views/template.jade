@@ -21,8 +21,8 @@
     .row
       .col-xs-10.col-xs-offset-1
         h2 Test Contract
-        .well(style="white-space: pre")
-          {{source}}
+        .form-group
+          textarea.form-control(rows="10" value='{{source}}')
         p.text-info Note: pretty boring atm. Next step should be to interact with stateful contract and then to add the first delegative voting contract.
       .col-xs-10.col-xs-offset-1
         hr
@@ -39,15 +39,22 @@
         hr
     .row
       .col-xs-5.col-xs-offset-1
-        h3 Methods
+        h2 Methods
+        {{#abiDefinition}}
         .form-inline
-          p multiply
-          input.form-control(type="text" placeholder="argument" value="{{arg}}")
-          button.btn.btn-default(on-click="callMultiply:{{arg}}") Call
+          {{#inputs:idx}}
+          .input-group
+            span.input-group-addon(id="{{name}}-aria") {{name}}
+            input.form-control(type="text" aria-describedby="{{name}}-aria" placeholder="argument" value="{{this.value}}")
+          {{/}}
+          button.btn.btn-default.btn-success(type="button" on-click="callMethod:{{name}},{{inputs}}") {{name}}
+          //button.btn.btn-default(on-click="callMultiply:{{arg}}") Call
         p 
         p Result: {{result}}
+        {{/abiDefinition}}
       .col-xs-5
-        p.text-info Note: Currently hard coded interface for this contract. Need to generalise UI so it can be generated for arbitrary contract definitions. 
+        h2 Contract State
+        p.text-info Note: Display the state of the contract storage.
       .col-xs-10.col-xs-offset-1
         hr
 
