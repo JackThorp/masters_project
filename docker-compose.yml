@@ -1,0 +1,13 @@
+web:
+  build: ./web_client
+  volumes:
+    - "./web_client:/src"
+  ports:
+    - "3000:3000"
+client-go:
+  build: ./eth_client
+  #volumes:
+  #  - "./eth_client:/src/eth_client"
+  ports:
+    - "8545:8545"
+    - "30303:30303"
