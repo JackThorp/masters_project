@@ -1,0 +1,12 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - sudo pip install --upgrade docker-compose==1.3.3
+
+test:
+  override:
+    - docker-compose run -d --no-deps web
+    - mocha
