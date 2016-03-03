@@ -9,4 +9,4 @@ dependencies:
 test:
   override:
     - docker-compose run -d --no-deps web
-    - mocha
+    - cd web_client; mocha
