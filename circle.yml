@@ -10,3 +10,9 @@ test:
   override:
     - docker-compose run -d --no-deps web
     - cd web_client; mocha
+
+deployment:
+  hub:
+    branch: master
+    commands:
+      - $DEPLOY

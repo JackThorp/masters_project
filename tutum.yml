@@ -1,0 +1,11 @@
+web:
+  image: jackthorp/masters_project:web_client
+  autorestart: always
+  ports:
+    - "80:3000"
+eth:
+  image: jackthorp/masters_project:eth_client
+  autorestart: always
+  ports:
+    - "8545:8545"
+    - "30303:30303"
