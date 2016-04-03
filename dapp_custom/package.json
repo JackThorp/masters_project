@@ -1,0 +1,21 @@
+{
+  "name": "web_client",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "gulp serve-dapp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jack Thorp",
+  "license": "",
+  "dependencies": {
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.1",
+    "gulp-serve": "^1.2.0",
+    "gulp-util": "^3.0.7",
+    "mocha": "^2.4.5",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "web3": "^0.15.3"
+  }
+}
