@@ -1,0 +1,30 @@
+<template name="views_welcome">
+  
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1> Account info </h1>
+      {{#with TemplateVar.get 'userInfo'}}
+      {{#if error }}
+      <p> {{msg}} </p>
+      {{else}}
+      <p> Data: {{this.data}} </p>
+      {{/if}}
+      {{/with}}
+      <input type="text" id="user-name">
+      <button class="btn btn-default btn-register"> Register </button>
+    </div>
+  </div>
+
+  <div class="row">  
+    <div class="col-md-10 col-md-offset-1">
+      <h1> Create a User </h1>
+       
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h1> List of Coops </h1>
+    </div>
+  </div>
+</template>

@@ -1,15 +1,11 @@
 {
-  "nonce": "0x000000000000002a",
-  "timestamp": "0x0",
+  "nonce": "0x0000000000000042",
+  "timestamp": "0x00",
   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-  "extraData": "0x0",
-  "gasLimit": "0x8000000",
-  "difficulty": "0x000005",
+  "extraData": "Custom Genesis Block",
+  "gasLimit": "0xffffffff",
+  "difficulty": "0x4000",
   "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-  "coinbase": "0x0000000000000000000000000000000000000000",
-  "alloc": {
-    "901e68f297e25f26f86546869b4943e6214b7300": {
-      "balance": "100000000000000000000"
-    }   
-  }
+  "coinbase": "0xdb575481f1d1b626b9a0ee2f2c6946b3f6526cd4",
+  "alloc": {}
 }
