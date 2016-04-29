@@ -1,0 +1,3 @@
+import web3 from '../lib/thirdparty/web3.js' 
+let UserController = web3.eth.contract([{"constant":false,"inputs":[],"name":"addUser","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"user","type":"address"}],"name":"getUser","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"updateUser","outputs":[],"type":"function"},{"constant":false,"inputs":[],"name":"removeUser","outputs":[],"type":"function"}]); 
+export default UserController;

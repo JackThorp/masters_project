@@ -1,25 +1,25 @@
 import { Template } from 'meteor/templating';
-import { ipfsAPI } from 'ipfs-api';
+import web3 from '../../lib/thirdparty/web3.js';
+import ipfs from 'ipfs-js';
 
 import './welcome.html';
+import contracts from '../../startup/contracts.js';
 
-/*
 Template['views_welcome'].onCreated(function() {
-	  //Meta.setSuffix(TAPi18n.__("dapp.home.title"));
-    accounts = EthAccounts.find();
+    //accounts = EthAccounts.find();
 });
 
 Template['views_welcome'].rendered = function() {
   
   var template = this;
-
   var user = web3.eth.accounts[0];
   console.log(user);
+  console.log(contracts);
   
   // Initialise template variables.
   TemplateVar.set('userInfo', {});
 
-  objects.contracts.UserRegistry.getUserData(user, function(err, result) {
+  contracts.UserRegistry.getUserData(user, function(err, result) {
     
     // Check for error.
     if(err) {
@@ -45,7 +45,7 @@ Template['views_welcome'].rendered = function() {
 };
 
 
-
+/*
 // TODO Fetch basic user info from storage?
 Template['views_welcome'].helpers({
  

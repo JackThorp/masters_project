@@ -1,0 +1,3 @@
+import web3 from '../lib/thirdparty/web3.js' 
+let CMC = web3.eth.contract([{"constant":false,"inputs":[{"name":"name","type":"bytes32"},{"name":"addr","type":"address"}],"name":"addContract","outputs":[],"type":"function"},{"constant":false,"inputs":[{"name":"name","type":"bytes32"}],"name":"removeContract","outputs":[{"name":"result","type":"bool"}],"type":"function"},{"constant":false,"inputs":[],"name":"remove","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"name","type":"bytes32"}],"name":"getContract","outputs":[{"name":"addr","type":"address"}],"type":"function"}]); 
+export default CMC;

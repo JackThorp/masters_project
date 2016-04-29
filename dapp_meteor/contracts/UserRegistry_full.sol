@@ -42,7 +42,7 @@ contract CMCEnabled {
 /******************************************/
 
 
-contract UserRegistry is CMCEnabled {
+contract UserRegistry_full is CMCEnabled {
 
 	// Holds mapping of user addresses to their data (stored in IPFS)
 

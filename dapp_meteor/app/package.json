@@ -13,7 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^3.3.6",
-    "ipfs-api": "^3.0.2",
+    "ipfs-js": "0.0.9",
+    "lodash": "^4.11.1",
     "meteor-node-stubs": "^0.2.3"
   }
 }

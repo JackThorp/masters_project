@@ -1,17 +1,18 @@
+// Load web3 & ipfs objects
+import web3 from '../lib/thirdparty/web3.js';
+import ipfs from 'ipfs-js';
+
+// Import routes & rest of start up
 import './routes.js';
 
-import { Accounts } from 'meteor/frozeman:accounts';
-import { Web3 }     from 'meteor/ethereum:web3';
-import { ipfsAPI }  from 'ipfs-api';
+// Global variables from imported files are availble here
+// but not vice versa. 
+// How to share a global variable?
 
 Meteor.startup(() => {
   
-  var web3 = new Web3();
   web3.setProvider(new web3.providers.HttpProvider('http://localhost:8545'));
 
-  var ipfs = ipfsAPI('localhost', '5001', {protocol: 'http'});
-  
-  console.log(web3);
-  console.log(ipfs);
+  ipfs.setProvider({host: 'localhost', port: '5001'})
 
 });

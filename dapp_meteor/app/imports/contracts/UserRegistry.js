@@ -1,0 +1,3 @@
+import web3 from '../lib/thirdparty/web3.js' 
+let UserRegistry = web3.eth.contract([{"constant":false,"inputs":[{"name":"user","type":"address"},{"name":"ipfsHash","type":"bytes"}],"name":"setUserData","outputs":[],"type":"function"},{"constant":true,"inputs":[{"name":"addr","type":"address"}],"name":"getUserData","outputs":[{"name":"","type":"bytes"}],"type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_addr","type":"address"}],"name":"UserAdded","type":"event"}]); 
+export default UserRegistry;

@@ -94,7 +94,6 @@ reload@1.1.7
 retry@1.0.6
 routepolicy@1.0.9
 session@1.1.4
-silentcicero:solc@0.4.3
 spacebars@1.0.10
 spacebars-compiler@1.0.10
 standard-minifier-css@1.0.5
@@ -106,9 +105,9 @@ templating-tools@1.0.3
 tracker@1.0.12
 ui@1.0.10
 underscore@1.0.7
-underscorestring:underscore.string@3.0.3_1
 url@1.0.8
 webapp@1.2.7
 webapp-hashing@1.0.8
 yasinuslu:blaze-meta@0.3.3
-zimme:iron-router-active@1.0.4
+zimme:active-route@2.0.4_1
+zimme:iron-router-active@2.0.1
