@@ -6,26 +6,26 @@ contract UserRegistry {
 	  
 	event UserAdded(address indexed _addr);
 
-  	mapping(address => bytes) ipfsDataHash;
+  mapping(address => bytes) ipfsDataHash;
 
 
-  	function setUserData(address user, bytes ipfsHash) {
+  function setUserData(address user, bytes ipfsHash) {
   		
   		//if(!checkSender(msg.sender, "userController")){
   		//	return;
   		//}
 
-    	ipfsDataHash[user] = ipfsHash;
+    ipfsDataHash[user] = ipfsHash;
 		UserAdded(user);
-  	}
+  }
 
 
-  	function getUserData(address addr) constant returns(bytes) {
+  function getUserData(address addr) constant returns(bytes) {
 
   		//if(!checkSender(msg.sender, "userController")) {
   		//	return;
   		//}
 
-    	return ipfsDataHash[addr];
-  	}
+    return ipfsDataHash[addr];
+  }
 }

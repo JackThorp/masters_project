@@ -88,7 +88,10 @@ function deployContract(name, contract) {
     }
              
     if(deployedContract.address) {
+      //var js = "let contracts  = {\n";
+      //js += "\t" + name + "="
       console.log(name + ": " + deployedContract.address);
+      // Have to promisify to find out when callbacks have finished executing. . .
       // TODO write addresses into contracts module...
     }
   });

@@ -2,7 +2,7 @@ import UserRegistry from '../contracts/UserRegistry.js';
 
 let contract_locations = {
   //TestContract: "0xbe8a55f99e675fb3f42ff9d4071949fd5b076eef",
-  UserRegistry: "0x3a02e860f1c57849c33a6eb3fd724d1740d44b62"
+  UserRegistry: "0xbd6cff56ff7fe3bfed83030f8a2a711984cc39a3"
 };
 
 
