@@ -1,6 +1,7 @@
 import './accounts.html';
 import web3 from '/imports/lib/thirdparty/web3.js'; 
-import { EthAccounts } from 'meteor/ethereum:accounts';
+import { LocalStore }   from 'meteor/frozeman:storage';
+import { EthAccounts }  from 'meteor/ethereum:accounts';
 
 // when the template is rendered
 Template["components_accounts"].onRendered(function(){
@@ -10,11 +11,12 @@ Template["components_accounts"].onRendered(function(){
 Template['components_accounts'].events({
 
   'click .accounts-row': function(e, template) {
-    var newPrimaryAccount = $(e.target).closest('tr').data('address');
-    var change = confirm("Are you sure you want to switch to account: " + newPrimaryAccount + "?");
+    var newAccount = $(e.target).closest('tr').data('address');
+    var change = confirm("Are you sure you want to switch to account: " + newAccount + "?");
     
     if(change) {
-      web3.eth.defaultAccount = newPrimaryAccount;
+      LocalStore.set('account', newAccount);
+      web3.eth.defaultAccount = newAccount;
     }
   }
 

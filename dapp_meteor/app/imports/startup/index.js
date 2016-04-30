@@ -1,6 +1,7 @@
 // Load web3 & ipfs objects
 import web3 from '../lib/thirdparty/web3.js';
 import ipfs from 'ipfs-js';
+import { LocalStore }   from 'meteor/frozeman:storage';
 import { EthAccounts } from 'meteor/ethereum:accounts';
 
 // Import routes & rest of start up
@@ -17,4 +18,7 @@ Meteor.startup(() => {
 
   EthAccounts.init();
 
+  if(!LocalStore.get('account')) {
+    LocalStore.set('account', web3.eth.accounts[0]);
+  }
 });
