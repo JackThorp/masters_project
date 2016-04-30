@@ -4,6 +4,7 @@ import { Router } from 'meteor/iron:router';
 // Import UI templates so they get loaded
 import '../ui/layouts/app-body.js';
 import '../ui/views/welcome.js';
+import '../ui/views/settings.js';
 
 
 // Router defaults
@@ -27,5 +28,10 @@ Router.route('/', {
 Router.route('/welcome', {
     template: 'views_welcome',
     name: 'welcome'
+});
+
+Router.route('/settings', {
+    template: 'views_settings',
+    name: 'settings'
 });
 

@@ -1,0 +1,36 @@
+{
+  "title": "Go-Op",
+  "welcome": "Welcome",
+  "settings": "Settings",
+  "headers": {
+				"identicon": "Identicon"
+				, "address": "Address"
+				, "balance": "Balance"
+				, "account": "Account"
+				, "solidity": "Solidity Code"
+				, "coinbase": "Coinbase"
+				, "listening": "Listening"
+				, "peerCount": "Peer Count"
+				, "blockNumber": "Block Numbr"
+				, "defaultBlock": "Default Block"
+				, "mining": "Mining"
+				, "gasPrice": "Gas Price"
+	},
+
+  "components" : {
+    
+    "networkHealth": {
+			"header": "Network Health"			
+		},
+		
+    "balance": {
+			"header": "My Balance",
+			"original": "Original Balance"
+		},
+
+		"accounts": {
+			"header": "My Accounts",
+			"description": "These are your Ethereum addresses. The identicons are generated based on the address value. Note, balance is static."			
+		}
+  }
+}

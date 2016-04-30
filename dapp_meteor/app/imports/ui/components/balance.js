@@ -1,15 +1,5 @@
-/**
-Template Controllers
-
-@module Templates
-*/
-
-/**
-The balance template
-
-@class [template] components_balance
-@constructor
-*/
+import './balance.html';
+import web3 from '/imports/lib/thirdparty/web3.js'; 
 
 // when the template is rendered
 Template['components_balance'].onRendered(function() {

@@ -1,15 +1,5 @@
-/**
-Template Controllers
-
-@module Templates
-*/
-
-/**
-The network health template
-
-@class [template] components_networkHealth
-@constructor
-*/
+import './networkHealth.html';
+import web3 from '/imports/lib/thirdparty/web3.js';
 
 Template['components_networkHealth'].helpers({
 	
