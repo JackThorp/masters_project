@@ -1,0 +1,42 @@
+<template name="views_coops">
+  <div class="row-fluid">
+	  <div class="col-md-6">
+      <h1> Create a Coop </h1>
+      <form class="coop-details form-horizontal">
+        <div class="form-group">
+          <label for="nameInput" class="col-sm-2 control-label">Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="nameInput" placeholder="Name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="idInput" class="col-sm-2 control-label">Organisation ID</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="idInput" placeholder="org id">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-default"> Submit </button>
+      </form>
+    </div>
+	  <div class="col-md-6">
+      <h1> List of Coops </h1>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th> Name </th>
+            <th> Org ID </th>
+          </tr>
+        </thead>
+        
+        <tbody>
+        {{#each coop in TemplateVar.get "coopsList" }}
+          <tr class="coop-row" id={{coop.ipfsHash}}>
+            <td> {{coop.name}} </td>
+            <td> {{coop.orgId}} </td>
+         </tr>
+        {{/each}}
+        </tbody>
+      </table>
+	  </div>
+ </div>
+</template>

@@ -10,6 +10,6 @@ Template['layout_header'].helpers({
 	},
 
   'short_address': function() {
-    return web3.eth.accounts[0].substring(2,6) + "...";
+    return LocalStore.get('account').toString().substring(2,6) + "...";
   }
 });

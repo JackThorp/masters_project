@@ -1,14 +1,15 @@
-import UserRegistry from '../contracts/UserRegistry.js';
+import { UserRegistry } from '../contracts/UserRegistry.js';
+import { CoopRegistry } from '../contracts/CoopRegistry.js';
 
 let contract_locations = {
-  //TestContract: "0xbe8a55f99e675fb3f42ff9d4071949fd5b076eef",
+  CoopRegistry: "0xb2f918f587a46369c0e40680d31db05a576e1e49",
   UserRegistry: "0xbd6cff56ff7fe3bfed83030f8a2a711984cc39a3"
 };
 
 
 // Setup objects global for contract and helper connector objects
 let contracts = {
-		//TestContract: TestContract.at(contract_locations.TestContract),
+		CoopRegistry: CoopRegistry.at(contract_locations.CoopRegistry),
 		UserRegistry: UserRegistry.at(contract_locations.UserRegistry),
 	  helpers: {}
 };

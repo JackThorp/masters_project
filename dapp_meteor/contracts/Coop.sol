@@ -9,6 +9,10 @@ contract Coop {
 	// Can only be set by coops UK contract.
 	bool certified;
 
+	function Coop(bytes ipfsHash) {
+		ipfsDataHash = ipfsHash;
+	}
+
 	function setCoopData(bytes ipfsHash) returns (bool) {
 		ipfsDataHash = ipfsHash;
 	}

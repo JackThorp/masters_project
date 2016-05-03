@@ -8,7 +8,10 @@ main();
 function main() {
   
   var CONTRACTS_PATH = './contracts';
-  var contracts = process.argv.slice(2).length > 0 ? args : getContractNames(CONTRACTS_PATH);
+  var compileOnly = process.argv[2] == "compile";
+  var namePos = compileOnly ? 3 : 2;
+  var names = process.argv.slice(namePos);
+  var contracts = names.length > 0 ? names : getContractNames(CONTRACTS_PATH);
  
   web3.setProvider(new web3.providers.HttpProvider('http://localhost:8545'));
   
@@ -18,7 +21,9 @@ function main() {
     var compiled = compileContract(name, CONTRACTS_PATH);
     var jsModule = writeJsModule(name, compiled);
     writeToFile(jsModule, path.join('app', 'imports', 'contracts', name + '.js'));
-    deployContract(name, compiled);
+    if(!compileOnly){
+      deployContract(name, compiled);
+    }
   }
   
 }
@@ -45,10 +50,12 @@ function compileContract(name, contractsPath) {
 
 function writeJsModule(name, contract) {
   
+  var codeName = name + "Code";   
   var js = "";
   js += "import web3 from '../lib/thirdparty/web3.js' \n";
   js += "let " + name + " = web3.eth.contract(" + JSON.stringify(contract.info.abiDefinition).trim() + '); \n';
-  js += "export default " + name + ";"; 
+  js += "let " + codeName + "  = " + JSON.stringify(contract.code).trim() + ";\n";
+  js += "export {" + name + ", " + codeName + " }"; 
   return js;
 
 }
@@ -74,7 +81,7 @@ function deployContract(name, contract) {
 
   var txObj = {
     gasPrice: web3.eth.gasPrice,
-    gas: 5000000,
+    gas: 500000,
     from: web3.eth.coinbase,
     data: contract.code
   }

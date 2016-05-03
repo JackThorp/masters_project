@@ -1,3 +1,4 @@
 import web3 from '../lib/thirdparty/web3.js' 
 let CMCEnabled = web3.eth.contract([{"constant":false,"inputs":[{"name":"CMCAddr","type":"address"}],"name":"setCMCAddress","outputs":[{"name":"result","type":"bool"}],"type":"function"},{"constant":false,"inputs":[],"name":"remove","outputs":[],"type":"function"}]); 
-export default CMCEnabled;
+let CMCEnabledCode  = "0x606060405260b18060106000396000f3606060405260e060020a600035046321b523dd81146024578063a7f4377914605a575b005b608060043560008054600160a060020a0316811480159060525750805433600160a060020a03908116911614155b15608a5760aa565b602260005433600160a060020a039081169116141560af57600054600160a060020a0316ff5b6060908152602090f35b805473ffffffffffffffffffffffffffffffffffffffff19168217905560015b919050565b56";
+export {CMCEnabled, CMCEnabledCode }

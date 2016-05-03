@@ -5,7 +5,8 @@ import { Router } from 'meteor/iron:router';
 import '../ui/layouts/app-body.js';
 import '../ui/views/welcome.js';
 import '../ui/views/settings.js';
-
+import '../ui/views/coops.js';
+import '../ui/views/coop.js';
 
 // Router defaults
 Router.configure({
@@ -35,3 +36,12 @@ Router.route('/settings', {
     name: 'settings'
 });
 
+Router.route('/coops', {
+    template: 'views_coops',
+    name: 'coops'
+});
+
+Router.route('/coop/:id', {
+  template: 'views_coop',
+  name: 'coop'
+});

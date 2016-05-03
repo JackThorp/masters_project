@@ -2,6 +2,7 @@
   "title": "Go-Op",
   "welcome": "Welcome",
   "settings": "Settings",
+  "coops": "Coops",
   "headers": {
 				"identicon": "Identicon"
 				, "address": "Address"

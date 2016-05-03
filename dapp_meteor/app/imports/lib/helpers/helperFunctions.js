@@ -1,37 +1,18 @@
-/**
-Helper functions
+import ipfs from 'ipfs-js';
 
-@module Helpers
-**/
+var Helpers = {};
 
-/**
-The Helpers class containing helper functions
-
-@class Helpers
-@constructor
-**/
-
-Helpers = {};
-
-
-/**
-Reruns functions reactively, based on an interval. Use it like so:
-
-    Helpers.rerun['10s'].tick();
-
-@method (rerun)
-**/
-
+//Reruns functions reactively, based on an interval. Use it like so:
 Helpers.rerun = {
     '10s': new ReactiveTimer(10)
 };
 
+Helpers.fromIPFS = function(ipfsHash, cb) {
+  //drop 0x 
+  ipfsHash = ipfs.utils.hexToBase58(ipfsHash.substring(2));
+  ipfs.catJson(ipfsHash, cb);
+}
 
-/**
-Clear localStorage
-
-@method (getLocalStorageSize)
-**/
 
 Helpers.getLocalStorageSize = function(){
 
@@ -49,10 +30,6 @@ Helpers.getLocalStorageSize = function(){
 
 /**
 Reactive wrapper for the moment package.
-
-@method (moment)
-@param {String} time    a date object passed to moment function.
-@return {Object} the moment js package
 **/
 
 Helpers.moment = function(time){
@@ -106,6 +83,6 @@ Helpers.formatTime = function(time, format) { //parameters
 };
 
 
-
+export default Helpers;
 
 
