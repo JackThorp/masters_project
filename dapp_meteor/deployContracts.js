@@ -71,7 +71,8 @@ function deployContract(name, contract) {
  
   var toDeploy = [
     'UserRegistry',
-    'CoopRegistry'
+    'CoopRegistry',
+    'MembershipRegistry'
   ];
 
   // Don't deploy all contracts

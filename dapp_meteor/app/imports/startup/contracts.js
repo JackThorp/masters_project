@@ -1,9 +1,11 @@
 import { UserRegistry } from '../contracts/UserRegistry.js';
 import { CoopRegistry } from '../contracts/CoopRegistry.js';
+import { MembershipRegistry } from '../contracts/MembershipRegistry.js';
 
 let contract_locations = {
   CoopRegistry: "0xb2f918f587a46369c0e40680d31db05a576e1e49",
-  UserRegistry: "0xbd6cff56ff7fe3bfed83030f8a2a711984cc39a3"
+  UserRegistry: "0xbd6cff56ff7fe3bfed83030f8a2a711984cc39a3",
+  MembershipRegistry: "0x30ab095346ddd0ca4596cc9c64f1df439cd5a1ad"
 };
 
 
@@ -11,7 +13,8 @@ let contract_locations = {
 let contracts = {
 		CoopRegistry: CoopRegistry.at(contract_locations.CoopRegistry),
 		UserRegistry: UserRegistry.at(contract_locations.UserRegistry),
-	  helpers: {}
+	  MembershipRegistry: MembershipRegistry.at(contract_locations.MembershipRegistry),
+    helpers: {}
 };
 
 // TODO Add helpers for fetching user & coop information from IPFS. See WeiFund.

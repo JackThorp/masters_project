@@ -46,3 +46,5 @@ meteor-base
 mquandalle:jade
 erasaur:meteor-lodash
 ethereum:accounts
+aldeed:simple-schema
+aldeed:collection2

@@ -5,43 +5,27 @@ import ipfs from 'ipfs-js';
 import { Router } from 'meteor/iron:router';
 import { Tempate } from 'meteor/templating';
 import Helpers from '/imports/lib/helpers/helperFunctions.js';
+import { Coops } from '/imports/api/coops.js';
 
 var coopsData = [];
 
 Template['views_coops'].onCreated(function() {
-  
   var template = this;
-  
-  contracts.CoopRegistry.getCoops.call(function(err, coopAddresses) {
-  
-    // Check for error.
-    if(err) {
-      console.log(err);
-    }  
-
-    for(var i = 0; i < coopAddresses.length; i++) {
-      Coop.at(coopAddresses[i]).getCoopData(function(err, ipfsHash) {
-        if(err) {
-          console.log(err);
-          return;
-        }
-        Helpers.fromIPFS(ipfsHash, function(err, data) {
-          data.ipfsHash = ipfsHash.substring(2);
-          coopsData.push(data);
-          TemplateVar.set(template, 'coopsList', coopsData); 
-        });
-      });  
-    }
-  }); 
 });
 
+
+Template['views_coops'].helpers({
+
+  'coopsList' : function() {
+    return Coops.find({}).fetch();
+  }
+
+});
 
 
 Template['views_coops'].events({
 
   'click .coop-row': function(e, template) {
-    console.log(e);
-    console.log('/coop/' + e.currentTarget.id);
     Router.go('/coop/' + e.currentTarget.id);
   },
   
@@ -62,20 +46,8 @@ Template['views_coops'].events({
     }
     
     var newCoopAddr = '';
-
-    // Attach listener for new user.
-    contracts.CoopRegistry.newCoop({}, function(err, e) { 
-      if(err) {
-        console.log(err);
-      }
-
-      if(e.args._coop == newCoopAddr) {
-        console.log(newCoopAddr + " successfully added to coop registry."); 
-        coopsData.push(coop_schema);
-        return TemplateVar.set(template, 'coopsList', coopsData);
-      }
-    });
-
+   
+    // TODO make this into insert method on Coops. . . 
     ipfs.addJson(coop_schema, function(err, res) {
       if (err) {
         console.log(err);

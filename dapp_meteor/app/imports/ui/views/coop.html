@@ -1,6 +1,32 @@
 <template name="views_coop">
   <div class="row-fluid">
 	  <div class="col-md-6">
-  </div>
+      {{#with coopData }}
+      <h1> {{ name }} </h1>
+      <p> OrgID: {{ orgId }} </p>
+      <button class="btn btn-success btn-join">Join {{name}}</button>
+      {{/with}}
+    </div>
+    <div class="col-md-6">
+      <h1> Members </h1>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th> Name </th>
+            <th> Email </th>
+          </tr>
+        </thead>
+        
+        <tbody>
+        {{#each member in memberList }}
+          <tr class="member-row" id={{member.ipfsHash}}>
+            <td> {{member.name}} </td>
+            <td> {{member.orgId}} </td>
+         </tr>
+        {{/each}}
+        </tbody>
+      </table>
+	
+    </div>
  </div>
 </template>

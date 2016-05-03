@@ -29,7 +29,7 @@
         </thead>
         
         <tbody>
-        {{#each coop in TemplateVar.get "coopsList" }}
+        {{#each coop in coopsList }}
           <tr class="coop-row" id={{coop.ipfsHash}}>
             <td> {{coop.name}} </td>
             <td> {{coop.orgId}} </td>
