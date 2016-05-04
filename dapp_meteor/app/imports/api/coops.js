@@ -1,9 +1,11 @@
-import { Mongo } from 'meteor/mongo';
+import { Mongo }        from 'meteor/mongo';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
-import { Meteor } from 'meteor/meteor';
-import contracts  from '/imports/startup/contracts.js';
+import { Meteor }       from 'meteor/meteor';
+import _                from 'lodash';
+
 import { Coop, CoopCode } from '/imports/contracts/Coop.js';
-import Helpers from '/imports/lib/helpers/helperFunctions.js';
+import contracts          from '/imports/startup/contracts.js';
+import Helpers            from '/imports/lib/helpers/helperFunctions.js';
 
 //TODO Need to add persistant minimongo collection?
 const Coops = new Mongo.Collection('coops', {connection: null});
@@ -13,17 +15,57 @@ const Coops = new Mongo.Collection('coops', {connection: null});
 export { Coops };
 
 Coops.schema = new SimpleSchema({
-  name: { type: String },
-  orgId: { type: String },
-  ipfsHash: {type: String },
-  address: {type: String }
+  name:     { type: String },
+  orgId:    { type: String },
+  ipfsHash: { type: String },
+  address:  { type: String },
+  members:  { type: [String], optional: true }
 });
 
 Coops.attachSchema(Coops.schema);
 
+Coops.helpers({
+
+  fillMembers(cb) {
+    var thisCoop = this
+    var fullMembers = [];
+    var memberCounter = 0;
+    var memberSize = thisCoop.members.length
+    for(var i = 0; i < memberSize; i++) {
+      
+      contracts.UserRegistry.getUserData(thisCoop.members[i], function(err, ipfsHex) {
+      
+        // Check for error.
+        if(err) {
+          console.log(err);
+          return;
+        }
+
+        // 'Current user' is not yet registered in userdb.
+        if(ipfsHex == "0x") {
+          console.log("member not registered as user?");
+          return;
+        }
+
+        Helpers.fromIPFS(ipfsHex, function(err, memberData) {
+         
+          fullMembers.push(memberData);
+          memberCounter++;
+          if(memberCounter == memberSize) {
+            cb(fullMembers);
+          }
+          //thisCoop.members[i] = memberData; // Set member data
+          
+        });
+      });
+    }
+  }
+});
+
 //1. Retrieves IPFS hash from a coop contract
 //2. Retrieves data from IPFS
-//3. Stores data in local collection
+//3. Retrieve member data from Ethereum
+//4. Stores data in local collection
 Coops.fromEth = function(coopAddr) {
   
   //1.
@@ -41,13 +83,23 @@ Coops.fromEth = function(coopAddr) {
       data.ipfsHash = ipfsHash.substring(2);
       data.address = coopAddr;
 
-      //3.  
-      Coops.insert(data, function(err, res) {
+      contracts.MembershipRegistry.getMembers(coopAddr, function(err, _members) {
+        
         if(err) {
           console.log(err);
+          return;
         }
-      });
+        
+        data.members = _members;
+        
+        //3.  
+        Coops.insert(data, function(err, res) {
+          if(err) {
+            console.log(err);
+          }
+        });
 
+      });
     });
   });
 };
@@ -85,6 +137,27 @@ Coops.init = function() {
 
     Coops.fromEth(newCoopAddr);
     
+  });
+
+  //3.
+  contracts.MembershipRegistry.newMembership({}, function(err, MREvent) {
+    
+    if(err) {
+      console.log(err);
+    }
+
+    console.log('new membership!');
+    let coopAddr = MREvent.args._coop;
+    let memberAddr = MREvent.args._member;
+   
+    Coops.update({
+      address: coopAddr
+    }, { 
+      $push: {
+        members: memberAddr
+      }
+    });
+
   });
   
 };

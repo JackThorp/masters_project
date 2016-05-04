@@ -9,6 +9,7 @@ contract MembershipRegistry {
 
 	// Makes inverse retrieval easier
 	mapping(address => address[]) public memberToCoops;
+
 	
 	// Maintain memberIDs
 	mapping(address => mapping(address => uint)) public toID;
@@ -17,14 +18,14 @@ contract MembershipRegistry {
 	// Register a user as member of cooperative
 	function register(address _user, address _coop) public returns (uint memberID){
 
-		memberID = coopToMembers[_coop].length++;
+		memberID = coopToMembers[_coop].length;
 		toID[_coop][_user] = memberID;
 		
 		coopToMembers[_coop].push(_user);
 		memberToCoops[_user].push(_coop);
 		numMembers[_coop] += 1;
 
-		newMembership(_coop, _user);
+		newMembership(_user, _coop);
 	}
 	
 

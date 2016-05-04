@@ -18,10 +18,10 @@
         </thead>
         
         <tbody>
-        {{#each member in memberList }}
-          <tr class="member-row" id={{member.ipfsHash}}>
+        {{#each member in coopData.members }}
+          <tr class="member-row" id={{member}}>
             <td> {{member.name}} </td>
-            <td> {{member.orgId}} </td>
+            <td> {{member}} </td>
          </tr>
         {{/each}}
         </tbody>
