@@ -3,7 +3,7 @@
 	  <div class="col-md-6">
       {{#with coopData }}
       <h1> {{ name }} </h1>
-      <p> OrgID: {{ orgId }} </p>
+      <p> OrgID: {{  orgId }} </p>
       <button class="btn btn-success btn-join">Join {{name}}</button>
       {{/with}}
     </div>
@@ -18,10 +18,10 @@
         </thead>
         
         <tbody>
-        {{#each member in coopData.members }}
+        {{#each member in fullMembers }}
           <tr class="member-row" id={{member}}>
             <td> {{member.name}} </td>
-            <td> {{member}} </td>
+            <td> {{member.email}} </td>
          </tr>
         {{/each}}
         </tbody>
