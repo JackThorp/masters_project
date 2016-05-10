@@ -5,6 +5,10 @@ var path  = require('path');
 
 main();
 
+/* Call with 'node deployContracts.js ?compile contractNames  
+ * - add compile to stop deploying
+ */
+
 function main() {
   
   var CONTRACTS_PATH = './contracts';
@@ -14,6 +18,8 @@ function main() {
   var contracts = names.length > 0 ? names : getContractNames(CONTRACTS_PATH);
  
   web3.setProvider(new web3.providers.HttpProvider('http://localhost:8545'));
+ 
+  console.log(web3.eth.getBalance(web3.eth.accounts[0]).toString(10));
   
   // Only function scope!!
   for(var i = 0; i < contracts.length; i++) {
@@ -22,7 +28,11 @@ function main() {
     var jsModule = writeJsModule(name, compiled);
     writeToFile(jsModule, path.join('app', 'imports', 'contracts', name + '.js'));
     if(!compileOnly){
-      deployContract(name, compiled);
+      try {
+        deployContract(name, compiled);
+      } catch (err) {
+      
+      }
     }
   }
   
@@ -70,9 +80,9 @@ function writeToFile(jsModule, path) {
 function deployContract(name, contract) { 
  
   var toDeploy = [
-    'UserRegistry',
-    'CoopRegistry',
-    'MembershipRegistry'
+    //'UserRegistry',
+    'CoopRegistry'
+    //'MembershipRegistry'
   ];
 
   // Don't deploy all contracts
@@ -82,8 +92,8 @@ function deployContract(name, contract) {
 
   var txObj = {
     gasPrice: web3.eth.gasPrice,
-    gas: 500000,
-    from: web3.eth.coinbase,
+    gas: 800000,
+    from: web3.eth.accounts[0],
     data: contract.code
   }
   
@@ -95,7 +105,7 @@ function deployContract(name, contract) {
       console.error(err);
     }
              
-    if(deployedContract.address) {
+    if(deployedContract && deployedContract.address) {
       //var js = "let contracts  = {\n";
       //js += "\t" + name + "="
       console.log(name + ": " + deployedContract.address);

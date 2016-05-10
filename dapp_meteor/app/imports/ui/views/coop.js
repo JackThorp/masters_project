@@ -1,3 +1,4 @@
+/*
 import './coop.html';
 import { Router } from 'meteor/iron:router';
 import { ReactiveVar } from 'meteor/reactive-var';
@@ -55,3 +56,4 @@ Template['views_coop'].events({
   }
 
 });
+*/

@@ -31,7 +31,8 @@ contract CoopRegistry {
 		return true;
 	}
 
-	function getCoops() returns (address[] _coops) {
+	// Was not compiling as constant by default. . .
+	function getCoops() constant returns (address[] _coops) {
 		return coops;
 	}
 

@@ -3,9 +3,9 @@ import { CoopRegistry } from '../contracts/CoopRegistry.js';
 import { MembershipRegistry } from '../contracts/MembershipRegistry.js';
 
 let contract_locations = {
-  CoopRegistry: "0xb2f918f587a46369c0e40680d31db05a576e1e49",
-  UserRegistry: "0xbd6cff56ff7fe3bfed83030f8a2a711984cc39a3",
-  MembershipRegistry: "0x78c6de6a03973bd6927f0029aaedd612253cadb2"
+  CoopRegistry:       "0x79c1576dbc0430457d8488ea0e8bb6a529cac323",
+  UserRegistry:       "0xb3c19c0c1a88aefacc33bee267110e305b9dfa3c",
+  MembershipRegistry: "0xdb5c943567da58a02cbeaa2023c04e254487e19e"
 };
 
 
