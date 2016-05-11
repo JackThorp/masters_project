@@ -30,9 +30,9 @@
         
         <tbody>
         {{#each coop in coopsList }}
-          <tr class="coop-row" id={{coop.ipfsHash}}>
-            <td> {{coop.name}} </td>
-            <td> {{coop.orgId}} </td>
+          <tr class="coop-row" id={{coop.address}}>
+            <td> {{coop.data.name}} </td>
+            <td> {{coop.data.orgId}} </td>
          </tr>
         {{/each}}
         </tbody>

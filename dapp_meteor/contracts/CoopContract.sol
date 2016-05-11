@@ -1,4 +1,4 @@
-contract Coop {
+contract CoopContract {
 
 	// Contract for a cooperative
 	// Potentially not necessary to have own contract but is good for extensibility
@@ -9,7 +9,7 @@ contract Coop {
 	// Can only be set by coops UK contract.
 	bool certified;
 
-	function Coop(bytes ipfsHash) {
+	function CoopContract(bytes ipfsHash) {
 		ipfsDataHash = ipfsHash;
 	}
 

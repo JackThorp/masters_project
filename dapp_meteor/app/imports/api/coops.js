@@ -1,31 +1,34 @@
 import Promise      from 'bluebird';
 import coopSchema   from './coopSchema.js';
 import contracts    from '/imports/startup/contracts.js';
-import { Coop, CoopCode }     from '/imports/contracts/Coop.js';
+import Coop         from '/imports/api/Coop.js';
+import { CoopContract, CoopContractCode }     from '/imports/contracts/CoopContract.js';
 
 coopRegistry  = Promise.promisifyAll(contracts.CoopRegistry); 
-coopContract  = Promise.promisifyAll(Coop);
+coopContract  = Promise.promisifyAll(CoopContract);
 
 class Coops {
 
-  constructor(_ipfs, _web3) {
-    this.ipfs = _ipfs;
-    this.web3 = _web3;
+  constructor(ipfs, web3) {
+    this.ipfs = ipfs;
+    this.web3 = web3;
   }
 
 
   // Fetch data for cooperative with given address
   get(addr) {
-  
+ 
     getCoopDataAsync = Promise.promisify(coopContract.at(addr).getCoopData);
     return getCoopDataAsync().then(function(ipfsHex) {
-      
+    
+      if(ipfsHex === "0x") return {}; //throw new Error("No data added for coop at " + addr);  
+
       // Refactor out somewhere.. . 
       ipfsHash = this.ipfs.utils.hexToBase58(ipfsHex.substring(2));
-      return ipfs.catJsonAsync(ipfsHash)
+      return this.ipfs.catJsonAsync(ipfsHash)
     })
     .then(function(coopData) {
-      return coopData;
+      return new Coop(addr, coopData);
     });
   }
 
@@ -34,8 +37,8 @@ class Coops {
   getAll() {
     
     let coops = this;
-
     return coopRegistry.getCoopsAsync().then(function(coopAddresses) {
+      
       var coopsList = [];
       for(var i = 0; i < coopAddresses.length; i++) {
         coopsList.push(coops.get(coopAddresses[i]));        
@@ -60,12 +63,14 @@ class Coops {
     var registeredPromise = coopRegistry.newCoopAsync({});
 
     ipfs.addJsonAsync(data).then(function(hash) {
-      ethHash = '0x' + ipfs.utils.base58ToHex(hash);
-      txObj.data = CoopCode;
       
+      var ethHash = '0x' + this.ipfs.utils.base58ToHex(hash);
+      txObj.data = CoopContractCode;
+     
       return new Promise(function(resolve, reject) {
         coopContract.new(ethHash, txObj, function(err, newCoop) {
-          if (err) { return reject(err); }
+          
+          if (err) return reject(err); 
 
           // Only true on second firing
           if(newCoop.address) {

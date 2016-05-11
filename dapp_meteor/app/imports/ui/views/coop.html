@@ -1,7 +1,7 @@
 <template name="views_coop">
   <div class="row-fluid">
 	  <div class="col-md-6">
-      {{#with coopData }}
+      {{#with coopData.data }}
       <h1> {{ name }} </h1>
       <p> OrgID: {{  orgId }} </p>
       <button class="btn btn-success btn-join">Join {{name}}</button>
@@ -18,7 +18,7 @@
         </thead>
         
         <tbody>
-        {{#each member in fullMembers }}
+        {{#each member in coopData.members }}
           <tr class="member-row" id={{member}}>
             <td> {{member.name}} </td>
             <td> {{member.email}} </td>

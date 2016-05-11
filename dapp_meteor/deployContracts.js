@@ -1,7 +1,8 @@
-var Web3  = require('web3');
-var web3  = new Web3();
-var fs    = require('fs');
-var path  = require('path');
+var Web3    = require('web3');
+var web3    = new Web3();
+var fs      = require('fs');
+var path    = require('path');
+var Promise = require('bluebird');
 
 main();
 
@@ -11,30 +12,47 @@ main();
 
 function main() {
   
-  var CONTRACTS_PATH = './contracts';
-  var compileOnly = process.argv[2] == "compile";
-  var namePos = compileOnly ? 3 : 2;
-  var names = process.argv.slice(namePos);
-  var contracts = names.length > 0 ? names : getContractNames(CONTRACTS_PATH);
- 
+  var CONTRACTS_PATH  = './contracts';
+  var compileOnly     = process.argv[2] == "compile";
+  var namePos         = compileOnly ? 3 : 2;
+  var names           = process.argv.slice(namePos);
+  var contracts       = names.length > 0 ? names : getContractNames(CONTRACTS_PATH);
+  
+  var toDeploy = [
+    'UserRegistry',
+    'CoopRegistry',
+    'MembershipRegistry'
+  ];
+
   web3.setProvider(new web3.providers.HttpProvider('http://localhost:8545'));
  
-  console.log(web3.eth.getBalance(web3.eth.accounts[0]).toString(10));
-  
+  console.log("Account 1 balance: " + web3.eth.getBalance(web3.eth.accounts[0]).toString(10));
+ 
+  var deployedContracts = [];
   // Only function scope!!
   for(var i = 0; i < contracts.length; i++) {
     var name = contracts[i];
     var compiled = compileContract(name, CONTRACTS_PATH);
     var jsModule = writeJsModule(name, compiled);
+    
     writeToFile(jsModule, path.join('app', 'imports', 'contracts', name + '.js'));
-    if(!compileOnly){
-      try {
-        deployContract(name, compiled);
-      } catch (err) {
-      
-      }
+  
+    if(!compileOnly && toDeploy.indexOf(name) >= 0){
+      deployedContracts.push(deployContract(name, compiled));
     }
   }
+
+  //TODO write to file properly using a buffer? ?
+  Promise.all(deployedContracts).then(function(dc) {
+    var file;
+    file  = "var contractLocations = { \n";
+    dc.forEach(function(contract){
+      file += "\t" + contract.name + ":\t'" + contract.address + "',\n";
+    });
+    file += "};\n"
+    file += "export default contractLocations"
+    writeToFile(file, path.join('app', 'imports', 'startup', 'contractLocations.js'));
+  });
   
 }
 
@@ -79,17 +97,7 @@ function writeToFile(jsModule, path) {
   
 function deployContract(name, contract) { 
  
-  var toDeploy = [
-    //'UserRegistry',
-    'CoopRegistry'
-    //'MembershipRegistry'
-  ];
-
-  // Don't deploy all contracts
-  if (toDeploy.indexOf(name) < 0) {
-    return;
-  }
-
+  
   var txObj = {
     gasPrice: web3.eth.gasPrice,
     gas: 800000,
@@ -98,19 +106,18 @@ function deployContract(name, contract) {
   }
   
   var Contract = web3.eth.contract(contract.info.abiDefinition); 
-
-  Contract.new(txObj, function(err, deployedContract){
-    
-    if(err) {
-      console.error(err);
-    }
-             
-    if(deployedContract && deployedContract.address) {
-      //var js = "let contracts  = {\n";
-      //js += "\t" + name + "="
-      console.log(name + ": " + deployedContract.address);
-      // Have to promisify to find out when callbacks have finished executing. . .
-      // TODO write addresses into contracts module...
-    }
+ 
+  return new Promise(function(resolve, reject) {
+    Contract.new(txObj, function(err, deployedContract){
+      
+      if(err) return reject(err);
+               
+      if(deployedContract && deployedContract.address) {
+        return resolve({
+          name: name,
+          address: deployedContract.address
+        });
+      }
+    });
   });
 }

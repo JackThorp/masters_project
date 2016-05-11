@@ -10,6 +10,7 @@ Template['views_coops'].onCreated(function() {
   var template = this;
   db.coops.getAll().then(function(data) {
      coopsData.set(data);         
+     console.log(data);
   });
 });
 
@@ -39,7 +40,11 @@ Template['views_coops'].events({
       'orgId': e.target.idInput.value
     }
    
-    db.coops.add(coop_schema).catch(function(err) {
+    db.coops.add(coop_schema).then(function(data) {
+      console.log("New Coop Registered!");
+      console.log(data);  
+    })
+    .catch(function(err) {
       console.log(err);
     });
   }
