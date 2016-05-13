@@ -1,15 +1,21 @@
-import _          from 'lodash';
-import Promise    from 'bluebird'
-import contracts  from '/imports/startup/contracts.js';
-import db         from '/imports/api/db.js';
+import _                  from 'lodash';
+import Promise            from 'bluebird'
+import contracts          from '/imports/startup/contracts.js';
+import db                 from '/imports/api/db.js';
+import membershipReactor  from './membershipReactor.js';
+import { Tracker }        from 'meteor/tracker';
 
 var membershipRegistry = Promise.promisifyAll(contracts.MembershipRegistry);
 
 class Coop {
 
   constructor(addr, data) {
-    this.data = data;
-    this.address = addr;
+    this.data     = data;
+    this.address  = addr;
+    
+    // Register dependencies for a coop.
+    this.coopDep = new Tracker.Dependency;
+    membershipReactor.register(addr, this.coopDep);
   }
   
   // Add member when user joins the cooperative
@@ -35,6 +41,7 @@ class Coop {
 
   // Fetches the coops members
   fetchMembers() {
+
     let coop = this;
 
     return membershipRegistry.getMembersAsync(coop.address).then(function(memberAddresses) {
@@ -42,7 +49,7 @@ class Coop {
       var memberPromises = [];
       //console.log(memberAddresses);
       for(var i = 0; i < memberAddresses.length; i++) {
-        
+
         // Use reflect to implement settle all 
         memberPromises.push(db.users.get(memberAddresses[i]).reflect());
       }

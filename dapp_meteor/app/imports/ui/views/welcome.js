@@ -56,9 +56,9 @@ Template['views_welcome'].events({
       }
     }
 
-    var user = TemplateVar.get(template, 'address');
+    var address = LocalStore.get('account');
     
-    db.users.set(user, userData).then(function(user) {
+    db.users.set(address, userData).then(function(user) {
       console.log('user added!');
       return TemplateVar.set(template, 'userInfo', {found: true, user: userData});
     })

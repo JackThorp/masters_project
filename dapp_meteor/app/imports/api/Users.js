@@ -11,6 +11,9 @@ class Users extends Collection {
 
   // Returns user object wrapping user data given address
   get(addr) {
+
+    // Check cache? ? 
+
     return userRegistry.getUserDataAsync(addr).then((hash) => {
      
       // address is not registered in userdb.
@@ -29,6 +32,7 @@ class Users extends Collection {
 
   // Sets user data for given address
   set(addr, data) {
+   
     
     this.checkData(data);
     
@@ -36,10 +40,16 @@ class Users extends Collection {
     let registeredPromise = userRegistry.UserAddedAsync({
       _addr: addr
     });
-      
+    
+    //TODO after registered should 'get' user to update
+    // cache? ? 
+
     this.addToIPFS(data).then((hash) => {
       var ethHash = this.ipfsToEth(hash);
       var txObj   = this.getTxObj();
+      console.log(ethHash);
+      console.log(addr);
+      console.log(txObj);
       return userRegistry.setUserData(addr, ethHash, txObj);
     })
     .catch(function(err){
