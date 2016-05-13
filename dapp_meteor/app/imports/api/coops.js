@@ -1,4 +1,5 @@
 import Promise      from 'bluebird';
+import Collection   from  './Collection.js';
 import coopSchema   from './coopSchema.js';
 import contracts    from '/imports/startup/contracts.js';
 import Coop         from '/imports/api/Coop.js';
@@ -7,11 +8,10 @@ import { CoopContract, CoopContractCode }     from '/imports/contracts/CoopContr
 coopRegistry  = Promise.promisifyAll(contracts.CoopRegistry); 
 coopContract  = Promise.promisifyAll(CoopContract);
 
-class Coops {
+class Coops extends Collection {
 
-  constructor(ipfs, web3) {
-    this.ipfs = ipfs;
-    this.web3 = web3;
+  constructor(ipfs, web3, schema) {
+    super(ipfs, web3, schema);
   }
 
 
@@ -54,14 +54,16 @@ class Coops {
   // Add a new cooperative to eth-ipfs
   add(data) {
 
+    // Check against schema
+    coops.checkData(data); 
+    
     var txObj = {
       from: web3.eth.accounts[0],
       gasPrice: web3.eth.gasPrice,
       gas: 400000
     }
-  
+ 
     var registeredPromise = coopRegistry.newCoopAsync({});
-
     ipfs.addJsonAsync(data).then(function(hash) {
       
       var ethHash = '0x' + this.ipfs.utils.base58ToHex(hash);
@@ -89,6 +91,17 @@ class Coops {
     return registeredPromise;
   }
 
+  checkData(data) {
+
+    if (typeof this.schema === 'undefined') {
+      throw new Error("Cannot check data, no schema set");
+    }
+
+    if (this.schema.errors(data)) {
+      console.log(this.schema.errors(data));
+      throw new Error(this.schema.errors(data));
+    }
+  }
 }
 
 export default Coops;

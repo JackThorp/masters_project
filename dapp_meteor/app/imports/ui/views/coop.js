@@ -27,8 +27,6 @@ Template['views_coop'].onCreated(function() {
 Template['views_coop'].helpers({
 
   'coopData' : function () {
-    let address = Router.current().params.id;
-     
     let template = Template.instance();
     return template.coop.get();
   }
@@ -47,6 +45,7 @@ Template['views_coop'].events({
       console.log(data);
     });
     */
+
     db.coops.get(coopAddr).then(function(coop){
       return coop.addMember(userAddr);
     }).then(function(data) {
