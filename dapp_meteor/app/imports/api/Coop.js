@@ -1,7 +1,8 @@
 import _          from 'lodash';
 import Promise    from 'bluebird'
 import contracts  from '/imports/startup/contracts.js';
-import { db }     from '/imports/api/db.js';
+import db         from '/imports/api/db.js';
+
 var membershipRegistry = Promise.promisifyAll(contracts.MembershipRegistry);
 
 class Coop {
@@ -48,6 +49,7 @@ class Coop {
       return Promise.all(memberPromises);
     })
     .filter(function(memberPromise) {
+      console.log(memberPromise);
       return memberPromise.isFulfilled();
     })
     .map(function(memberPromise){

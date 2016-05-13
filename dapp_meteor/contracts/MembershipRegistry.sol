@@ -18,6 +18,8 @@ contract MembershipRegistry {
 	// Register a user as member of cooperative
 	function register(address _user, address _coop) public returns (uint memberID){
 
+		// check if member already registered?
+
 		memberID = coopToMembers[_coop].length;
 		toID[_coop][_user] = memberID;
 		

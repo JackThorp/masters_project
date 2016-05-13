@@ -1,28 +1,39 @@
 import { Template } from 'meteor/templating';
+import { ReactiveVar } from 'meteor/reactive-var';
 import web3       from '../../lib/thirdparty/web3.js';
 import contracts  from '../../startup/contracts.js';
-import { db }     from '/imports/api/db.js';
+import db         from '/imports/api/db.js';
 
 import './welcome.html';
 
 Template['views_welcome'].onCreated(function() {
   
   var template = this;
-  
-  //TODO what if not set
-  var user = LocalStore.get('account');
+  template.userVar = new ReactiveVar({}); 
 
-  // Initialise template variables.
-  TemplateVar.set('userInfo', {});
-  TemplateVar.set('address', user);
-   
-  db.users.get(user).then(function(data) {
-    return TemplateVar.set(template, 'userInfo', {found: true, user: data});
+  //TODO what if not set
+  var address = LocalStore.get('account');
+
+  db.users.get(address).then(function(user) {
+    return user.fetchCoops();
+  })
+  .then(function(user){
+    TemplateVar.set(template, 'found', true);
+    template.userVar.set(user);
   })
   .catch(function(err) {
     console.log(err);
-    return TemplateVar.set(template, 'userInfo', {error: true, msg: String(err)});
+    TemplateVar.set(template, 'found', false);
   });
+
+});
+
+Template['views_welcome'].helpers({
+  
+  'user': function() {
+    let template = Template.instance();
+    return template.userVar.get();
+  }
 
 });
 
@@ -57,3 +68,4 @@ Template['views_welcome'].events({
     });
   } 
 });
+

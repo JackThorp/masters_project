@@ -3,7 +3,7 @@ import chaiAsPromised from 'chai-as-promised';
 import Promise    from 'bluebird';
 import web3       from '/imports/lib/thirdparty/web3.js';
 import ipfsJs     from 'ipfs-js';
-import Coops      from './Coops.js';
+//import Coops      from './Coops.js';
 
 chai.use(chaiAsPromised);
 const expect = chai.expect;
@@ -21,7 +21,7 @@ describe('Coops', function() {
   });
 
   var coops = {};
-
+/*
   beforeEach(function() {
     coops = new Coops(ipfs, web3);
   });
@@ -29,7 +29,7 @@ describe('Coops', function() {
   it('should be exported as defined object', function() {
     expect(coops).to.be.ok;
   });
-
+*/
   describe('get', function() {
     it('should get coop data from coop contract', function() {
        

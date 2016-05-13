@@ -2,18 +2,18 @@
   
   <div class="row">
     <div class="col-md-5 col-md-offset-1">
-      {{#with TemplateVar.get 'userInfo' }}
-      {{#if found}}
-      <h1> {{user.name}} </h1>
-      <p> {{user.email}} </p>
+      {{#if TemplateVar 'found'}}
+      {{#with user.data }}
+      <h1> {{name}} </h1>
+      <p> {{email}} </p>
       <address>
-        {{user.address.line1}} <br>
-        {{user.address.line2}} <br>
-        {{user.address.city}} <br>
-        {{user.address.postCode}} <br>
-        {{user.address.country}} <br>
+        {{address.line1}} <br>
+        {{address.line2}} <br>
+        {{address.city}} <br>
+        {{address.postCode}} <br>
+        {{address.country}} <br>
       </address>
-      
+      {{/with}} 
       {{else}}
 
       <h1> Register New User </h1>
@@ -299,7 +299,12 @@
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
       {{/if}} 
-      {{/with}}
+    </div>
+
+    <div class="col-md-5">
+      {{#each coop in user.coops}}
+      <h1> {{coop.data.name}} </h1>
+      {{/each}}
     </div>
   </div>
 

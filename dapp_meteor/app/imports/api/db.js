@@ -12,12 +12,11 @@ var ipfs          = Promise.promisifyAll(ipfsJs);
 class DB {
 
   constructor(config) {
-    console.log(ipfs.setProvider);
     ipfs.setProvider({host: 'localhost', port: '5001'});
-    this.users = new Users(ipfs, web3, userSchema);
-    this.coops = new Coops(ipfs, web3, coopSchema);
+    this.users = new Users(ipfs, web3, userSchema),
+    this.coops = new Coops(ipfs, web3, coopSchema)
   }
-
 }
 
-export let db = new DB();
+let db = new DB();
+export default db;

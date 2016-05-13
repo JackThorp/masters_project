@@ -42,6 +42,10 @@ class Collection {
   ipfsToEth(hash) {
     return '0x' + this.ipfs.utils.base58ToHex(hash);
   }
+
+  ethToIpfs(hash) {
+    return this.ipfs.utils.hexToBase58(hash.substring(2));
+  }
 }
 
 export default Collection;

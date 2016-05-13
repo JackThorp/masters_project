@@ -1,8 +1,8 @@
 import './coop.html';
-import { Router } from 'meteor/iron:router';
-import { ReactiveVar } from 'meteor/reactive-var';
-import contracts from '/imports/startup/contracts.js';
-import { db } from '/imports/api/db.js';
+import { Router }       from 'meteor/iron:router';
+import { ReactiveVar }  from 'meteor/reactive-var';
+import contracts        from '/imports/startup/contracts.js';
+import db               from '/imports/api/db.js';
 
 Template['views_coop'].onCreated(function() {
   let template = this;
@@ -44,7 +44,7 @@ Template['views_coop'].events({
     db.coops.get(coopAddr).addMember(userAddr).then(function(data) {
       console.log(data);
     });
-    */
+*/    
 
     db.coops.get(coopAddr).then(function(coop){
       return coop.addMember(userAddr);

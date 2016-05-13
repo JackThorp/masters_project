@@ -1,3 +1,4 @@
+/*
 import { chai } from 'meteor/practicalmeteor:chai';
 import chaiAsPromised from 'chai-as-promised';
 import Promise    from 'bluebird';
@@ -60,7 +61,7 @@ describe('Users', function() {
       // expect requires a function as parameter!
       expect(users.checkData.bind(users, userData)).to.throw(Error);
     });
-    */
+    
 
     it('should throw an error if data does not match schema', function() {
       var userData = {
@@ -104,3 +105,4 @@ describe('Users', function() {
   });
   
 });
+*/

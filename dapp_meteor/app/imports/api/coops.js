@@ -10,24 +10,18 @@ coopContract  = Promise.promisifyAll(CoopContract);
 
 class Coops extends Collection {
 
-  constructor(ipfs, web3, schema) {
-    super(ipfs, web3, schema);
-  }
-
-
   // Fetch data for cooperative with given address
   get(addr) {
- 
-    getCoopDataAsync = Promise.promisify(coopContract.at(addr).getCoopData);
-    return getCoopDataAsync().then(function(ipfsHex) {
-    
-      if(ipfsHex === "0x") return {}; //throw new Error("No data added for coop at " + addr);  
 
-      // Refactor out somewhere.. . 
-      ipfsHash = this.ipfs.utils.hexToBase58(ipfsHex.substring(2));
+    getCoopDataAsync = Promise.promisify(coopContract.at(addr).getCoopData);
+    return getCoopDataAsync().then((hash) => {
+    
+      if(hash === "0x") return {}; //throw new Error("No data added for coop at " + addr);  
+
+      ipfsHash = this.ethToIpfs(hash);
       return this.ipfs.catJsonAsync(ipfsHash)
     })
-    .then(function(coopData) {
+    .then((coopData) => {
       return new Coop(addr, coopData);
     });
   }
@@ -55,18 +49,13 @@ class Coops extends Collection {
   add(data) {
 
     // Check against schema
-    coops.checkData(data); 
+    this.checkData(data); 
     
-    var txObj = {
-      from: web3.eth.accounts[0],
-      gasPrice: web3.eth.gasPrice,
-      gas: 400000
-    }
- 
     var registeredPromise = coopRegistry.newCoopAsync({});
-    ipfs.addJsonAsync(data).then(function(hash) {
+    this.addToIPFS(data).then((hash) => {
       
-      var ethHash = '0x' + this.ipfs.utils.base58ToHex(hash);
+      var ethHash = this.ipfsToEth(hash);
+      var txObj   = this.getTxObj(); 
       txObj.data = CoopContractCode;
      
       return new Promise(function(resolve, reject) {
@@ -81,27 +70,16 @@ class Coops extends Collection {
         });
       });
     })
-    .then(function(coopAddr) {
-      return coopRegistry.addCoopAsync(coopAddr, txObj);
+    .then((coopAddr) => {
+      return coopRegistry.addCoopAsync(coopAddr, this.getTxObj());
     })
-    .catch(function(err) {
+    .catch((err) => {
       console.log(err);
     });
 
     return registeredPromise;
   }
 
-  checkData(data) {
-
-    if (typeof this.schema === 'undefined') {
-      throw new Error("Cannot check data, no schema set");
-    }
-
-    if (this.schema.errors(data)) {
-      console.log(this.schema.errors(data));
-      throw new Error(this.schema.errors(data));
-    }
-  }
 }
 
 export default Coops;

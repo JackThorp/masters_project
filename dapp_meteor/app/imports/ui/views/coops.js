@@ -1,17 +1,19 @@
 import './coops.html';
 import { Router }   from 'meteor/iron:router';
 import { Template } from 'meteor/templating';
-import { db }       from '/imports/api/db.js';
+import db           from '/imports/api/db.js';
 import { ReactiveVar } from 'meteor/reactive-var'
 
 var coopsData = new ReactiveVar([]);
 
 Template['views_coops'].onCreated(function() {
   var template = this;
+  
   db.coops.getAll().then(function(data) {
      coopsData.set(data);         
      console.log(data);
   });
+ 
 });
 
 
@@ -47,6 +49,7 @@ Template['views_coops'].events({
     .catch(function(err) {
       console.log(err);
     });
+    
   }
 
 });
