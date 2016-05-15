@@ -4,16 +4,28 @@ import userSchema from './userSchema.js';
 import contracts  from '/imports/startup/contracts.js';
 import User       from './User.js';
 
+import MembershipReactor  from './MembershipReactor.js';
+import UserReactor        from './UserReactor.js';
+
 userRegistry  = Promise.promisifyAll(contracts.UserRegistry); 
 
 // Users collection
 class Users extends Collection {
 
+  constructor(ipfs, web3, schema, membershipReactor, userReactor) {
+    super(ipfs, web3, schema);
+    this.membershipReactor  = membershipReactor;
+    this.userReactor        = userReactor;
+  }
+
   // Returns user object wrapping user data given address
   get(addr) {
 
-    // Check cache? ? 
-
+    // Should react to changes to user with address
+    let dep = new Tracker.Dependency;
+    dep.depend();
+    this.membershipReactor.register(dep, addr);
+    
     return userRegistry.getUserDataAsync(addr).then((hash) => {
      
       // address is not registered in userdb.
@@ -35,9 +47,9 @@ class Users extends Collection {
    
     
     this.checkData(data);
-    
+   
     // Listen for registration event.
-    let registeredPromise = userRegistry.UserAddedAsync({
+    let registeredPromise = userRegistry.newUserAsync({
       _addr: addr
     });
     

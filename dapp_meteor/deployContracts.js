@@ -100,7 +100,7 @@ function deployContract(name, contract) {
   
   var txObj = {
     gasPrice: web3.eth.gasPrice,
-    gas: 800000,
+    gas: 1000000,
     from: web3.eth.accounts[0],
     data: contract.code
   }

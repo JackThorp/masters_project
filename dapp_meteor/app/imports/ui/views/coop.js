@@ -16,8 +16,8 @@ Template['views_coop'].onCreated(function() {
 
   // Should rerun on new membership event
   Tracker.autorun(function() {  
+    console.log("RERUNNING!!");
     db.coops.get(template.address).then(function(coop) {
-      console.log(coop);
       return coop.fetchMembers();
     })
     .then(function(coop) {

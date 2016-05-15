@@ -4,6 +4,10 @@
       {{#with coopData.data }}
       <h1> {{ name }} </h1>
       <p> OrgID: {{  orgId }} </p>
+      <h3> Terms & Conditions: </h3>
+      <p> {{ terms }} </p>
+      <h3> Membership Fee: </h3>
+      <p> {{ fee }} Ether</p>
       <button class="btn btn-success btn-join">Join {{name}}</button>
       {{/with}}
     </div>
@@ -29,4 +33,4 @@
 	
     </div>
  </div>
-</template>
+  </template>

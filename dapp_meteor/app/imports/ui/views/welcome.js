@@ -1,29 +1,31 @@
-import { Template } from 'meteor/templating';
-import { ReactiveVar } from 'meteor/reactive-var';
-import web3       from '../../lib/thirdparty/web3.js';
-import contracts  from '../../startup/contracts.js';
-import db         from '/imports/api/db.js';
+import { Template }     from 'meteor/templating';
+import { ReactiveVar }  from 'meteor/reactive-var';
+import web3             from '../../lib/thirdparty/web3.js';
+import contracts        from '../../startup/contracts.js';
+import db               from '/imports/api/db.js';
 
 import './welcome.html';
+import '/imports/ui/components/signUpForm.js';
 
 Template['views_welcome'].onCreated(function() {
   
   var template = this;
-  template.userVar = new ReactiveVar({}); 
+  this.userVar = new ReactiveVar(); 
 
   //TODO what if not set
   var address = LocalStore.get('account');
 
-  db.users.get(address).then(function(user) {
-    return user.fetchCoops();
-  })
-  .then(function(user){
-    TemplateVar.set(template, 'found', true);
-    template.userVar.set(user);
-  })
-  .catch(function(err) {
-    console.log(err);
-    TemplateVar.set(template, 'found', false);
+  Tracker.autorun(function() {
+    db.users.get(address).then(function(user) {
+      return user.fetchCoops();
+    })
+    .then(function(user){
+      console.log(user);
+      template.userVar.set(user);
+    })
+    .catch(function(err) {
+      console.log(err); 
+    });
   });
 
 });
@@ -31,9 +33,8 @@ Template['views_welcome'].onCreated(function() {
 Template['views_welcome'].helpers({
   
   'user': function() {
-    let template = Template.instance();
-    return template.userVar.get();
-  }
+    return Template.instance().userVar.get();
+  },
 
 });
 

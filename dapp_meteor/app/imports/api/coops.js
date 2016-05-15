@@ -4,14 +4,26 @@ import coopSchema   from './coopSchema.js';
 import contracts    from '/imports/startup/contracts.js';
 import Coop         from '/imports/api/Coop.js';
 import { CoopContract, CoopContractCode }     from '/imports/contracts/CoopContract.js';
+import { Tracker }  from 'meteor/tracker';
 
 coopRegistry  = Promise.promisifyAll(contracts.CoopRegistry); 
 coopContract  = Promise.promisifyAll(CoopContract);
 
 class Coops extends Collection {
 
+  constructor(ipfs, web3, schema, membershipReactor, coopReactor) {
+    super(ipfs, web3, schema);
+    this.membershipReactor  = membershipReactor;
+    this.coopReactor        = coopReactor;
+  }
+  
   // Fetch data for cooperative with given address
   get(addr) {
+    
+    // Register reactive dependency here. Asynchronous callbacks will have different context!
+    let dep = new Tracker.Dependency;
+    dep.depend();
+    this.membershipReactor.register(dep, addr);
 
     getCoopDataAsync = Promise.promisify(coopContract.at(addr).getCoopData);
     return getCoopDataAsync().then((hash) => {
@@ -31,6 +43,12 @@ class Coops extends Collection {
   getAll() {
     
     let coops = this;
+    
+    // Make reactive to new coop event
+    let dep = new Tracker.Dependency;
+    dep.depend();
+    this.coopReactor.register(dep);
+
     return coopRegistry.getCoopsAsync().then(function(coopAddresses) {
       
       var coopsList = [];
@@ -49,6 +67,7 @@ class Coops extends Collection {
   add(data) {
 
     // Check against schema
+    // TODO How to catch this error? ? 
     this.checkData(data); 
     
     var registeredPromise = coopRegistry.newCoopAsync({});

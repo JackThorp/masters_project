@@ -1,0 +1,3 @@
+import './coopsTable.html';
+
+

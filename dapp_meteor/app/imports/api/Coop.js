@@ -2,8 +2,6 @@ import _                  from 'lodash';
 import Promise            from 'bluebird'
 import contracts          from '/imports/startup/contracts.js';
 import db                 from '/imports/api/db.js';
-import membershipReactor  from './membershipReactor.js';
-import { Tracker }        from 'meteor/tracker';
 
 var membershipRegistry = Promise.promisifyAll(contracts.MembershipRegistry);
 
@@ -12,10 +10,6 @@ class Coop {
   constructor(addr, data) {
     this.data     = data;
     this.address  = addr;
-    
-    // Register dependencies for a coop.
-    this.coopDep = new Tracker.Dependency;
-    membershipReactor.register(addr, this.coopDep);
   }
   
   // Add member when user joins the cooperative
@@ -36,6 +30,7 @@ class Coop {
     membershipRegistry.registerAsync(userAddr, coopAddr, txObj).catch(function(err) {
       console.log(err);
     });
+    
     return registeredPromise;
   }
 
@@ -56,7 +51,6 @@ class Coop {
       return Promise.all(memberPromises);
     })
     .filter(function(memberPromise) {
-      console.log(memberPromise);
       return memberPromise.isFulfilled();
     })
     .map(function(memberPromise){

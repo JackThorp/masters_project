@@ -1,0 +1,19 @@
+<template name="components_coopsTable"> 
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th> Name </th>
+        <th> Org ID </th>
+      </tr>
+    </thead>
+    
+    <tbody>
+    {{#each coop in coopsList }}
+      <tr class="coop-row" id={{coop.address}}>
+        <td> {{coop.data.name}} </td>
+        <td> {{coop.data.orgId}} </td>
+     </tr>
+    {{/each}}
+    </tbody>
+  </table>
+</template>
