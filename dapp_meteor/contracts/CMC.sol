@@ -39,7 +39,11 @@ contract CMC {
 	address owner;
 
     // This is where we keep all the contracts.
-    mapping (bytes32 => address) contracts;
+    mapping (bytes32 => address) public contracts;
+
+    function CMC() {
+        owner = msg.sender;
+    }
 
 
     function addContract(bytes32 name, address addr) {

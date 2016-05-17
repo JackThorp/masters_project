@@ -1,13 +1,15 @@
 <template name="views_coop">
   <div class="row-fluid">
 	  <div class="col-md-6">
-      {{#with coopData.data }}
-      <h1> {{ name }} </h1>
-      <p> OrgID: {{  orgId }} </p>
+      {{#with coopData }}
+      <h1> {{ data.name }} </h1>
+      <p> OrgID: {{  data.orgId }} </p>
       <h3> Terms & Conditions: </h3>
-      <p> {{ terms }} </p>
+      <p> {{ data.terms }} </p>
       <h3> Membership Fee: </h3>
-      <p> {{ fee }} Ether</p>
+      <p> {{ toEther fee }} Ether</p>
+      <h3> Balance </h3>
+      <p> {{ toEther balance }} Ether </p>
       <button class="btn btn-success btn-join">Join {{name}}</button>
       {{/with}}
     </div>

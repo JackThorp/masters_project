@@ -41,26 +41,28 @@ contract UserRegistry is CMCEnabled {
 	  
 	event newUser(address indexed _addr);
 
-  mapping(address => bytes) ipfsDataHash;
+  mapping(address => bytes32) ipfsData;
 
 
-  function setUserData(address user, bytes ipfsHash) {
+  function setUserData(address user, bytes32 ipfsHash) returns(bool) {
   		
-  		//if(!checkSender(msg.sender, "userController")){
-  		//	return;
-  		//}
+  	if(!checkSender(msg.sender, "UserController")){
+  		return false;
+  	}
 
-    ipfsDataHash[user] = ipfsHash;
+    ipfsData[user] = ipfsHash;
 		newUser(user);
+    return true;
   }
 
 
-  function getUserData(address addr) constant returns(bytes) {
+  function getUserData(address addr) constant returns(bytes32) {
 
-  		//if(!checkSender(msg.sender, "userController")) {
-  		//	return;
-  		//}
-
-    return ipfsDataHash[addr];
+  	if(!checkSender(msg.sender, "UserController")) {
+  		return;
+  	}
+ 
+    return ipfsData[addr];
   }
+
 }

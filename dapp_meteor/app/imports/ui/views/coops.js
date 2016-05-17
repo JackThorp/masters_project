@@ -44,15 +44,16 @@ Template['views_coops'].events({
     var coopData = {
       'name': e.target.nameInput.value,
       'orgId': e.target.idInput.value,
-      'terms': e.target.terms.value,
-      'fee'  : parseInt(e.target.feeAmount.value)
+      'terms': e.target.terms.value
     }
+
+    var fee = web3.toWei(parseInt(e.target.feeAmount.value), "ether");
   
     console.log(coopData);
     
-    db.coops.add(coopData).then(function(data) {
+    db.coops.add(coopData, fee).then(function(data) {
       console.log("New Coop Registered!");
-      console.log(data);  
+      return ;  
     })
     .catch(function(err) {
       console.log(err);

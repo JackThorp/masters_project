@@ -3,7 +3,11 @@
 
 //Interface for getting contracts from CMC
 contract ContractProvider {
-  function contracts(bytes32 name) returns (address addr) {}
+  function contracts(bytes32 name) returns (address addr);
+}
+
+contract CoopContract {
+	function membershipFee() returns (uint);
 }
 
 contract CMCEnabled {
@@ -53,13 +57,31 @@ contract MembershipRegistry is CMCEnabled {
 
 
 	// Register a user as member of cooperative
-	function register(address _user, address _coop) public returns (uint memberID){
+	function register(address _coop) public returns (uint memberID){
 
 		// check if member already registered?
 		// Sanity checks.
-		//if(!checkSender(msg.sender, "membershipController")) {
-		//	return;
-		//}
+		// Sanitise input.
+		// address user 	= msg.sender; TODO change so people can only register themselves.
+		
+		// Check valid user via User Controller or User Registry? (probably through controller)
+		// Check valid coop by same token.
+		
+		address _user = msg.sender;
+		uint payment 	= msg.value;
+		uint fee = CoopContract(_coop).membershipFee();
+
+		// Check sent amount is equal to fee. 
+		if (payment != fee) {
+			// Return Funds to Sender
+			return;
+		}
+
+		// Return if payment of membership fee is unsuccessful
+		if(!_coop.send(payment)) {
+			return;
+		}
+
 
 		memberID = coopToMembers[_coop].length;
 		toID[_coop][_user] = memberID;

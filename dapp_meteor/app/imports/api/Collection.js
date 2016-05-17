@@ -27,7 +27,6 @@ class Collection {
   }
 
   addToIPFS(data) {
-    console.log(this.ipfs);
     return this.ipfs.addJsonAsync(data);
   }
 
@@ -35,16 +34,20 @@ class Collection {
     return {
       from: this.web3.eth.accounts[0],
       gasPrice: this.web3.eth.gasPrice,
-      gas: 400000
+      gas: 800000
     } 
   }
 
+  //Hex if 34 bytes - just store 32bytes and assume Qm beginning
   ipfsToEth(hash) {
-    return '0x' + this.ipfs.utils.base58ToHex(hash);
+    let hex = this.ipfs.utils.base58ToHex(hash);
+    return '0x' +  hex.substring(4);
   }
 
-  ethToIpfs(hash) {
-    return this.ipfs.utils.hexToBase58(hash.substring(2));
+  // 1220 is standard hex start for ipfs multihashes (sha256 with 20 character length)
+  ethToIpfs(hex) {
+    let fullHex = '1220' + hex.substring(2);
+    return this.ipfs.utils.hexToBase58(fullHex);
   }
 }
 

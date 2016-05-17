@@ -8,8 +8,6 @@ import db               from '/imports/api/db.js';
 Template['views_coop'].onCreated(function() {
   let template = this;
 
-  //template.coop = new ReactiveVar({});
-
   template.coopVar = new ReactiveVar({});
 
   template.address = Router.current().params.id;
@@ -22,6 +20,7 @@ Template['views_coop'].onCreated(function() {
     })
     .then(function(coop) {
       console.log(coop);
+      coop.balance = web3.eth.getBalance(coop.address);
       template.coopVar.set(coop);
     })
     .catch(function(err){
@@ -35,6 +34,10 @@ Template['views_coop'].helpers({
   'coopData' : function () {
     let template = Template.instance();
     return template.coopVar.get();
+  },
+
+  'toEther': function(wei) {
+    return web3.fromWei(wei, "ether");
   }
 
 });
@@ -46,13 +49,7 @@ Template['views_coop'].events({
     let userAddr = LocalStore.get('account');
     let coopAddr = template.address;
 
-    /*
-    db.coops.get(coopAddr).addMember(userAddr).then(function(data) {
-      console.log(data);
-    });
-*/    
-
-    // TODO sets up second dependecy? ?
+    // TODO don't want to set dependecy up for this get even if it is null? ?
     db.coops.get(coopAddr).then(function(coop){
       return coop.addMember(userAddr);
     }).then(function(data) {

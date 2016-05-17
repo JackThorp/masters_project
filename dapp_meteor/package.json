@@ -1,0 +1,19 @@
+{
+  "name": "dapp_meteor",
+  "version": "1.0.0",
+  "description": "A starting point for decentralized MeteorJS applications. Includes Ethereum.js, iron-router, Bootstrap 3, Font Awesome, LESS and more.",
+  "main": "deployContracts.js",
+  "dependencies": {
+    "bluebird": "^3.3.5",
+    "ipfs-js": "0.0.9",
+    "lodash": "^4.12.0",
+    "solc": "^0.3.1-1",
+    "web3": "^0.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

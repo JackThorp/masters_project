@@ -24,18 +24,25 @@ class Coops extends Collection {
     let dep = new Tracker.Dependency;
     dep.depend();
     this.membershipReactor.register(dep, addr);
+    // Register with coop Reactor? ?
 
-    getCoopDataAsync = Promise.promisify(coopContract.at(addr).getCoopData);
-    return getCoopDataAsync().then((hash) => {
+    let coopData = {};
+    let coopInstance = Promise.promisifyAll(coopContract.at(addr));
+    return coopInstance.getCoopDataAsync().then((hash) => {
     
-      if(hash === "0x") return {}; //throw new Error("No data added for coop at " + addr);  
+      if(hash === "0x") return; //throw new Error("No data added for coop at " + addr);  
 
       ipfsHash = this.ethToIpfs(hash);
       return this.ipfs.catJsonAsync(ipfsHash)
     })
-    .then((coopData) => {
-      return new Coop(addr, coopData);
+    .then((_coopData) => {
+      coopData = _coopData;
+      return coopInstance.membershipFeeAsync();
+    })
+    .then((fee) => {
+      return new Coop(addr, coopData, fee);
     });
+
   }
 
 
@@ -64,7 +71,7 @@ class Coops extends Collection {
 
   
   // Add a new cooperative to eth-ipfs
-  add(data) {
+  add(data, fee) {
 
     // Check against schema
     // TODO How to catch this error? ? 
@@ -75,10 +82,10 @@ class Coops extends Collection {
       
       var ethHash = this.ipfsToEth(hash);
       var txObj   = this.getTxObj(); 
-      txObj.data = CoopContractCode;
-     
+      txObj.data  = CoopContractCode;
+      
       return new Promise(function(resolve, reject) {
-        coopContract.new(ethHash, txObj, function(err, newCoop) {
+        coopContract.new(ethHash, fee, txObj, function(err, newCoop) {
           
           if (err) return reject(err); 
 

@@ -7,18 +7,20 @@ var membershipRegistry = Promise.promisifyAll(contracts.MembershipRegistry);
 
 class Coop {
 
-  constructor(addr, data) {
+  constructor(addr, data, fee) {
     this.data     = data;
     this.address  = addr;
+    this.fee      = fee;
   }
   
   // Add member when user joins the cooperative
   addMember(userAddr) {
 
     var txObj = {
-      from: web3.eth.accounts[0],
+      from: userAddr,
       gas: 400000,
-      gasPrice: web3.eth.gasPrice
+      gasPrice: web3.eth.gasPrice,
+      value: this.fee
     }
 
     let coopAddr = this.address;
@@ -27,7 +29,7 @@ class Coop {
       _coop: coopAddr
     });
 
-    membershipRegistry.registerAsync(userAddr, coopAddr, txObj).catch(function(err) {
+    membershipRegistry.registerAsync(coopAddr, txObj).catch(function(err) {
       console.log(err);
     });
     

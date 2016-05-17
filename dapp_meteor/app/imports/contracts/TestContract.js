@@ -1,4 +1,0 @@
-import web3 from '../lib/thirdparty/web3.js' 
-let TestContract = web3.eth.contract([{"constant":true,"inputs":[],"name":"num","outputs":[{"name":"","type":"uint256"}],"type":"function"},{"constant":false,"inputs":[],"name":"increment","outputs":[],"type":"function"},{"inputs":[],"type":"constructor"}]); 
-let TestContractCode  = "60606040525b60026000600050819055505b608d80601d6000396000f360606040526000357c0100000000000000000000000000000000000000000000000000000000900480634e70b1dc146041578063d09de08a14606257603f565b005b604c6004805050606f565b6040518082815260200191505060405180910390f35b606d60048050506078565b005b60006000505481565b6001600060005054016000600050819055505b56";
-export {TestContract, TestContractCode }

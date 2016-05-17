@@ -1,20 +1,21 @@
+// THIS CONTRACT IS REDUNDANT WHILST VARIABLE LENGTH ARRAYS CANNOT BE SENT BETWEEN CONTRACTS
 contract MembershipController {
 	
 	// This contract is the only contract that can CRUD the Membership registry
 	event Registered(address _coop, address _member, uint _memberID);
 	event Unregistered(address _coop, address _member, uint _memberID);
 
-	function joinCoop(address _coop) {
-		
-		// Sanitise input.
-
-		var user = msg.sender;
-
-		// Check valid user. 
-
-
+	function joinCoop(address _coop) returns (bool) {
+		// 
 	}
 
+	function getMembers(address _coop) constant returns (address[]) {
+		return coopToMembers[_coop];
+	}
+
+	function getCoops(address _member) constant returns (address[]) {
+		return memberToCoops[_member];
+	}
 
 	function leaveCoop(address _coop) {
 
