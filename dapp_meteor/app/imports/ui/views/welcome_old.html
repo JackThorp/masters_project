@@ -1,0 +1,45 @@
+<template name="views_welcome_old">
+  
+  <div class="row">
+    <div class="col-md-5 col-md-offset-1">
+      {{#if user}}
+      {{#with user.data }}
+      <h1> {{name}} </h1>
+      <p> {{email}} </p>
+      <address>
+        {{address.line1}} <br>
+        {{address.line2}} <br>
+        {{address.city}} <br>
+        {{address.postCode}} <br>
+        {{address.country}} <br>
+      </address>
+      {{/with}} 
+      {{else}}
+        <h1> Register New User </h1>
+        {{> components_signUpForm}}
+      {{/if}}
+    </div>
+
+    <div class="col-md-5">
+      <h1> Your Coops </h1>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th> Name </th>
+            <th> Org ID </th>
+          </tr>
+        </thead>
+        
+        <tbody>
+        {{#each coop in user.coops }}
+          <tr class="coop-row" id={{coop.address}}>
+            <td> {{coop.data.name}} </td>
+            <td> {{coop.data.orgId}} </td>
+         </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</template>

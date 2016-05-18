@@ -1,8 +1,10 @@
 {
-  "title": "Go-Op",
+  "title": "Goop",
   "welcome": "Welcome",
+  "home": "Home",
   "settings": "Settings",
   "coops": "Coops",
+  "signin": "Sign In",
   "headers": {
 				"identicon": "Identicon"
 				, "address": "Address"

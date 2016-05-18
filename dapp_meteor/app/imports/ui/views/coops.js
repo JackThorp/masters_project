@@ -1,30 +1,54 @@
-import './coops.html';
-import { Router }   from 'meteor/iron:router';
-import { Template } from 'meteor/templating';
-import { Tracker  } from 'meteor/tracker';
-import db           from '/imports/api/db.js';
-import { ReactiveVar } from 'meteor/reactive-var'
+import { Router }       from 'meteor/iron:router';
+import { Template }     from 'meteor/templating';
+import { Tracker  }     from 'meteor/tracker';
+import { ReactiveVar }  from 'meteor/reactive-var'
+import bs               from 'bootstrap';
+import db               from '/imports/api/db.js';
 
-var coopsData = new ReactiveVar([]);
+import './coops.html';
 
 Template['views_coops'].onCreated(function() {
+  
   var template = this;
- 
+  this.userVar = new ReactiveVar(); 
+
+  //TODO what if not set
+  var address = LocalStore.get('account');
+
+  // Get all this users coops.
   Tracker.autorun(function() {
-    console.log("RERUNNING!");
-    db.coops.getAll().then(function(data) {
-      coopsData.set(data);         
-      console.log(data);
+    db.users.get(address).then(function(user) {
+      return user.fetchCoops();
+    })
+    .then(function(user){
+      console.log(user);
+      template.userVar.set(user);
+    })
+    .catch(function(err) {
+      console.log(err); 
     });
   });
- 
+
+
 });
 
 
 Template['views_coops'].helpers({
 
   'coopsList' : function() {
-    return coopsData.get();
+    return [{
+      name: 'Altgen'
+    }, {
+      name: 'Fairmondo'
+    }, {
+      name: 'Outlandish'
+    }, {
+      name: 'Cultural'
+    }];
+  },
+
+  'user': function() {
+    return Template.instance().userVar.get();
   }
 
 });
@@ -32,9 +56,9 @@ Template['views_coops'].helpers({
 
 Template['views_coops'].events({
 
-  'click .coop-row': function(e, template) {
-    Router.go('/coop/' + e.currentTarget.id);
-  },
+  //'click .new-coop-btn': function(e, template) {
+  //  Router.go('/createCoop');
+  //},
   
   
   'submit .coop-details': function(e, template) {

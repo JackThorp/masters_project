@@ -1,44 +1,21 @@
 <template name="views_welcome">
-  
-  <div class="row">
-    <div class="col-md-5 col-md-offset-1">
-      {{#if user}}
-      {{#with user.data }}
-      <h1> {{name}} </h1>
-      <p> {{email}} </p>
-      <address>
-        {{address.line1}} <br>
-        {{address.line2}} <br>
-        {{address.city}} <br>
-        {{address.postCode}} <br>
-        {{address.country}} <br>
-      </address>
-      {{/with}} 
-      {{else}}
-        <h1> Register New User </h1>
-        {{> components_signUpForm}}
-      {{/if}}
+  <div class="welcome-wrapper">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <img src="/images/Logo.png" class="center-img">
+        <h1> Welcome To Go-Op </h1>
+        <h2> Start your own decentralised autonomous cooperative! </h2>
+        <button class="btn btn-primary"> Sign Up Now </button>
+      </div>
     </div>
+  </div>
 
-    <div class="col-md-5">
-      <h1> Your Coops </h1>
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th> Name </th>
-            <th> Org ID </th>
-          </tr>
-        </thead>
-        
-        <tbody>
-        {{#each coop in user.coops }}
-          <tr class="coop-row" id={{coop.address}}>
-            <td> {{coop.data.name}} </td>
-            <td> {{coop.data.orgId}} </td>
-         </tr>
-        {{/each}}
-        </tbody>
-      </table>
+  <div class="welcome-body">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <h3> Enabling the distributed cooperative...</h3>
+        <p> abvfh. </p>
+      </div>
     </div>
   </div>
 

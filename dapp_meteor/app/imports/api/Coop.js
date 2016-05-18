@@ -29,6 +29,7 @@ class Coop {
       _coop: coopAddr
     });
 
+    // Capture the TX hash for looking up in BC explorers
     membershipRegistry.registerAsync(coopAddr, txObj).catch(function(err) {
       console.log(err);
     });

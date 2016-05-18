@@ -1,5 +1,5 @@
-<template name="layout_header">
-	<nav class="navbar navbar-default">
+<template name="layout_navbar">
+  <nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="/">
@@ -13,10 +13,11 @@
         </div>
       </form>
 
+      {{#if loggedIn }}
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a href="{{ pathFor 'welcome' }}">
-            {{_ "welcome"}}
+          <a href="{{ pathFor 'home' }}">
+            {{_ "home"}}
           </a>
         </li>
         
@@ -27,18 +28,16 @@
         </li>
 
         <li>
-          <a href="{{ pathFor 'settings' }}">
-            {{_ "settings"}}
-          </a>
-        </li>
-        <li>
           {{> dapp_identicon identity=address class="dapp-small"}}
-          {{short_address}}
         </li>
         <li>
         </li>
-			</ul>
-     
+      </ul>
+      {{else}}
+      <form class="navbar-form navbar-right" role="search">
+        <button type="submit" class="btn btn-primary btn-default">{{_ "signin" }}</button>
+      </form>
+      {{/if}}
 		</div>
 	</nav>
 </template>

@@ -19,12 +19,12 @@ class MembershipReactor extends EthereumReactor {
 
   // Listen for any and all membership events
   setUpListener() {
-    console.log("setting up membership reactor");
     let reactor = this;
     membershipRegistry.newMembershipAsync({}).then(function(membershipEvent) {
       
       let userAddress = membershipEvent.args._member;
       let coopAddress = membershipEvent.args._coop;
+      console.log("NEW MEMBER EVENT (user: " + userAddress + ", coop: " + coopAddress + ")"); 
 
       reactor.triggerDeps(userAddress);
       reactor.triggerDeps(coopAddress);

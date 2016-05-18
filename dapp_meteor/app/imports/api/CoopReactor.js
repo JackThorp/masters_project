@@ -13,8 +13,8 @@ class CoopReactor extends EthereumReactor {
     let reactor = this;
     coopRegistry.newCoopAsync({}).then(function(newCoopEvent) {
      
-      console.log("NEW COOP!");
       let coopAddress = newCoopEvent.args._coop;
+      console.log("NEW COOP EVENT (coop: " + coopAddress + ")");
 
       reactor.triggerDeps(coopAddress);
     })

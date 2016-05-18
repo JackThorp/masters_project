@@ -1,3 +1,3 @@
 import './_footer.html';
-import './_header.js';
+import './_navbar.js';
 import './app-body.html';
