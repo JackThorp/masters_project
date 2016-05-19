@@ -1,6 +1,7 @@
 import './_navbar.html';
 import web3 from '/imports/lib/thirdparty/web3.js';
 import { LocalStore }   from 'meteor/frozeman:storage';
+import { Session }      from 'meteor/session';
 
 
 Template['layout_navbar'].onCreated(function(){
@@ -16,7 +17,7 @@ Template['layout_navbar'].onCreated(function(){
 Template['layout_navbar'].helpers({
 
   'loggedIn': function() {
-    return true;
+    return Session.get('user');
   },
 	
   'address': function(){

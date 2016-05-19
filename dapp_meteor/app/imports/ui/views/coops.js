@@ -12,12 +12,11 @@ Template['views_coops'].onCreated(function() {
   var template = this;
   this.userVar = new ReactiveVar(); 
 
-  //TODO what if not set
-  var address = LocalStore.get('account');
+  var user  = Session.get('user');
 
   // Get all this users coops.
   Tracker.autorun(function() {
-    db.users.get(address).then(function(user) {
+    db.users.get(user.address).then(function(user) {
       return user.fetchCoops();
     })
     .then(function(user){
@@ -64,7 +63,8 @@ Template['views_coops'].events({
   'submit .coop-details': function(e, template) {
 
     e.preventDefault();
-  
+    $('#newCoopModal').modal( 'hide' );
+    
     var coopData = {
       'name': e.target.nameInput.value,
       'orgId': e.target.idInput.value,
@@ -74,7 +74,6 @@ Template['views_coops'].events({
     var fee = web3.toWei(parseInt(e.target.feeAmount.value), "ether");
   
     console.log(coopData);
-    
     db.coops.add(coopData, fee).then(function(data) {
       console.log("New Coop Registered!");
       return ;  
@@ -82,7 +81,6 @@ Template['views_coops'].events({
     .catch(function(err) {
       console.log(err);
     });
-    
   }
 
 });

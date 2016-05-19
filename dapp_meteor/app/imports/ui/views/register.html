@@ -1,0 +1,52 @@
+<template name="views_register">
+
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3">
+            {{#if registeredAccounts }}
+            <h3> Sign In </h3>
+            <p> Looks like you've already registered! </p>
+            <p> Sign in with one of the following accounts or register with a new one below. </p> 
+            {{/if}}
+            <ul class="media-list">
+            {{#each account in registeredAccounts}}
+            <div class="account-wrapper " data-user="bob" data-address={{account.address}}>
+              <li class="media sign-in-account">
+                <div class="media-left">
+                  {{> dapp_identicon identity=account.address class="dapp-small"}}
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading">{{account.address}}</h4>
+                </div>
+              </li>
+            </div>
+            {{/each}}
+            </ul>
+            <h3> Register </h3>
+            <form class="user-details">
+              <div class="form-group">
+                <label for="account"> Account</label>
+                <select id="account" class="form-control">
+                  {{#each account in accounts}}
+                  <option value="{{account}}" selected="{{selected}}">{{account}}</option>
+                  {{/each}}
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="userName">Name</label>
+                <input type="text" class="form-control" id="userName">
+              </div>
+              <div class="form-group">
+                <label for="userEmail">Email address</label>
+                <input type="email" class="form-control" id="userEmail">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,9 +1,10 @@
 import { Router } from 'meteor/iron:router';
-
+import db         from '/imports/api/db.js';
 
 // Import UI templates so they get loaded
 import '../ui/layouts/app-body.js';
 import '../ui/views/welcome.js';
+import '../ui/views/register.js';
 import '../ui/views/home.js';
 import '../ui/views/settings.js';
 import '../ui/views/coops.js';
@@ -22,10 +23,67 @@ Router.configure({
 
 // ROUTES
 
+// If session variable for user not set then
+// redirect back to welcome except for on welcome and login page
+//
+// If session variable for user set then
+// redirect to home if on welcome page or register page. 
+
+let renderUserHome = function() {
+  console.log(Session.get('user'));
+  if (Session.get('user')) {
+    this.layout('layout_main');
+    this.render('views_home');
+  } else {
+    this.next();
+  }
+}
+/*
+let renderWelcome = function() {
+  if (!Session.get('user')) {
+    this.redirect('/');
+  } else {
+    this.next();
+  }
+}
+*/
+// Don't render welcome of register pages if user is logged in
+//Router.onBeforeAction(renderUserHome, {only: ['welcome', 'register']});
+//Router.onBeforeAction(renderWelcome, {except: ['welcome', 'register']});
+
+Router.onBeforeAction(function() {
+ 
+  var routerCtx = this;
+  let address = LocalStore.get('account');
+  if (!Session.get('user') && address != "undefined") {
+    console.log("restoring user");
+    db.users.get(address).then((user) => {
+      Session.set('user', user);
+      console.log(user);
+    })
+    .catch((err) => {
+      console.log(err);
+      LocalStore.set('account', undefined);
+    })
+    .finally(function(){
+      //context.next();
+    });
+  } else { 
+    this.next();
+  }
+})
+
+
+
 // Default route
 Router.route('/', {
-    template: 'views_welcome',
-    name: 'default'
+  template: 'views_welcome',
+  name: 'welcome'
+});
+
+Router.route('/register', {
+  template: 'views_register',
+  name: 'register'
 });
 
 Router.route('/home', {
@@ -40,7 +98,7 @@ Router.route('/createCoop', {
 
 Router.route('/welcome_old', {
     template: 'views_welcome_old',
-    name: 'welcome'
+    name: 'welcome_old'
 });
 
 Router.route('/settings', {
@@ -54,6 +112,7 @@ Router.route('/coops', {
 });
 
 Router.route('/coop/:id', {
+  // Find the coop here and then pass in context..
   template: 'views_coop',
   name: 'coop'
 });

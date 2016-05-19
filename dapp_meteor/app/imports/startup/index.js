@@ -1,5 +1,6 @@
 import web3 from '../lib/thirdparty/web3.js';
 import { LocalStore }   from 'meteor/frozeman:storage';
+import { Session }      from 'meteor/session';
 import { EthAccounts }  from 'meteor/ethereum:accounts';
 import db               from '/imports/api/db.js';
 
@@ -17,8 +18,11 @@ Meteor.startup(() => {
   db.init(web3);
 
   EthAccounts.init();
-  
-  if(!LocalStore.get('account')) {
-    LocalStore.set('account', web3.eth.accounts[0]);
-  }
+
+  // SHOULD BE:
+  // if local store is set then
+  // get user
+  // if user exists then set user in session variable logged in true
+  // else account is not user
+  // remove from localstorage
 });
