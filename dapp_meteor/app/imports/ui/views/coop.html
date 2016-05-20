@@ -1,38 +1,83 @@
 <template name="views_coop">
-  <div class="row-fluid">
-	  <div class="col-md-6">
-      {{#with coopData }}
-      <h1> {{ data.name }} </h1>
-      <p> OrgID: {{  data.orgId }} </p>
-      <h3> Terms & Conditions: </h3>
-      <p> {{ data.terms }} </p>
-      <h3> Membership Fee: </h3>
-      <p> {{ toEther fee }} Ether</p>
-      <h3> Balance </h3>
-      <p> {{ toEther balance }} Ether </p>
-      <button class="btn btn-success btn-join">Join {{name}}</button>
-      {{/with}}
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="full-width">
+      <div class="coop-banner-wrapper">
+        <img class="coop-banner" src="/images/woods.jpg">
+      </div>
+      </div>
     </div>
-    <div class="col-md-6">
-      <h1> Members </h1>
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th> Name </th>
-            <th> Email </th>
-          </tr>
-        </thead>
-        
-        <tbody>
-        {{#each member in coopData.members }}
-          <tr class="member-row" id={{member}}>
-            <td> {{member.data.name}} </td>
-            <td> {{member.data.email}} </td>
-         </tr>
-        {{/each}}
-        </tbody>
-      </table>
-	
+  </div>
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+	    <div class="row">
+        <div class="col-md-8">
+          <div class="content-wrapper">
+            {{#with coopData }}
+            <div class="row">
+              <div class="col-xs-12">
+                <h2> {{ data.name }} </h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-8">
+                <p> {{data.description}} </p> 
+                
+                <p> <span class="strong-label">Coops UK ID:</span> {{  data.orgId }} </p>
+
+                <p> <span class="strong-label">Mambership Fee:</span> {{ toEther fee }} Ether </p>
+                
+                <p> <span class="strong-label">Balance:</span> {{ toEther balance }} Ether</p> 
+
+              </div>
+              <div class="col-sm-4">
+                <button class="btn btn-success btn-join btn-full">Join</button>
+              </div>
+            </div>
+            {{/with}}
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="content-wrapper">
+                <h2> Proposals </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="content-wrapper">
+                <h1> Members </h1>
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th> Name </th>
+                      <th> Email </th>
+                    </tr>
+                  </thead>
+                
+                  <tbody>
+                  {{#each member in coopData.members }}
+                    <tr class="member-row" id={{member}}>
+                      <td> {{member.data.name}} </td>
+                      <td> {{member.data.email}} </td>
+                   </tr>
+                  {{/each}}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="content-wrapper">
+                <h3> Coop Rules </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
- </div>
-  </template>
+  </div>
+</template>

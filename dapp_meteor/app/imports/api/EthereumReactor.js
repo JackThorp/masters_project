@@ -25,7 +25,6 @@ class EthereumReactor {
     if (!this.deps[address]) return;
     
     _.forEach(this.deps[address], function(dep) {
-      console.log(dep);
       dep.changed();
     });
   }
@@ -46,23 +45,6 @@ class EthereumReactor {
     this.deps[address].push(dependency);
   }
 
-
-  /*
-  // Listen for any and all membership events
-  setUpListener(listeners) {
-    _.forEach(listeners, this.addListener);
-  }
-
-  registerListener(listener) {
-    let reactor = this;
-    listener.then(function(adresses) {
-      _.forEach(addresses, reactor.triggerDeps);
-    })
-    .catch(function(err) {
-      console.log(err);
-    });
-  }
-*/
 }
 
 export default EthereumReactor;

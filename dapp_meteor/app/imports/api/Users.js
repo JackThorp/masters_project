@@ -44,8 +44,11 @@ class Users extends Collection {
     });
   }
 
-  // Sets user data for given address
-  set(addr, data) {
+  /* Adds user data to IPFS
+   * Registers user to user registry contract
+   * Returns a new user object
+  */
+   set(addr, data) {
    
     this.checkData(data);
    
@@ -56,17 +59,22 @@ class Users extends Collection {
     
     //TODO after registered should 'get' user to update
     // cache? ? 
-
+    console.log("address: " + addr);
+    console.log("data: " + data);
     this.addToIPFS(data).then((hash) => {
       var ethHash = this.ipfsToEth(hash);
       var txObj   = this.getTxObj();
+      console.log("adding to user controller");
       return userController.addUserAsync(addr, ethHash, txObj);
     })
     .catch(function(err){
       console.log(err);
     });
 
-    return registeredPromise;
+    return registeredPromise.then(function(userEvent) {
+      let userAddress = userEvent.args._addr;
+      return new User(userAddress, data);
+    });
 
   }
 }

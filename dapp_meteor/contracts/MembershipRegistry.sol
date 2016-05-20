@@ -77,12 +77,20 @@ contract MembershipRegistry is CMCEnabled {
 			return;
 		}
 
+		// Don't register member twice. Is it bettern to return or throw?
+		address[] joinedCoops = memberToCoops[_user];
+		for (uint i = 0; i < joinedCoops.length; i++) {
+			if(joinedCoops[i] == _coop) {
+				return;
+			}
+		}
+
 		// Return if payment of membership fee is unsuccessful
 		if(!_coop.send(payment)) {
 			return;
 		}
 
-
+		// Member is not registered yet
 		memberID = coopToMembers[_coop].length;
 		toID[_coop][_user] = memberID;
 		

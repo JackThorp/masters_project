@@ -60,7 +60,6 @@ Template['views_register'].helpers({
       return account.address;
     });
     let diff = _.difference(accounts, registered);
-    console.log(diff);
     return diff
   }
 
@@ -97,8 +96,6 @@ Template['views_register'].events({
    
     // Add user to user databae
     db.users.set(address, userData).then(function(user) {
-      //TODO this is tx receipt - not the user!!
-      console.log('user added!');
       LocalStore.set('account', user.address);
       Session.set('user', user);
       Router.go('/home');

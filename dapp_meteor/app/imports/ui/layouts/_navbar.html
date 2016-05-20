@@ -1,6 +1,6 @@
 <template name="layout_navbar">
   <nav class="navbar navbar-default">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="/">
           {{_ "title"}} 
@@ -9,7 +9,7 @@
       
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input id="searchQuery" type="text" class="form-control" placeholder="Search">
         </div>
       </form>
 
@@ -26,11 +26,24 @@
             {{_ "coops"}}
           </a>
         </li>
-
+<!--
         <li>
-          {{> dapp_identicon identity=address class="dapp-small"}}
+          <a class="navbar-identicon">
+            {{> dapp_identicon identity=address class="dapp-small"}}
+          </a>
         </li>
+-->
         <li>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="{{pathFor route='user' data=address}}">Profile</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="{{pathFor 'register'}}">Switch Accounts</a></li>
+            </ul>
+          </div>
         </li>
       </ul>
       {{else}}

@@ -8,8 +8,9 @@ import '../ui/views/register.js';
 import '../ui/views/home.js';
 import '../ui/views/settings.js';
 import '../ui/views/coops.js';
-import '../ui/views/createCoop.js';
 import '../ui/views/coop.js';
+import '../ui/views/user.js';
+import '../ui/views/search.js';
 
 // Router defaults
 Router.configure({
@@ -28,29 +29,7 @@ Router.configure({
 //
 // If session variable for user set then
 // redirect to home if on welcome page or register page. 
-
-let renderUserHome = function() {
-  console.log(Session.get('user'));
-  if (Session.get('user')) {
-    this.layout('layout_main');
-    this.render('views_home');
-  } else {
-    this.next();
-  }
-}
 /*
-let renderWelcome = function() {
-  if (!Session.get('user')) {
-    this.redirect('/');
-  } else {
-    this.next();
-  }
-}
-*/
-// Don't render welcome of register pages if user is logged in
-//Router.onBeforeAction(renderUserHome, {only: ['welcome', 'register']});
-//Router.onBeforeAction(renderWelcome, {except: ['welcome', 'register']});
-
 Router.onBeforeAction(function() {
  
   var routerCtx = this;
@@ -72,7 +51,7 @@ Router.onBeforeAction(function() {
     this.next();
   }
 })
-
+*/
 
 
 // Default route
@@ -91,14 +70,14 @@ Router.route('/home', {
   name: 'home'
 });
 
-Router.route('/createCoop', {
-  template: 'views_createCoop',
-  name: 'createCoop'
+Router.route('/user/:addr', {
+    template: 'views_user',
+    name: 'user'
 });
 
-Router.route('/welcome_old', {
-    template: 'views_welcome_old',
-    name: 'welcome_old'
+Router.route('/search', {
+  template: 'views_search',
+  name: 'search'
 });
 
 Router.route('/settings', {

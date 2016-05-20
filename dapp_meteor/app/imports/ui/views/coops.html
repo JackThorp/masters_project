@@ -52,7 +52,9 @@
         <div class="row">
           <div class="col-xs-8">
             {{#each coop in user.coops }}
-            <h3> {{coop.data.name}} </h3>
+            <a href="/coop/{{coop.address}}">
+              <h4> {{coop.data.name}} </h4>
+            </a>
             {{/each}}
           </div>
         </div>

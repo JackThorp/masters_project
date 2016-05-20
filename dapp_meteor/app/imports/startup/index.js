@@ -3,6 +3,7 @@ import { LocalStore }   from 'meteor/frozeman:storage';
 import { Session }      from 'meteor/session';
 import { EthAccounts }  from 'meteor/ethereum:accounts';
 import db               from '/imports/api/db.js';
+import { Router }       from 'meteor/iron:router';
 
 // Import routes & rest of start up
 import './routes.js';
@@ -18,6 +19,9 @@ Meteor.startup(() => {
   db.init(web3);
 
   EthAccounts.init();
+ 
+  // For now - just go to home on refresh
+  //Router.go('/');
 
   // SHOULD BE:
   // if local store is set then

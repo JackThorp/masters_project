@@ -12,10 +12,9 @@ Template['views_coops'].onCreated(function() {
   var template = this;
   this.userVar = new ReactiveVar(); 
 
-  var user  = Session.get('user');
-
   // Get all this users coops.
   Tracker.autorun(function() {
+    var user  = Session.get('user');
     db.users.get(user.address).then(function(user) {
       return user.fetchCoops();
     })
@@ -28,23 +27,10 @@ Template['views_coops'].onCreated(function() {
     });
   });
 
-
 });
 
 
 Template['views_coops'].helpers({
-
-  'coopsList' : function() {
-    return [{
-      name: 'Altgen'
-    }, {
-      name: 'Fairmondo'
-    }, {
-      name: 'Outlandish'
-    }, {
-      name: 'Cultural'
-    }];
-  },
 
   'user': function() {
     return Template.instance().userVar.get();
@@ -55,11 +41,6 @@ Template['views_coops'].helpers({
 
 Template['views_coops'].events({
 
-  //'click .new-coop-btn': function(e, template) {
-  //  Router.go('/createCoop');
-  //},
-  
-  
   'submit .coop-details': function(e, template) {
 
     e.preventDefault();
@@ -73,10 +54,9 @@ Template['views_coops'].events({
 
     var fee = web3.toWei(parseInt(e.target.feeAmount.value), "ether");
   
-    console.log(coopData);
-    db.coops.add(coopData, fee).then(function(data) {
-      console.log("New Coop Registered!");
-      return ;  
+    db.coops.add(coopData, fee).then(function(coop) {
+      let userAddress = Session.get('user').address;
+      return coop.addMember(userAddress);
     })
     .catch(function(err) {
       console.log(err);

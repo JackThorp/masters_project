@@ -1,0 +1,15 @@
+<template name="views_search">
+ 
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="content-wrapper">
+        <h2> Search Results: "{{searchQuery}}" </h2>
+        {{#each coop in search searchQuery}}
+        <a href="/coop/{{coop.address}}">
+          <h4> {{coop.data.name}} </h4>
+        </a>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</template>

@@ -15,6 +15,7 @@ class Coops extends Collection {
     super(ipfs, web3, schema);
     this.membershipReactor  = membershipReactor;
     this.coopReactor        = coopReactor;
+    this.coops = {};
   }
   
   // Fetch data for cooperative with given address
@@ -25,8 +26,12 @@ class Coops extends Collection {
     dep.depend();
     this.membershipReactor.register(dep, addr);
     // Register with coop Reactor? ?
+    
+    let coopData = this.coops[addr];
+    if (coopData) {
+      return new Promise(function(resolve) { resolve(coopData)});
+    }
 
-    let coopData = {};
     let coopInstance = Promise.promisifyAll(coopContract.at(addr));
     return coopInstance.getCoopDataAsync().then((hash) => {
     
@@ -40,7 +45,9 @@ class Coops extends Collection {
       return coopInstance.membershipFeeAsync();
     })
     .then((fee) => {
-      return new Coop(addr, coopData, fee);
+      let res = new Coop(addr, coopData, fee);
+      this.coops[addr] = res;
+      return res;
     });
 
   }
@@ -70,11 +77,12 @@ class Coops extends Collection {
   }
 
   
-  // Add a new cooperative to eth-ipfs
+  /* Adds coop data to IPFS
+   * Creates a new coop contract with data and fee
+   * Returns a coop object.
+   */
   add(data, fee) {
 
-    // Check against schema
-    // TODO How to catch this error? ? 
     this.checkData(data); 
     
     var registeredPromise = coopRegistry.newCoopAsync({});
@@ -103,7 +111,10 @@ class Coops extends Collection {
       console.log(err);
     });
 
-    return registeredPromise;
+    return registeredPromise.then(function(coopEvent) {
+      let address = coopEvent.args._coop;
+      return new Coop(address, data, fee);
+    });
   }
 
 }

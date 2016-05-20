@@ -14,12 +14,10 @@ Template['views_coop'].onCreated(function() {
 
   // Should rerun on new membership event
   Tracker.autorun(function() {  
-    console.log("RERUNNING!!");
     db.coops.get(template.address).then(function(coop) {
       return coop.fetchMembers();
     })
     .then(function(coop) {
-      console.log(coop);
       coop.balance = web3.eth.getBalance(coop.address);
       template.coopVar.set(coop);
     })
@@ -46,7 +44,7 @@ Template['views_coop'].events({
 
   'click .btn-join' : function(e, template) {
 
-    let userAddr = LocalStore.get('account');
+    let userAddr = Session.get('user').address;
     let coopAddr = template.address;
 
     // TODO don't want to set dependecy up for this get even if it is null? ?
