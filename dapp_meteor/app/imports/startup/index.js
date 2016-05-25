@@ -12,14 +12,13 @@ import './routes.js';
 window.web3 = web3;
 
 Meteor.startup(() => {
-  
+
   web3.setProvider(new web3.providers.HttpProvider('http://localhost:8545'));
-  
+
   // Initialise database.
   db.init(web3);
 
   EthAccounts.init();
- 
   // For now - just go to home on refresh
   //Router.go('/');
 

@@ -93,12 +93,17 @@ Template['views_register'].events({
 
     let select = e.target.account;
     let address = select.options[select.selectedIndex].value;
-   
+  
+    $('#wait-modal').modal('show');
+
     // Add user to user databae
     db.users.set(address, userData).then(function(user) {
       LocalStore.set('account', user.address);
       Session.set('user', user);
-      Router.go('/home');
+      $('#wait-modal').modal('hide');
+      $('#wait-modal').on('hidden.bs.modal', function (e) {
+        Router.go('/home');
+      })
     })
     .catch(function(err) {
       console.log(err);

@@ -6,11 +6,12 @@
 case $1 in
 
   private )
-    geth --genesis test_genesis_block.json --datadir ./.ethereum --networkid 1387 --nodiscover --maxpeers 0  --rpc --rpccorsdomain "*" --mine --minerthreads="1" --verbosity 5 console 2>> $2
+    geth --ipcpath /Users/jackthorp/Library/Ethereum/geth.ipc --genesis test_genesis_block.json --datadir ./.ethereum --networkid 1387 --nodiscover --maxpeers 0  --rpc --rpccorsdomain "*" --mine --minerthreads="1" --verbosity 5 console 2>> $2
     ;;
   
   testnet ) 
     geth --testnet --rpc --rpccorsdomain "*" console 2> $2
+    # geth --testnet --rpc --rpccorsdomain "*" --ipcpath /Users/jackthorp/Library/Ethereum/geth.ipc console 2> $2
     ;;
 
 esac
