@@ -15,16 +15,18 @@ Template['views_coops'].onCreated(function() {
   // Get all this users coops.
   Tracker.autorun(function() {
     var user  = Session.get('user');
-    db.users.get(user.address).then(function(user) {
-      return user.fetchCoops();
-    })
-    .then(function(user){
-      console.log(user);
-      template.userVar.set(user);
-    })
-    .catch(function(err) {
-      console.log(err); 
-    });
+    if (user && user.address) {
+      db.users.get(user.address).then(function(user) {
+        return user.fetchCoops();
+      })
+      .then(function(user){
+        console.log(user);
+        template.userVar.set(user);
+      })
+      .catch(function(err) {
+        console.log(err); 
+      });
+    }
   });
 
 });

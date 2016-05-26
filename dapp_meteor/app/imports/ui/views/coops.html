@@ -31,6 +31,18 @@
                     <div class="input-group-addon">.00</div>
                   </div>
                 </div>
+                <div class="form-group">
+                  <label for="quorumInput" class="control-label">Quorum Level</label>
+                  <input type="range" id="quorumInput" value="50" onchange="rangevalue.value=value" name="points" min="0" max="100">
+                </div>
+                <div class="form-group">
+                  <label for="ordinaryRes" class="control-label">Ordinary Resolution Level</label>
+                  <input type="range" id="ordinaryRes" name="points" min="0" max="100">
+                </div>
+                 <div class="form-group">
+                  <label for="extraRes" class="control-label">Extraordinary Resolution Level</label>
+                  <input type="range" id="extraRes" name="points" min="0" max="100">
+                </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

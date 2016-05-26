@@ -46,84 +46,66 @@ contract MembershipRegistry {
 /********************************************************/
 /********************************************************/
 
-contract CoopContract is CMCEnabled {
+contract CoopContract {
+  function membershipFee() returns (uint f); 
+  function quorum() returns (uint q);
+  function normalRes() returns (uint nr);
+}
 
-	// Contract for a cooperative
-	// Potentially not necessary to have own contract but is good for extensibility
-	// e.g coop can collect funds/ether etc.
-	event newMotionCreated(uint _mId);
-	event motionPassed(uint _mId);
-	event motionDefeated(uint _mId);
-	event motionVote(uint _mId);
+/********************************************************/
+/********************************************************/
+
+contract CoopProposals is CMCEnabled {
+  
+  event motionPassed(uint mid);
+
+  //enum rule {quorum, fee, normalRes, extraRes}
 
   struct ProposalVotes {
     bool passed;
-    bool defeated;
     uint vAgainst;
     uint vFor;
     mapping(address => bool) voted;
   }
 
+  /*
+  // Ammendment to rules
+  struct Ammendment {
+    uint id;
+    rule rule;
+    uint value;
+    ProposalVotes pVotes;
+  }
+*/
   // Ordinary Motion
   struct Motion {
     uint id;
     bytes32 ipfsHash;
     ProposalVotes pVotes;
   }
-
+/*
+  uint ammendmentCounter;
+  mapping(uint => Ammendment) public proposedAmmendments;
+*/
   uint public motionCounter;
   mapping(uint => Motion) proposedMotions;
 
-	bytes ipfsDataHash;
-	uint	public membershipFee;	
-	uint 	public quorum;
-	uint 	public normalRes;
-	//uint 	public extraordinaryRes;
+  address coopAddress;
 
-	function CoopContract(bytes _ipfsDataHash, uint _membershipFee, uint _quorum, uint _nRes) {
-		ipfsDataHash 	= _ipfsDataHash;
-		membershipFee = _membershipFee;
-		quorum 				= _quorum;
-		normalRes			= _nRes;
+  function CoopProposals () {
+    coopAddress = msg.sender;
+    //ammendmentCounter = 0;
     motionCounter = 0;
-	}
-
-	function setCoopData(bytes ipfsHash) returns (bool) {
-		ipfsDataHash = ipfsHash;
-	}
-
-	function getCoopData() constant returns (bytes) {
-		return ipfsDataHash;
-	}
-
-  function getMotionData(uint mId) constant returns (bytes32) {
-  	return proposedMotions[mId].ipfsHash;
   }
 
-  function getVotesFor(uint mId) constant returns (uint) {
-  	return proposedMotions[mId].pVotes.vFor;
-  }
-
-  function getVotesAgainst(uint mId) constant returns (uint) {
-		return proposedMotions[mId].pVotes.vAgainst;
-  }
-	
-	function hasPassed(uint mId) constant returns (bool) {
-		return proposedMotions[mId].pVotes.passed;
-  }
-
-  function hasFailed(uint mId) constant returns (bool) {
-		return proposedMotions[mId].pVotes.defeated;
-  }
-	// TODO mark privte . . .
   function isAMember(address sender) returns (bool) {
     address memRegAddr = ContractProvider(CMC).contracts("MembershipRegistry");
-    return MembershipRegistry(memRegAddr).isMember(msg.sender, this);
+    return MembershipRegistry(memRegAddr).isMember(msg.sender, coopAddress);
   }
 
   function getNumMembers() returns (uint) {
     address memRegAddr = ContractProvider(CMC).contracts("MembershipRegistry");
-    return MembershipRegistry(memRegAddr).totalMembers(this);
+    return MembershipRegistry(memRegAddr).totalMembers(coopAddress);
   }
 
   function proposeMotion (bytes32 _ipfsHash) returns (uint _mId) {
@@ -132,17 +114,17 @@ contract CoopContract is CMCEnabled {
       return;
     }
 
-    uint mId                = motionCounter++;
-    proposedMotions[mId]    = Motion({
+    uint mId                  = motionCounter++;
+    proposedMotions[mId]          = Motion({
       id: mId, 
       ipfsHash: _ipfsHash, 
-      pVotes: ProposalVotes({passed: false, defeated: false, vAgainst: 0, vFor: 0})
+      pVotes: ProposalVotes({passed: false, vAgainst: 0, vFor: 0})
     });
 
-    newMotionCreated(mId);
     return mId;
   }
 
+  /*
   function supportMotion (uint mId, bool _vFor) returns (bool success) {
 
     if (!isAMember(msg.sender)) {
@@ -151,10 +133,10 @@ contract CoopContract is CMCEnabled {
     
     Motion motion = proposedMotions[mId];
     
-    // Need different check here? ? 
-    //if (motion.id == 0) {
-    //  return;
-    //}
+    // Check valid ammendment
+    if (motion.id == 0) {
+      return;
+    }
 
     // Check if they have already voted for motion.
     if (motion.pVotes.voted[msg.sender]) {
@@ -167,11 +149,12 @@ contract CoopContract is CMCEnabled {
     } else {
       motion.pVotes.vAgainst++;
     }
-    motionVote(mId);
-
 
     motion.pVotes.voted[msg.sender] = true;
 
+    CoopContract coopContract = CoopContract(coopAddress);
+    uint quorum     = coopContract.quorum();
+    uint normalRes  = coopContract.normalRes();
     uint numMembers = getNumMembers(); 
     uint totalVotes = motion.pVotes.vFor + motion.pVotes.vAgainst;
 
@@ -184,11 +167,76 @@ contract CoopContract is CMCEnabled {
     if (result >= (normalRes / 100)) {
       motion.pVotes.passed = true;
       motionPassed(mId);
-    } else {
-    	motion.pVotes.defeated = true;
-    	motionDefeated(mId);
+      return true;
     } 
-    return;
+    return false;
+  }
+  */
+}
+  /*
+  function proposeAmmendment(uint _rule, uint _newValue) returns (uint aId) {
+
+    if(!isAMember(msg.sender)) {
+      return;
+    }
+
+    uint aId                  = ammendmentCounter++;
+    ProposalVotes _pVotes     = ProposalVotes({passed: false, vAgainst: 0, vFor: 0});
+    Ammendment newAmmendment  = Ammendment({
+      id: aId, 
+      rule: _rule, 
+      value: _value, 
+      pVotes: _pVotes
+    });
+
+    proposedAmmendments[aId] = newAmmendment;
+    return aId;
   }
 
-}
+  function voteOnAmmendment(uint aId, bool _vFor) {
+
+    // Check sender is coop member.
+    if (!isAMember(msg.sender)) {
+      return;
+    }
+    
+    Ammendment ammendment = proposedAmmendments[aId];
+    
+    // Check valid ammendment
+    if (ammendment.id == 0) {
+      return;
+    }
+
+    // Check if they have already voted for ammendment.
+    if (ammendment.pVotes.voted[msg.sender]) {
+      return;
+    }
+
+    // Register the vote
+    if (_vFor) {
+      ammendment.pVotes.vFor++;
+    } else {
+      ammendment.pVotes.vAgainst++;
+    }
+    ammendment.pVotes.voted[msg.sender] = true;
+
+    CoopContract coopContract = CoopContract(coopAddress);
+    uint quorum     = coopContract.quorum();
+    uint numMembers = numMembers(); 
+    uint totalVotes = ammendment.pVotes.vFor + ammendment.pVotes.vAgainst;
+
+    var turnout = totalVotes / numMembers;
+    if (turnout < (quorum / 100)) {
+      return;
+    }
+
+    var result = ammendment.pVotes.vFor / totalVotes;
+    if (result >= (normalRes / 100)) {
+      coopContract.setRule(ammendment.rule, ammendment.value);
+      ammendmentPassed(aId);
+      return true;
+    } 
+    return false;
+    // remove proposal (will still be in the history??)
+  }
+*/

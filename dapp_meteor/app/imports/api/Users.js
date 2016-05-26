@@ -3,9 +3,7 @@ import Collection from './Collection.js';
 import userSchema from './userSchema.js';
 import contracts  from '/imports/startup/contracts.js';
 import User       from './User.js';
-
-import MembershipReactor  from './MembershipReactor.js';
-import UserReactor        from './UserReactor.js';
+import db         from './db.js';
 
 userController  = Promise.promisifyAll(contracts.UserController); 
 userRegistry    = Promise.promisifyAll(contracts.UserRegistry); 
@@ -36,7 +34,7 @@ class Users extends Collection {
         throw new Error("user not registered"); 
       }
 
-      ipfsHash = this.ethToIpfs(hash);
+      ipfsHash = db.ethToIpfs(hash);
       return this.ipfs.catJsonAsync(ipfsHash)
     })
     .then((userData) => {
@@ -61,8 +59,8 @@ class Users extends Collection {
     // cache? ? 
     console.log("address: " + addr);
     console.log("data: " + data);
-    this.addToIPFS(data).then((hash) => {
-      var ethHash = this.ipfsToEth(hash);
+    this.ipfs.addJsonAsync(data).then((hash) => {
+      var ethHash = db.ipfsToEth(hash);
       var txObj   = this.getTxObj();
       console.log("adding to user controller");
       return userController.addUserAsync(addr, ethHash, txObj);

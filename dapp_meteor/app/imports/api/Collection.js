@@ -27,8 +27,7 @@ class Collection {
   }
 
   addToIPFS(data) {
-    return this.ipfs.addJsonAsync(data);
-  }
+    return   }
 
   getTxObj() {
     return {
@@ -38,17 +37,6 @@ class Collection {
     } 
   }
 
-  //Hex if 34 bytes - just store 32bytes and assume Qm beginning
-  ipfsToEth(hash) {
-    let hex = this.ipfs.utils.base58ToHex(hash);
-    return '0x' +  hex.substring(4);
-  }
-
-  // 1220 is standard hex start for ipfs multihashes (sha256 with 20 character length)
-  ethToIpfs(hex) {
-    let fullHex = '1220' + hex.substring(2);
-    return this.ipfs.utils.hexToBase58(fullHex);
-  }
 }
 
 export default Collection;

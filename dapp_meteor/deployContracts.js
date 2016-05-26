@@ -57,7 +57,7 @@ function main() {
   var CMCContract = {};
   var txObj = {
     gasPrice: web3.eth.gasPrice,
-    gas: 1000000,
+    gas: 2000000,
     from: web3.eth.accounts[0],
   }
 

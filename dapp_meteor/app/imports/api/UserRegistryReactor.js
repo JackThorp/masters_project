@@ -7,7 +7,7 @@ var userRegistry = Promise.promisifyAll(contracts.UserRegistry);
 
 let instance = null;
 
-class UserReactor extends EthereumReactor {
+class UserRegistryReactor extends EthereumReactor {
 
   constructor() {
     if (!instance) {
@@ -31,7 +31,7 @@ class UserReactor extends EthereumReactor {
   }
 }
 
-export default UserReactor;
+export default UserRegistryReactor;
 
 /*
 import Promise          from 'bluebird';

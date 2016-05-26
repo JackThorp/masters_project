@@ -21,6 +21,19 @@ Meteor.startup(() => {
   EthAccounts.init();
   // For now - just go to home on refresh
   //Router.go('/');
+  
+  let userAddress = LocalStore.get('account');
+  if (userAddress) {
+    db.users.get(userAddress).then(function(user) {
+      Session.set('user', user);
+    })
+    .catch(function(err) {
+      LocalStore.set('account', null);
+      Router.go('/');
+    });
+  } else {
+    Router.go('/');
+  }
 
   // SHOULD BE:
   // if local store is set then

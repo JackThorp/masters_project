@@ -7,12 +7,10 @@ class EthereumReactor {
     this.deps = {
       all: []
     };
-    this.setUpListener();
   }
 
   // Overriddern by contract reactors
   setUpListener() {
-
   }
 
   // Trigger all registered dependencies for given address

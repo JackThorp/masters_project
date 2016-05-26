@@ -1,0 +1,74 @@
+// new Ballot is created per resolution. 
+contract CoopProposals {
+    
+    struct Voter {
+        bool voted;         // if true, that person already voted
+    }
+
+    struct Proposal {
+        uint id;
+        bytes32 ipfsHash;
+        uint vAgainst;
+        uint vFor;
+        mapping(address => Voter) votes;
+    }
+
+    uint proposalsCount;
+    address public coop;
+
+    // A dynamically-sized array of `Proposal` structs.
+    Proposal[] public proposals;
+
+    /// Create a new ballot to choose one of `proposalNames`.
+    function CoopProposals (bytes32 proposalHash) {
+        coop        = msg.sender;
+        proposalsCount = 0;
+    }
+
+    function vote (uint pId, bool vFor) {
+
+        // check sender is member of coop.
+        
+        Proposal proposal = proposals[pId];
+        
+        // return if member already voted
+        if(proposal.votes[msg.sender].voted) {
+            return;
+        }
+
+        if (vFor) {
+            proposal.vFor++;
+        } else {
+            proposal.vAgainst;
+        }
+        proposal.votes[msg.sender].voted = true;
+
+        // EVENT
+    }
+
+    function create () {
+
+    }
+
+    function hasPassed (uint pId) constant returns (bool) {
+        // Get quorum
+        // Get members of coop
+        // Get ordinary resolution level
+        
+        Proposal proposal = proposals[pId];
+        totalVotes = proposal.vFor + proposal.vAgainst;
+        
+        // Check quorum is reached
+        turnout = totalVotes / (quorum / 100);
+        if (turnout < 1) {
+            return false;
+        }
+        
+        result = proposal.vFor / totalVotes;
+        if (result >= (normalRes/100)) {
+            return false;
+        }
+        
+        return true
+    }
+}

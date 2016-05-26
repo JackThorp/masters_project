@@ -3,6 +3,7 @@ import Collection   from  './Collection.js';
 import coopSchema   from './coopSchema.js';
 import contracts    from '/imports/startup/contracts.js';
 import Coop         from '/imports/api/Coop.js';
+import db           from './db.js';
 import { CoopContract, CoopContractCode }     from '/imports/contracts/CoopContract.js';
 import { Tracker }  from 'meteor/tracker';
 
@@ -15,7 +16,7 @@ class Coops extends Collection {
     super(ipfs, web3, schema);
     this.membershipReactor  = membershipReactor;
     this.coopReactor        = coopReactor;
-    this.coops = {};
+    //this.coops = {};
   }
   
   // Fetch data for cooperative with given address
@@ -25,29 +26,32 @@ class Coops extends Collection {
     let dep = new Tracker.Dependency;
     dep.depend();
     this.membershipReactor.register(dep, addr);
-    // Register with coop Reactor? ?
-    
-    let coopData = this.coops[addr];
-    if (coopData) {
-      return new Promise(function(resolve) { resolve(coopData)});
-    }
+
+    let coopData = {};
+    let fee, quorum = 0;
 
     let coopInstance = Promise.promisifyAll(coopContract.at(addr));
     return coopInstance.getCoopDataAsync().then((hash) => {
     
       if(hash === "0x") return; //throw new Error("No data added for coop at " + addr);  
 
-      ipfsHash = this.ethToIpfs(hash);
+      ipfsHash = db.ethToIpfs(hash);
       return this.ipfs.catJsonAsync(ipfsHash)
     })
     .then((_coopData) => {
       coopData = _coopData;
       return coopInstance.membershipFeeAsync();
     })
-    .then((fee) => {
-      let res = new Coop(addr, coopData, fee);
-      this.coops[addr] = res;
-      return res;
+    .then((_fee) => {
+      fee = _fee;
+      return coopInstance.quorumAsync();
+    })
+    .then((_quorum) => {
+      quorum = _quorum;
+      return coopInstance.normalResAsync();
+    })
+    .then((normalRes) => {
+      return new Coop(addr, coopData, fee, quorum, normalRes, this.ipfs, dep);
     });
 
   }
@@ -85,35 +89,20 @@ class Coops extends Collection {
 
     this.checkData(data); 
     
-    var registeredPromise = coopRegistry.newCoopAsync({});
-    this.addToIPFS(data).then((hash) => {
-      
-      var ethHash = this.ipfsToEth(hash);
-      var txObj   = this.getTxObj(); 
-      txObj.data  = CoopContractCode;
-      
-      return new Promise(function(resolve, reject) {
-        coopContract.new(ethHash, fee, txObj, function(err, newCoop) {
-          
-          if (err) return reject(err); 
-
-          // Only true on second firing
-          if(newCoop.address) {
-            resolve(newCoop.address);
-          }
-        });
-      });
-    })
-    .then((coopAddr) => {
-      return coopRegistry.addCoopAsync(coopAddr, this.getTxObj());
+    var registeredPromise = coopRegistry.newRegistrationAsync({});
+    
+    this.ipfs.addJsonAsync(data).then((hash) => {
+      var ethHash = db.ipfsToEth(hash);
+      return coopRegistry.newCoopAsync(ethHash, fee, 100, 50, this.getTxObj());
     })
     .catch((err) => {
       console.log(err);
     });
 
+    //TODO don't return coop here (evades caching)
     return registeredPromise.then(function(coopEvent) {
       let address = coopEvent.args._coop;
-      return new Coop(address, data, fee);
+      return new Coop(address, data, fee, 100, 50, this.ipfs);
     });
   }
 

@@ -131,4 +131,14 @@ contract MembershipRegistry is CMCEnabled {
 	function totalMembers(address _coop) public constant returns (uint){
 		return numMembers[_coop];
 	}
+
+	function isMember(address _user, address _coop) public constant returns (bool) {
+		address[] coops = memberToCoops[_user];
+		for (uint i = 0; i < coops.length; i++) {
+			if(coops[i] == _coop) {
+				return true;
+			}
+		}
+		return false;
+	}
 }
