@@ -62,6 +62,10 @@
                             <label for="proposalInput" class="control-label">Proposal</label>
                             <textarea class="form-control" rows="5" id="proposalInput"></textarea>
                           </div>
+                          <div class="form-group">
+                            <label for="endBlockInput" class="control-label">Closing Block</label>
+                            <input type="number" id="endBlockInput" class="form-control"  min="{{blockNow}}"><br>
+                          </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -75,7 +79,7 @@
 
                 <div class="row">
                   <div class="col-xs-8">
-                    <h3> Proposals </h3>
+                    <h3> Open Proposals </h3>
                   </div>
                   <div class="col-xs-4">
                     <button type="button" class="btn h3-btn btn-primary pull-right new-coop-btn" data-toggle="modal" data-target="#newProposalModal"> New Proposal </button>
@@ -83,37 +87,56 @@
                 </div>
                 <div class="row">
                   <div class="col-xs-12">
-                    <div class="list-group">
-                      {{#each proposal in coopData.proposals}}
-                      <a id="{{proposal.id}}" href="#" class="proposal-item list-group-item">
-                        <h4 class="list-group-item-heading">{{proposal.title}}</h4>
-                        <p class="list-group-item-text">{{proposal.proposal}}</p>
-                      </a>
-                      {{/each}}
+                    {{#each proposal in coopData.proposals}}
+                    {{#if isOpen proposal }}
+                    <div id="{{proposal.id}}" class="proposal-item">
+                      <div class="row">
+                        <div class="col-xs-8">
+                          <h4 class="">{{proposal.title}}</h4>
+                          <p class="">{{proposal.proposal}}</p>
+                        </div>
+                        <div class="col-xs-4">
+
+                        </div>
+                      </div>
                     </div>
+                    {{/if}}
+                    {{/each}}
                     
                     <!-- New Proposal Modal -->
                     <div class="modal fade" id="proposalVoteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
+                          {{#with selectedProposal}}
                           <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            {{#with selectedProposal}}
                             <h4 class="modal-title" id="myModalLabel">Vote On: {{title}}</h4>
-                            {{/with}}
                           </div>
                           <div class="modal-body">
-                            {{#with selectedProposal}}
-                            <p> {{proposal}} </p>
-                            <p> votes For: {{votesFor}} </p>
-                            <p> votes Against: {{votesAgainst}} </p>
-                            {{/with}}
+                            <div class="row">
+                              <div class="col-xs-6 col-xs-offset-3">
+                                <div id="chart-{{id}}" class="ct-chart proposal-chart ct-perfect-fourth"></div>
+                              </div>
+                              <div class="col-xs-12">
+                                <p> votes for: {{votesFor}} </p>
+                                <p> votes against: {{votesAgainst}} </p>
+                                <p> votes total: {{totalVotes this}} </p>
+                                {{#if isOpen this }}
+                                <p> votes needed to reach quorum: {{toReachQuorum this}} </p>
+                                {{/if}}
+                                <h4> Proposal </h4>
+                                <p> {{proposal}} </p>
+                              </div>
+                            </div>
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            {{#if isOpen this }}
                             <button type="button" class="btn btn-danger vote-against" data-dismiss="modal">Against</button>
                             <button type="button" class="btn btn-success vote-for" data-dismiss="modal">For</button>
+                            {{/if}}
                           </div>
+                          {{/with}}
                         </div>
                       </div>
                     </div>
@@ -123,12 +146,52 @@
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="content-wrapper">
+                <h3> Closed Proposals </h3>
+                {{#each proposal in coopData.proposals}}
+                {{#if isClosed proposal }}
+                <div id="{{proposal.id}}" class="proposal-item">
+                  <div class="row">
+                    <div class="col-xs-8">
+                      <h4 class="">{{proposal.title}}</h4>
+                      <p class="">{{proposal.proposal}}</p>
+                    </div>
+                    <div class="col-xs-4">
+                      <h3 class="pull-right"> 
+                        {{#if proposal.passed }}
+                        <span class="label label-success">Passed</span> 
+                        {{else}}
+                        <span class="label label-danger">Defeated</span> 
+                        {{/if}}
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                {{/if}}
+                {{/each}}
+              </div>
+            </div>
+          </div>
         </div>
         <div class="col-md-4">
           <div class="row">
             <div class="col-xs-12">
               <div class="content-wrapper">
-                <h1> Members </h1>
+                <h3> Coop Rules </h3>
+                {{#with coopData }}
+                <p> <span class="strong-lable">Fee: </span> {{ toEther fee }} </p>
+                <p> <span class="strong-label">Quorum:</span> {{quorum}}% </p>
+                <p> <span class="strong-label">Normal Resolution:</span> {{normalRes}}% </p>
+                {{/with}}
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="content-wrapper">
+                <h3> Members </h3>
                 <table class="table table-hover">
                   <thead>
                     <tr>
@@ -136,7 +199,6 @@
                       <th> Email </th>
                     </tr>
                   </thead>
-                
                   <tbody>
                   {{#each member in coopData.members }}
                     <tr class="member-row" id={{member}}>
@@ -146,17 +208,6 @@
                   {{/each}}
                   </tbody>
                 </table>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="content-wrapper">
-                <h3> Coop Rules </h3>
-                {{#with coopData }}
-                <p> <span class="strong-label">Quorum:</span> {{quorum}}% </p>
-                <p> <span class="strong-label">Normal Resolution:</span> {{normalRes}}% </p>
-                {{/with}}
               </div>
             </div>
           </div>

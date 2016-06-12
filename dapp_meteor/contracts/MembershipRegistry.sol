@@ -46,13 +46,9 @@ contract MembershipRegistry is CMCEnabled {
 
 	// List of members for each coop
 	mapping(address => address[]) public coopToMembers;
-	mapping(address => uint) public numMembers;
-
-	// Makes inverse retrieval easier
-	mapping(address => address[]) public memberToCoops;
-
+	mapping(address => uint) 			public numMembers;
 	
-	// Maintain memberIDs
+	mapping(address => address[]) public memberToCoops;
 	mapping(address => mapping(address => uint)) public toID;
 
 
@@ -66,6 +62,7 @@ contract MembershipRegistry is CMCEnabled {
 		
 		// Check valid user via User Controller or User Registry? (probably through controller)
 		// Check valid coop by same token.
+		//TODO check with user & coop registries that they are valid. 
 		
 		address _user = msg.sender;
 		uint payment 	= msg.value;
@@ -74,6 +71,7 @@ contract MembershipRegistry is CMCEnabled {
 		// Check sent amount is equal to fee. 
 		if (payment != fee) {
 			// Return Funds to Sender
+			// Should be a throw because then value is returned.
 			return;
 		}
 
@@ -87,6 +85,7 @@ contract MembershipRegistry is CMCEnabled {
 
 		// Return if payment of membership fee is unsuccessful
 		if(!_coop.send(payment)) {
+			// TOD ALL OF THESE SHOULD THROW
 			return;
 		}
 
@@ -104,6 +103,7 @@ contract MembershipRegistry is CMCEnabled {
 
 
 	// Remove user as member of cooperative
+	// TODO only deregister yourself?
 	function deregister(address _user, address _coop) public {
 		
 		var memberID = toID[_coop][_user];

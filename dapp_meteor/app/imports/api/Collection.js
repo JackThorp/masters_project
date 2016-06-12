@@ -33,7 +33,7 @@ class Collection {
     return {
       from: this.web3.eth.accounts[0],
       gasPrice: this.web3.eth.gasPrice,
-      gas: 800000
+      gas: 900000
     } 
   }
 

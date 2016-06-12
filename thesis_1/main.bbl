@@ -1,0 +1,1381 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist{none}{none}
+    \entry{Sociotechnology}{url}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia}
+      \field{month}{06}
+      \field{title}{Sociotechnology}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://en.wikipedia.org/wiki/Sociotechnology
+      \endverb
+    \endentry
+    \entry{berners_lee}{url}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{Tim Berners-Lee on the Web at 25: the past, present and future}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://www.wired.co.uk/magazine/archive/2014/03/web-at-25/tim-berners-lee
+      \endverb
+    \endentry
+    \entry{Snowden}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=c5cb4b14120d355f5a282f5db3951863}{Guardian}{G\bibinitperiod}{The}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c5cb4b14120d355f5a282f5db3951863}
+      \strng{fullhash}{c5cb4b14120d355f5a282f5db3951863}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{NSA Files: Decoded}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded#section/4
+      \endverb
+    \endentry
+    \entry{nsa_giants}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{US tech giants knew of NSA data collection, agency's top lawyer insists}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://www.theguardian.com/world/2014/mar/19/us-tech-giants-knew-nsa-data-collection-rajesh-de
+      \endverb
+    \endentry
+    \entry{Prism}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{NSA Prism program taps in to user data of Apple, Google and others}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://www.theguardian.com/world/2013/jun/06/us-tech-giants-nsa-data
+      \endverb
+    \endentry
+    \entry{nsa_undermine}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{NSA's Decade-Long Plan to Undermine Encryption Includes Backdoors, Stolen Keys, Manipulating Standards}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://www.wired.com/2013/09/nsa-backdoored-and-stole-keys/
+      \endverb
+    \endentry
+    \entry{Redecentralise}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{month}{06}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://redecentralize.org/
+      \endverb
+    \endentry
+    \entry{Webwewant}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{month}{06}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://webwewant.org/
+      \endverb
+    \endentry
+    \entry{Firechat}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{month}{06}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://opengarden.com/about-firechat
+      \endverb
+    \endentry
+    \entry{Arkos}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{month}{06}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://arkos.io/
+      \endverb
+    \endentry
+    \entry{Solid}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{month}{06}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://solid.mit.edu/
+      \endverb
+    \endentry
+    \entry{Mailpile}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{month}{06}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://www.mailpile.is/
+      \endverb
+    \endentry
+    \entry{OPI}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{month}{06}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://www.openproducts.com/
+      \endverb
+    \endentry
+    \entry{Freedombox}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{month}{06}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://freedomboxfoundation.org/learn/
+      \endverb
+    \endentry
+    \entry{p2pdef}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=14687c848c748f6d3cf5640a82b670d6}{Schollmeier}{S\bibinitperiod}{Rüdiger}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{14687c848c748f6d3cf5640a82b670d6}
+      \strng{fullhash}{14687c848c748f6d3cf5640a82b670d6}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{p2p}
+      \field{title}{A Definition of Peer-to-Peer Networking for the Classification of Peer-to-Peer Architectures and Applications}
+      \field{year}{2001}
+      \field{pages}{0101}
+      \range{pages}{1}
+    \endentry
+    \entry{nakamoto2008bitcoin}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=1977190f018b398e43ede3de043de8ea}{Nakamoto}{N\bibinitperiod}{Satoshi}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{1977190f018b398e43ede3de043de8ea}
+      \strng{fullhash}{1977190f018b398e43ede3de043de8ea}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Bitcoin: A peer-to-peer electronic cash system}
+      \field{year}{2008}
+    \endentry
+    \entry{Ethereum}{url}{}
+      \name{author}{1}{}{%
+        {{hash=850981945102d0f671b6762173c8988a}{Buterin}{B\bibinitperiod}{Vitalik}{V\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{850981945102d0f671b6762173c8988a}
+      \strng{fullhash}{850981945102d0f671b6762173c8988a}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ethereum Whitepaper}
+      \verb{url}
+      \verb https://github.com/ethereum/wiki/wiki/White-Paper
+      \endverb
+    \endentry
+    \entry{Ipfs}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{month}{06}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://ipfs.io/
+      \endverb
+      \keyw{IPFS}
+    \endentry
+    \entry{Maidsafe}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{Maidsafe}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://maidsafe.net/
+      \endverb
+    \endentry
+    \entry{Storj}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{Storj}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://storj.io/
+      \endverb
+    \endentry
+    \entry{Google_outage}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Google Outage: Internet Traffic Plunges 40 Percent}
+      \verb{url}
+      \verb http://news.sky.com/story/1129847/google-outage-internet-traffic-plunges-40-percent
+      \endverb
+    \endentry
+    \entry{Coming_online}{url}{}
+      \name{author}{1}{}{%
+        {{hash=b3745a86888964b5a05e89df93bde525}{Smith}{S\bibinitperiod}{Jack}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{b3745a86888964b5a05e89df93bde525}
+      \strng{fullhash}{b3745a86888964b5a05e89df93bde525}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{4.2 Billion People in the World Still Don't Have Internet --- Here's Why That Matters}
+      \verb{url}
+      \verb https://mic.com/articles/125674/4-2-billion-people-in-the-world-still-don-t-have-internet-here-s-why-that-matters#.FxzJMFNt2
+      \endverb
+    \endentry
+    \entry{Open_cooperativism}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=596519ae7a206862b90e6bbba7070816}{Bauwens}{B\bibinitperiod}{Michel}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{596519ae7a206862b90e6bbba7070816}
+      \strng{fullhash}{596519ae7a206862b90e6bbba7070816}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{Why We Need a New Kind of Open Cooperativism for the P2P Age}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://p2pfoundation.net/Why_We_Need_a_New_Kind_of_Open_Cooperativism_for_the_P2P_Age
+      \endverb
+    \endentry
+    \entry{Platform_cooperativism}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{Platform cooperativism: Introduction}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://platformcoop.net/
+      \endverb
+    \endentry
+    \entry{Myners}{article}{}
+      \name{author}{1}{}{%
+        {{hash=25b647006a30c2de2f3c7b110c62d477}{Myners}{M\bibinitperiod}{Paul}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{25b647006a30c2de2f3c7b110c62d477}
+      \strng{fullhash}{25b647006a30c2de2f3c7b110c62d477}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Co-operative Group: Report of the Independent Governance Review}
+      \field{year}{2014}
+    \endentry
+    \entry{VinayOnBlockchains}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=593d623d43ad4e538b7fda7534c37e70}{Gupta}{G\bibinitperiod}{Vinay}{V\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{593d623d43ad4e538b7fda7534c37e70}
+      \strng{fullhash}{593d623d43ad4e538b7fda7534c37e70}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{Programmable blockchains in context: Ethereum's future}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://medium.com/@ConsenSys/programmable-blockchains-in-context-ethereum-s-future-cd8451eb421e#.5ruxu8i90
+      \endverb
+    \endentry
+    \entry{Namecoin}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{month}{06}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://namecoin.info/
+      \endverb
+    \endentry
+    \entry{Litecoin}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{month}{06}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://litecoin.com/
+      \endverb
+    \endentry
+    \entry{Faircoin}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://fair-coin.org/
+      \endverb
+    \endentry
+    \entry{Dogecoin}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://dogecoin.com/
+      \endverb
+    \endentry
+    \entry{Onename}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://onename.com/
+      \endverb
+    \endentry
+    \entry{Shard}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Shard (Database Architecture)}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Shard_(database_architecture)
+      \endverb
+    \endentry
+    \entry{Bitcoin_consistency}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=150ccba9c2411823939761e957e1a37d}{Sirer}{S\bibinitperiod}{Emin\bibnamedelima Gün}{E\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{150ccba9c2411823939761e957e1a37d}
+      \strng{fullhash}{150ccba9c2411823939761e957e1a37d}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Bitcoin Guarantees Strong, not Eventual, Consistency}
+      \verb{url}
+      \verb http://hackingdistributed.com/2016/03/01/bitcoin-guarantees-strong-not-eventual-consistency/
+      \endverb
+    \endentry
+    \entry{Merkle}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Merkle Tree}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Merkle_tree
+      \endverb
+    \endentry
+    \entry{Hash}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Hash Function}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Hash_function
+      \endverb
+    \endentry
+    \entry{Ethereum_crowdfund}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6209e5f5ad3edb7e58a7995138aa70a8}{Jackson}{J\bibinitperiod}{Darnell}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{6209e5f5ad3edb7e58a7995138aa70a8}
+      \strng{fullhash}{6209e5f5ad3edb7e58a7995138aa70a8}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{Ethereum Self-Crowdfunded 21 Million in Less than a Month --- What Is It and Why Should We Care?}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://insidebitcoins.com/news/ethereum-self-crowdfunded-21-million-in-less-than-a-month-what-is-it-and-why-should-we-care/23838
+      \endverb
+    \endentry
+    \entry{wood2014ethereum}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9f252fbc7b8ff3c128b3e8dd806afa9b}{Wood}{W\bibinitperiod}{Gavin}{G\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9f252fbc7b8ff3c128b3e8dd806afa9b}
+      \strng{fullhash}{9f252fbc7b8ff3c128b3e8dd806afa9b}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ethereum Project Yellow Paper}
+      \field{title}{Ethereum: A secure decentralised generalised transaction ledger}
+      \field{year}{2014}
+    \endentry
+    \entry{Patricia}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Patricia Tree}
+      \verb{url}
+      \verb https://github.com/ethereum/wiki/wiki/Patricia-Tree
+      \endverb
+    \endentry
+    \entry{SmartContract}{url}{}
+      \name{author}{1}{}{%
+        {{hash=7a8fa37f931a316fe587067d55ea90fb}{Szabo}{S\bibinitperiod}{Nick}{N\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{7a8fa37f931a316fe587067d55ea90fb}
+      \strng{fullhash}{7a8fa37f931a316fe587067d55ea90fb}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Smart Contracts}
+      \field{urlyear}{1994}
+      \verb{url}
+      \verb http://szabo.best.vwh.net/smart.contracts.html
+      \endverb
+    \endentry
+    \entry{Contracts_guide}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ethereum Frontier Guide}
+      \field{title}{Contracts and Transactions}
+      \verb{url}
+      \verb https://ethereum.gitbooks.io/frontier-guide/content/contracts_and_transactions_intro.html
+      \endverb
+    \endentry
+    \entry{Solidity}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://solidity.readthedocs.io/en/latest/
+      \endverb
+    \endentry
+    \entry{devconvid}{url}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{DEVCON1: Panel - The Pathway To Ethereum Adoption}
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=IsIjUNuG4pw
+      \endverb
+    \endentry
+    \entry{mazieres1998escaping}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=f74609e259322f9c7b6a2c775a7d8e29}{Mazieres}{M\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=bf47e9a89253c3f1c964e6bb221faeb1}{Kaashoek}{K\bibinitperiod}{M\bibnamedelima Frans}{M\bibinitperiod\bibinitdelim F\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{cd6a0f97408602f4180d65fe24cd188b}
+      \strng{fullhash}{cd6a0f97408602f4180d65fe24cd188b}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 8th ACM SIGOPS European workshop on Support for composing distributed applications}
+      \field{title}{Escaping the evils of centralized control with self-certifying pathnames}
+      \field{year}{1998}
+      \field{pages}{118\bibrangedash 125}
+      \range{pages}{8}
+    \endentry
+    \entry{maymounkov2002kademlia}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=221556d7e71e3256de194f3347838327}{Maymounkov}{M\bibinitperiod}{Petar}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=f74609e259322f9c7b6a2c775a7d8e29}{Mazieres}{M\bibinitperiod}{David}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{8301c8fd70416b42b1edda4450fbb598}
+      \strng{fullhash}{8301c8fd70416b42b1edda4450fbb598}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Peer-to-Peer Systems}
+      \field{title}{Kademlia: A peer-to-peer information system based on the xor metric}
+      \field{year}{2002}
+      \field{pages}{53\bibrangedash 65}
+      \range{pages}{13}
+    \endentry
+    \entry{benet2014ipfs}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ae8544cf985d862137480d00d30a318b}{Benet}{B\bibinitperiod}{Juan}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{ae8544cf985d862137480d00d30a318b}
+      \strng{fullhash}{ae8544cf985d862137480d00d30a318b}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1407.3561}
+      \field{title}{IPFS-Content Addressed, Versioned, P2P File System}
+      \field{year}{2014}
+    \endentry
+    \entry{IPFSVid}{url}{}
+      \name{author}{1}{}{%
+        {{hash=8c1b26a6903aa1d1b0ddde64e58232e8}{stanfordonline}{s\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{8c1b26a6903aa1d1b0ddde64e58232e8}
+      \strng{fullhash}{8c1b26a6903aa1d1b0ddde64e58232e8}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Stanford Seminar - Juan Benet of Protocol Labs}
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=HUVmypx9HGI
+      \endverb
+    \endentry
+    \entry{DCFire}{article}{}
+      \name{author}{1}{}{%
+        {{hash=47e587c2178cc1596ad598d770d735ba}{Jones}{J\bibinitperiod}{Penny}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{47e587c2178cc1596ad598d770d735ba}
+      \strng{fullhash}{47e587c2178cc1596ad598d770d735ba}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fire brings down data centers in India and Canada}
+      \field{year}{2012}
+      \verb{url}
+      \verb http://www.datacenterdynamics.com/content-tracks/colo-cloud/fire-brings-down-data-centers-in-india-and-canada/68499.fullarticle
+      \endverb
+    \endentry
+    \entry{Pioneers}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{Wikipedia}{W\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Rochdale Society of Equitable Pioneers}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Rochdale_Society_of_Equitable_Pioneers
+      \endverb
+    \endentry
+    \entry{Principles}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{Wikipedia}{W\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Rochdale Principles}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Rochdale_Principles
+      \endverb
+    \endentry
+    \entry{Coops_india_wiki}{url}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{Wikipedia}{W\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cooperative Movement in India}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Cooperative_movement_in_India
+      \endverb
+    \endentry
+    \entry{Coops_india}{article}{}
+      \name{author}{1}{}{%
+        {{hash=89c1e460ae334bd06be150acca4a39a5}{Rananavare}{R\bibinitperiod}{A.\bibnamedelimi M.}{A\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{89c1e460ae334bd06be150acca4a39a5}
+      \strng{fullhash}{89c1e460ae334bd06be150acca4a39a5}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Role of Cooperative Societies in the Economic Development of India}
+      \field{year}{1964}
+      \verb{url}
+      \verb http://digitalcommons.usu.edu/etd/2978
+      \endverb
+    \endentry
+    \entry{Kenya_coops}{article}{}
+      \name{author}{1}{}{%
+        {{hash=989a024048b92d0c851aa77e90dfa766}{Schneider}{S\bibinitperiod}{Nathan}{N\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{989a024048b92d0c851aa77e90dfa766}
+      \strng{fullhash}{989a024048b92d0c851aa77e90dfa766}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Shareable}
+      \field{title}{10 Lessons from Kenya's Remarkable Cooperatives}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.shareable.net/blog/10-lessons-from-kenyas-remarkable-cooperatives
+      \endverb
+    \endentry
+    \entry{ICA}{url}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{International Cooperative Alliance}
+      \verb{url}
+      \verb http://ica.coop/en/what-co-operative
+      \endverb
+    \endentry
+    \entry{roelants2014cooperatives}{article}{}
+      \name{author}{3}{}{%
+        {{hash=b695bdf2ec99b2edd3fd71094ba2252e}{Roelants}{R\bibinitperiod}{B}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=0e3b85464c1e0999dcd6dc04cb4a296b}{Hyungsik}{H\bibinitperiod}{E}{E\bibinitperiod}{}{}{}{}}%
+        {{hash=0bba459105cffa0dfa978763a6989db8}{Terrasi}{T\bibinitperiod}{E}{E\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{2b25830b12979a68370f75a125fa2c6c}
+      \strng{fullhash}{2b25830b12979a68370f75a125fa2c6c}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Quebec: CICOPA/Desjardin}
+      \field{title}{Cooperatives and Employment: a global report}
+      \field{year}{2014}
+    \endentry
+    \entry{Cooperative_economy}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c55abca884ca48a5fa10968484040fe6}{UK}{U\bibinitperiod}{Cooperatives}{C\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{c55abca884ca48a5fa10968484040fe6}
+      \strng{fullhash}{c55abca884ca48a5fa10968484040fe6}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The co-operative economy 2015}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.uk.coop/sites/default/files/uploads/attachments/co-op_economy_2015.pdf
+      \endverb
+    \endentry
+    \entry{Suma}{url}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Suma Wholefoods}
+      \verb{url}
+      \verb http://www.suma.coop/
+      \endverb
+    \endentry
+    \entry{TheCoop}{url}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{The Cooperative Group}
+      \verb{url}
+      \verb http://www.co-operative.coop/
+      \endverb
+    \endentry
+    \entry{CoopAct}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{Wikipedia}{W\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Co-operative and Community Benefit Societies Act 2014}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Co-operative_and_Community_Benefit_Societies_Act_2014
+      \endverb
+    \endentry
+    \entry{CoopsUK}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://www.uk.coop/
+      \endverb
+    \endentry
+    \entry{AgileGov}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=4474544bc603fbf72508c21114a5e1c4}{Manel}{M\bibinitperiod}{Jon}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{4474544bc603fbf72508c21114a5e1c4}
+      \strng{fullhash}{4474544bc603fbf72508c21114a5e1c4}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{Inside the UK Government Digital Service}
+      \field{year}{2013}
+      \verb{url}
+      \verb http://www.bbc.co.uk/news/uk-politics-22860849
+      \endverb
+    \endentry
+    \entry{bracken}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{The Co-operative Group appoints a new chief digital officer}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.co-operative.coop/corporate/press/press-releases/headline-news/the-co-operative-group-appoints-a-new-chief-digital-officer/
+      \endverb
+    \endentry
+    \entry{OpenCoop}{url}{}
+      \name{author}{1}{}{%
+        {{hash=61d0967ff2c302ddeac6afef4598df8d}{Foundation}{F\bibinitperiod}{P2P}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{61d0967ff2c302ddeac6afef4598df8d}
+      \strng{fullhash}{61d0967ff2c302ddeac6afef4598df8d}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Open Cooperatives}
+      \verb{url}
+      \verb http://p2pfoundation.net/Open_Cooperatives
+      \endverb
+    \endentry
+    \entry{PlatformCoop}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://platformcoop.net/
+      \endverb
+    \endentry
+    \entry{TreborPC}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2326eac5eaef6dfb4b1cfde6f336731d}{Scholz}{S\bibinitperiod}{Trebor}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{2326eac5eaef6dfb4b1cfde6f336731d}
+      \strng{fullhash}{2326eac5eaef6dfb4b1cfde6f336731d}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Platform Cooperativism vs. the Sharing Economy}
+      \field{year}{2014}
+      \verb{url}
+      \verb https://medium.com/@trebors/platform-cooperativism-vs-the-sharing-economy-2ea737f1b5ad#.7q4yt3ul8
+      \endverb
+    \endentry
+    \entry{Fairmondo}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://www.fairmondo.de/
+      \endverb
+    \endentry
+    \entry{Resonate}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://resonate.is/
+      \endverb
+    \endentry
+    \entry{Loomio}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb htttp://www.loomio.org
+      \endverb
+    \endentry
+    \entry{Enspiral-loomio}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://www.enspiral.com/ventures/loomio/
+      \endverb
+    \endentry
+    \entry{Enspiral}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://p2pfoundation.net/Enspiral
+      \endverb
+    \endentry
+    \entry{DAOBlog}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=850981945102d0f671b6762173c8988a}{Buterin}{B\bibinitperiod}{Vitalik}{V\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{850981945102d0f671b6762173c8988a}
+      \strng{fullhash}{850981945102d0f671b6762173c8988a}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{DAOs, DACs, DAs and More: An Incomplete Terminology Guide}
+      \verb{url}
+      \verb https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide/
+      \endverb
+    \endentry
+    \entry{Digix}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://www.dgx.io/
+      \endverb
+    \endentry
+    \entry{DigixCrowd}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=0d8d43989bfbf8621af2635a7eea2642}{Kalla}{K\bibinitperiod}{Sid}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{0d8d43989bfbf8621af2635a7eea2642}
+      \strng{fullhash}{0d8d43989bfbf8621af2635a7eea2642}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Digix DAO Closes Crowdsale in Under a Day; Raises 5.5 Million}
+      \verb{url}
+      \verb http://www.smithandcrown.com/digix-dao-closes-crowdsale-under-day-raises-5-5-million/
+      \endverb
+    \endentry
+    \entry{TheDAO}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://daohub.org/
+      \endverb
+    \endentry
+    \entry{DAOCrowd}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=e121c794d4080899a4a4a7427cd3101e}{Waters}{W\bibinitperiod}{Richard}{R\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{e121c794d4080899a4a4a7427cd3101e}
+      \strng{fullhash}{e121c794d4080899a4a4a7427cd3101e}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Automated company raises equivalent of 120M in digital currency}
+      \verb{url}
+      \verb http://www.cnbc.com/2016/05/17/automated-company-raises-equivalent-of-120-million-in-digital-currency.html
+      \endverb
+    \endentry
+    \entry{RHC}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://robinhoodcoop.org/?page_id=88
+      \endverb
+    \endentry
+    \entry{BuyCo}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://buyco.io/proof-of-concept/
+      \endverb
+    \endentry
+    \entry{modelRules}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://www.uk.coop/resources/model-governing-documents
+      \endverb
+    \endentry
+    \entry{somersetRules}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://www.somerset.coop/p/somerset-rules-registrations.html
+      \endverb
+    \endentry
+    \entry{webarchitects}{url}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Webarchitects - About}
+      \verb{url}
+      \verb https://www.webarchitects.co.uk/about
+      \endverb
+    \endentry
+    \entry{CoopParticipation}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{month}{09}
+      \field{title}{Interim results for Co-operative Group Limited for the 26 weeks ended 4 July 2015}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.co-operative.coop/corporate/press/press-releases/headline-news/interim-results-2015/
+      \endverb
+    \endentry
+    \entry{DataProtection}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://www.gov.uk/data-protection/the-data-protection-act
+      \endverb
+    \endentry
+    \entry{SolidityCheatsheet}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://solidity.readthedocs.io/en/latest/miscellaneous.html#cheatsheet
+      \endverb
+    \endentry
+    \entry{StackExchangeAddress}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key
+      \endverb
+    \endentry
+    \entry{WalletJS}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://www.npmjs.com/package/ethereumjs-wallet
+      \endverb
+    \endentry
+    \entry{PrivacyBlockchain}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=850981945102d0f671b6762173c8988a}{Buterin}{B\bibinitperiod}{Vitalik}{V\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{850981945102d0f671b6762173c8988a}
+      \strng{fullhash}{850981945102d0f671b6762173c8988a}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Privacy on the Blockchain}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://blog.ethereum.org/2016/01/15/privacy-on-the-blockchain/
+      \endverb
+    \endentry
+    \entry{HonestElection}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=b6ee14f5593a5e58e9a3d0834de15766}{Larimer}{L\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{b6ee14f5593a5e58e9a3d0834de15766}
+      \strng{fullhash}{b6ee14f5593a5e58e9a3d0834de15766}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Provably Honest Online Elections are Possible}
+      \field{year}{2014}
+      \verb{url}
+      \verb http://bytemaster.github.io/article/2014/12/21/Provably-Honest-Online-Elections/
+      \endverb
+    \endentry
+    \entry{liu2004linkable}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=fe3bdceb4ebc2212135fbe9daafd1094}{Liu}{L\bibinitperiod}{Joseph\bibnamedelima K}{J\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+        {{hash=e4592248750f03f5b9185deb0ba68781}{Wei}{W\bibinitperiod}{Victor\bibnamedelima K}{V\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+        {{hash=cfe1203a450dc706d6e576f1efbc298c}{Wong}{W\bibinitperiod}{Duncan\bibnamedelima S}{D\bibinitperiod\bibinitdelim S\bibinitperiod}{}{}{}{}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d790cd6bd373e620d1e632f670542541}
+      \strng{fullhash}{d790cd6bd373e620d1e632f670542541}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Information Security and privacy}
+      \field{title}{Linkable spontaneous anonymous group signature for ad hoc groups}
+      \field{year}{2004}
+      \field{pages}{325\bibrangedash 335}
+      \range{pages}{11}
+    \endentry
+    \entry{tsang2005short}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=1e6440861896bc744603b8e1f0cb2753}{Tsang}{T\bibinitperiod}{Patrick\bibnamedelima P}{P\bibinitperiod\bibinitdelim P\bibinitperiod}{}{}{}{}}%
+        {{hash=e4592248750f03f5b9185deb0ba68781}{Wei}{W\bibinitperiod}{Victor\bibnamedelima K}{V\bibinitperiod\bibinitdelim K\bibinitperiod}{}{}{}{}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{466dff95a6c5216bf53177418abaeea9}
+      \strng{fullhash}{466dff95a6c5216bf53177418abaeea9}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Information Security Practice and Experience}
+      \field{title}{Short linkable ring signatures for e-voting, e-cash and attestation}
+      \field{year}{2005}
+      \field{pages}{48\bibrangedash 60}
+      \range{pages}{13}
+    \endentry
+    \entry{HomoEncryption}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=d604755a0b38418d3285c48276556060}{Gurkan}{G\bibinitperiod}{Kobi}{K\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{d604755a0b38418d3285c48276556060}
+      \strng{fullhash}{d604755a0b38418d3285c48276556060}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Additive Homomorphic Encryption on Ethereum}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://blog.kobigurk.com/homomorphic-encryption-on-ethereum/
+      \endverb
+    \endentry
+    \entry{e-Residency}{url}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{What is e-Residency?}
+      \verb{url}
+      \verb https://e-estonia.com/e-residents/about/
+      \endverb
+    \endentry
+    \entry{IDBereg}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=2cd3425b3cc606757d03f154c26ed470}{Beregszaszi}{B\bibinitperiod}{Alex}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{2cd3425b3cc606757d03f154c26ed470}
+      \strng{fullhash}{2cd3425b3cc606757d03f154c26ed470}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{Smart contracts and ID cards}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://ledger.press/smart-contracts-and-id-cards-11bc16155737#.rtyvtf2io
+      \endverb
+    \endentry
+    \entry{BertaniKYC}{url}{}
+      \name{author}{1}{}{%
+        {{hash=6ac6a8a8b3da9a93d6739d2215f78725}{Bertani}{B\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{6ac6a8a8b3da9a93d6739d2215f78725}
+      \strng{fullhash}{6ac6a8a8b3da9a93d6739d2215f78725}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{Proof of Identity on Ethereum (or the ``KYC problem'')}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://blog.oraclize.it/2016/04/27/proof-of-identity-on-ethereum/
+      \endverb
+    \endentry
+    \entry{RSARequest}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://github.com/ethereum/EIPs/issues/74
+      \endverb
+    \endentry
+    \entry{EstoniaE-Voting}{url}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{Wikipedia}{W\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Electronic Voting In Estonia}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Electronic_voting_in_Estonia
+      \endverb
+    \endentry
+    \entry{BertaniOracles}{url}{}
+      \name{author}{1}{}{%
+        {{hash=6ac6a8a8b3da9a93d6739d2215f78725}{Bertani}{B\bibinitperiod}{Thomas}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{6ac6a8a8b3da9a93d6739d2215f78725}
+      \strng{fullhash}{6ac6a8a8b3da9a93d6739d2215f78725}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Understanding oracles}
+      \verb{url}
+      \verb http://blog.oraclize.it/2016/02/18/understanding-oracles/
+      \endverb
+    \endentry
+    \entry{Oraclise}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://www.oraclize.it/
+      \endverb
+    \endentry
+    \entry{TaulCurators}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=affca7eabc749d080f16190c79e9f808}{Tual}{T\bibinitperiod}{Stephan}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{affca7eabc749d080f16190c79e9f808}
+      \strng{fullhash}{affca7eabc749d080f16190c79e9f808}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{04}
+      \field{title}{On DAO Contractors and Curators}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://blog.slock.it/on-contractors-and-curators-2fb9238b2553#.w77jmjbqs
+      \endverb
+    \endentry
+    \entry{Web3Vid}{url}{}
+      \name{author}{1}{}{%
+        {{hash=9f252fbc7b8ff3c128b3e8dd806afa9b}{Wood}{W\bibinitperiod}{Gavin}{G\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9f252fbc7b8ff3c128b3e8dd806afa9b}
+      \strng{fullhash}{9f252fbc7b8ff3c128b3e8dd806afa9b}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ethereum London Meetup: The Ethereum Experience (Video)}
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=GJGIeSCgskc
+      \endverb
+    \endentry
+    \entry{Web3Slides}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=9f252fbc7b8ff3c128b3e8dd806afa9b}{Wood}{W\bibinitperiod}{Gavin}{G\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9f252fbc7b8ff3c128b3e8dd806afa9b}
+      \strng{fullhash}{9f252fbc7b8ff3c128b3e8dd806afa9b}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ethereum London Meetup: The Ethereum Experience (Slides)}
+      \verb{url}
+      \verb http://www.slideshare.net/ethereum/the-ethereum-experience
+      \endverb
+    \endentry
+    \entry{VinayLaunch}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=593d623d43ad4e538b7fda7534c37e70}{Gupta}{G\bibinitperiod}{Vinay}{V\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{593d623d43ad4e538b7fda7534c37e70}
+      \strng{fullhash}{593d623d43ad4e538b7fda7534c37e70}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{03}
+      \field{title}{The Ethereum Launch Process}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://blog.ethereum.org/2015/03/03/ethereum-launch-process/
+      \endverb
+    \endentry
+    \entry{TronStack}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://ethereum.stackexchange.com/questions/349/are-whisper-and-swarm-still-being-developed
+      \endverb
+    \endentry
+    \entry{DevUpdate}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=d51bc373bb8a4448011a03cef560500e}{Gerring}{G\bibinitperiod}{Taylor}{T\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{d51bc373bb8a4448011a03cef560500e}
+      \strng{fullhash}{d51bc373bb8a4448011a03cef560500e}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Ethereum Dev Update 2015 / Week 44}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://blog.ethereum.org/2015/11/02/ethereum-dev-update-2015-week-44/
+      \endverb
+    \endentry
+    \entry{FiveTypes}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=638d104bc326a74ad6495357b419554a}{Industries}{I\bibinitperiod}{Eris}{E\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{638d104bc326a74ad6495357b419554a}
+      \strng{fullhash}{638d104bc326a74ad6495357b419554a}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tutorials | Solidity 1: The Five Types Model}
+      \verb{url}
+      \verb https://docs.erisindustries.com/tutorials/solidity/solidity-1/
+      \endverb
+    \endentry
+    \entry{Web3JS}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://github.com/ethereum/web3.js
+      \endverb
+    \endentry
+    \entry{JavascriptAPI}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://github.com/ethereum/wiki/wiki/JavaScript-API
+      \endverb
+    \endentry
+    \entry{ActionDriven}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=638d104bc326a74ad6495357b419554a}{Industries}{I\bibinitperiod}{Eris}{E\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{638d104bc326a74ad6495357b419554a}
+      \strng{fullhash}{638d104bc326a74ad6495357b419554a}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tutorials | Solidity 2: An Action-Driven Architecture}
+      \verb{url}
+      \verb https://docs.erisindustries.com/tutorials/solidity/solidity-2/
+      \endverb
+    \endentry
+    \entry{ipfs-js}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://www.npmjs.com/package/ipfs-js
+      \endverb
+    \endentry
+    \entry{BlockApps}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://www.blockapps.net/
+      \endverb
+    \endentry
+    \entry{ReturnArray}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://forum.ethereum.org/discussion/2161/return-an-array-from-a-solidity-function
+      \endverb
+    \endentry
+    \entry{Embark}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://iurimatias.github.io/embark-framework/
+      \endverb
+    \endentry
+    \entry{Truffle}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb http://truffle.readthedocs.io/en/latest/
+      \endverb
+    \endentry
+    \entry{Meteor}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://www.meteor.com/
+      \endverb
+    \endentry
+    \entry{MeteorRef}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Dapp using Meteor}
+      \verb{url}
+      \verb https://github.com/ethereum/wiki/wiki/Dapp-using-Meteor
+      \endverb
+    \endentry
+    \entry{jsSchema}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://github.com/molnarg/js-schema
+      \endverb
+    \endentry
+    \entry{ActiveRecord}{url}{}
+      \name{author}{1}{}{%
+        {{hash=9c677286866aad38f8e9b660f5411814}{Wikipedia}{W\bibinitperiod}{}{}{}{}{}{}}%
+      }
+      \strng{namehash}{9c677286866aad38f8e9b660f5411814}
+      \strng{fullhash}{9c677286866aad38f8e9b660f5411814}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Active Record Pattern}
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Active_record_pattern
+      \endverb
+    \endentry
+    \entry{Tracker}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \verb{url}
+      \verb https://github.com/meteor/docs/blob/version-NEXT/long-form/tracker-manual.md
+      \endverb
+    \endentry
+    \entry{GethStackExchange}{url}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{StackExchange: Should correct transaction nonce be one less than account transaction count?}
+      \verb{url}
+      \verb http://ethereum.stackexchange.com/questions/3411/should-correct-transaction-nonce-be-one-less-than-account-transaction-count
+      \endverb
+    \endentry
+    \entry{GethBug}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Geth Bug}
+      \verb{url}
+      \verb https://github.com/ethereum/go-ethereum/issues/1368
+      \endverb
+    \endentry
+  \endsortlist
+  \missing{Yellowpaper}
+\endrefsection
+\endinput
+

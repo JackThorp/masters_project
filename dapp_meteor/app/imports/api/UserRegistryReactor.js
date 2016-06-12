@@ -18,10 +18,12 @@ class UserRegistryReactor extends EthereumReactor {
   }
 
   // Listen for any and all membership events
+
   setUpListener() {
+  
     let reactor = this;
-    userRegistry.newUserAsync({}).then(function(newUserEvent) {
-      console.log("NEW USER EVENT");      
+  
+    userRegistry.newUserAsync({}).then(function(newUserEvent) {  
       let userAddress = newUserEvent.args._addr;
       reactor.triggerDeps(userAddress);
     })

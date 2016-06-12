@@ -41,16 +41,15 @@ contract MembershipRegistry {
 }
 
 /************************************************************************/
-
 contract CoopContract is CMCEnabled {
 
-	// Contract for a cooperative
-	// Potentially not necessary to have own contract but is good for extensibility
-	// e.g coop can collect funds/ether etc.
-	event newMotionCreated(uint _mId);
-	event motionPassed(uint _mId);
-	event motionDefeated(uint _mId);
-	event motionVote(uint _mId);
+  // Contract for a cooperative
+  // Potentially not necessary to have own contract but is good for extensibility
+  // e.g coop can collect funds/ether etc.
+  event newProposalCreated(uint _pId);
+  event proposalPassed(uint _pId);
+  event proposalDefeated(uint _pId);
+  event proposalVote(uint _pId);
 
   struct ProposalVotes {
     bool passed;
@@ -60,58 +59,59 @@ contract CoopContract is CMCEnabled {
     mapping(address => bool) voted;
   }
 
-  // Ordinary Motion
-  struct Motion {
+  struct Proposal {
     uint id;
     bytes32 ipfsHash;
     ProposalVotes pVotes;
   }
 
-  uint public motionCounter;
-  mapping(uint => Motion) proposedMotions;
+  uint public proposalsCounter;
+  mapping(uint => Proposal) proposals;
 
-	bytes ipfsDataHash;
-	uint	public membershipFee;	
-	uint 	public quorum;
-	uint 	public normalRes;
-	//uint 	public extraordinaryRes;
+  bytes ipfsDataHash;
+  uint  public membershipFee; 
+  uint  public quorum;
+  uint  public normalRes;
 
-	function CoopContract(bytes _ipfsDataHash, uint _membershipFee, uint _quorum, uint _nRes) {
-		ipfsDataHash 	= _ipfsDataHash;
-		membershipFee = _membershipFee;
-		quorum 				= _quorum;
-		normalRes			= _nRes;
-    motionCounter = 0;
-	}
+  address scheduler;
 
-	function setCoopData(bytes ipfsHash) returns (bool) {
-		ipfsDataHash = ipfsHash;
-	}
-
-	function getCoopData() constant returns (bytes) {
-		return ipfsDataHash;
-	}
-
-  function getMotionData(uint mId) constant returns (bytes32) {
-  	return proposedMotions[mId].ipfsHash;
+  function CoopContract(bytes _ipfsDataHash, uint _membershipFee, uint _quorum, uint _nRes) {
+    ipfsDataHash  = _ipfsDataHash;
+    membershipFee = _membershipFee;
+    quorum        = _quorum;
+    normalRes     = _nRes;
+    proposalsCounter = 0;
+    scheduler     = 0xb8da699d7fb01289d4ef718a55c3174971092bef;
   }
 
-  function getVotesFor(uint mId) constant returns (uint) {
-  	return proposedMotions[mId].pVotes.vFor;
+  function setCoopData(bytes ipfsHash) returns (bool) {
+    ipfsDataHash = ipfsHash;
   }
 
-  function getVotesAgainst(uint mId) constant returns (uint) {
-		return proposedMotions[mId].pVotes.vAgainst;
-  }
-	
-	function hasPassed(uint mId) constant returns (bool) {
-		return proposedMotions[mId].pVotes.passed;
+  function getCoopData() constant returns (bytes) {
+    return ipfsDataHash;
   }
 
-  function hasFailed(uint mId) constant returns (bool) {
-		return proposedMotions[mId].pVotes.defeated;
+  function getProposalData(uint pId) constant returns (bytes32) {
+    return proposals[pId].ipfsHash;
   }
-	// TODO mark privte . . .
+
+  function getVotesFor(uint pId) constant returns (uint) {
+    return proposals[pId].pVotes.vFor;
+  }
+
+  function getVotesAgainst(uint pId) constant returns (uint) {
+    return proposals[pId].pVotes.vAgainst;
+  }
+  
+  function hasPassed(uint pId) constant returns (bool) {
+    return proposals[pId].pVotes.passed;
+  }
+
+  function hasFailed(uint pId) constant returns (bool) {
+    return proposals[pId].pVotes.defeated;
+  }
+  // TODO mark privte . . .
   function isAMember(address sender) returns (bool) {
     address memRegAddr = ContractProvider(CMC).contracts("MembershipRegistry");
     return MembershipRegistry(memRegAddr).isMember(msg.sender, this);
@@ -122,71 +122,103 @@ contract CoopContract is CMCEnabled {
     return MembershipRegistry(memRegAddr).totalMembers(this);
   }
 
-  function proposeMotion (bytes32 _ipfsHash) returns (uint _mId) {
+  function newProposal (bytes32 _ipfsHash, uint _endBlock) returns (uint _pId) {
+
+    newProposalCreated(98);
 
     if(!isAMember(msg.sender)) {
       return;
     }
 
-    uint mId                = motionCounter++;
-    proposedMotions[mId]    = Motion({
-      id: mId, 
+    // check block number is greater than current block by X (see alarm clock service)? 
+
+    uint pId        = proposalsCounter++;
+    proposals[pId]  = Proposal({
+      id: pId, 
       ipfsHash: _ipfsHash, 
-      pVotes: ProposalVotes({passed: false, defeated: false, vAgainst: 0, vFor: 0})
+      pVotes: ProposalVotes({
+        passed: false, 
+        defeated: false, 
+        vAgainst: 0, 
+        vFor: 0
+      })
     });
 
-    newMotionCreated(mId);
-    return mId;
+    // Signature of proposal evaluation function
+    bytes4 sig = bytes4(sha3("closeProposal(uint)"));
+    
+    // Signature of alarm service scheduleCall function
+    bytes4 scheduleCallSig = bytes4(sha3("scheduleCall(bytes4,uint256)"));
+
+    // Schedule closing of this proposal
+    scheduler.call(scheduleCallSig, sig, _endBlock);
+
+    newProposalCreated(pId);
+    return pId;
   }
 
-  function supportMotion (uint mId, bool _vFor) returns (bool success) {
+  function supportProposal (uint pId, bool _vFor) returns (bool success) {
 
     if (!isAMember(msg.sender)) {
       return;
     }
     
-    Motion motion = proposedMotions[mId];
+    Proposal proposal = proposals[pId];
     
     // Need different check here? ? 
     //if (motion.id == 0) {
     //  return;
     //}
+    
+    // Return if motion has ended
+    bool passed     = proposal.pVotes.passed;
+    bool defeated   = proposal.pVotes.defeated;
+    if(passed || defeated) {
+      return;
+    }
 
     // Check if they have already voted for motion.
-    if (motion.pVotes.voted[msg.sender]) {
+    if (proposal.pVotes.voted[msg.sender]) {
       return;
     }
 
     // Register the vote TODO (extract into shared function byref / byVal)
     if (_vFor) {
-      motion.pVotes.vFor++;
+      proposal.pVotes.vFor++;
     } else {
-      motion.pVotes.vAgainst++;
+      proposal.pVotes.vAgainst++;
     }
-    motionVote(mId);
-
-
-    motion.pVotes.voted[msg.sender] = true;
-
-    uint numMembers = getNumMembers(); 
-    uint totalVotes = motion.pVotes.vFor + motion.pVotes.vAgainst;
-
-    var turnout = totalVotes / numMembers;
-    if (turnout < (quorum / 100)) {
-      return;
-    }
-
-    var result = motion.pVotes.vFor / totalVotes;
-    if (result >= (normalRes / 100)) {
-      motion.pVotes.passed = true;
-      motionPassed(mId);
-    } else {
-    	motion.pVotes.defeated = true;
-    	motionDefeated(mId);
-    } 
-    return;
+    proposalVote(pId);
+    proposal.pVotes.voted[msg.sender] = true;
   }
 
+  function closeProposal(uint pId) returns (bool) {
+
+    //TODO restrict close proposal to alarm service!!
+
+    Proposal proposal = proposals[pId];
+    uint numMembers = getNumMembers(); 
+    uint totalVotes = proposal.pVotes.vFor + proposal.pVotes.vAgainst;
+
+    // Vote defeated if quorum not reached
+    var turnout = totalVotes / numMembers;
+    if (turnout < (quorum / 100)) {
+      proposal.pVotes.defeated = true;
+      proposalDefeated(pId);
+      return true;
+    }
+
+    // Calculate resolution level
+    var result = proposal.pVotes.vFor / totalVotes;
+    if (result >= (normalRes / 100)) {
+      proposal.pVotes.passed = true;
+      proposalPassed(pId);
+    } else {
+      proposal.pVotes.defeated = true;
+      proposalDefeated(pId);
+    } 
+    return true;
+  }
 }
 /******************************************************************************/
 contract CoopRegistry is CMCEnabled {
@@ -202,16 +234,6 @@ contract CoopRegistry is CMCEnabled {
 	// Map allows efficient delete operation.
 	mapping(address => uint) coopIndex;
 
-
-	function addCoop(address _coop) returns (bool result) {
-
-		var length = coops.push(_coop);
-		coopIndex[_coop] = length - 1;
-		numCoops += 1;
-		newRegistration(_coop);
-		return true;
-	}
-
 	function newCoop(bytes _ipfsDataHash, uint _membershipFee, uint _quorum, uint _nRes) returns (bool result) {
 
 		address _coop = new CoopContract(_ipfsDataHash, _membershipFee, _quorum, _nRes);
@@ -224,6 +246,7 @@ contract CoopRegistry is CMCEnabled {
 		return true;
 	}
 	
+  //TODO delete or comment out for submition!
 	function removeCoop(address _coop) returns (bool result) {
 
 		// Delete sets entry to zero. It does not remove element.

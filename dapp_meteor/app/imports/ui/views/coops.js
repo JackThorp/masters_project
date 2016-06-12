@@ -1,7 +1,8 @@
 import { Router }       from 'meteor/iron:router';
 import { Template }     from 'meteor/templating';
 import { Tracker  }     from 'meteor/tracker';
-import { ReactiveVar }  from 'meteor/reactive-var'
+import { ReactiveVar }  from 'meteor/reactive-var';
+import { ReactiveDict } from 'meteor/reactive-dict';
 import bs               from 'bootstrap';
 import db               from '/imports/api/db.js';
 
@@ -10,7 +11,11 @@ import './coops.html';
 Template['views_coops'].onCreated(function() {
   
   var template = this;
-  this.userVar = new ReactiveVar(); 
+  this.userVar = new ReactiveVar();
+  this.formSliders = new ReactiveDict();
+  this.formSliders.set('quorum', 50);
+  this.formSliders.set('normal', 50);
+  this.formSliders.set('extra', 50);
 
   // Get all this users coops.
   Tracker.autorun(function() {
@@ -36,6 +41,10 @@ Template['views_coops'].helpers({
 
   'user': function() {
     return Template.instance().userVar.get();
+  },
+
+  'sliderValue': function(sliderName) {
+    return Template.instance().formSliders.get(sliderName);
   }
 
 });
@@ -54,15 +63,25 @@ Template['views_coops'].events({
       'terms': e.target.terms.value
     }
 
-    var fee = web3.toWei(parseInt(e.target.feeAmount.value), "ether");
-  
-    db.coops.add(coopData, fee).then(function(coop) {
+    var fee = web3.toWei(Number(e.target.feeAmount.value), "ether");
+    var quorum = e.target.quorum.value;
+    var nRes   = e.target.normal.value;
+    var eRes   = e.target.extra.value;
+
+    db.coops.add(coopData, fee, quorum, nRes).then(function(coop) {
       let userAddress = Session.get('user').address;
       return coop.addMember(userAddress);
     })
     .catch(function(err) {
       console.log(err);
     });
+    
+  },
+
+  'input .slider-input': function(e, template) {
+    let nv = e.currentTarget.value;
+    let slider = e.currentTarget.id;
+    let sliderVals = template.formSliders.set(slider, nv);
   }
 
 });

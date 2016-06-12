@@ -2,7 +2,6 @@ import { UserRegistry }         from '../contracts/UserRegistry.js';
 import { CoopRegistry }         from '../contracts/CoopRegistry.js';
 import { MembershipRegistry }   from '../contracts/MembershipRegistry.js';
 import { UserController }       from '../contracts/UserController.js';
-import { MembershipController } from '../contracts/MembershipController.js';
 import { CMC }                  from '../contracts/CMC.js';
 
 import contractLocations from './contractLocations.js';
@@ -13,7 +12,6 @@ let contracts = {
 		UserRegistry: UserRegistry.at(contractLocations.UserRegistry),
     UserController: UserController.at(contractLocations.UserController),
 	  MembershipRegistry: MembershipRegistry.at(contractLocations.MembershipRegistry),
-    MembershipController: MembershipController.at(contractLocations.MembershipController),
     CMC: CMC.at(contractLocations.CMC),
     helpers: {}
 };

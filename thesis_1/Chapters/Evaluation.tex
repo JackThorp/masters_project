@@ -1,0 +1,125 @@
+% Chapter 
+
+\chapter{Evalutation} % Main chapter title
+\label{Evaluation} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+\section{Technology}
+The first objective of this study has been to develop an insight into the current state of distributed web application development using Ethereum and IPFS. This section summarises and expands on the comments made throughout this report about the practical and theoretical limitations of this technology. \\
+
+\subsection{Contract development}
+Learning to develop smart contracts in Solidity has been a fun and informative experience, it is quite unlike normal server side development and requires careful attention. As discussed in section \ref{sec:scDesign}, smart contract code needs to be designed so that it can easily adapt over time. This means building highly modular systems defined with robust APIs. At the same time, the gas costs of executing code mean that it is not only important to write efficiently but to also reason further about which logic must necessarily be executed on the blockchain at all.\\
+
+As discussed in the implementation section, the interaction of contracts executing in the EVM is currently limited in places. Most importantly, contracts can?t return variable length arrays to one another. The ramification of this issue is that some parts of the public facing API need to be exposed by low level storage contracts. The consequence of spreading the 'backend' API across many smart contracts is that it increases coupling with ?front end? application code. The complexity of 'front end' code increases a little bit for every smart contract in the ?back end? it needs to communicate with. Planned protocol updates mean this problem is likely to disappear eventually. For now, designing smart contract systems is just a little bit trickier.\\
+
+One issue that caused a few headaches during smart contract development was the duplication of contracts across Solidity files. Typically, it's practical to keep a define each smart contract within it's own file. However, in order to compile, the definition of any external function called by a contract also needs to included in the same file. For a contract that actually creates an instance of another contract, the whole contract definition must be included within the file. This is exactly the case with the CoopRegistry and CoopContract (see section ) and the cause for a few bugs. If a contract is defined in multiple files then keeping those definitions consistent is troublesome. It is easy to change one copy and forget to change another. Solidity provides a fairly crude import statement that doesn't handle import collisions so is tricky to work with. If you are planning to develop smart contracts, watch out for this.\\
+
+Finally a word on testing. Applications are usually built on Ethereum because they require a high degree of security. This make testing them well even more important than usual. Unfortunately the range and maturity Solidity test frameworks is not great. A couple of projects to look out for are Dapple and sol-Tester. https://github.com/androlo/sol-tester \\
+
+
+\subsection{Ethereum clients}
+To build a dapp, a developer will need to connect to an Ethereum network using an Ethereum client. Two clients have been explored during Go-op development: geth (a full client written in go) and testrpc (an in memory client stub). Using geth it is possible to connect to any number of separate Ethereum networks including the live public network, the live test network and local private networks. Instructions for setting up a local private network are given in appendix A. Unlike geth, testrpc doesn?t actually mine transactions so is much quicker and far less resource intensive, which makes it a good tool for development.\\
+
+The biggest ?blocker? during the project, which took some weeks to resolve properly, stemmed from a false positive error message in geth. After submitting a transaction from the application to the geth client, the client?s logs would output the following error message: ?transaction (<txdata>) removed from pool: low tx nonce or out of funds.? (full posting on stack exchange \cite{GethStackExchange}). Some time was spent trying to understand why their was not enough gas, why the gas-price might be too low, or whether nonces were zero indexed before we discovered that it was in fact a defect in the geth program itself\cite{GethBug}. Despite the error message, transactions were not actually being dropped and did have sufficient funds as well as a correct nonce. It was a false positive error message. Unfortunately a lot of valuable time during the middle of the project was lost by not discovering this sooner. \\
+
+Whilst testrpc is recommended to speed up development it should be used with an understanding that it is not representative of a real production environment. In order to build applications with a good user experience some stage of development and testing should use a production like network. Geth makes it very easy to connect to the testnet and online ether faucets make it very easy to deploy and test smart contract systems in a production parity environment. \\
+
+\subsection{Ethereum Project}
+\myworries{TODO}
+
+Bitcoin comparison - recent troubles.
+Public goods works needs finance and good governance.
+Good communication via blog. Lots of learning resources.
+Scalability issues of blockchain networks. Talk about benefits of sharding and proof of stake.
+A lot of this should be able to take from interim. 
+
+\subsection{Frameworks}
+A number of frameworks, including Meteor, have become popular within the community for dapp development. It is our belief, after trailing a couple of them and using Meteor extensively, that there are no compelling reasons for adopting a new framework specifically for dapp development. From our experience, there are three special requirements for dapp development:
+
+\begin{enumerate}
+\item A compiler plugin similar to deployScript.js (see ) that is able to generate the web3.js 'handles' needed for contract interaction.
+\item Some kind of account management tool or 'wallet'.
+\item A framework for testing, developing and deploying Solidity smart contracts. 
+\end{enumerate}
+
+The first requirement is the main offering for most dapp frameworks. In our opinion, developing your own smart contract compiler plugin is simple if you are familiar with Ethereum and a very instructive process if you are not. Having said this, if you already have a favourite web development framework, build tool etc you are comfortable with, integrating the first requirement should not be too demanding.\\
+
+There are a few tools for in browser wallets such as eth-lightwallet. Most are general libraries that can be used regardless of framework choice. The other option for account management is Mist which just exposes an API to the application and doesn't require any kind of dedicated framework..\\
+
+Finally, writing and testing solidity contract code. This is very important but does not need to form part of a framework for 'front end' development. Frameworks specifically for Solidity development are likely to be very useful. There are a number of possible solutions including the Mix IDE and Dapple here.\\
+
+At the end of the day, developing professional SPAs (which dapps must necessarily be) is a serious engineering process regardless of integration with Web3 clients etc. The biggest factor for choosing a framework or tool be it's suitability for SPA development. Meteor is popular because many developers think this is such a tool regardless of specific support for dapps development.\\
+
+\subsection{IPFS}
+IPFS was very straightforward to use and was not the cause of any problems. Hopefully, planned integration with browsers and the Swarm project will make it even easier to use in future both within dapps and in general. Watch this space.\\
+
+\section{Solution}
+The second objective of this study has been to develop a governance application for large co-operative enterprises. This section evaluates the Go-op solution and whether it is 'fit for purpose'.\\
+
+\subsection{Cost analysis}
+All Ethereum transactions cost Ether. Understanding how much running a dapp costs is important when assessing it's suitability. Whilst the cost of 'deploying' the static contracts such as registries etc are only incurred once and are therefore constant. The operations that require investigation are those carried out by users every time they interact with the system. In Go-op, transactions are fired for the following processes:
+\begin{itemize}
+\item Registering as a new user
+\item Changing user information
+\item Creating a new co-operative
+\item Joining a co-operative i.e. membership
+\item Creating a proposal (includes cost of using the Ethereum Alarm Clock service)
+\item Voting on a proposal
+\end{itemize}
+
+Calculating the cost of a transaction in GBP requires knowledge of three variables: units of gas consumed, price of gas and Ether/GBP conversion rate. The cumulative gas consumption for each operation has been measured for an instance of Go-op deployed on the Morden testnet (accessing such measurements is easily done using a blockchain explorer such as EtherCamp[]) [link to account]. Gas prices and exchange rates are constantly fluctuating but at the time of writing gas-price is set at around 23 GWei  (or Shannon) per unit and the price of 1 Ether is just below \pounds 10. Using this information we can calculate the cost of each of the above processes:\\
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c| } 
+ \hline
+ operation & gas price & gas consumption & cost (Ether) & cost (GBP) \\ 
+ \hline
+ Coop creation & 0.000000023228 & 739553 & 0.01717833708 & 0.17 \\
+ \hline
+ Membership & 0.000000023228 & 162791 & 0.00378130934 & 0.04 \\ 
+  \hline
+ Creating a proposal & 0.000000023228 & 107698 & 0.00250160914 & 0.03 \\ 
+  \hline
+ Voting & 0.000000023228 & 47308 & 0.00109887022 & 0.01 \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+As table X shows. The biggest cost in Go-op is currently creating a new cooperative, which costs about 17 pence (not a lot). Joining as a member costs the user 4 pence whilst creating a proposal and voting on it costs only 3 pence and one pence respectively. Although these are trivial amounts, a co-operative using Go-op can of course subsidise the individual costs of governance participation by issuing credit (similar way to printer credits). As it stands, the order of the costs involved with using Go-op are totally manageable. Are prices likely to rise significantly in the future? This is difficult to answer but if anything, the introduction of proof of stake consensus and sharding (if it happens) are likely to reduce prices and the  ... stability.\\
+
+\subsection{Security analysis}
+\myworries{TODO}
+In order to be fit for use, Go-op needs to be secure. The two main security concerns are the protection of
+user information see section X and 
+
+ The biggest security hole in Go-op its susceptibility to Sybil attacks whereby a single user can assume multiple identities to attack the system. It is trivial for a co-operative member to create multiple Ethereum accounts and join a cooperative multiple times in order to disproportionately affect a resolution outcome. The only formal barrier to prevent this kind of attack is the cost of repaying the membership fee which is unlikely to prevent a motivated attacker. The wider problem of identity management and some potential solutions is discussed to some detail in section X. The most workable solution for Go-op would probably be the ?curator? approach taken TheDAO. Go-op would enable users to elect a co-op member (whose account we assume is already verified) whose role would be to validate the unique identity users applying for membership. The validation of identity would happen as part of some ?off chain? process. Joining a cooperative would still work in the same way but would only be confirmed following a signed transaction from the ?curator?. The cooperative could even arrange to pay a fee to the ?curator? every time they validate a new member.
+
+The second security concern for Go-op is the lack of code verification. There are no tests in place for the Go-op smart contract system which means that it is hard to guarantee correct behaviour. The absence of smart contract tests so far is a result of time constraints and convenient testing frameworks. Any serious proposal for a democracy application ought to be tested rigorously and possibly even formally verified. As part of a testing process we would expect the smart contract system to be re-architected somewhat to improve the ?separation of concerns? and make the interactions between contracts simpler. The current system of a many to many relationship captured across three contracts each with public facing APIs and no common controller is very susceptible to creating data inconsistencies. The Five Types model was not fully realised in this first POC because of the inability to pass key data types between contracts. When this limitation is addressed in future updates to the EVM a proper implementation of this design pattern should be attempted.
+identity management problems. Auditing of smart contract code. Privacy of data. Long way to go in terms of security.
+
+\subsection{Performance Analysis}
+\myworries{TODO}
+
+redesigning smart contract system to impove transation times. add controllers and logic into blockchain.
+Untangle dependencies. For example, controller contract talks to other contracts too much. 
+optimistic ui to improve UX.
+What are the costs of storage as system grows? 
+Storage of two way mappings. Trade of between duplicated storage and computation on chain as number of members and number of coops increase.
+caching in front end.
+Alarm clock dates not particularly strict. Lazy evaluation may be better. 
+
+
+\subsection{Fit for purpose}
+\myworries{TODO}
+
+Not currently - Not a finished product and yet to solve many of the problems about privacy and identity discussed in RnD.
+All the small bits of work that need to be done too: redesigning sc system. optimistic UI etc.
+Use of cryptocurrency adoption problems.
+Coops UK requirements (CRM software plugin)
+Extraordinary resolutions. 
+
+Positive Feedback from Nick Swanson about similar ideas for Trade Unions. And from platform coop community. Looks like it could fulfill a real use case.
+Usability given wait time for block mining. 
+Reactivity, React may have been better but time overhead of yet another tool to learn. 
+More user involvement in design process
+Does it solve a real problem (process)
+As platform cooperation and trends develop 
+Benefit of being in the ecosystem.
+

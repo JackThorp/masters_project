@@ -1,0 +1,126 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\contentsline {chapter}{Abstract}{iii}{section*.1}
+\contentsline {chapter}{Acknowledgements}{v}{section*.2}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.7}
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.8}
+\contentsline {subsection}{\numberline {1.1.1}Technical Solutions}{2}{subsection.10}
+\contentsline {subsection}{\numberline {1.1.2}Social Developments}{3}{subsection.11}
+\contentsline {subsection}{\numberline {1.1.3}Synthesis}{4}{subsection.12}
+\contentsline {section}{\numberline {1.2}Objectives}{5}{section.13}
+\contentsline {section}{\numberline {1.3}Contributions}{5}{section.17}
+\contentsline {chapter}{\numberline {2}Background}{7}{chapter.18}
+\contentsline {section}{\numberline {2.1}The Distributed Web}{7}{section.19}
+\contentsline {subsection}{\numberline {2.1.1}Blockchains}{7}{subsection.20}
+\contentsline {subsubsection}{Introduction}{7}{section*.21}
+\contentsline {subsubsection}{Transactions and Blocks}{8}{section*.23}
+\contentsline {subsubsection}{Blockchains as State Transition Systems}{8}{section*.24}
+\contentsline {subsubsection}{Blockchain mining}{10}{section*.31}
+\contentsline {subsubsection}{Proof of work, hash functions and security}{10}{section*.41}
+\contentsline {subsubsection}{Incentivisation}{11}{section*.42}
+\contentsline {subsubsection}{Forks and consensus}{11}{section*.43}
+\contentsline {subsubsection}{Proof of Stake}{12}{section*.44}
+\contentsline {subsubsection}{Sharding}{12}{section*.45}
+\contentsline {subsubsection}{Value Proposition}{12}{section*.46}
+\contentsline {subsection}{\numberline {2.1.2}Ethereum}{12}{subsection.47}
+\contentsline {subsubsection}{Introduction}{12}{section*.48}
+\contentsline {subsubsection}{Ethereum Accounts}{12}{section*.49}
+\contentsline {subsubsection}{Ethereum as a state transition system}{13}{section*.51}
+\contentsline {subsubsection}{Gas}{14}{section*.53}
+\contentsline {subsubsection}{Blockchain Mining}{14}{section*.54}
+\contentsline {subsubsection}{Smart Contracts}{15}{section*.64}
+\contentsline {subsubsection}{Dapps}{16}{section*.66}
+\contentsline {subsubsection}{Value Proposition}{17}{section*.67}
+\contentsline {subsection}{\numberline {2.1.3}The InterPlanetary File System}{17}{subsection.68}
+\contentsline {subsubsection}{The Problems}{17}{section*.69}
+\contentsline {subsubsection}{The IPFS Solution}{18}{section*.70}
+\contentsline {section}{\numberline {2.2}Cooperative Forms of Organisation}{19}{section.72}
+\contentsline {subsection}{\numberline {2.2.1}Brief History}{19}{subsection.73}
+\contentsline {subsection}{\numberline {2.2.2}Principles Of Cooperation}{20}{subsection.75}
+\contentsline {subsection}{\numberline {2.2.3}Scale}{21}{subsection.83}
+\contentsline {subsection}{\numberline {2.2.4}Cooperative Forms}{21}{subsection.84}
+\contentsline {subsection}{\numberline {2.2.5}Legal Incorporation \& Official Bodies}{22}{subsection.85}
+\contentsline {subsection}{\numberline {2.2.6}The Cooperative Movement Today}{22}{subsection.86}
+\contentsline {section}{\numberline {2.3}Related Work}{23}{section.87}
+\contentsline {subsection}{\numberline {2.3.1}Loomio}{23}{subsection.88}
+\contentsline {subsection}{\numberline {2.3.2}Boardroom}{23}{subsection.89}
+\contentsline {subsection}{\numberline {2.3.3}DigixDAO and The DAO}{23}{subsection.90}
+\contentsline {subsection}{\numberline {2.3.4}Robin Hood Asset Management}{24}{subsection.91}
+\contentsline {subsection}{\numberline {2.3.5}BuyCo.io}{24}{subsection.92}
+\contentsline {chapter}{\numberline {3}Research And Design}{27}{chapter.93}
+\contentsline {section}{\numberline {3.1}Cooperative Governance}{27}{section.94}
+\contentsline {subsection}{\numberline {3.1.1}Current Governance Model}{27}{subsection.95}
+\contentsline {subsubsection}{Membership}{27}{section*.96}
+\contentsline {subsubsection}{General Meetings}{28}{section*.98}
+\contentsline {subsubsection}{Board of Directors}{29}{section*.100}
+\contentsline {subsubsection}{Voting}{29}{section*.101}
+\contentsline {subsubsection}{Quorum}{30}{section*.104}
+\contentsline {subsubsection}{Resolutions}{30}{section*.105}
+\contentsline {subsection}{\numberline {3.1.2}A Scalable Governance Solution}{30}{subsection.106}
+\contentsline {subsubsection}{Membership}{31}{section*.107}
+\contentsline {subsubsection}{General Meetings}{32}{section*.108}
+\contentsline {subsubsection}{Resolutions}{33}{section*.109}
+\contentsline {subsubsection}{Voting}{33}{section*.110}
+\contentsline {subsubsection}{Quorum and Thresholds}{34}{section*.111}
+\contentsline {subsubsection}{Boards}{34}{section*.112}
+\contentsline {section}{\numberline {3.2}Privacy on The Blockchain}{34}{section.113}
+\contentsline {subsection}{\numberline {3.2.1}Storing Private Data}{34}{subsection.114}
+\contentsline {subsection}{\numberline {3.2.2}Computing Private Data}{36}{subsection.126}
+\contentsline {subsection}{\numberline {3.2.3}A Word on Solidity Access Modifiers}{36}{subsection.127}
+\contentsline {section}{\numberline {3.3}Oracles And Identity Management}{37}{section.129}
+\contentsline {subsection}{\numberline {3.3.1}e-Residency}{37}{subsection.130}
+\contentsline {subsection}{\numberline {3.3.2}Curators}{38}{subsection.132}
+\contentsline {section}{\numberline {3.4}Blockchain Time}{39}{section.133}
+\contentsline {subsection}{\numberline {3.4.1}Accurate Timestamps}{39}{subsection.134}
+\contentsline {subsection}{\numberline {3.4.2}Scheduled Execution}{39}{subsection.135}
+\contentsline {section}{\numberline {3.5}Idealised Web3.0 Architecture}{41}{section.138}
+\contentsline {subsection}{\numberline {3.5.1}Status}{43}{subsection.145}
+\contentsline {section}{\numberline {3.6}Smart Contract Design Patterns}{43}{section.146}
+\contentsline {subsection}{\numberline {3.6.1}Events}{44}{subsection.147}
+\contentsline {subsection}{\numberline {3.6.2}The Five Types Model}{45}{subsection.149}
+\contentsline {subsubsection}{Benefits}{47}{section*.157}
+\contentsline {subsubsection}{Critiques}{47}{section*.158}
+\contentsline {chapter}{\numberline {4}Go-op}{49}{chapter.159}
+\contentsline {section}{\numberline {4.1}Welcome Page}{49}{section.160}
+\contentsline {section}{\numberline {4.2}Registration}{49}{section.162}
+\contentsline {section}{\numberline {4.3}Home Page}{49}{section.164}
+\contentsline {section}{\numberline {4.4}My Coops}{50}{section.166}
+\contentsline {subsection}{\numberline {4.4.1}Creating A Coop}{50}{subsection.168}
+\contentsline {section}{\numberline {4.5}Coop Page}{53}{section.170}
+\contentsline {subsection}{\numberline {4.5.1}Creating A Proposal}{53}{subsection.172}
+\contentsline {subsection}{\numberline {4.5.2}Voting On A Proposal}{55}{subsection.174}
+\contentsline {section}{\numberline {4.6}Loading Screens}{56}{section.176}
+\contentsline {chapter}{\numberline {5}Implementation}{57}{chapter.178}
+\contentsline {section}{\numberline {5.1}Architecture}{57}{section.179}
+\contentsline {section}{\numberline {5.2}Go-op Smart Contract System}{58}{section.181}
+\contentsline {subsection}{\numberline {5.2.1}CMC}{59}{subsection.183}
+\contentsline {subsection}{\numberline {5.2.2}CMCEnabled}{59}{subsection.184}
+\contentsline {subsection}{\numberline {5.2.3}UserRegistry \& UserController}{60}{subsection.185}
+\contentsline {subsection}{\numberline {5.2.4}CoopRegistry}{61}{subsection.190}
+\contentsline {subsection}{\numberline {5.2.5}MembershipRegistry}{62}{subsection.192}
+\contentsline {subsection}{\numberline {5.2.6}CoopContract}{63}{subsection.199}
+\contentsline {section}{\numberline {5.3}Client Application}{66}{section.211}
+\contentsline {subsection}{\numberline {5.3.1}Meteor Framework}{66}{subsection.212}
+\contentsline {subsection}{\numberline {5.3.2}Application Structure}{66}{subsection.213}
+\contentsline {subsection}{\numberline {5.3.3}API}{68}{subsection.215}
+\contentsline {subsubsection}{database}{68}{section*.216}
+\contentsline {subsubsection}{Ethereum Reactors}{70}{section*.224}
+\contentsline {subsection}{\numberline {5.3.4}User Interface}{72}{subsection.228}
+\contentsline {subsection}{\numberline {5.3.5}User Experience}{72}{subsection.229}
+\contentsline {subsection}{\numberline {5.3.6}Deployment Script}{73}{subsection.230}
+\contentsline {chapter}{\numberline {6}Evalutation}{75}{chapter.231}
+\contentsline {section}{\numberline {6.1}Technology}{75}{section.232}
+\contentsline {subsection}{\numberline {6.1.1}Contract development}{75}{subsection.233}
+\contentsline {subsection}{\numberline {6.1.2}Ethereum clients}{76}{subsection.234}
+\contentsline {subsection}{\numberline {6.1.3}Ethereum Project}{76}{subsection.235}
+\contentsline {subsection}{\numberline {6.1.4}Frameworks}{77}{subsection.236}
+\contentsline {subsection}{\numberline {6.1.5}IPFS}{77}{subsection.240}
+\contentsline {section}{\numberline {6.2}Solution}{78}{section.241}
+\contentsline {subsection}{\numberline {6.2.1}Cost analysis}{78}{subsection.242}
+\contentsline {subsection}{\numberline {6.2.2}Security analysis}{79}{subsection.243}
+\contentsline {subsection}{\numberline {6.2.3}Performance Analysis}{79}{subsection.244}
+\contentsline {subsection}{\numberline {6.2.4}Fit for purpose}{80}{subsection.245}
+\contentsline {chapter}{\numberline {7}Conclusion}{81}{chapter.246}
+\contentsline {chapter}{\numberline {A}Appendix Title Here}{83}{appendix.247}
+\contentsline {chapter}{Bibliography}{85}{appendix*.248}

@@ -22,19 +22,19 @@ class CoopReactor extends EthereumReactor {
     
     let reactor = this;
     let instance      = Promise.promisifyAll(CoopContract.at(coopAddr)); 
-    instance.newMotionCreatedAsync({}).then(function(newMotionEvent) {
+    instance.newProposalCreatedAsync({}).then(function(newProposalEvent) {
      
-      let mId = newMotionEvent.args._mId;
+      let pId = newProposalEvent.args._pId;
 
-      console.log("NEW MOTION EVENT (id: " + mId + ")");
+      console.log("NEW PROPOSAL EVENT (id: " + pId + ")");
 
-      reactor.triggerDeps(mId);
+      reactor.triggerDeps(pId);
     })
     .catch(function(err) {
       console.log(err)
     });
 
-    instance.motionVoteAsync({}).then(function(voteEvent) {
+    instance.proposalVoteAsync({}).then(function(voteEvent) {
      
       let mId = voteEvent.args._mId;
 

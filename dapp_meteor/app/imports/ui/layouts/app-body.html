@@ -1,12 +1,19 @@
 <template name="layout_main">
+  <div class="full-wrapper"> 
     <!-- The dynamic page header -->
-    {{> yield region="navbar"}}
-
-	<!-- content -->
-	<main class="container-fluid">
-		{{> yield}}
-	</main>
-    
-    <!-- The dynamic page footer -->
-    <!-- {{> yield region="footer"}} -->
+    <div id="header">  
+      {{> yield region="navbar"}}
+    </div>
+    <!-- content -->
+    <div id="content">
+      <main class="container-fluid">
+        {{> yield}}
+      </main>
+    </div>
+      
+      <!-- The dynamic page footer -->
+      <div id="footer">
+        {{> yield region="footer"}}
+      </div>
+  </div>
 </template>

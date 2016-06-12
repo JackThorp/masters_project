@@ -45,7 +45,6 @@ contract CMC {
         owner = msg.sender;
     }
 
-
     function addContract(bytes32 name, address addr) {
         if(msg.sender != owner){
             return;
@@ -58,7 +57,6 @@ contract CMC {
 
         contracts[name] = addr;
     }
-
 
     function removeContract(bytes32 name) returns (bool result) {
         
@@ -75,11 +73,9 @@ contract CMC {
         return true;
     }
 
-
     function getContract(bytes32 name) constant returns (address addr) {
         return contracts[name];
     }
-
 
     function remove() {
         if (msg.sender == owner){

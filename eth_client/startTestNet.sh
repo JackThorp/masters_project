@@ -10,7 +10,7 @@ case $1 in
     ;;
   
   testnet ) 
-    geth --testnet --rpc --rpccorsdomain "*" console 2> $2
+    geth --testnet --rpc --rpccorsdomain "*" --datadir ~/.ethereum/testnet console 2> $2
     # geth --testnet --rpc --rpccorsdomain "*" --ipcpath /Users/jackthorp/Library/Ethereum/geth.ipc console 2> $2
     ;;
 

@@ -39,7 +39,10 @@ class Coop {
     });
 
     // Capture the TX hash for looking up in BC explorers
-    membershipRegistry.registerAsync(coopAddr, txObj).catch(function(err) {
+    membershipRegistry.registerAsync(coopAddr, txObj).then(function(tx) {
+      console.log(tx);
+    })
+    .catch(function(err) {
       console.log(err);
     });
     
@@ -82,74 +85,55 @@ class Coop {
     let coop = this;
     let proposals = [];
     let coopInstance = this.coopInstance;
-    let motionPromises = []
+    let proposalPromises = [];
 
-    return coopInstance.motionCounterAsync().then((numMotions) => {
+    console.log(coopInstance);
+    return coopInstance.proposalsCounterAsync().then((numProposals) => {
     
-      for(var i = 0; i < numMotions; i++) {
-        motionPromises.push(coopInstance.getMotionDataAsync(i));
+      console.log("proposals counter: " + numProposals);
+      for(var i = 0; i < numProposals; i++) {
+        proposalPromises.push(coopInstance.getProposalDataAsync(i));
       }
-      return Promise.all(motionPromises);
+      return Promise.all(proposalPromises);
     })
-    .map((motionHash) => {
-      console.log(motionHash);
-      let ipfsHash = db.ethToIpfs(motionHash);
+    .map((proposalHash) => {
+      console.log(proposalHash);
+      let ipfsHash = db.ethToIpfs(proposalHash);
       return this.ipfs.catJsonAsync(ipfsHash);
     })
-    .map((motionData, mId) => {
-      proposals[mId] = motionData;
-      proposals[mId].id = mId;
-      return coopInstance.getVotesForAsync(mId);
+    .map((proposalData, pId) => {
+      proposals[pId] = proposalData;
+      proposals[pId].id = pId;
+      return coopInstance.getVotesForAsync(pId);
     })
-    .map((votesFor, mId) => {
-      proposals[mId].votesFor = votesFor;
-      return coopInstance.getVotesAgainstAsync(mId);
+    .map((votesFor, pId) => {
+      proposals[pId].votesFor = votesFor;
+      return coopInstance.getVotesAgainstAsync(pId);
     })
-    .map((votesAgainst, mId) => {
-      proposals[mId].votesAgainst = votesAgainst;
-      return coopInstance.hasPassed(mId);
+    .map((votesAgainst, pId) => {
+      proposals[pId].votesAgainst = votesAgainst;
+      return coopInstance.hasPassed(pId);
     })
-    .map((passed, mId) => {
-      proposals[mId].passed = passed;
-      return coopInstance.hasFailed(mId);
+    .map((passed, pId) => {
+      proposals[pId].passed = passed;
+      return coopInstance.hasFailed(pId);
     })
-    .map((failed, mId) => {
-      proposals[mId].failed = failed;
-      return proposals[mId];
+    .map((failed, pId) => {
+      proposals[pId].failed = failed;
+      return proposals[pId];
     })
     .then((proposals) => {
       console.log(proposals)
       coop.proposals = proposals;
       return coop;
-     // _.forEach(motionData, function(data, mId) {
-     //   motionPromises.push(coopInstance.getVotesForAsync(mId));
-     //   proposals[mId] = data;
-     //   proposals[mId].id = mId;
-     // })
-     // return Promise.all(motionPromises); 
     })
-    /*
-    .map((vFor, mId) => {
-      console.log(vFor);
-      proposals[mId].vFor = vFor;
-      return coopInstance.getVotesAgainstAsync(mId);
-    })
-    .each((vAgainst, mId) => {
-      proposals[mId].vAgainst = vAgainst;
-      return proposals;
-    })
-    .then((proposals) => {
-      coop.proposals = proposals;
-      return coop;
-    })
-    */
     .catch(function(err) {
       console.log(err);
     });
   }
 
-  // submit a new motion
-  submitProposal(proposalData) {
+  // submit a new proposal
+  submitProposal(proposalData, endBlock) {
      
     var txObj = {
       from: Session.get('user').address,
@@ -160,7 +144,9 @@ class Coop {
     let coopInstance = this.coopInstance;
     return this.ipfs.addJsonAsync(proposalData).then((hash) => {
       var ethHash = db.ipfsToEth(hash);
-      return coopInstance.proposeMotionAsync(ethHash, txObj)
+      console.log("HASH: " + ethHash);
+      console.log("Block: " + endBlock);
+      return coopInstance.newProposalAsync(ethHash, endBlock, txObj);
     })
     .catch(function(err) {
       console.log(err);
@@ -176,7 +162,7 @@ class Coop {
     }
 
     let coopInstance = this.coopInstance;
-    return coopInstance.supportMotionAsync(pId, vote, txObj);
+    return coopInstance.supportProposalAsync(pId, vote, txObj);
   }
 }
 

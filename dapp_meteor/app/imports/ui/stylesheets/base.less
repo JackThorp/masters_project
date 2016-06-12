@@ -1,15 +1,37 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 body {
   background-color: @background-color;
 }
 
 footer {
+}
+
+#footer {
   background-color: @footer-color;
-  min-height: 75px;
+  height: 100px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
 
 h1, h2 {
   text-align: center;
   font-family: 'Merriweather Sans', sans-serif;
+}
+
+.full-wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+#content {
+  padding-bottom: 200px;
 }
 
 .welcome-wrapper, .welcome-body {
@@ -52,4 +74,8 @@ h1, h2 {
 
 .strong-label {
   font-weight: bold;
+}
+
+.about {
+  text-align: center;
 }

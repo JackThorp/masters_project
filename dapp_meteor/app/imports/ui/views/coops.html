@@ -32,16 +32,16 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="quorumInput" class="control-label">Quorum Level</label>
-                  <input type="range" id="quorumInput" value="50" onchange="rangevalue.value=value" name="points" min="0" max="100">
+                  <label for="quorumInput" class="control-label">Quorum Level: {{sliderValue 'quorum'}}%</label>
+                  <input type="range" class="slider-input" id="quorum" name="points" min="0" max="100">
                 </div>
                 <div class="form-group">
-                  <label for="ordinaryRes" class="control-label">Ordinary Resolution Level</label>
-                  <input type="range" id="ordinaryRes" name="points" min="0" max="100">
+                  <label for="ordinaryRes" class="control-label">Ordinary Resolution Level: {{sliderValue 'normal'}}%</label>
+                  <input type="range" class="slider-input" id="normal" name="points" min="0" max="100">
                 </div>
                  <div class="form-group">
-                  <label for="extraRes" class="control-label">Extraordinary Resolution Level</label>
-                  <input type="range" id="extraRes" name="points" min="0" max="100">
+                   <label for="extraRes" class="control-label">Extraordinary Resolution Level: {{sliderValue 'extra'}}%</label>
+                   <input type="range" class="slider-input" id="extra" name="points" min="0" max="100">
                 </div>
               </div>
               <div class="modal-footer">

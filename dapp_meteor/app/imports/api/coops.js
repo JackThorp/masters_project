@@ -65,7 +65,7 @@ class Coops extends Collection {
     // Make reactive to new coop event
     let dep = new Tracker.Dependency;
     dep.depend();
-    this.coopReactor.register(dep);
+    coops.coopReactor.register(dep);
 
     return coopRegistry.getCoopsAsync().then(function(coopAddresses) {
       
@@ -85,15 +85,15 @@ class Coops extends Collection {
    * Creates a new coop contract with data and fee
    * Returns a coop object.
    */
-  add(data, fee) {
+  add(data, fee, quorum, nRes) {
 
     this.checkData(data); 
     
     var registeredPromise = coopRegistry.newRegistrationAsync({});
-    
+
     this.ipfs.addJsonAsync(data).then((hash) => {
       var ethHash = db.ipfsToEth(hash);
-      return coopRegistry.newCoopAsync(ethHash, fee, 100, 50, this.getTxObj());
+      return coopRegistry.newCoopAsync(ethHash, fee, quorum, nRes, this.getTxObj());
     })
     .catch((err) => {
       console.log(err);
@@ -102,7 +102,7 @@ class Coops extends Collection {
     //TODO don't return coop here (evades caching)
     return registeredPromise.then(function(coopEvent) {
       let address = coopEvent.args._coop;
-      return new Coop(address, data, fee, 100, 50, this.ipfs);
+      return new Coop(address, data, fee, quorum, nRes, this.ipfs);
     });
   }
 

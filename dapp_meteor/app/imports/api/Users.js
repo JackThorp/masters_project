@@ -19,13 +19,15 @@ class Users extends Collection {
   }
 
   // Returns user object wrapping user data given address
+
+
   get(addr) {
 
-    // Should react to changes to user with address
     let dep = new Tracker.Dependency;
     dep.depend();
-    this.membershipReactor.register(dep, addr);
     this.userReactor.register(dep, addr);
+
+    this.membershipReactor.register(dep, addr);
 
     return userController.getUserAsync(addr).then((hash) => {
      
