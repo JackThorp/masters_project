@@ -23,13 +23,28 @@ The biggest ?blocker? during the project, which took some weeks to resolve prope
 Whilst testrpc is recommended to speed up development it should be used with an understanding that it is not representative of a real production environment. In order to build applications with a good user experience some stage of development and testing should use a production like network. Geth makes it very easy to connect to the testnet and online ether faucets make it very easy to deploy and test smart contract systems in a production parity environment. \\
 
 \subsection{Ethereum Project}
+The success or failure of applications like Go-op is of course entirely dependent on the success or failure of the Ethereum platform as a whole. There are a number of factors need to be considered when evaluating the likelihood of Ethereum's continued success. Probably the most important are scalability, governance and finance.
+
+\subsubsection{Scalability}
+If the Ethereum platform is unable to scale to meet rising demand then dapps running on the network will either become very expensive or very slow. Whilst some applications would be able to endure such conditions but many more would not. \\
+
+How much of a demand increase are we likely to see? This is a difficult question to answer but the short answer is a reasonable amount. It will probably depend a lot on the successes of the early adopters but there are already quite a few of them.\\
+
+Will the platform scale? Currently there are two ways Ethereum are hoping to scale the network. The first is the introduction of a PoS (proof of stake) algorithm called Casper\cite{casper} which would serve as an alternative consensus protocol to proof of work. It is quite a complex idea where miners on the inclusion of blocks against the network protocol. PoS is less resource intensive the PoW because it doesn't need to burn CPU cycles to break hash functions. This makes it both better for the environment and more resilient to external factors such as energy prices. More important for scalability is the potential to process transactions faster (conservative block time estimate is 4 seconds, optimistic is sub second \cite{posTPS}). Finally, PoS could make the network more accessible for computers that don?t have the high specs required to be a PoW miner which would help to increase network security.\\
+
+The second main scalability effort is sharding. In a sharded blockchain network each peer holds a ?shard? rather than a full copy of the blockchain. 
+
 \myworries{TODO}
 
-Bitcoin comparison - recent troubles.
-Public goods works needs finance and good governance.
-Good communication via blog. Lots of learning resources.
-Scalability issues of blockchain networks. Talk about benefits of sharding and proof of stake.
-A lot of this should be able to take from interim. 
+\subsubsection{Governance}
+Not too long ago, Mike Hearn published a blog post on Medium explaining his belief that the Bitcoin experiment 'has failed' \cite{HearnBitcoin}. He described Bitcoin as being on 'the brink of technical collapse' and the primary reason being an 'entirely artificial capacity cap of one megabyte per block' which essentially acts as a bottleneck in the system. There are a great number of articles, blog posts and comments debating this point. Most of them very emotional and personal. Regardless of whether he is correct or not, it cannot be denied that Mike Hearn's comments have caused greate uncertainty and instability within the Bitcoin system. Not to mention the possible implications of bitcoinXT\cite{bitcoinXT} had it ever taken off. \\
+
+All projects face technical challenges. The difficulty Bitcoin have experienced is not the lack of technical solutions but a failure to debate and agree on them as a community without undermining the entire system, which is surely a question of governance. So, should we be worried about the organisational structure of Ethereum? Well, firstly Ethereum's creator is no mystery, it is Vitalik Buterin and he is well respected and revered across the community. Beyond this, Ethereum has the yellowpaper\cite{yellowpaper}, a clearly defined formal specification which means the project is owned less by 'core developers' who understand the main implementation and more by the community, because the spec is far more accessible to understand and develop new clients with. Finally, Ethereum is a crowd funded project so should be a lot more accountable to its funders. This is a different dynamic than that of Bitcoin.\\
+
+%Personally, we have found Ethereum to be extensively documented and communicated at a high quality. 
+
+\subsubsection{Finance}
+Neither the Ethereum Foundation or EthDev turn a direct profit from developing Ethereum because essentially it is a ?public good?. This means the project faces the difficult question of ?who is going to pay for it?s maintenance??. The point is well made by Vinay Gupta in his talk at DevCon1\cite{GuptaFinance}. Despite Vinay?s optimism given the vast amount of start up capital raised by the crowd fund (somewhere in the region of \$18 million), he doesn?t give concrete answers as to a long term revenue model. It is surely encouraging to see members of the Ethereum team thinking about these problems fairly early on. The huge amount of funds Ethereum based projects, such as TheDAO, are generating and the widespread interest of the financial industry suggest that there is probably enough invested capital to secure the platforms continued development for some time to come.
 
 \subsection{Frameworks}
 A number of frameworks, including Meteor, have become popular within the community for dapp development. It is our belief, after trailing a couple of them and using Meteor extensively, that there are no compelling reasons for adopting a new framework specifically for dapp development. From our experience, there are three special requirements for dapp development:
@@ -55,7 +70,7 @@ IPFS was very straightforward to use and was not the cause of any problems. Hope
 The second objective of this study has been to develop a governance application for large co-operative enterprises. This section evaluates the Go-op solution and whether it is 'fit for purpose'.\\
 
 \subsection{Cost analysis}
-All Ethereum transactions cost Ether. Understanding how much running a dapp costs is important when assessing it's suitability. Whilst the cost of 'deploying' the static contracts such as registries etc are only incurred once and are therefore constant. The operations that require investigation are those carried out by users every time they interact with the system. In Go-op, transactions are fired for the following processes:
+All Ethereum transactions cost Ether. Understanding how much running Go-op costs is important when assessing it's suitability for co-operatives. The cost of 'deploying' the static contracts such as registries etc is only incurred once and is therefore constant and negligable. The operations that require investigation are those carried out by users every time they interact with the system. In Go-op, transactions are fired for the following processes:
 \begin{itemize}
 \item Registering as a new user
 \item Changing user information
@@ -65,11 +80,12 @@ All Ethereum transactions cost Ether. Understanding how much running a dapp cost
 \item Voting on a proposal
 \end{itemize}
 
-Calculating the cost of a transaction in GBP requires knowledge of three variables: units of gas consumed, price of gas and Ether/GBP conversion rate. The cumulative gas consumption for each operation has been measured for an instance of Go-op deployed on the Morden testnet (accessing such measurements is easily done using a blockchain explorer such as EtherCamp[]) [link to account]. Gas prices and exchange rates are constantly fluctuating but at the time of writing gas-price is set at around 23 GWei  (or Shannon) per unit and the price of 1 Ether is just below \pounds 10. Using this information we can calculate the cost of each of the above processes:\\
+Calculating the cost of a transaction in GBP requires knowledge of three variables: units of gas consumed, price of gas and Ether/GBP conversion rate. The cumulative gas consumption for each operation has been measured with an instance of Go-op deployed on the Morden testnet (accessing such measurements is easily done using a blockchain explorer such as Ethercamp\cite{EtherCamp}). Gas prices and exchange rates are constantly fluctuating but at the time of writing gas-price is set at around 23 GWei  (or Shannon) per unit and the price of 1 Ether is just below \pounds 10. Using this information we can calculate the cost of each of the above processes:\\
+\begin{table}
 \begin{center}
 \begin{tabular}{ |c|c|c|c|c| } 
  \hline
- operation & gas price & gas consumption & cost (Ether) & cost (GBP) \\ 
+ operation & gas price (Eth) & gas consumption & cost (Eth) & cost (GBP) \\ 
  \hline
  Coop creation & 0.000000023228 & 739553 & 0.01717833708 & 0.17 \\
  \hline
@@ -80,34 +96,39 @@ Calculating the cost of a transaction in GBP requires knowledge of three variabl
  Voting & 0.000000023228 & 47308 & 0.00109887022 & 0.01 \\ 
  \hline
 \end{tabular}
+\caption {Table of costs for running key Go-op operations}
+\label{table:costs}
 \end{center}
+\end{table}
 
-As table X shows. The biggest cost in Go-op is currently creating a new cooperative, which costs about 17 pence (not a lot). Joining as a member costs the user 4 pence whilst creating a proposal and voting on it costs only 3 pence and one pence respectively. Although these are trivial amounts, a co-operative using Go-op can of course subsidise the individual costs of governance participation by issuing credit (similar way to printer credits). As it stands, the order of the costs involved with using Go-op are totally manageable. Are prices likely to rise significantly in the future? This is difficult to answer but if anything, the introduction of proof of stake consensus and sharding (if it happens) are likely to reduce prices and the  ... stability.\\
+As table \ref{table:costs} shows, the biggest cost in Go-op is currently creating a new cooperative, which costs about 17 pence (not a lot). Joining as a member costs the user 4 pence whilst creating a proposal and voting on it costs only 3 pence and one pence respectively. Although these are trivial amounts, a co-operative using Go-op can of course subsidise the individual costs of governance participation by issuing credit (similar to printer credit). As it stands, the order of the costs involved with using Go-op are totally manageable. Are prices likely to rise significantly in the future? This is difficult to answer but if anything, the introduction of proof of stake consensus and sharding (if it happens) are likely to reduce prices.\\
 
 \subsection{Security analysis}
 \myworries{TODO}
-In order to be fit for use, Go-op needs to be secure. The two main security concerns are the protection of
-user information see section X and 
+To be fit for use Go-op needs to be secure. In our opinion the most pressing security concerns with the current state of development are the protection of user information or privacy, contract code verification, and member identification.\\
 
- The biggest security hole in Go-op its susceptibility to Sybil attacks whereby a single user can assume multiple identities to attack the system. It is trivial for a co-operative member to create multiple Ethereum accounts and join a cooperative multiple times in order to disproportionately affect a resolution outcome. The only formal barrier to prevent this kind of attack is the cost of repaying the membership fee which is unlikely to prevent a motivated attacker. The wider problem of identity management and some potential solutions is discussed to some detail in section X. The most workable solution for Go-op would probably be the ?curator? approach taken TheDAO. Go-op would enable users to elect a co-op member (whose account we assume is already verified) whose role would be to validate the unique identity users applying for membership. The validation of identity would happen as part of some ?off chain? process. Joining a cooperative would still work in the same way but would only be confirmed following a signed transaction from the ?curator?. The cooperative could even arrange to pay a fee to the ?curator? every time they validate a new member.
+\subsubsection{Member Identification}
+Currently Go-op allows any registered user to join a co-operative so long as they pay their fee and agree to the terms and conditions. Unfortunately, this means it is trivial for any co-operative member to create multiple Ethereum accounts, register multiple user aliases and join a cooperative multiple times to achieve disproportional representation in voting. The only formal barrier to prevent this kind of attack is the cost of repaying the membership fee which is unlikely to prevent a motivated 'attacker'. The wider problem of identity management and some potential solutions is discussed at greater length in section \ref{sec:identity}. The most workable solution for Go-op would probably be the 'curator' approach taken TheDAO. Go-op would enable users to elect a coop member (whose account we assume is already verified) whose role would be to validate the unique identity users applying for membership. The validation of identity would happen as part of some 'off chain' process. Joining a cooperative would still work in the same way but would only be confirmed following a signed transaction from the ?curator?. The cooperative could even arrange to pay a fee to the ?curator? every time they validate a new member.\\
 
-The second security concern for Go-op is the lack of code verification. There are no tests in place for the Go-op smart contract system which means that it is hard to guarantee correct behaviour. The absence of smart contract tests so far is a result of time constraints and convenient testing frameworks. Any serious proposal for a democracy application ought to be tested rigorously and possibly even formally verified. As part of a testing process we would expect the smart contract system to be re-architected somewhat to improve the ?separation of concerns? and make the interactions between contracts simpler. The current system of a many to many relationship captured across three contracts each with public facing APIs and no common controller is very susceptible to creating data inconsistencies. The Five Types model was not fully realised in this first POC because of the inability to pass key data types between contracts. When this limitation is addressed in future updates to the EVM a proper implementation of this design pattern should be attempted.
-identity management problems. Auditing of smart contract code. Privacy of data. Long way to go in terms of security.
+\subsubsection{Code Verification}
+Go-op currently lacks a significant amount of code verification. There are no tests for the smart contract system which means it is hard to guarantee its correct behaviour. The absence of smart contract tests so far is a result of time constraints and access to convenient testing frameworks. Any serious proposal for a democracy application ought to be tested rigorously and possibly even formally verified. As part of a testing process we would expect the smart contract system to be re-architected somewhat to improve the ?separation of concerns? and make the interactions between contracts simpler. The current system of a many to many relationship captured across three contracts each with public facing APIs and no common controller is very susceptible to creating data inconsistencies. The Five Types model was not fully realised in this first PoC because of the inability to pass key data types between contracts. When this limitation is addressed in future updates to the EVM a proper implementation of this design pattern should be attempted.
+
+\subsubsection{Privacy}
+Whilst Go-op currently only holds a limited amount of user data i.e. a name and email address, it doesn't store that data in encrypted format. This means that user details as well as the fact of membership are publicly accessible. Further to this, member voting behaviour is also publicly visible. From our discussions with co-operative businesses it is apparent that higher levels of privacy and protection are required than currently supported. To address this, any future development should explore the approaches introduced in section \ref{sec:blockchainprivacy}.
 
 \subsection{Performance Analysis}
-\myworries{TODO}
-
-redesigning smart contract system to impove transation times. add controllers and logic into blockchain.
-Untangle dependencies. For example, controller contract talks to other contracts too much. 
-optimistic ui to improve UX.
-What are the costs of storage as system grows? 
-Storage of two way mappings. Trade of between duplicated storage and computation on chain as number of members and number of coops increase.
-caching in front end.
-Alarm clock dates not particularly strict. Lazy evaluation may be better. 
-
+The usability of Go-op can start to be improved in a few ways. Firstly, through the introduction of more controller and application logic controllers to the smart contract system the number of individual transactions, and therefore time to execute, a single user process, operation or unit of logic can be reduced. Secondly, an optimistic UI should be explored that responds instantly to user interaction and allows the fluid use of the application without waiting for transactions to be processed. Thirdly, caching could be introduced to the 'front end' database to improve query speeds. The effectiveness of caching in this architecture may not be significant however, because the server i.e. the Ethereum client runs locally, so there is no network that direct blockchain read requests need to travel across. Finally, the Ethereum Alarm clock service may need to be replaced for a lazy evaluation approach to make it easier for members to specify proposal closing in terms of real dates.\\
 
 \subsection{Fit for purpose}
-\myworries{TODO}
+The security and performance issues with Go-op are important but not insurmountable and have implementable solutions. The key question in evaluating the ?product? is whether it actually meets real user requirements and what evidence there is to support such a claim. 
+
+Co-opertives UK[] are the official body for co-operatives within the UK. With thousands of members across the country they definitely fulfill the definitions of a large and distributed. We spoke with their head of membership, John Atherton, to gain insight into the Coops UK manage their membership. 
+
+%http://www3.imperial.ac.uk/newsandeventspggrp/imperialcollege/centres/cryptocurrency/newssummary/news_27-4-2016-16-22-19 
+When Go-op was presented at the Digital Catapult[] for a government policy ?hack day? we received some positive feedback from the co-founders of ObjectChain Collab, Nick Swanson and Paul Ferris. Mr Swanson described his belief that a democratic governance application like Go-op could also be very useful to the Trade Union movement. He explained that an e-voting review was expected to take place as part of the Trade Union bill currently being processed by parliament because of purported concerns about security and corruption. As democratic organisations trade unions face many of the same challenges surrounding member participation and representation as co-operatives. In fact, given that trade unions typically have a much larger membership than co-operatives the problems may be even more pressing. 
+ http://www.bbc.co.uk/news/uk-politics-36146561  
+
+
 
 Not currently - Not a finished product and yet to solve many of the problems about privacy and identity discussed in RnD.
 All the small bits of work that need to be done too: redesigning sc system. optimistic UI etc.

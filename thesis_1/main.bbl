@@ -406,6 +406,21 @@
       \verb https://en.wikipedia.org/wiki/Hash_function
       \endverb
     \endentry
+    \entry{blockchainHeaders}{url}{}
+      \name{author}{1}{}{%
+        {{hash=0c30b8317b76d851424a9e137f03f2f3}{Wander}{W\bibinitperiod}{Matthäus}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{0c30b8317b76d851424a9e137f03f2f3}
+      \strng{fullhash}{0c30b8317b76d851424a9e137f03f2f3}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Illustration of Blockchain}
+      \verb{url}
+      \verb http://i.stack.imgur.com/HrKX0.png
+      \endverb
+    \endentry
     \entry{Ethereum_crowdfund}{article}{}
       \name{author}{1}{}{%
         {{hash=6209e5f5ad3edb7e58a7995138aa70a8}{Jackson}{J\bibinitperiod}{Darnell}{D\bibinitperiod}{}{}{}{}}%
@@ -1374,7 +1389,99 @@
       \verb https://github.com/ethereum/go-ethereum/issues/1368
       \endverb
     \endentry
+    \entry{casper}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=850981945102d0f671b6762173c8988a}{Buterin}{B\bibinitperiod}{Vitalik}{V\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{850981945102d0f671b6762173c8988a}
+      \strng{fullhash}{850981945102d0f671b6762173c8988a}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{Understanding Serenity, Part 2: Casper}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://blog.ethereum.org/2015/12/28/understanding-serenity-part-2-casper/
+      \endverb
+    \endentry
+    \entry{posTPS}{url}{}
+      \name{author}{1}{}{%
+        {{hash=bef6afedf5ffc2d9fe2d4e894dba4ead}{Exchange}{E\bibinitperiod}{Stack}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{bef6afedf5ffc2d9fe2d4e894dba4ead}
+      \strng{fullhash}{bef6afedf5ffc2d9fe2d4e894dba4ead}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Can Proof of Stake (PoS) improve the number of Transactions per Second?}
+      \verb{url}
+      \verb http://ethereum.stackexchange.com/questions/5708/can-proof-of-stake-pos-improve-the-number-of-transactions-per-second/5714#5714
+      \endverb
+    \endentry
+    \entry{HearnBitcoin}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=9c489231e2685b9cdeb6a277469e4219}{Hearn}{H\bibinitperiod}{Mike}{M\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{9c489231e2685b9cdeb6a277469e4219}
+      \strng{fullhash}{9c489231e2685b9cdeb6a277469e4219}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{title}{The resolution of the Bitcoin experiment}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://medium.com/@octskyward/the-resolution-of-the-bitcoin-experiment-dabb30201f7#.vfvdgiqjr
+      \endverb
+    \endentry
+    \entry{bitcoinXT}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=d89471c1cec6986890a71f599c23c7b6}{Palmer}{P\bibinitperiod}{Daniel}{D\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{d89471c1cec6986890a71f599c23c7b6}
+      \strng{fullhash}{d89471c1cec6986890a71f599c23c7b6}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{2016}
+      \field{title}{Scalability Debate Continues As Bitcoin XT Proposal Stalls}
+      \field{year}{January}
+      \verb{url}
+      \verb http://www.coindesk.com/scalability-debate-bitcoin-xt-proposal-stalls/
+      \endverb
+    \endentry
+    \entry{GuptaFinance}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=593d623d43ad4e538b7fda7534c37e70}{Gupta}{G\bibinitperiod}{Vinay}{V\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{593d623d43ad4e538b7fda7534c37e70}
+      \strng{fullhash}{593d623d43ad4e538b7fda7534c37e70}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Dangerous Old Men: cypherpunk's failure, Ethereum's success}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=1iNiUasJiEc
+      \endverb
+    \endentry
+    \entry{EtherCamp}{url}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Ether.Camp}
+      \verb{url}
+      \verb https://morden.ether.camp/
+      \endverb
+    \endentry
   \endsortlist
+  \missing{yellowpaper}
   \missing{Yellowpaper}
 \endrefsection
 \endinput

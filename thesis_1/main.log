@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.5)  12 JUN 2016 23:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.5)  13 JUN 2016 03:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1174,15 +1174,25 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box54
 \enitdp@description=\count316
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
+\TX@col@width=\dimen190
+\TX@old@table=\dimen191
+\TX@old@col=\dimen192
+\TX@target=\dimen193
+\TX@delta=\dimen194
+\TX@cols=\count317
+\TX@ftn=\toks23
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2015/04/15 v5.1e context-sensitive quotations (JAW)
-\csq@reset=\count317
-\csq@gtype=\count318
-\csq@glevel=\count319
-\csq@qlevel=\count320
-\csq@maxlvl=\count321
-\csq@tshold=\count322
-\csq@ltx@everypar=\toks23
+\csq@reset=\count318
+\csq@gtype=\count319
+\csq@glevel=\count320
+\csq@qlevel=\count321
+\csq@maxlvl=\count322
+\csq@tshold=\count323
+\csq@ltx@everypar=\toks24
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2015/04/15 v5.1e csquotes generic definitions (JAW)
@@ -1213,23 +1223,23 @@ LaTeX Warning: Label `fig:bitcoin_transition' multiply defined.
 (./Chapters/Conclusion.aux) (./Appendices/AppendixA.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 131.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 132.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
@@ -1317,17 +1327,17 @@ Dictionary: translator-basic-dictionary, Language: English
 File: siunitx-abbreviations.cfg 2015/01/21 v2.6e siunitx: Abbreviated units
 ) (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count323
-\scratchdimen=\dimen190
+\scratchcounter=\count324
+\scratchdimen=\dimen195
 \scratchbox=\box55
-\nofMPsegments=\count324
-\nofMParguments=\count325
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count326
-\MPscratchDim=\dimen191
-\MPnumerator=\count327
-\makeMPintoPDFobject=\count328
-\everyMPtoPDFconversion=\toks25
+\nofMPsegments=\count325
+\nofMParguments=\count326
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count327
+\MPscratchDim=\dimen196
+\MPnumerator=\count328
+\makeMPintoPDFobject=\count329
+\everyMPtoPDFconversion=\toks26
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1384,13 +1394,13 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package scrlayer Info: Setting magic \footheight to \baselineskip while
-(scrlayer)             \begin{document} on input line 131.
-Package scrbase Info: activating english \authorshipname on input line 131.
-Package scrbase Info: activating english \byname on input line 131.
-Package scrbase Info: activating english \abbrevname on input line 131.
-Package scrbase Info: activating english \constantsname on input line 131.
-Package scrbase Info: activating english \symbolsname on input line 131.
-Package scrbase Info: activating english \acknowledgementname on input line 131
+(scrlayer)             \begin{document} on input line 132.
+Package scrbase Info: activating english \authorshipname on input line 132.
+Package scrbase Info: activating english \byname on input line 132.
+Package scrbase Info: activating english \abbrevname on input line 132.
+Package scrbase Info: activating english \constantsname on input line 132.
+Package scrbase Info: activating english \symbolsname on input line 132.
+Package scrbase Info: activating english \acknowledgementname on input line 132
 .
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
@@ -1403,45 +1413,52 @@ Package biblatex Info: ... file 'main.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
+(biblatex)                yellowpaper
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
 (biblatex)                Yellowpaper
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 131.
-Package biblatex Info: Reference segment=0 on input line 131.
+Package biblatex Info: Reference section=0 on input line 132.
+Package biblatex Info: Reference segment=0 on input line 132.
 \AtBeginShipoutBox=\box56
-Package hyperref Info: Link coloring ON on input line 131.
+Package hyperref Info: Link coloring ON on input line 132.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count329
+\c@section@level=\count330
 )
-LaTeX Info: Redefining \ref on input line 131.
-LaTeX Info: Redefining \pageref on input line 131.
-LaTeX Info: Redefining \nameref on input line 131.
+LaTeX Info: Redefining \ref on input line 132.
+LaTeX Info: Redefining \pageref on input line 132.
+LaTeX Info: Redefining \nameref on input line 132.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-\c@lstlisting=\count330
-Package scrhack Info: undefining \float@addtolists on input line 131.
-\c__siunitx_mathsf_int=\count331
+\c@lstlisting=\count331
+Package scrhack Info: undefining \float@addtolists on input line 132.
+\c__siunitx_mathsf_int=\count332
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 131.
+(Font)              <10.95> on input line 132.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 131.
+(Font)              <8> on input line 132.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 131.
-\c__siunitx_mathtt_int=\count332
+(Font)              <6> on input line 132.
+\c__siunitx_mathtt_int=\count333
 
 1: section
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 148.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 149.
 [1
 
 
@@ -1452,7 +1469,7 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
  Abstract
 --------------------
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 189.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 190.
 1: section
 [3
 
@@ -1467,7 +1484,7 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
 
 ]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 211.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 212.
  (./main.toc
 1: section
 [7] [8])
@@ -1476,21 +1493,21 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
 
  [9] [10
 
-] (./main.lof)
+] (./main.lof
+1: section
+[11])
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
-
-1: section
-[11] [12
-
-] (./main.lot)
+ [12] (./main.lot)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
 
 1: section
-[13] [14
+[13
+
+] [14
 
 ]
 --------------------
@@ -1518,7 +1535,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
-<Figures/baran_net.jpg, id=707, 451.6875pt x 286.06876pt>
+<Figures/baran_net.jpg, id=821, 451.6875pt x 286.06876pt>
 File: Figures/baran_net.jpg Graphic file (type jpg)
 
 <use Figures/baran_net.jpg>
@@ -1689,10 +1706,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
 
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 82.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsppl.fd
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 82.
 ) [5]
 \openout2 = `Chapters/Background.aux'.
 
- (./Chapters/Background.tex [6
+
+(./Chapters/Background.tex [6
 
 
 
@@ -1720,7 +1744,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
  []
 
 1: section
-[7] <Figures/basic_chain.jpg, id=803, 577.15625pt x 262.9825pt>
+[7] <Figures/basic_chain.jpg, id=919, 577.15625pt x 262.9825pt>
 File: Figures/basic_chain.jpg Graphic file (type jpg)
 
 <use Figures/basic_chain.jpg>
@@ -1746,32 +1770,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-<Figures/blockchain_transition.jpg, id=807, 688.5725pt x 330.23375pt>
+<Figures/blockchain_transition.jpg, id=923, 688.5725pt x 330.23375pt>
 File: Figures/blockchain_transition.jpg Graphic file (type jpg)
 
 <use Figures/blockchain_transition.jpg>
 Package pdftex.def Info: Figures/blockchain_transition.jpg used on input line 3
 8.
-(pdftex.def)             Requested size: 361.34995pt x 173.29971pt.
+(pdftex.def)             Requested size: 505.88771pt x 242.62062pt.
 
+Overfull \hbox (144.53777pt too wide) in paragraph at lines 38--40
+ [][] 
+ []
+
+[8 <./Figures/basic_chain.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
-[8 <./Figures/basic_chain.jpg>]
-<Figures/state_transition.png, id=818, 736.351pt x 182.281pt>
+<Figures/state_transition.png, id=931, 736.351pt x 182.281pt>
 File: Figures/state_transition.png Graphic file (type png)
 
 <use Figures/state_transition.png>
 Package pdftex.def Info: Figures/state_transition.png used on input line 48.
-(pdftex.def)             Requested size: 361.34995pt x 89.44919pt.
- [9 <./Figures/blockchain_transition.jpg> <./Figures/state_transition.png>]
-<Figures/blockchain.png, id=836, 682.86613pt x 265.17969pt>
+(pdftex.def)             Requested size: 505.88771pt x 125.22887pt.
+
+Overfull \hbox (144.53777pt too wide) in paragraph at lines 48--50
+ [][] 
+ []
+
+[9 <./Figures/blockchain_transition.jpg>]
+<Figures/blockchain.png, id=946, 682.86613pt x 265.17969pt>
 File: Figures/blockchain.png Graphic file (type png)
 
 <use Figures/blockchain.png>
 Package pdftex.def Info: Figures/blockchain.png used on input line 91.
-(pdftex.def)             Requested size: 361.34995pt x 140.32605pt.
+(pdftex.def)             Requested size: 505.88771pt x 196.45647pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 98--99
 
@@ -1782,7 +1815,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
-[10 <./Figures/blockchain.png>]
+[10 <./Figures/state_transition.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
@@ -1807,7 +1840,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
-
+[11 <./Figures/blockchain.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
@@ -1817,7 +1850,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
-[11]
+
 Overfull \hbox (19.37656pt too wide) in paragraph at lines 126--127
 \T1/ppl/m/n/10.95 con-sid-ered as state tran-si-tion sys-tems. The state tran-s
 i-tion func-tion of Ethereum
@@ -1841,7 +1874,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
 
 Overfull \hbox (1.23325pt too wide) in paragraph at lines 130--131
-\T1/ppl/m/n/10.95 Wood[[][]37[][]]. Prac-ti-cal in-for-ma-tion and ref-er-ences
+\T1/ppl/m/n/10.95 Wood[[][]38[][]]. Prac-ti-cal in-for-ma-tion and ref-er-ences
  for nav-i-gat-ing the Ethereum
  []
 
@@ -1855,12 +1888,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
-<Figures/ethereum_accounts.png, id=861, 654.445pt x 301.125pt>
+[12] <Figures/ethereum_accounts.png, id=982, 654.445pt x 301.125pt>
 File: Figures/ethereum_accounts.png Graphic file (type png)
 
 <use Figures/ethereum_accounts.png>
 Package pdftex.def Info: Figures/ethereum_accounts.png used on input line 137.
 (pdftex.def)             Requested size: 361.34995pt x 166.26253pt.
+
+Underfull \hbox (badness 1152) in paragraph at lines 139--139
+ []\T1/ppl/m/sc/10 Figure 2.5: |\T1/ppl/m/n/10 Il-lus-tra-tion of the two dif-f
+er-ent types of 
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
@@ -1871,7 +1910,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
 
-[12]
+
 Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
@@ -1886,7 +1925,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
-<Figures/ethereum_transition.png, id=869, 776.501pt x 411.939pt>
+[13 <./Figures/ethereum_accounts.png>]
+<Figures/ethereum_transition.png, id=989, 776.501pt x 411.939pt>
 File: Figures/ethereum_transition.png Graphic file (type png)
 
 <use Figures/ethereum_transition.png>
@@ -1909,20 +1949,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
-[13 <./Figures/ethereum_accounts.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
-<Figures/ethereum_state_transition.png, id=879, 846.362pt x 207.977pt>
+<Figures/ethereum_state_transition.png, id=991, 846.362pt x 207.977pt>
 File: Figures/ethereum_state_transition.png Graphic file (type png)
 
 <use Figures/ethereum_state_transition.png>
 Package pdftex.def Info: Figures/ethereum_state_transition.png used on input li
 ne 172.
 (pdftex.def)             Requested size: 361.34995pt x 88.79367pt.
- [14 <./Figures/ethereum_transition.png> <./Figures/ethereum_state_transition.p
-ng>]
+ [14 <./Figures/ethereum_transition.png>]
 Overfull \hbox (0.48846pt too wide) in paragraph at lines 186--187
 \T1/ppl/m/n/10.95 and gas limit (var-i-ous low-level Ethereum-specific con-cept
 s) are valid. 
@@ -1933,7 +1972,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
 
-
+[15 <./Figures/ethereum_state_transition.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
@@ -1953,7 +1992,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
  []
 
-[15]
+
 Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
@@ -1968,12 +2007,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
 
-<Figures/Simplestorage.png, id=906, 567.11874pt x 228.855pt>
+<Figures/Simplestorage.png, id=1016, 656.4525pt x 238.8925pt>
 File: Figures/Simplestorage.png Graphic file (type png)
 
 <use Figures/Simplestorage.png>
 Package pdftex.def Info: Figures/Simplestorage.png used on input line 230.
-(pdftex.def)             Requested size: 361.34995pt x 145.82416pt.
+(pdftex.def)             Requested size: 505.88771pt x 184.10088pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
@@ -1984,7 +2023,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
  []
 
-[16 <./Figures/Simplestorage.png>]
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 244--245
 
  []
@@ -2039,7 +2078,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 255--280
 
  []
 
-[17] <Figures/IpfsStack.jpg, id=931, 398.48875pt x 261.97874pt>
+[17 <./Figures/Simplestorage.png>]
+<Figures/IpfsStack.jpg, id=1042, 398.48875pt x 261.97874pt>
 File: Figures/IpfsStack.jpg Graphic file (type jpg)
 
 <use Figures/IpfsStack.jpg>
@@ -2050,12 +2090,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 290--291
 
  []
 
-
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 296--297
 
  []
 
-[18] <Figures/rochdale_pioneers.jpg, id=939, 751.80875pt x 365.365pt>
+<Figures/rochdale_pioneers.jpg, id=1049, 751.80875pt x 365.365pt>
 File: Figures/rochdale_pioneers.jpg Graphic file (type jpg)
 
 <use Figures/rochdale_pioneers.jpg>
@@ -2066,7 +2106,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 306--307
 
  []
 
-
+[19 <./Figures/IpfsStack.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 308--309
 
  []
@@ -2076,7 +2116,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
  []
 
-[19 <./Figures/IpfsStack.jpg>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 313--314
 
  []
@@ -2177,7 +2217,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 379--380
 
  []
 
-
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 383--384
 
  []
@@ -2187,10 +2227,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 387--388
 
  []
 
-[23]
+
 Overfull \hbox (1.64458pt too wide) in paragraph at lines 389--390
 []\T1/ppl/m/n/10.95 This year saw the launch of two DAOs on Ethereum. The Digix
--DAO[[][]71[][]],
+-DAO[[][]72[][]],
  []
 
 
@@ -2208,7 +2248,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 395--396
 
  []
 
-
+[24]
 Overfull \hbox (17.3942pt too wide) in paragraph at lines 401--402
 \T1/ppl/m/n/10.95 BuyCo.io is a 'col-lab-o-ra-tive pur-chas-ing toolkit' that a
 ims to lever-age blockchain
@@ -2219,7 +2259,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 401--402
 
  []
 
-) [24] [25]
+) [25]
 \openout2 = `Chapters/ResearchAndDesign.aux'.
 
  (./Chapters/ResearchAndDesign.tex [26
@@ -2255,7 +2295,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-<Figures/webarchForm.png, id=1051, 739.76375pt x 318.18875pt>
+<Figures/webarchForm.png, id=1161, 739.76375pt x 318.18875pt>
 File: Figures/webarchForm.png Graphic file (type png)
 
 <use Figures/webarchForm.png>
@@ -2266,21 +2306,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
-<Figures/WorkerModelGM.png, id=1055, 631.35875pt x 137.51375pt>
+<Figures/WorkerModelGM.png, id=1165, 631.35875pt x 137.51375pt>
 File: Figures/WorkerModelGM.png Graphic file (type png)
 
 <use Figures/WorkerModelGM.png>
 Package pdftex.def Info: Figures/WorkerModelGM.png used on input line 34.
 (pdftex.def)             Requested size: 505.88771pt x 110.1874pt.
  [28 <./Figures/webarchForm.png>]
-<Figures/WorkerRulesVoting.png, id=1065, 979.66pt x 244.915pt>
+<Figures/WorkerRulesVoting.png, id=1172, 979.66pt x 244.915pt>
 File: Figures/WorkerRulesVoting.png Graphic file (type png)
 
 <use Figures/WorkerRulesVoting.png>
 Package pdftex.def Info: Figures/WorkerRulesVoting.png used on input line 48.
 (pdftex.def)             Requested size: 505.88771pt x 126.47083pt.
 
-<Figures/SomersetVoting.png, id=1068, 914.41624pt x 203.76125pt>
+<Figures/SomersetVoting.png, id=1175, 914.41624pt x 203.76125pt>
 File: Figures/SomersetVoting.png Graphic file (type png)
 
 <use Figures/SomersetVoting.png>
@@ -2301,19 +2341,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 78.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsppl.fd
-File: omsppl.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 78.
 
 Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
-
-
-LaTeX Warning: Reference `sec:identity' on page 31 undefined on input line 97.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 97--98
@@ -2453,12 +2484,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
  []
 
-<Figures/AccessModifiers.png, id=1134, 692.5875pt x 163.61125pt>
+<Figures/AccessModifiers.png, id=1242, 656.4525pt x 254.9525pt>
 File: Figures/AccessModifiers.png Graphic file (type png)
 
 <use Figures/AccessModifiers.png>
 Package pdftex.def Info: Figures/AccessModifiers.png used on input line 187.
-(pdftex.def)             Requested size: 361.34995pt x 85.36293pt.
+(pdftex.def)             Requested size: 505.88771pt x 196.4774pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 184--193
 
@@ -2480,13 +2511,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
 
-<Figures/e-Residency.png, id=1148, 289.08pt x 151.767pt>
+[37 <./Figures/AccessModifiers.png>]
+<Figures/e-Residency.png, id=1261, 289.08pt x 151.767pt>
 File: Figures/e-Residency.png Graphic file (type png)
 
 <use Figures/e-Residency.png>
 Package pdftex.def Info: Figures/e-Residency.png used on input line 207.
 (pdftex.def)             Requested size: 361.34995pt x 189.71753pt.
- [37 <./Figures/AccessModifiers.png>]
+
 Overfull \hbox (3.20395pt too wide) in paragraph at lines 216--217
 \T1/ppl/m/n/10.95 mem-bers have no idea whether pro-pos-als are le-git-i-mate, 
 and there-fore likely
@@ -2502,12 +2534,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 218--219
 
  []
 
-
+[38 <./Figures/e-Residency.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
-[38 <./Figures/e-Residency.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
@@ -2525,11 +2557,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 234--235
 
  []
 
-<Figures/lazy.png, id=1176, 572.1375pt x 245.91875pt>
+<Figures/lazy.png, id=1282, 572.1375pt x 245.91875pt>
 File: Figures/lazy.png Graphic file (type png)
  <use Figures/lazy.png>
 Package pdftex.def Info: Figures/lazy.png used on input line 239.
-(pdftex.def)             Requested size: 361.34995pt x 155.31987pt.
+(pdftex.def)             Requested size: 433.61882pt x 186.38234pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 236--245
 
@@ -2546,22 +2578,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 246--247
 
  []
 
-<Figures/eager.png, id=1187, 580.1675pt x 321.2pt>
+<Figures/eager.png, id=1291, 580.1675pt x 321.2pt>
 File: Figures/eager.png Graphic file (type png)
  <use Figures/eager.png>
 Package pdftex.def Info: Figures/eager.png used on input line 250.
-(pdftex.def)             Requested size: 361.34995pt x 200.05844pt.
+(pdftex.def)             Requested size: 433.61882pt x 240.06622pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 255--256
 
  []
 
-[40 <./Figures/lazy.png> <./Figures/eager.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 261--262
 
  []
 
-
+[40 <./Figures/lazy.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 263--264
 
  []
@@ -2571,19 +2603,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 265--266
 
  []
 
-<Figures/DappArch.jpg, id=1198, 479.7925pt x 450.68375pt>
+<Figures/DappArch.jpg, id=1300, 479.7925pt x 450.68375pt>
 File: Figures/DappArch.jpg Graphic file (type jpg)
 
 <use Figures/DappArch.jpg>
 Package pdftex.def Info: Figures/DappArch.jpg used on input line 270.
-(pdftex.def)             Requested size: 361.34995pt x 339.4286pt.
+(pdftex.def)             Requested size: 505.88771pt x 475.20555pt.
 
-<Figures/DappVWeb.jpg, id=1200, 557.08125pt x 235.88126pt>
+<Figures/DappVWeb.jpg, id=1304, 557.08125pt x 235.88126pt>
 File: Figures/DappVWeb.jpg Graphic file (type jpg)
 
 <use Figures/DappVWeb.jpg>
 Package pdftex.def Info: Figures/DappVWeb.jpg used on input line 279.
-(pdftex.def)             Requested size: 361.34995pt x 153.00786pt.
+(pdftex.def)             Requested size: 505.88771pt x 214.20956pt.
 
 Overfull \hbox (3.76819pt too wide) in paragraph at lines 276--287
 []\T1/ppl/m/n/10.95 Figure [][]3.9[][] is a con-cep-tual di-a-gram show-ing the
@@ -2595,12 +2627,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 276--287
 
  []
 
-
+[41 <./Figures/eager.png>] [42 <./Figures/DappArch.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 294--295
 
  []
 
-[41] [42 <./Figures/DappArch.jpg> <./Figures/DappVWeb.jpg>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 296--297
 
  []
@@ -2616,7 +2648,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
 
-
+[43 <./Figures/DappVWeb.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 304--305
 
  []
@@ -2636,18 +2668,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
  []
 
-<Figures/DNSContract.png, id=1223, 816.04875pt x 352.31625pt>
+<Figures/DNSContract.png, id=1335, 656.4525pt x 324.21124pt>
 File: Figures/DNSContract.png Graphic file (type png)
 
 <use Figures/DNSContract.png>
 Package pdftex.def Info: Figures/DNSContract.png used on input line 317.
-(pdftex.def)             Requested size: 361.34995pt x 156.00879pt.
- [43]
+(pdftex.def)             Requested size: 505.88771pt x 249.8512pt.
+
 Underfull \hbox (badness 10000) in paragraph at lines 323--324
 
  []
 
-
+[44]
 Underfull \hbox (badness 10000) in paragraph at lines 326--330
 
  []
@@ -2657,26 +2689,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 326--330
 
  []
 
-[44 <./Figures/DNSContract.png>]
-<Figures/FiveTypesSystem.png, id=1242, 575.14874pt x 495.8525pt>
+[45 <./Figures/DNSContract.png>]
+<Figures/FiveTypesSystem.png, id=1353, 575.14874pt x 495.8525pt>
 File: Figures/FiveTypesSystem.png Graphic file (type png)
 
 <use Figures/FiveTypesSystem.png>
 Package pdftex.def Info: Figures/FiveTypesSystem.png used on input line 339.
 (pdftex.def)             Requested size: 361.34995pt x 311.54132pt.
 
-<Figures/FiveTypesDOUG.png, id=1243, 529.98pt x 502.87875pt>
+<Figures/FiveTypesDOUG.png, id=1356, 529.98pt x 502.87875pt>
 File: Figures/FiveTypesDOUG.png Graphic file (type png)
 
 <use Figures/FiveTypesDOUG.png>
 Package pdftex.def Info: Figures/FiveTypesDOUG.png used on input line 347.
 (pdftex.def)             Requested size: 361.34995pt x 342.87383pt.
- [45 <./Figures/FiveTypesSystem.png>] [46 <./Figures/FiveTypesDOUG.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 356--357
 
  []
 
-
+[46 <./Figures/FiveTypesSystem.png>] [47 <./Figures/FiveTypesDOUG.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
@@ -2691,16 +2723,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 364--365
 
  []
 
-) [47]
+) [48]
 \openout2 = `Chapters/Goop.aux'.
 
- (./Chapters/Goop.tex [48
-
-
-
-]
+ (./Chapters/Goop.tex
 Chapter 4.
-<Figures/WelcomePage.png, id=1275, 1224.575pt x 696.6025pt>
+<Figures/WelcomePage.png, id=1380, 1224.575pt x 696.6025pt>
 File: Figures/WelcomePage.png Graphic file (type png)
 
 <use Figures/WelcomePage.png>
@@ -2711,7 +2739,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-<Figures/RegistrationPage2.png, id=1277, 692.5875pt x 591.20876pt>
+<Figures/RegistrationPage2.png, id=1382, 692.5875pt x 591.20876pt>
 File: Figures/RegistrationPage2.png Graphic file (type png)
 
 <use Figures/RegistrationPage2.png>
@@ -2722,7 +2750,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-<Figures/HomePage.png, id=1279, 1279.78125pt x 263.98625pt>
+<Figures/HomePage.png, id=1384, 1279.78125pt x 263.98625pt>
 File: Figures/HomePage.png Graphic file (type png)
 
 <use Figures/HomePage.png>
@@ -2733,7 +2761,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
-<Figures/MyCoopsPage.png, id=1281, 1279.78125pt x 347.2975pt>
+<Figures/MyCoopsPage.png, id=1386, 1279.78125pt x 347.2975pt>
 File: Figures/MyCoopsPage.png Graphic file (type png)
 
 <use Figures/MyCoopsPage.png>
@@ -2741,12 +2769,16 @@ Package pdftex.def Info: Figures/MyCoopsPage.png used on input line 54.
 (pdftex.def)             Requested size: 505.88771pt x 137.28433pt.
 
 1: section
-[49]
+[49
+
+
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-<Figures/CreateCoopPage.png, id=1291, 896.34875pt x 700.6175pt>
+<Figures/CreateCoopPage.png, id=1393, 896.34875pt x 700.6175pt>
 File: Figures/CreateCoopPage.png Graphic file (type png)
 
 <use Figures/CreateCoopPage.png>
@@ -2769,7 +2801,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
 [50 <./Figures/WelcomePage.png>] [51 <./Figures/RegistrationPage2.png> <./Figur
 es/HomePage.png>] [52 <./Figures/MyCoopsPage.png> <./Figures/CreateCoopPage.png
->] <Figures/CoopPage2.png, id=1314, 1118.1775pt x 655.44875pt>
+>] <Figures/CoopPage2.png, id=1414, 1118.1775pt x 655.44875pt>
 File: Figures/CoopPage2.png Graphic file (type png)
 
 <use Figures/CoopPage2.png>
@@ -2780,14 +2812,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
-<Figures/NewProposalPage.png, id=1316, 808.01875pt x 551.05875pt>
+<Figures/NewProposalPage.png, id=1416, 808.01875pt x 551.05875pt>
 File: Figures/NewProposalPage.png Graphic file (type png)
 
 <use Figures/NewProposalPage.png>
 Package pdftex.def Info: Figures/NewProposalPage.png used on input line 96.
 (pdftex.def)             Requested size: 505.88771pt x 345.01627pt.
  [53 <./Figures/CoopPage2.png>] [54 <./Figures/NewProposalPage.png>]
-<Figures/ProposalVotePage.png, id=1333, 733.74126pt x 588.1975pt>
+<Figures/ProposalVotePage.png, id=1430, 733.74126pt x 588.1975pt>
 File: Figures/ProposalVotePage.png Graphic file (type png)
 
 <use Figures/ProposalVotePage.png>
@@ -2803,7 +2835,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
-<Figures/WaitPage.png, id=1341, 663.47874pt x 398.48875pt>
+<Figures/WaitPage.png, id=1437, 663.47874pt x 398.48875pt>
 File: Figures/WaitPage.png Graphic file (type png)
 
 <use Figures/WaitPage.png>
@@ -2815,12 +2847,12 @@ Package pdftex.def Info: Figures/WaitPage.png used on input line 121.
 
 (./Chapters/Implementation.tex
 Chapter 5.
-<Figures/GoopArch.png, id=1349, 681.54625pt x 491.8375pt>
+<Figures/GoopArch.png, id=1444, 681.54625pt x 491.8375pt>
 File: Figures/GoopArch.png Graphic file (type png)
 
 <use Figures/GoopArch.png>
 Package pdftex.def Info: Figures/GoopArch.png used on input line 10.
-(pdftex.def)             Requested size: 361.34995pt x 260.77019pt.
+(pdftex.def)             Requested size: 433.61882pt x 312.92122pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
@@ -2839,13 +2871,13 @@ reum node through
 
 
 Overfull \hbox (2.64546pt too wide) in paragraph at lines 20--21
-\T1/ppl/m/n/10.95 the web3.js li-brary[[][]104[][]]. The web3.js li-brary im-pl
+\T1/ppl/m/n/10.95 the web3.js li-brary[[][]105[][]]. The web3.js li-brary im-pl
 e-ments the Web3 Javascript
  []
 
 
 Overfull \hbox (1.17836pt too wide) in paragraph at lines 20--21
-\T1/ppl/m/n/10.95 is achieved through the ipfs-js[[][]107[][]] li-brary, de-vel
+\T1/ppl/m/n/10.95 is achieved through the ipfs-js[[][]108[][]] li-brary, de-vel
 -oped by Con-sen-Sys (a lead-
  []
 
@@ -2869,7 +2901,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
 
 
-]
+] [58 <./Figures/GoopArch.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
@@ -2889,12 +2921,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-[58 <./Figures/GoopArch.png>]
-<Figures/SCArch.png, id=1373, 722.7pt x 542.025pt>
+<Figures/SCArch.png, id=1466, 722.7pt x 542.025pt>
 File: Figures/SCArch.png Graphic file (type png)
  <use Figures/SCArch.png>
 Package pdftex.def Info: Figures/SCArch.png used on input line 37.
-(pdftex.def)             Requested size: 361.34995pt x 271.01183pt.
+(pdftex.def)             Requested size: 433.61882pt x 325.2175pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
@@ -2905,13 +2936,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
-[59 <./Figures/SCArch.png>]
-<Figures/UserReg2.png, id=1382, 532.99126pt x 386.44376pt>
-File: Figures/UserReg2.png Graphic file (type png)
+[59] [60 <./Figures/SCArch.png>]
+<Figures/UserRegistry.png, id=1480, 655.44875pt x 380.42125pt>
+File: Figures/UserRegistry.png Graphic file (type png)
 
-<use Figures/UserReg2.png>
-Package pdftex.def Info: Figures/UserReg2.png used on input line 54.
-(pdftex.def)             Requested size: 361.34995pt x 262.00581pt.
+<use Figures/UserRegistry.png>
+Package pdftex.def Info: Figures/UserRegistry.png used on input line 54.
+(pdftex.def)             Requested size: 505.88771pt x 293.61601pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
@@ -2927,12 +2958,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
-
+[61 <./Figures/UserRegistry.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
-[60 <./Figures/UserReg2.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 69--70
 
  []
@@ -2952,12 +2983,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
-<Figures/CoopRegistry.png, id=1391, 456.70625pt x 146.5475pt>
+<Figures/CoopRegistry.png, id=1488, 656.4525pt x 160.6pt>
 File: Figures/CoopRegistry.png Graphic file (type png)
 
 <use Figures/CoopRegistry.png>
 Package pdftex.def Info: Figures/CoopRegistry.png used on input line 82.
-(pdftex.def)             Requested size: 361.34995pt x 115.95236pt.
+(pdftex.def)             Requested size: 505.88771pt x 123.76529pt.
 
 Overfull \hbox (3.37486pt too wide) in paragraph at lines 79--87
 []\T1/pcr/m/n/10.95 getCoops() \T1/ppl/m/n/10.95 re-turns the state vari-able a
@@ -2974,7 +3005,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
-[61]
+[62]
 Overfull \hbox (2.41096pt too wide) in paragraph at lines 92--93
 []\T1/ppl/m/n/10.95 The CoopReg-istry does not cur-rently im-ple-ment a \T1/pcr
 /m/n/10.95 removeCoop() \T1/ppl/m/n/10.95 func-
@@ -2990,12 +3021,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
-<Figures/MemRegVars.png, id=1403, 612.2875pt x 144.54pt>
+<Figures/MemRegVars.png, id=1499, 654.445pt x 170.6375pt>
 File: Figures/MemRegVars.png Graphic file (type png)
 
 <use Figures/MemRegVars.png>
 Package pdftex.def Info: Figures/MemRegVars.png used on input line 99.
-(pdftex.def)             Requested size: 361.34995pt x 85.30211pt.
+(pdftex.def)             Requested size: 505.88771pt x 131.90419pt.
 
 Overfull \hbox (15.46431pt too wide) in paragraph at lines 105--106
 []\T1/ppl/m/n/10.95 The Mem-ber-shipReg-istry has five meth-ods \T1/pcr/m/n/10.
@@ -3016,7 +3047,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-[62 <./Figures/CoopRegistry.png> <./Figures/MemRegVars.png>]
+[63 <./Figures/CoopRegistry.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 120--121
 
  []
@@ -3031,12 +3062,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
-<Figures/CoopState.png, id=1411, 383.4325pt x 187.70125pt>
+<Figures/CoopState.png, id=1508, 657.45625pt x 193.72375pt>
 File: Figures/CoopState.png Graphic file (type png)
 
 <use Figures/CoopState.png>
 Package pdftex.def Info: Figures/CoopState.png used on input line 130.
-(pdftex.def)             Requested size: 361.34995pt x 176.90031pt.
+(pdftex.def)             Requested size: 505.88771pt x 149.06427pt.
 
 Overfull \hbox (3.68936pt too wide) in paragraph at lines 127--135
 \T1/ppl/m/n/10.95 meth-ods: \T1/pcr/m/n/10.95 setCoopData()\T1/ppl/m/n/10.95 , 
@@ -3062,13 +3093,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
  []
 
-<Figures/ProposalStructs.png, id=1414, 368.37625pt x 266.9975pt>
+[64 <./Figures/MemRegVars.png>]
+<Figures/ProposalStructs.png, id=1519, 657.45625pt x 262.9825pt>
 File: Figures/ProposalStructs.png Graphic file (type png)
 
 <use Figures/ProposalStructs.png>
 Package pdftex.def Info: Figures/ProposalStructs.png used on input line 140.
-(pdftex.def)             Requested size: 361.34995pt x 261.90425pt.
- [63] [64 <./Figures/CoopState.png> <./Figures/ProposalStructs.png>]
+(pdftex.def)             Requested size: 505.88771pt x 202.35669pt.
+ [65 <./Figures/CoopState.png> <./Figures/ProposalStructs.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
@@ -3083,12 +3115,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
-[65]
+
 Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
-
+[66]
 Overfull \hbox (3.01303pt too wide) in paragraph at lines 175--176
 []\T1/ppl/m/n/10.95 Meteor has re-cently up-dated from ver-sion 1.2 to 1.3. The
  up-date changed
@@ -3099,24 +3131,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
-<Figures/AppStructure.png, id=1455, 253.94875pt x 382.42876pt>
+<Figures/AppStructure.png, id=1550, 253.94875pt x 382.42876pt>
 File: Figures/AppStructure.png Graphic file (type png)
 
 <use Figures/AppStructure.png>
 Package pdftex.def Info: Figures/AppStructure.png used on input line 180.
-(pdftex.def)             Requested size: 361.34995pt x 544.18468pt.
+(pdftex.def)             Requested size: 180.67497pt x 272.09233pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
-
+[67 <./Figures/AppStructure.png>]
 Overfull \hbox (0.54347pt too wide) in paragraph at lines 194--195
 \T1/ppl/m/n/10.95 tract mod-ules' that are gen-er-ated as part of the de-ploy-m
 ent script
  []
 
-[66] [67 <./Figures/AppStructure.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
@@ -3126,12 +3158,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 209--210
 
  []
 
-<Figures/dbClassDiagram.png, id=1473, 722.7pt x 542.025pt>
+<Figures/dbClassDiagram.png, id=1560, 722.7pt x 542.025pt>
 File: Figures/dbClassDiagram.png Graphic file (type png)
 
 <use Figures/dbClassDiagram.png>
 Package pdftex.def Info: Figures/dbClassDiagram.png used on input line 213.
-(pdftex.def)             Requested size: 361.34995pt x 271.01183pt.
+(pdftex.def)             Requested size: 505.88771pt x 379.4149pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
@@ -3139,7 +3171,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 221.
-
+[68] [69 <./Figures/dbClassDiagram.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 229--230
 
  []
@@ -3149,7 +3181,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
-[68]
+
 Underfull \hbox (badness 10000) in paragraph at lines 233--234
 
  []
@@ -3164,7 +3196,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 237--238
 
  []
 
-[69 <./Figures/dbClassDiagram.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
@@ -3174,18 +3206,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
  []
 
-
+[70]
 Underfull \hbox (badness 10000) in paragraph at lines 244--245
 
  []
 
-<Figures/UserRegistryReactor.png, id=1501, 522.95375pt x 219.82124pt>
+<Figures/UserRegistryReactor.png, id=1593, 656.4525pt x 189.70876pt>
 File: Figures/UserRegistryReactor.png Graphic file (type png)
 
 <use Figures/UserRegistryReactor.png>
 Package pdftex.def Info: Figures/UserRegistryReactor.png used on input line 248
 .
-(pdftex.def)             Requested size: 361.34995pt x 151.89484pt.
+(pdftex.def)             Requested size: 505.88771pt x 146.19775pt.
 
 Overfull \hbox (16.67384pt too wide) in paragraph at lines 254--255
 \T1/pcr/m/n/10.95 RegistryReactor \T1/ppl/m/n/10.95 that lis-tens for this even
@@ -3197,14 +3229,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 254--255
 
  []
 
-[70 <./Figures/UserRegistryReactor.png>]
-<Figures/ReactorsClassDiagram.png, id=1511, 722.7pt x 542.025pt>
+<Figures/ReactorsClassDiagram.png, id=1596, 722.7pt x 542.025pt>
 File: Figures/ReactorsClassDiagram.png Graphic file (type png)
 
 <use Figures/ReactorsClassDiagram.png>
 Package pdftex.def Info: Figures/ReactorsClassDiagram.png used on input line 25
 8.
-(pdftex.def)             Requested size: 361.34995pt x 271.01183pt.
+(pdftex.def)             Requested size: 505.88771pt x 379.4149pt.
 
 Overfull \hbox (32.6837pt too wide) in paragraph at lines 264--265
 \T1/ppl/m/n/10.95 in the smart con-tract sys-tem: \T1/pcr/m/n/10.95 UserRegistr
@@ -3216,24 +3247,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 264--265
 
  []
 
-<Figures/UsersDepRegistration.png, id=1513, 465.74pt x 168.63pt>
+<Figures/UsersDepRegistration.png, id=1598, 651.43375pt x 81.30376pt>
 File: Figures/UsersDepRegistration.png Graphic file (type png)
 
 <use Figures/UsersDepRegistration.png>
 Package pdftex.def Info: Figures/UsersDepRegistration.png used on input line 26
 8.
-(pdftex.def)             Requested size: 361.34995pt x 130.8387pt.
+(pdftex.def)             Requested size: 505.88771pt x 63.14pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 274--275
 
  []
 
-[71 <./Figures/ReactorsClassDiagram.png> <./Figures/UsersDepRegistration.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 276--277
 
  []
 
-
+[71 <./Figures/UserRegistryReactor.png>] [72 <./Figures/ReactorsClassDiagram.pn
+g> <./Figures/UsersDepRegistration.png>]
 Overfull \hbox (6.575pt too wide) in paragraph at lines 279--280
 \T1/ppl/m/n/10.95 Me-teor builds the ap-pli-ca-tion is com-piles the HTML tem-p
 lates into javascript
@@ -3265,7 +3297,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 286--287
 
  []
 
-[72]
+[73]
 Overfull \hbox (5.7221pt too wide) in paragraph at lines 288--289
 \T1/ppl/m/n/10.95 in re-sponse to user in-put be-fore con-fir-ma-tion is re-cei
 ved from the blockchain.
@@ -3296,10 +3328,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 300--301
 
  []
 
-[73]) [74]
+[74]) [75]
 \openout2 = `Chapters/Evaluation.aux'.
 
- (./Chapters/Evaluation.tex
+ (./Chapters/Evaluation.tex [76
+
+
+
+]
 Chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--7
@@ -3322,11 +3358,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
  []
 
 1: section
-[75
-
-
-
-]
+[77]
 Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
@@ -3346,72 +3378,119 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
-[76]
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
+[78]
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-[77]
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+[79]
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
 
-Overfull \hbox (72.23009pt too wide) in paragraph at lines 70--83
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+
+ []
+
+[80]
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+
+Overfull \hbox (72.23009pt too wide) in paragraph at lines 86--99
  [] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+[81]
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
-[78]
-Overfull \hbox (16.90677pt too wide) in paragraph at lines 92--93
-[]\T1/ppl/m/n/10.95 The biggest se-cu-rity hole in Go-op its sus-cep-ti-bil-ity
- to Sybil at-tacks whereby
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--109
+
  []
 
-[79]) [80]
+
+Overfull \hbox (1.29791pt too wide) in paragraph at lines 111--112
+\T1/ppl/m/n/10.95 ac-counts, reg-is-ter mul-ti-ple user aliases and join a co-o
+p-er-a-tive mul-ti-ple times
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+ []
+
+[82]
+Overfull \hbox (1.41844pt too wide) in paragraph at lines 120--121
+\T1/ppl/m/n/10.95 through the in-tro-duc-tion of more con-troller and ap-pli-ca
+-tion logic con-trollers
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+
+ []
+
+[83]
+Overfull \hbox (0.38985pt too wide) in paragraph at lines 128--130
+\T1/ppl/m/n/10.95 pol-icy ?hack day? we re-ceived some pos-i-tive feed-back fro
+m the co-founders
+ []
+
+) [84]
 \openout2 = `Chapters/Conclusion.aux'.
 
  (./Chapters/Conclusion.tex
 Chapter 7.
 )
 1: section
-[81
+[85
 
 
 
 ]
 \openout2 = `Appendices/AppendixA.aux'.
 
- (./Appendices/AppendixA.tex [82
+ (./Appendices/AppendixA.tex [86
 
 
 
@@ -3419,74 +3498,74 @@ Chapter 7.
 Appendix A.
 )
 1: section
-[83] [84
+[87] [88
 
 
 ]
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (10.88724pt too wide) in paragraph at lines 259--259
+Overfull \hbox (10.88724pt too wide) in paragraph at lines 260--260
 \T1/pcr/m/n/10.95 snowden -[] nsa -[] files -[] surveillance -[] revelations -[
 ] decoded #
  []
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (7.41939pt too wide) in paragraph at lines 259--259
+Overfull \hbox (7.41939pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/n/10.95 June 2016. \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\
 T1/pcr/m/n/10.95 https : / / freedomboxfoundation . org / learn/$[][]\T1/ppl/m/
 n/10.95 . 
@@ -3494,26 +3573,26 @@ n/10.95 .
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (4.01483pt too wide) in paragraph at lines 259--259
+Overfull \hbox (4.01483pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/it/10.95 Google Out-age: In-ter-net Traf-fic Plunges 40 Per-cent\T1
 /ppl/m/n/10.95 . \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/pcr/m/n/10.
 95 http : / / news .
@@ -3521,20 +3600,20 @@ Overfull \hbox (4.01483pt too wide) in paragraph at lines 259--259
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 1: section
-[85]
+[89]
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (47.4903pt too wide) in paragraph at lines 259--259
+Overfull \hbox (47.4903pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/it/10.95 Platform co-op-er-a-tivism: In-tro-duc-tion\T1/ppl/m/n/10.
 95 . June 2016. \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/pcr/m/n/10.9
 5 http : / / platformcoop .
@@ -3542,165 +3621,176 @@ Overfull \hbox (47.4903pt too wide) in paragraph at lines 259--259
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (31.46187pt too wide) in paragraph at lines 259--259
+Overfull \hbox (31.46187pt too wide) in paragraph at lines 260--260
 \T1/ppl/m/n/10.95 June 2016. \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1
 /pcr/m/n/10.95 https : / / medium . com / @ConsenSys / programmable -[]
  []
 
 
-Overfull \hbox (31.09721pt too wide) in paragraph at lines 259--259
+Overfull \hbox (31.09721pt too wide) in paragraph at lines 260--260
 \T1/pcr/m/n/10.95 blockchains -[] in -[] context -[] ethereum -[] s -[] future 
 -[] cd8451eb421e #
  []
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (20.2126pt too wide) in paragraph at lines 259--259
+Overfull \hbox (20.2126pt too wide) in paragraph at lines 260--260
 \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/pcr/m/n/10.95 http : / / hac
 kingdistributed . com / 2016 / 03 / 01 / bitcoin -[]
  []
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
-
-
-Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
+
+
+Overfull \hbox (1.7601pt too wide) in paragraph at lines 260--260
+[]\T1/ppl/m/n/10.95 Matthäus Wan-der. \T1/ppl/m/it/10.95 Il-lus-tra-tion of Blo
+ckchain\T1/ppl/m/n/10.95 . \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/p
+cr/m/n/10.95 http : / / i . stack .
+ []
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (22.02722pt too wide) in paragraph at lines 259--259
+Package biblatex Warning: No driver for entry type 'url'.
+(biblatex)                Using fallback driver on input line 260.
+
+[90]
+
+Package biblatex Warning: No driver for entry type 'webpage'.
+(biblatex)                Using fallback driver on input line 260.
+
+
+Overfull \hbox (22.02722pt too wide) in paragraph at lines 260--260
 \T1/pcr/m/n/10.95 io / frontier -[] guide / content / contracts _ and _ transac
 tions _
  []
 
-[86]
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (23.12138pt too wide) in paragraph at lines 259--259
+Overfull \hbox (23.12138pt too wide) in paragraph at lines 260--260
 \T1/ppl/m/n/10.95 In: (2012). \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T
 1/pcr/m/n/10.95 http : / / www . datacenterdynamics . com / content -[]
  []
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (33.62459pt too wide) in paragraph at lines 259--259
+Overfull \hbox (33.62459pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/n/10.95 Wikipedia. \T1/ppl/m/it/10.95 Co-op-er-a-tive Move-ment in 
 In-dia\T1/ppl/m/n/10.95 . \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/pc
 r/m/n/10.95 https : / / en . wikipedia .
  []
 
 
-Overfull \hbox (38.62177pt too wide) in paragraph at lines 259--259
+Overfull \hbox (38.62177pt too wide) in paragraph at lines 260--260
 \T1/ppl/m/n/10.95 nomic De-vel-op-ment of In-dia^^Q. In: (1964). \T1/ppl/m/sc/1
 0.95 url\T1/ppl/m/n/10.95 : [][]$\T1/pcr/m/n/10.95 http : / / digitalcommons .
  []
 
 
-Overfull \hbox (13.62473pt too wide) in paragraph at lines 259--259
+Overfull \hbox (13.62473pt too wide) in paragraph at lines 260--260
 \T1/pcr/m/n/10.95 blog / 10 -[] lessons -[] from -[] kenyas -[] remarkable -[] 
 cooperatives$[][]\T1/ppl/m/n/10.95 . 
  []
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
+
+[91]
+
+Package biblatex Warning: No driver for entry type 'webpage'.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
-
-[87]
-
-Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (5.48344pt too wide) in paragraph at lines 259--259
+Overfull \hbox (5.48344pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/n/10.95 P2P Foun-da-tion. \T1/ppl/m/it/10.95 Open Co-op-er-a-tives\
 T1/ppl/m/n/10.95 . \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/pcr/m/n/1
 0.95 http : / / p2pfoundation .
@@ -3708,156 +3798,156 @@ T1/ppl/m/n/10.95 . \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/pcr/m/n/1
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (4.31725pt too wide) in paragraph at lines 259--259
+Overfull \hbox (4.31725pt too wide) in paragraph at lines 260--260
 \T1/pcr/m/n/10.95 cooperativism -[] vs -[] the -[] sharing -[] economy -[] 2ea7
 37f1b5ad #
  []
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (11.88724pt too wide) in paragraph at lines 259--259
+Overfull \hbox (11.88724pt too wide) in paragraph at lines 260--260
 \T1/pcr/m/n/10.95 automated -[] company -[] raises -[] equivalent -[] of -[] 12
 0 -[] million -[]
  []
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (23.02722pt too wide) in paragraph at lines 259--259
+Overfull \hbox (23.02722pt too wide) in paragraph at lines 260--260
 \T1/pcr/m/n/10.95 corporate / press / press -[] releases / headline -[] news / 
 interim -[]
  []
 
+[92]
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
-[88]
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (59.13255pt too wide) in paragraph at lines 259--259
+Overfull \hbox (59.13255pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/pcr/m/n/10.95 http : / / s
 olidity . readthedocs . io / en / latest / miscellaneous .
  []
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (18.95723pt too wide) in paragraph at lines 259--259
+Overfull \hbox (18.95723pt too wide) in paragraph at lines 260--260
 \T1/pcr/m/n/10.95 42055 / what -[] is -[] the -[] approach -[] to -[] calculate
  -[] an -[] ethereum -[]
  []
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (2.30063pt too wide) in paragraph at lines 259--259
+Overfull \hbox (2.30063pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/n/10.95 Vitalik Bu-terin. \T1/ppl/m/it/10.95 Pri-vacy on the Blockc
 hain\T1/ppl/m/n/10.95 . 2016. \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T
 1/pcr/m/n/10.95 https : / / blog .
  []
 
 
-Overfull \hbox (6.05473pt too wide) in paragraph at lines 259--259
+Overfull \hbox (6.05473pt too wide) in paragraph at lines 260--260
 \T1/pcr/m/n/10.95 ethereum . org / 2016 / 01 / 15 / privacy -[] on -[] the -[] 
 blockchain/$[][]\T1/ppl/m/n/10.95 . 
  []
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (14.14261pt too wide) in paragraph at lines 259--259
+Overfull \hbox (14.14261pt too wide) in paragraph at lines 260--260
 \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/pcr/m/n/10.95 http : / / blo
 g . kobigurk . com / homomorphic -[] encryption -[]
  []
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (18.03387pt too wide) in paragraph at lines 259--259
+Overfull \hbox (18.03387pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/it/10.95 What is e-Residency? \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.
 95 : [][]$\T1/pcr/m/n/10.95 https : / / e -[] estonia . com / e -[] residents /
 
@@ -3865,35 +3955,35 @@ Overfull \hbox (18.03387pt too wide) in paragraph at lines 259--259
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (6.11209pt too wide) in paragraph at lines 259--259
+Overfull \hbox (6.11209pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/n/10.95 Alex Beregsza-szi. \T1/ppl/m/it/10.95 Smart con-tracts and 
 ID cards\T1/ppl/m/n/10.95 . Apr. 2016. \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 
 : [][]$\T1/pcr/m/n/10.95 https :
  []
 
 
-Overfull \hbox (50.30719pt too wide) in paragraph at lines 259--259
+Overfull \hbox (50.30719pt too wide) in paragraph at lines 260--260
 \T1/pcr/m/n/10.95 / / ledger . press / smart -[] contracts -[] and -[] id -[] c
 ards -[] 11bc16155737 #
  []
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (19.63072pt too wide) in paragraph at lines 259--259
+Overfull \hbox (19.63072pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/n/10.95 Wikipedia. \T1/ppl/m/it/10.95 Elec-tronic Vot-ing In Es-to-
 nia\T1/ppl/m/n/10.95 . \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/pcr/m
 /n/10.95 https : / / en . wikipedia .
@@ -3901,10 +3991,10 @@ nia\T1/ppl/m/n/10.95 . \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/pcr/m
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (20.81316pt too wide) in paragraph at lines 259--259
+Overfull \hbox (20.81316pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/n/10.95 Thomas Bertani. \T1/ppl/m/it/10.95 Un-der-stand-ing or-a-cl
 es\T1/ppl/m/n/10.95 . \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/pcr/m/
 n/10.95 http : / / blog . oraclize .
@@ -3912,174 +4002,226 @@ n/10.95 http : / / blog . oraclize .
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (15.78061pt too wide) in paragraph at lines 259--259
+Overfull \hbox (15.78061pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/n/10.95 Stephan Tual. \T1/ppl/m/it/10.95 On DAO Con-trac-tors and C
 u-ra-tors\T1/ppl/m/n/10.95 . Apr. 2016. \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95
  : [][]$\T1/pcr/m/n/10.95 https :
  []
 
 
-Overfull \hbox (49.80719pt too wide) in paragraph at lines 259--259
+Overfull \hbox (49.80719pt too wide) in paragraph at lines 260--260
 \T1/pcr/m/n/10.95 / / blog . slock . it / on -[] contractors -[] and -[] curato
 rs -[] 2fb9238b2553 #
  []
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (6.59515pt too wide) in paragraph at lines 259--259
+Overfull \hbox (6.59515pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/n/10.95 Gavin Wood. \T1/ppl/m/it/10.95 Ethereum Lon-don Meetup: The
  Ethereum Ex-pe-ri-ence (Video)\T1/ppl/m/n/10.95 .
  []
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (8.02942pt too wide) in paragraph at lines 259--259
+Overfull \hbox (8.02942pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/n/10.95 Gavin Wood. \T1/ppl/m/it/10.95 Ethereum Lon-don Meetup: The
  Ethereum Ex-pe-ri-ence (Slides)\T1/ppl/m/n/10.95 .
  []
 
 
-Overfull \hbox (14.14261pt too wide) in paragraph at lines 259--259
+Overfull \hbox (14.14261pt too wide) in paragraph at lines 260--260
 \T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/pcr/m/n/10.95 http : / / www
  . slideshare . net / ethereum / the -[] ethereum -[]
  []
 
+[93]
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
-
-[89]
-
-Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (8.79265pt too wide) in paragraph at lines 259--259
+Package biblatex Warning: No driver for entry type 'webpage'.
+(biblatex)                Using fallback driver on input line 260.
+
+
+Overfull \hbox (8.79265pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/n/10.95 Eris In-dus-tries. \T1/ppl/m/it/10.95 Tu-to-ri-als | So-lid
 -ity 1: The Five Types Model\T1/ppl/m/n/10.95 . \T1/ppl/m/sc/10.95 url\T1/ppl/m
 /n/10.95 : [][]$\T1/pcr/m/n/10.95 https :
  []
 
 
-Overfull \hbox (28.59721pt too wide) in paragraph at lines 259--259
+Overfull \hbox (28.59721pt too wide) in paragraph at lines 260--260
 \T1/pcr/m/n/10.95 / / docs . erisindustries . com / tutorials / solidity / soli
 dity -[]
  []
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (20.2126pt too wide) in paragraph at lines 259--259
+Overfull \hbox (20.2126pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/pcr/m/n/10.95 https : / / 
 github . com / ethereum / wiki / wiki / JavaScript -[]
  []
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (3.24011pt too wide) in paragraph at lines 259--259
+Overfull \hbox (3.24011pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/sc/10.95 url\T1/ppl/m/n/10.95 : [][]$\T1/pcr/m/n/10.95 https : / / 
 iurimatias . github . io / embark -[] framework/$[][]\T1/ppl/m/n/10.95 . 
  []
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'url'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
 Package biblatex Warning: No driver for entry type 'webpage'.
-(biblatex)                Using fallback driver on input line 259.
+(biblatex)                Using fallback driver on input line 260.
 
 
-Overfull \hbox (7.5252pt too wide) in paragraph at lines 259--259
+Overfull \hbox (7.5252pt too wide) in paragraph at lines 260--260
 []\T1/ppl/m/it/10.95 Geth Bug\T1/ppl/m/n/10.95 . \T1/ppl/m/sc/10.95 url\T1/ppl/
 m/n/10.95 : [][]$\T1/pcr/m/n/10.95 https : / / github . com / ethereum / go -[]
  ethereum /
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 263.
-[90]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 263.
+
+Package biblatex Warning: No driver for entry type 'webpage'.
+(biblatex)                Using fallback driver on input line 260.
+
+
+Overfull \hbox (8.88724pt too wide) in paragraph at lines 260--260
+[][]$\T1/pcr/m/n/10.95 https : / / blog . ethereum . org / 2015 / 12 / 28 / und
+erstanding -[]
+ []
+
+
+Package biblatex Warning: No driver for entry type 'url'.
+(biblatex)                Using fallback driver on input line 260.
+
+
+Overfull \hbox (4.81725pt too wide) in paragraph at lines 260--260
+\T1/pcr/m/n/10.95 com / questions / 5708 / can -[] proof -[] of -[] stake -[] p
+os -[] improve -[]
+ []
+
+[94]
+
+Package biblatex Warning: No driver for entry type 'webpage'.
+(biblatex)                Using fallback driver on input line 260.
+
+
+Package biblatex Warning: No driver for entry type 'webpage'.
+(biblatex)                Using fallback driver on input line 260.
+
+
+Package biblatex Warning: Month out of range
+(biblatex)                at entry 'bitcoinXT' on input line 260.
+
+
+Overfull \hbox (30.14026pt too wide) in paragraph at lines 260--260
+\T1/ppl/m/it/10.95 Stalls\T1/ppl/m/n/10.95 . 2016 Jan-uary. \T1/ppl/m/sc/10.95 
+url\T1/ppl/m/n/10.95 : [][]$\T1/pcr/m/n/10.95 http : / / www . coindesk . com /
+ scalability -[]
+ []
+
+
+Package biblatex Warning: No driver for entry type 'webpage'.
+(biblatex)                Using fallback driver on input line 260.
+
+
+Overfull \hbox (31.8088pt too wide) in paragraph at lines 260--260
+\T1/ppl/m/it/10.95 cess\T1/ppl/m/n/10.95 . 2015. \T1/ppl/m/sc/10.95 url\T1/ppl/
+m/n/10.95 : [][]$\T1/pcr/m/n/10.95 https : / / www . youtube . com / watch ? v 
+= 1iNiUasJiEc$[][]\T1/ppl/m/n/10.95 . 
+ []
+
+
+Package biblatex Warning: No driver for entry type 'url'.
+(biblatex)                Using fallback driver on input line 260.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 264.
+[95]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 264.
  (./main.aux (./Chapters/Introduction.aux) (./Chapters/Background.aux)
 (./Chapters/ResearchAndDesign.aux) (./Chapters/Goop.aux)
 (./Chapters/Implementation.aux) (./Chapters/Evaluation.aux)
 (./Chapters/Conclusion.aux) (./Appendices/AppendixA.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 263.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 263.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 264.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 264.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 97561C78B741D09EB9C2C6EE2880B526;17146.
-
-
-LaTeX Warning: There were undefined references.
+(rerunfilecheck)             Checksum: 24CBE836118BE61A67626F2DD8E1AC75;17889.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -4089,13 +4231,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32354 strings out of 493089
- 652065 string characters out of 6134843
- 1033651 words of memory out of 5000000
- 34956 multiletter control sequences out of 15000+600000
+ 32438 strings out of 493089
+ 653300 string characters out of 6134843
+ 1039106 words of memory out of 5000000
+ 35018 multiletter control sequences out of 15000+600000
  46253 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,20n,83p,10377b,2565s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,20n,84p,10377b,2569s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/20
@@ -4103,10 +4245,10 @@ xlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/20
 f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2015/texmf-dist/
 fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
 ype1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (106 pages, 2565391 bytes).
+Output written on main.pdf (111 pages, 2616864 bytes).
 PDF statistics:
- 1938 PDF objects out of 2073 (max. 8388607)
- 1722 compressed objects within 18 object streams
- 473 named destinations out of 1000 (max. 500000)
- 1210 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2077 PDF objects out of 2487 (max. 8388607)
+ 1851 compressed objects within 19 object streams
+ 492 named destinations out of 1000 (max. 500000)
+ 1258 words of extra memory for PDF output out of 10000 (max. 10000000)
 

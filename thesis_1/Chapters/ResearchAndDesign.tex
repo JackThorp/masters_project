@@ -22,7 +22,7 @@ Beyond defining stakeholder boundaries most governing documents also specify a m
 \centering
 \makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/webarchForm}}
 \decoRule
-\caption[]{A section of a membership application form for Webarchitects multi stakeholder cooperative illustrating example conditions of membership}
+\caption[Webarchitect's Membership Form]{A section of a membership application form for Webarchitects multi stakeholder cooperative illustrating example conditions of membership}
 \label{fig:webarchForm}
 \end{figure} 
 Figure \ref{fig:webarchForm} is an extract from the membership application form for Webrarchitects\cite{webarchitects} (a multi stakeholder co-operative). Besides providing general personal information such as name, email and address, prospective members must also sign up to rules or conditions of membership.\\
@@ -33,7 +33,7 @@ General meetings (GMs) are the 'sovereign body' of a cooperative. Although any m
 \centering
 \makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/WorkerModelGM}}
 \decoRule
-\caption[]{A section of the Coops UK worker co-operative model rules outlining the purpose of general meetings}
+\caption[Worker Coop General Meeting Definition]{A section of the Coops UK worker co-operative model rules outlining the purpose of general meetings}
 \label{fig:workerCoopGM}
 \end{figure} 
 
@@ -47,7 +47,7 @@ A board of directors is a subset of the membership in large co-operatives, appoi
 \centering
 \makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/WorkerRulesVoting}}
 \decoRule
-\caption[]{A section of the Coops UK worker coop model rules illustrating an example voting process.}
+\caption[Worker Coop Voting Process]{A section of the Coops UK worker coop model rules illustrating an example voting process.}
 \label{fig:WorkerRulesVoting}
 \end{figure} 
 Co-operatives are almost always 'one member one vote'. The voting process in small cooperatives may just be a show of hands. Large member coops must have sophisticated member engagement strategies to inform, encourage and enable members to take part in postal or online ballots to elect directors or pass important motions. Figure \ref{fig:WorkerRulesVoting} shows the main voting clauses from the Coops UK worker co-operative model rules. Voting in multi stakeholder cooperatives can be slightly more interesting as the rules must protect against unfair representation or dominance of a single stakeholder group. Figure \ref{fig:SomersetVoting} shows an extract from the Somerset Rules. The Somerset rules also specify that no resolution may change the rules on class weighting themselves. 
@@ -55,7 +55,7 @@ Co-operatives are almost always 'one member one vote'. The voting process in sma
 \centering
 \makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/SomersetVoting}}
 \decoRule
-\caption[]{A section of the Somerset multi stakeholder model rules illustrating the complex and contractual nature of class based voting.}
+\caption[Somerset Rules for Class Based Voting]{A section of the Somerset multi stakeholder model rules illustrating the complex and contractual nature of class based voting.}
 \label{fig:SomersetVoting}
 \end{figure} 
 
@@ -184,9 +184,9 @@ Provable honest voting systems that protect voter privacy have been widely discu
 Whilst the Ethereum blockchain is transparent, the Solidity language features various visibilities for functions and state variables (see Figure \ref{fig:AccessModifiers}, so what does this mean? \\
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/AccessModifiers}
+\makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/AccessModifiers}}
 \decoRule
-\caption[]{}
+\caption[Solidity Access Modifiers]{Illustration of various access modifiers for state variables and functions within Solidity}
 \label{fig:AccessModifiers}
 \end{figure}
 Access modifiers within Solidity, like in many other languages, are designed to aid code encapsulation. Whilst they restrict the behaviour of executing contract code, and therefore help to catch bugs and errors at compile time, they don't provide any access modification to any external entity reading from the blockchain.\\
@@ -204,9 +204,9 @@ e-Residency is a transnational digital identity offered by the government of Est
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/e-Residency}
+\makebox[\textwidth][c]{\includegraphics[width=\textwidth]{Figures/e-Residency}}
 \decoRule
-\caption[]{}
+\caption[e-Residency Card]{e-Residency card issued by Estonian Government}
 \label{fig:e-Residency}
 \end{figure}
 
@@ -236,9 +236,9 @@ Unfortunately, because smart contract code can only be executed as the result of
 A contract working eagerly will somehow arrange for an external transaction to call its evaluation code at a specific time in the future. In contrast, a contract working lazily will just wait for a transaction to occur 'naturally' and then, if the time of an event has passed, evaluate it's logic.\\
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/lazy}
+\makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{Figures/lazy}}
 \decoRule
-\caption[]{Timeline of ballot contract calls with ;azy evaluation}
+\caption[Lazy Contract Scheduling]{Timeline of ballot contract calls with lazy evaluation}
 \label{fig:lazy}
 \end{figure}
 Figure \ref{fig:lazy} shows an example time frame for a ballot contract. When the ballot closes the contract may need to perform some additional logic to calculate a result or close the voting. Following a lazy approach, this is triggered by the 'read result' transaction which is the next transaction to occur. There are a couple of issues with the approach. Firstly, if no transactions 'naturally' occur after the ballot closes then the evaluation simply can't happen. Secondly, the 'read result' method must become a transaction because it might trigger evaluation code which updates state in the blockchain. Ideally, getting the result should just be a call and the first user to ask for it shouldn't have to pay!\\
@@ -247,9 +247,9 @@ To address these problems an 'eager evaluation' solution has been developed by t
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/eager}
+\makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{Figures/eager}}
 \decoRule
-\caption[]{Timeline of ballot contract calls with eager evaluation}
+\caption[Eager Contract Scheduling]{Timeline of ballot contract calls with eager evaluation}
 \label{fig:eager}
 \end{figure}
 The eager evaluation solution also has its flaws. Firstly, calls are scheduled for a given period of blocks into the future and not at a given time. Secondly, the service cannot guarantee that a call will be executed. It relies on an open market of rational actors but if no one wants to collect the fee for your function call then it cannot happen.\\
@@ -267,18 +267,18 @@ Whisper is a private and public messaging system built into Ethereum. Conceptual
 Together, Ethereum, Swarm and Whisper form a complementary stack of tools for building completely distributed web applications.\\ 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/DappArch}
+\makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/DappArch}}
 \decoRule
-\caption[]{}
+\caption[Idealised Web3.0 Architecture]{Idealised Web3.0 architecture. Diagram taken from the Ethereum Experience \cite{Web3Slides}}
 \label{fig:DappArch}
 \end{figure}
 
 Figure \ref{fig:DappArch} is a conceptual diagram showing the interaction of three dapps in an idealised Web3.0 architecture. The green circles represent client computers, perhaps even a single program such as the Mist browser. The 'backend' of the dapp consists of logic split between javascript running in in the browser and the Ethereum blockchain. Dapps communicate dynamically using Whisper for public and private instant messaging and Swarm for file or content storage.\\
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/DappVWeb}
+\makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/DappVWeb}}
 \decoRule
-\caption[]{}
+\caption[Web App v Dapp]{Dapp and traditional 'web app' comparison. Diagram taken from the Ethereum Experience \cite{Web3Slides}}
 \label{fig:DappVWeb}
 \end{figure}
 \\
@@ -314,9 +314,9 @@ This section introduces a couple of useful patterns to aid smart contract develo
 Front end dapp code uses the web3.js library\cite{Web3JS}, which exposes the Web3 Javascript API\cite{JavascriptAPI}, to interact with smart contracts. in turn, the web3 library communicates with the local Ethereum node through an RPC (Remote Procedure Call) interface. Depending on whether smart contract code modifies the blockchain (i.e changes contract storage state) a function call will either be a 'transaction' or a 'call'. Calls do not require gas to execute and a web3.js callback will be passed the same return value as the solidity function. Transactions however, need to be processed by the network. They require gas to execute and the argument passed to the callback is a transaction hash, not the return value of the solidity function. Return values for non-constant (state changing) contract functions are only returnable to calls from other contracts within the EVM not from an external call. A potential implication of this is that it becomes difficult for a dapp to know whether a transaction (i.e state changing function call) successfully completed or whether it failed (conditions, exceptions, out of gas etc). A simple design pattern that uses Ethereum events is used to handle this. \\
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/DNSContract}
+\makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/DNSContract}}
 \decoRule
-\caption[]{A simple domain name registration contract to illustrate the use of events}
+\caption[Example DNS Contract]{A simple domain name registration contract to illustrate the use of events.}
 \label{fig:DNSContract}
 \end{figure}
 
@@ -336,17 +336,17 @@ The five types of contract within this model are as follows: \\
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/FiveTypesSystem}
+\makebox[\textwidth][c]{\includegraphics[width=\textwidth]{Figures/FiveTypesSystem}}
 \decoRule
-\caption[]{}
+\caption[Five Types Dependency Graph]{Five Types component dependency diagram (original by Eris Industries \cite{FiveTypes}}
 \label{fig:FiveTypesSystem}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/FiveTypesDOUG}
+\makebox[\textwidth][c]{\includegraphics[width=\textwidth]{Figures/FiveTypesDOUG}}
 \decoRule
-\caption[]{}
+\caption[Five Types Contract Management Contract Interaction]{Illustration of contract management contract (Doug) within Five Types model.}
 \label{fig:FiveTypesDOUG}
 \end{figure}
 

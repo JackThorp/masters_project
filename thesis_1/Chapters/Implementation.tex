@@ -7,9 +7,9 @@
 \section{Architecture}
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/GoopArch}
+\makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{Figures/GoopArch}}
 \decoRule
-\caption[]{}
+\caption[Go-op Architecture Diagram]{Go-op architecture diagram - 'geth' Ethereum client, IPFS node and Go-op 'front end' all run on local host machine.}
 \label{fig:GoopArch}
 \end{figure}
 
@@ -34,9 +34,9 @@ The principal entities in the system are users and 'coops' which are stored in t
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/SCArch}
+\makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{Figures/SCArch}}
 \decoRule
-\caption[]{}
+\caption[Go-op Smart Contract System Architecture]{Go-op smart contract system architecture.}
 \label{fig:SCArch}
 \end{figure}
 
@@ -51,9 +51,9 @@ The UserRegistry contract (Figure \ref{fig:UserRegistry}) is very simple. It sto
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/UserReg2}
+\makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/UserRegistry}}
 \decoRule
-\caption[]{Snippet of the UserRegistry contract}
+\caption[UserRegistry Contract Snippet]{Snippet of the UserRegistry contract}
 \label{fig:UserRegistry}
 \end{figure}
 
@@ -79,9 +79,9 @@ The CoopRegistry is another relatively simple contract. It stores the addresses 
 \code{getCoops()} returns the state variable array of CoopContract addresses. \\
  \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/CoopRegistry}
+\makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/CoopRegistry}}
 \decoRule
-\caption[]{Snippet of the CoopContract creation within the CoopRegistry contract (a Solidity definition for CoopContract must be provided in order to compile CoopRegistry) }
+\caption[CoopRegistry Coop Creation Snippet]{Snippet of the CoopContract creation within the CoopRegistry contract (a Solidity definition for CoopContract must be provided in order to compile CoopRegistry) }
 \label{fig:CoopRegistry}
 \end{figure}
 
@@ -96,9 +96,9 @@ The MembershipRegistry contract maintains the many to many 'membership' relation
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/MemRegVars}
+\makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/MemRegVars}}
 \decoRule
-\caption[]{ }
+\caption[MembershipRegistry State Variables]{State variables of the MembershipRegistry smart contract.}
 \label{fig:MemRegVars}
 \end{figure}
 
@@ -127,9 +127,9 @@ The \code{isMember()} method is required by CoopContracts to establish membershi
 Each cooperative in the Go-op system exists as a unique CoopContract (full listing in section X). The CoopContract is by far the most complex contract because it implements a proposal voting system. The  contract has twelve methods: \code{set\allowbreak CoopData()}, \code{get\allowbreak CoopData()}, \code{get\allowbreak ProposalData()}, \code{get\allowbreak VotesFor()}, \code{getVotes\allowbreak Against()}, \code{has\allowbreak Passed()}, \code{has\allowbreak Failed()}, \code{isA\allowbreak Member()}, \code{getNum\allowbreak Members()}, \code{new\allowbreak Proposal()}, \code{support\allowbreak Proposal()}, \code{close\allowbreak Proposal()}. The majority of these methods are one liners and fairly self explanatory. The most involved functions are \code{new\allowbreak Proposal()}, \code{support\allowbreak Proposal()}, \code{close\allowbreak Proposal()} which will be discussed presently.\\
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/CoopState}
+\makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/CoopState}}
 \decoRule
-\caption[]{ }
+\caption[State Variables ofCoopContract]{State variables of the CoopContract.}
 \label{fig:CoopState}
 \end{figure}
 
@@ -137,9 +137,9 @@ Figure \ref{fig:CoopState} shows the state variables of a CoopContract. The ipfs
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/ProposalStructs}
+\makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/ProposalStructs}}
 \decoRule
-\caption[]{ }
+\caption[Proposal Structs in CoopContract]{Proposal structs used by the CoopContract.}
 \label{fig:ProposalStructs}
 \end{figure}
 
@@ -177,9 +177,9 @@ Meteor has recently updated from version 1.2 to 1.3. The update changed the beha
 \subsection{Application Structure}
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/AppStructure}
+\makebox[\textwidth][c]{\includegraphics[width=0.5\textwidth]{Figures/AppStructure}}
 \decoRule
-\caption[]{ }
+\caption[Front End Application Structure]{Front end application structure}
 \label{fig:AppStructure}
 \end{figure}
 
@@ -210,9 +210,9 @@ The client side 'database' (as shown in figure X) abstracts complexity away from
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/dbClassDiagram}
+\makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/dbClassDiagram}}
 \decoRule
-\caption[]{ }
+\caption[Front End Database Alass Diagram]{Front end database class diagram.}
 \label{fig:dbClassDiagram}
 \end{figure}
 
@@ -245,9 +245,9 @@ To help build reactive user interfaces in Go-op, the database is implemented as 
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/UserRegistryReactor}
+\makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/UserRegistryReactor}}
 \decoRule
-\caption[]{Critical section of UserRegistryReactor}
+\caption[Critical Section In UserRegistryReactor]{Critical section of UserRegistryReactor}
 \label{fig:UserRegistryReactor}
 \end{figure}
 
@@ -255,9 +255,9 @@ When a new user is added to a the \code{UserRegistry} the \code{newUser} event i
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/ReactorsClassDiagram}
+\makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/ReactorsClassDiagram}}
 \decoRule
-\caption[]{Class diagram for Ethereum reactor classes.}
+\caption[Reactors Class Diagram]{Class diagram for Ethereum reactor classes.}
 \label{fig:ReactorsClassDiagram}
 \end{figure}
 
@@ -265,9 +265,9 @@ Figure \ref{fig:ReactorsClassDiagram} shows the class hierarchy for the various 
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/UsersDepRegistration}
+\makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/UsersDepRegistration}}
 \decoRule
-\caption[]{Snippet of Users collection highlighting reactive dependency registration process}
+\caption[Dependency Registration in Users Collection]{Snippet of Users collection highlighting reactive dependency registration process}
 \label{fig:UsersDepRegistration}
 \end{figure}
 
@@ -286,8 +286,6 @@ User experience is extra important for blockchain based applications because of 
 The first step to improving response times is to minimise the number of separate transactions needed to perform one logical process. Initially, the process of creating a new coop took three transactions. The first one deployed a new CoopContract, the second added the Coop to the CoopRegistry and the final transaction added the creator as the first member. A new block is mined roughly every seventeen seconds on the Ethereum network and given that transactions often don't make it the next block straight away, it could potentially take well over a minute for the application to confirm a new coop being created. This process was improved somewhat and now only takes two transactions to complete. This was achieved by adding the contract creation logic into the CoopRegistry and exposing a newCoop method. Theoretically, there is really no reason why the whole process cannot be performed in one transaction. It could be done fairly simply by adding more application controller contracts on top of the registry contracts. Although the return type problem (discussed in section ) means that it is currently not possible to expose a pubic API entirely through top level contracts (still need direct access to registries) redesigning the Go-op smart contract system this way would probably have a lot of benefits including minimising transactions, helping consistency and simplifying front end code.\\
 
 Reducing the number of transactions is useful but even waiting for one transaction to process is pretty unacceptable for UX. The best way around this is an optimistic interface. An optimistic interfaces would update the UI in response to user input before confirmation is received from the blockchain. Ideally, icons would be used to indicate which parts of the application are pending and not yet confirmed. Optimistic UIs work best when there is a high degree of confidence in that the request to the backend will succeed. Given the high availability of blockchain networks it is probably possible to have quite a high degree of certainty about the behaviour of Ethereum contracts. Go-op doesn't currently implement an optimistic UI.\\
-
-\myworries{TODO -.Loading animations}
 
 \subsection{Deployment Script}
 \label{subsec:deployScript}

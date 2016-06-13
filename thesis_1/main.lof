@@ -4,9 +4,52 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces networks}}{2}{figure.caption.9}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Simplified Blockchain Network}}{8}{figure.caption.22}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Blockchain As State Transition}}{9}{figure.caption.25}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Bitcoin State Transition}}{10}{figure.caption.26}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Sequence of Blockchain Headers}}{11}{figure.caption.40}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Ethereum Accounts}}{13}{figure.caption.50}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Ethereum State Transition Diagram}}{14}{figure.caption.52}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Ethereum Block Validation Process}}{15}{figure.caption.55}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces IPFS Stack}}{19}{figure.caption.71}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Rochdale Pioneers}}{20}{figure.caption.74}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Webarchitect's Membership Form}}{28}{figure.caption.97}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Worker Coop General Meeting Definition}}{29}{figure.caption.99}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Worker Coop Voting Process}}{29}{figure.caption.102}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Somerset Rules for Class Based Voting}}{30}{figure.caption.103}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Solidity Access Modifiers}}{37}{figure.caption.128}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces e-Residency Card}}{38}{figure.caption.131}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Lazy Contract Scheduling}}{40}{figure.caption.136}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Eager Contract Scheduling}}{41}{figure.caption.137}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Idealised Web3.0 Architecture}}{42}{figure.caption.139}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Web App v Dapp}}{43}{figure.caption.140}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Example DNS Contract}}{45}{figure.caption.148}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Five Types Dependency Graph}}{46}{figure.caption.155}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Five Types Contract Management Contract Interaction}}{47}{figure.caption.156}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Go-op Welcome Page}}{50}{figure.caption.161}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Go-op Registration View}}{51}{figure.caption.163}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Go-op User Home Page View}}{51}{figure.caption.165}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Go-op My Coops View}}{52}{figure.caption.167}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Go-op New Coop Pop Up}}{52}{figure.caption.169}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Go-op Coop Home Page}}{53}{figure.caption.171}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Go-op New Proposal Pop Up}}{54}{figure.caption.173}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Go-op Proposal Pop Up}}{55}{figure.caption.175}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Go-op Loading Pop Up}}{56}{figure.caption.177}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Go-op Architecture Diagram}}{58}{figure.caption.180}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Go-op Smart Contract System Architecture}}{60}{figure.caption.182}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces UserRegistry Contract Snippet}}{61}{figure.caption.186}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces CoopRegistry Coop Creation Snippet}}{63}{figure.caption.191}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces MembershipRegistry State Variables}}{64}{figure.caption.193}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces State Variables ofCoopContract}}{65}{figure.caption.200}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Proposal Structs in CoopContract}}{65}{figure.caption.201}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Front End Application Structure}}{67}{figure.caption.214}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Front End Database Alass Diagram}}{69}{figure.caption.217}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Critical Section In UserRegistryReactor}}{71}{figure.caption.225}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Reactors Class Diagram}}{72}{figure.caption.226}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Dependency Registration in Users Collection}}{72}{figure.caption.227}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
