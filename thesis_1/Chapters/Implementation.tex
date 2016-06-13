@@ -21,14 +21,14 @@ The Go-op 'front end' code interacts with the local Ethereum node through the we
 
 One important note is that user accounts are not managed through the web3 library and must be added / removed etc through the Ethereum client command line interface. User accounts need to be unlocked before they can be used by the Go-op application to sign transactions. Again, the development of new user friendly interfaces will soon make it possible to avoid such pains. \\
 
-For more information about installing and running Ethereum and IPFS clients consult Appendix A. \\
+For more information about installing and running Ethereum and IPFS clients consult Appendix \ref{AppendixA}. \\
 
 A possible alternative to running Web3 clients locally is to run them as web services (this is the kind of approach offered by Block apps\cite{BlockApps} for example). Whilst this has the potential to simplify the problem in the short term, it generally works against the objectives of decentralisation. The process introduces the web service as a 'trusted' intermediary. It is counter intuitive to add points of trust into the process of executing Ethereum contracts as the whole point is to eliminate 'centralised trust' in the first place. \\
 
 Lower level architecture explanations for the Go-op application and smart contract system are provided in the following sections. \\
 
 \section{Go-op Smart Contract System}
-The smart contract system for Go-op (Figure \ref{fig:SCArch}) is relatively small. It is composed of five static contract accounts (CMC, UserController, UserRegistry, CoopRegistry and MembershipRegistry) and a dynamic number of user and CoopContract accounts. The architecture of the contracts roughly follows the Five Types design pattern discussed in section \ref{sec:scDesign}.\\ 
+The smart contract system for Go-op (figure \ref{fig:SCArch}) is relatively small. It is composed of five static contract accounts (CMC, UserController, UserRegistry, CoopRegistry and MembershipRegistry) and a dynamic number of user and CoopContract accounts. The architecture of the contracts roughly follows the Five Types design pattern discussed in section \ref{sec:scDesign}.\\ 
 
 The principal entities in the system are users and 'coops' which are stored in the UserRegistry contract and CoopRegistry contract respectively. The many to many 'membership' relation between users and coops is stored by the MembershipRegistry contract. The next few subsections explain the role of each system component in detail.\\
 
@@ -47,7 +47,7 @@ Although it was not possible to fully realise the Five Type design pattern due t
 CMCEnabled is an 'abstract' contract that is inherited by all non CMC contracts. It defines a minimal interface required by the CMC to interact with non CMC contracts. A ContractProvider contract is used to define the minimal interface required in the opposite direction. Again, these are also standard contracts of the Five Types pattern. A code listing and detailed explanation be found here\cite{FiveTypes}.\\
 
 \subsection{UserRegistry \& UserController}
-The UserRegistry contract (Figure \ref{fig:UserRegistry}) is very simple. It stores a mapping of user account addresses to IPFS addresses and has two functions, setUserData and getUserData (not shown in figure), for reading and writing to this mapping. The UserRegistry uses the CMC contract to restrict both read and write permission to only the UserController contract. \\
+The UserRegistry contract (figure \ref{fig:UserRegistry}) is very simple. It stores a mapping of user account addresses to IPFS addresses and has two functions, setUserData and getUserData (not shown in figure), for reading and writing to this mapping. The UserRegistry uses the CMC contract to restrict both read and write permission to only the UserController contract. \\
 
 \begin{figure}
 \centering
@@ -74,6 +74,7 @@ There are a few possible 'workarounds' in this case:\\
 There are plans to implement dynamic return types between contracts in a future protocol update so, hopefully, the current workaround is only temporary\cite{ReturnArray}. A big factor for choosing workaround c) is that it will be the easy to revert once the protocol is updated.\\
 
 \subsection{CoopRegistry}
+\label{subsec:coopReg}
 The CoopRegistry is another relatively simple contract. It stores the addresses of all CoopContract contracts in the Go-op system. Unlike the UserRegistry it does not store any additional information about cooperatives, such as an IPFS address, because this is stored by the individual CoopContracts themselves. The CoopRegistry contract exposes two methods: \code{newCoop()} and \code{getCoops()}. \\
 
 \code{getCoops()} returns the state variable array of CoopContract addresses. \\
@@ -85,7 +86,7 @@ The CoopRegistry is another relatively simple contract. It stores the addresses 
 \label{fig:CoopRegistry}
 \end{figure}
 
-\code{newCoop()} creates a new instance of a CoopContract with the provided parameters (see Figure \ref{fig:CoopRegistry}) and saves the resultant address in the registry array.\\
+\code{newCoop()} creates a new instance of a CoopContract with the provided parameters (see figure \ref{fig:CoopRegistry}) and saves the resultant address in the registry array.\\
 
 A cleaner 'separation of concerns' might be achieved here by extracting the complexity of CoopContract creation out of the CoopRegistry into a CoopController. This could help modularity by creating a more rigid API for the CoopRegistry and would abstract the registry contract from the public facing API. However, assuming the avoidance of intensive contract code[Footnote] it is not possible to pass variable length arrays, such as the list of coop addresses, between contracts. This means that at least some part of the public facing API must be exposed by the CoopRegistry directly. At present therefore, a new coop controller contract probably does not simplify the design of the system enough to warrant its introduction. \\
 
@@ -124,7 +125,7 @@ The \code{deregister()} method removes the sender as a member of the given coop.
 The \code{isMember()} method is required by CoopContracts to establish membership during voting.\\
 
 \subsection{CoopContract}
-Each cooperative in the Go-op system exists as a unique CoopContract (full listing in section X). The CoopContract is by far the most complex contract because it implements a proposal voting system. The  contract has twelve methods: \code{set\allowbreak CoopData()}, \code{get\allowbreak CoopData()}, \code{get\allowbreak ProposalData()}, \code{get\allowbreak VotesFor()}, \code{getVotes\allowbreak Against()}, \code{has\allowbreak Passed()}, \code{has\allowbreak Failed()}, \code{isA\allowbreak Member()}, \code{getNum\allowbreak Members()}, \code{new\allowbreak Proposal()}, \code{support\allowbreak Proposal()}, \code{close\allowbreak Proposal()}. The majority of these methods are one liners and fairly self explanatory. The most involved functions are \code{new\allowbreak Proposal()}, \code{support\allowbreak Proposal()}, \code{close\allowbreak Proposal()} which will be discussed presently.\\
+Each cooperative in the Go-op system exists as a unique CoopContract. The CoopContract is by far the most complex contract because it implements a proposal voting system. The  contract has twelve methods: \code{set\allowbreak CoopData()}, \code{get\allowbreak CoopData()}, \code{get\allowbreak ProposalData()}, \code{get\allowbreak VotesFor()}, \code{getVotes\allowbreak Against()}, \code{has\allowbreak Passed()}, \code{has\allowbreak Failed()}, \code{isA\allowbreak Member()}, \code{getNum\allowbreak Members()}, \code{new\allowbreak Proposal()}, \code{support\allowbreak Proposal()}, \code{close\allowbreak Proposal()}. The majority of these methods are one liners and fairly self explanatory. The most involved functions are \code{new\allowbreak Proposal()}, \code{support\allowbreak Proposal()}, \code{close\allowbreak Proposal()} which will be discussed presently.\\
 \begin{figure}
 \centering
 \makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/CoopState}}
@@ -206,7 +207,7 @@ Node\_modules, readme and package.json are standard javascript application asset
 This section describes the contents of the api folder which forms a layer between the application view logic and the Web3 'backend'.
 
 \subsubsection{database}
-The client side 'database' (as shown in figure X) abstracts complexity away from view logic by orchestrating the retrieval of data from the Web3 'backend' and exposing an easy to use, reactive and 'promisified' interface.\\
+The client side 'database' (as shown in figure \ref{fig:dbClassDiagram}) abstracts complexity away from view logic by orchestrating the retrieval of data from the Web3 'backend' and exposing an easy to use, reactive and 'promisified' interface.\\
 
 \begin{figure}
 \centering
@@ -251,7 +252,7 @@ To help build reactive user interfaces in Go-op, the database is implemented as 
 \label{fig:UserRegistryReactor}
 \end{figure}
 
-When a new user is added to a the \code{UserRegistry} the \code{newUser} event is fired (see Figure \ref{fig:UserRegistry}). Figure \ref{fig:UserRegistryReactor} shows the critical logic in the \code{User\allowbreak Registry\allowbreak Reactor} that listens for this event. When it fires, the \code{UserReactor} triggers all the reactivity dependencies that have been registered to it. \\
+When a new user is added to a the \code{UserRegistry} the \code{newUser} event is fired (see figure \ref{fig:UserRegistry}). Figure \ref{fig:UserRegistryReactor} shows the critical logic in the \code{User\allowbreak Registry\allowbreak Reactor} that listens for this event. When it fires, the \code{UserReactor} triggers all the reactivity dependencies that have been registered to it. \\
 
 \begin{figure}
 \centering
@@ -295,5 +296,5 @@ A distinction can be made between what might be termed 'static' and 'dynamic' sm
 
 In either case, whether contracts are static or dynamic the front end needs to know the contract ABI (application binary interface) so it can create a 'handle' for interaction or deployment with the web3 library.\\
 
-With this in mind, the purpose of the deployContracts script is two fold. It's first purpose is to compile each of the Solidity contracts and wrap the resulting ABI into modules so that they can be loaded by the front end code. Figure X shows an example output for a compiled CoopRegistry contract. The second purpose of the deployContracts script it to deploy the contracts. Only the static contracts need to be deployed by this script i.e no CoopContracts need to be deployed here. Once the static contracts have been deployed they must also be registered with the CMC (see information about CMCs see section). Finally, the addresses of the deployed contracts are written to the contractLocations module so that they can also be accessed by the front end code. \\
+With this in mind, the purpose of the deployContracts script is two fold. It's first purpose is to compile each of the Solidity contracts and wrap the resulting ABI into modules so that they can be loaded by the front end code. The second purpose of the deployContracts script it to deploy the contracts. Only the static contracts need to be deployed by this script i.e no CoopContracts need to be deployed here. Once the static contracts have been deployed they must also be registered with the CMC (see information about CMCs see section). Finally, the addresses of the deployed contracts are written to the contractLocations module so that they can also be accessed by the front end code. \\
 

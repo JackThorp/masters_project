@@ -1,0 +1,15 @@
+[0] Config.pm:324> INFO - This is Biber 2.1
+[1] Config.pm:327> INFO - Logfile is 'main.blg'
+[68] biber-darwin:276> INFO - === Mon Jun 13, 2016, 13:23:37
+[69] Biber.pm:333> INFO - Reading 'main.bcf'
+[198] Biber.pm:645> INFO - Found 133 citekeys in bib section 0
+[298] Biber.pm:2977> INFO - Processing section 0
+[343] Biber.pm:3115> INFO - Looking for bibtex format file 'example.bib' for section 0
+[365] bibtex.pm:1021> INFO - Decoding LaTeX character macros into UTF-8
+[372] bibtex.pm:895> INFO - Found BibTeX data source 'example.bib'
+[1932] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1933] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1933] Biber.pm:2854> INFO - Sorting list 'none' of type 'entry' with scheme 'none' and locale 'en-US'
+[1933] Biber.pm:2858> INFO - No sort tailoring available for locale 'en-US'
+[2047] bbl.pm:505> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[2055] bbl.pm:596> INFO - Output to main.bbl

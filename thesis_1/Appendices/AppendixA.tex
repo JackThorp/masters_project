@@ -1,7 +1,47 @@
 % Appendix A
 
-\chapter{Appendix Title Here} % Main appendix title
+\chapter{Practical Guidance} % Main appendix title
 
 \label{AppendixA} % For referencing this appendix elsewhere, use \ref{AppendixA}
 
-Write your Appendix content here.
+\section{Navigating The Ethereum Ecosystem}
+The Ethereum ecosystem is relatively busy place and can be disorientating for newcomers. This section serves as a short glossary to make this process a little easier.\\
+\\
+\keyword{geth}\\
+Geth is a full Ethereum client written in the go language. It implements the Web3 Javascript API over JSON RPC.\\
+ \\
+\keyword{web3.js}\\
+A javascript library that implements needed to connect to a local Ethereum client.\\
+\\
+\keyword{TurboEthereum}\\
+The name for the software distribution implemented in C++. It?s major components are:\\
+\\
+\begin{itemize}
+\item AlethOne. A 'Mainline' Ethereum desktop miner
+\item AlethZero. A 'Power-User' Ethereum client.
+\item ++eth. The 'mainline' CLI Ethereum client. 
+\item Mix. An IDE (integrated Development Environment) for building dapps. 
+\item TurboEthereum (C++ Ethereum Client)
+\end{itemize}
+\keyword{Webthree-Umbrella}\\
+This is essentially just the name of the umbrella repository for TurboEthereum.\\
+\\
+\keyword{Pyeth}\\
+Pyeth is a Python implementation of an Ethereum client. There are a number of clients in different languages.\\
+\\
+\keyword{Solidity, Serpent \& Mutan}\\
+Languages for smart contract development. New developers are advised to stick to Solidity.\\
+\\
+\keyword{Mist}\\
+Mist is a user friendly browser for Ethereum dapps. The Mist browser will serve as a wallet and interface for dapps. It is scheduled to be launched at the Metropolis release stage.\\
+\\
+\keyword{Casper}\\
+Casper is the proof-of-stake consensus protocol planned to be launched with the Serenity Ethereum release. It is so called because it is an adaption of the GHOST (Greedy Heaviest Observed Subtree First) protocol.\\
+
+\section{Creating a Private Test Network}
+A local private network is an Ethereum network with one peer or miner which is your host machine. To set up a local instance you will need to stop your client from attaching to existing networks and 'listening for peers'. To make development a bit easier it is suggested that a custom genesis block is used with a decreased difficulty and some pre-seeded accounts. Ade Duke has written a good blog post on 'How To Create A Private Ethereum Chain'\cite{AdeDuke}, more practical information can be found there.\\
+
+
+
+
+

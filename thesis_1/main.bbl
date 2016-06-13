@@ -92,73 +92,89 @@
       \verb https://www.wired.com/2013/09/nsa-backdoored-and-stole-keys/
       \endverb
     \endentry
-    \entry{Redecentralise}{webpage}{}
+    \entry{Redecentralise}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
       \field{month}{06}
+      \field{title}{Redecentralize.org}
       \field{year}{2016}
       \verb{url}
       \verb http://redecentralize.org/
       \endverb
     \endentry
-    \entry{Webwewant}{webpage}{}
+    \entry{Webwewant}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
       \field{month}{06}
+      \field{title}{WebWeWant}
       \field{year}{2016}
       \verb{url}
       \verb https://webwewant.org/
       \endverb
     \endentry
-    \entry{Firechat}{webpage}{}
+    \entry{Firechat}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
       \field{month}{06}
+      \field{title}{FireChat}
       \field{year}{2016}
       \verb{url}
       \verb http://opengarden.com/about-firechat
       \endverb
     \endentry
-    \entry{Arkos}{webpage}{}
+    \entry{Arkos}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
       \field{month}{06}
+      \field{title}{ArkOS}
       \field{year}{2016}
       \verb{url}
       \verb https://arkos.io/
       \endverb
     \endentry
-    \entry{Solid}{webpage}{}
+    \entry{Solid}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
       \field{month}{06}
+      \field{title}{SOLID (Social Linked Data)}
       \field{year}{2016}
       \verb{url}
       \verb https://solid.mit.edu/
       \endverb
     \endentry
-    \entry{Mailpile}{webpage}{}
+    \entry{Mailpile}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
       \field{month}{06}
+      \field{title}{Mailpile}
       \field{year}{2016}
       \verb{url}
       \verb https://www.mailpile.is/
       \endverb
     \endentry
-    \entry{OPI}{webpage}{}
+    \entry{OPI}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
       \field{month}{06}
+      \field{title}{OPI}
       \field{year}{2016}
       \verb{url}
       \verb https://www.openproducts.com/
       \endverb
     \endentry
-    \entry{Freedombox}{webpage}{}
+    \entry{Freedombox}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
       \field{month}{06}
+      \field{title}{FreedomBox}
       \field{year}{2016}
       \verb{url}
       \verb https://freedomboxfoundation.org/learn/
@@ -211,10 +227,12 @@
       \verb https://github.com/ethereum/wiki/wiki/White-Paper
       \endverb
     \endentry
-    \entry{Ipfs}{webpage}{}
+    \entry{Ipfs}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
       \field{month}{06}
+      \field{title}{IPFS}
       \field{year}{2016}
       \verb{url}
       \verb https://ipfs.io/
@@ -325,41 +343,51 @@
       \verb https://medium.com/@ConsenSys/programmable-blockchains-in-context-ethereum-s-future-cd8451eb421e#.5ruxu8i90
       \endverb
     \endentry
-    \entry{Namecoin}{webpage}{}
+    \entry{Namecoin}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
       \field{month}{06}
+      \field{title}{Namecoin}
       \field{year}{2016}
       \verb{url}
       \verb https://namecoin.info/
       \endverb
     \endentry
-    \entry{Litecoin}{webpage}{}
+    \entry{Litecoin}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
       \field{month}{06}
+      \field{title}{Litecoin}
       \field{year}{2016}
       \verb{url}
       \verb https://litecoin.com/
       \endverb
     \endentry
-    \entry{Faircoin}{webpage}{}
+    \entry{Faircoin}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{FairCoin}
       \verb{url}
       \verb https://fair-coin.org/
       \endverb
     \endentry
-    \entry{Dogecoin}{webpage}{}
+    \entry{Dogecoin}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{DogeCoin}
       \verb{url}
       \verb http://dogecoin.com/
       \endverb
     \endentry
-    \entry{Onename}{webpage}{}
+    \entry{Onename}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Onename}
       \verb{url}
       \verb https://onename.com/
       \endverb
@@ -487,9 +515,11 @@
       \verb https://ethereum.gitbooks.io/frontier-guide/content/contracts_and_transactions_intro.html
       \endverb
     \endentry
-    \entry{Solidity}{webpage}{}
+    \entry{Solidity}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Solidity Documentation}
       \verb{url}
       \verb https://solidity.readthedocs.io/en/latest/
       \endverb
@@ -740,9 +770,11 @@
       \verb https://en.wikipedia.org/wiki/Co-operative_and_Community_Benefit_Societies_Act_2014
       \endverb
     \endentry
-    \entry{CoopsUK}{webpage}{}
+    \entry{CoopsUK}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Co-operatives UK}
       \verb{url}
       \verb http://www.uk.coop/
       \endverb
@@ -790,9 +822,11 @@
       \verb http://p2pfoundation.net/Open_Cooperatives
       \endverb
     \endentry
-    \entry{PlatformCoop}{webpage}{}
+    \entry{PlatformCoop}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{PlatformCoop.net}
       \verb{url}
       \verb http://platformcoop.net/
       \endverb
@@ -813,37 +847,47 @@
       \verb https://medium.com/@trebors/platform-cooperativism-vs-the-sharing-economy-2ea737f1b5ad#.7q4yt3ul8
       \endverb
     \endentry
-    \entry{Fairmondo}{webpage}{}
+    \entry{Fairmondo}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Fairmondo: Ethical Marketplace}
       \verb{url}
       \verb https://www.fairmondo.de/
       \endverb
     \endentry
-    \entry{Resonate}{webpage}{}
+    \entry{Resonate}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Resontate Co-operative Music Streaming Platform}
       \verb{url}
       \verb http://resonate.is/
       \endverb
     \endentry
-    \entry{Loomio}{webpage}{}
+    \entry{Loomio}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Loomio: Decision Making Platform}
       \verb{url}
       \verb htttp://www.loomio.org
       \endverb
     \endentry
-    \entry{Enspiral-loomio}{webpage}{}
+    \entry{Enspiral-loomio}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Enspiral Ventures: Loomio}
       \verb{url}
       \verb http://www.enspiral.com/ventures/loomio/
       \endverb
     \endentry
-    \entry{Enspiral}{webpage}{}
+    \entry{Enspiral}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Enspiral Network}
       \verb{url}
       \verb http://p2pfoundation.net/Enspiral
       \endverb
@@ -863,9 +907,11 @@
       \verb https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide/
       \endverb
     \endentry
-    \entry{Digix}{webpage}{}
+    \entry{Digix}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{DigixDAO}
       \verb{url}
       \verb https://www.dgx.io/
       \endverb
@@ -885,9 +931,11 @@
       \verb http://www.smithandcrown.com/digix-dao-closes-crowdsale-under-day-raises-5-5-million/
       \endverb
     \endentry
-    \entry{TheDAO}{webpage}{}
+    \entry{TheDAO}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{TheDAO}
       \verb{url}
       \verb https://daohub.org/
       \endverb
@@ -907,30 +955,38 @@
       \verb http://www.cnbc.com/2016/05/17/automated-company-raises-equivalent-of-120-million-in-digital-currency.html
       \endverb
     \endentry
-    \entry{RHC}{webpage}{}
+    \entry{RHC}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Robin Hood Asset Management Co-operative}
       \verb{url}
       \verb http://robinhoodcoop.org/?page_id=88
       \endverb
     \endentry
-    \entry{BuyCo}{webpage}{}
+    \entry{BuyCo}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{BuyCo.io}
       \verb{url}
       \verb http://buyco.io/proof-of-concept/
       \endverb
     \endentry
-    \entry{modelRules}{webpage}{}
+    \entry{modelRules}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Coops UK Worker Coop Model Rules}
       \verb{url}
       \verb http://www.uk.coop/resources/model-governing-documents
       \endverb
     \endentry
-    \entry{somersetRules}{webpage}{}
+    \entry{somersetRules}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Somerset Rules}
       \verb{url}
       \verb http://www.somerset.coop/p/somerset-rules-registrations.html
       \endverb
@@ -958,27 +1014,35 @@
     \entry{DataProtection}{webpage}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Data Protection Act}
       \verb{url}
       \verb https://www.gov.uk/data-protection/the-data-protection-act
       \endverb
     \endentry
-    \entry{SolidityCheatsheet}{webpage}{}
+    \entry{SolidityCheatsheet}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Solidity Cheatsheet}
       \verb{url}
       \verb http://solidity.readthedocs.io/en/latest/miscellaneous.html#cheatsheet
       \endverb
     \endentry
-    \entry{StackExchangeAddress}{webpage}{}
+    \entry{StackExchangeAddress}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Stack Exchange Question}
       \verb{url}
       \verb http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key
       \endverb
     \endentry
-    \entry{WalletJS}{webpage}{}
+    \entry{WalletJS}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{WalletJS}
       \verb{url}
       \verb https://www.npmjs.com/package/ethereumjs-wallet
       \endverb
@@ -1115,9 +1179,11 @@
       \verb http://blog.oraclize.it/2016/04/27/proof-of-identity-on-ethereum/
       \endverb
     \endentry
-    \entry{RSARequest}{webpage}{}
+    \entry{RSARequest}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Github Issue: Ethereum RSA Request}
       \verb{url}
       \verb https://github.com/ethereum/EIPs/issues/74
       \endverb
@@ -1152,9 +1218,11 @@
       \verb http://blog.oraclize.it/2016/02/18/understanding-oracles/
       \endverb
     \endentry
-    \entry{Oraclise}{webpage}{}
+    \entry{Oraclise}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Oraclize}
       \verb{url}
       \verb http://www.oraclize.it/
       \endverb
@@ -1174,6 +1242,15 @@
       \field{year}{2016}
       \verb{url}
       \verb https://blog.slock.it/on-contractors-and-curators-2fb9238b2553#.w77jmjbqs
+      \endverb
+    \endentry
+    \entry{EthereumAlarmClock}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Ethereum Alarm Clock}
+      \verb{url}
+      \verb http://www.ethereum-alarm-clock.com/
       \endverb
     \endentry
     \entry{Web3Vid}{url}{}
@@ -1223,9 +1300,11 @@
       \verb https://blog.ethereum.org/2015/03/03/ethereum-launch-process/
       \endverb
     \endentry
-    \entry{TronStack}{webpage}{}
+    \entry{TronStack}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Ethereum Stack Exchange: Are Whisper and Swarm still being developed?}
       \verb{url}
       \verb http://ethereum.stackexchange.com/questions/349/are-whisper-and-swarm-still-being-developed
       \endverb
@@ -1262,16 +1341,20 @@
       \verb https://docs.erisindustries.com/tutorials/solidity/solidity-1/
       \endverb
     \endentry
-    \entry{Web3JS}{webpage}{}
+    \entry{Web3JS}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Web3.js Library}
       \verb{url}
       \verb https://github.com/ethereum/web3.js
       \endverb
     \endentry
-    \entry{JavascriptAPI}{webpage}{}
+    \entry{JavascriptAPI}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Ethereum Web3 Javascript API}
       \verb{url}
       \verb https://github.com/ethereum/wiki/wiki/JavaScript-API
       \endverb
@@ -1291,44 +1374,56 @@
       \verb https://docs.erisindustries.com/tutorials/solidity/solidity-2/
       \endverb
     \endentry
-    \entry{ipfs-js}{webpage}{}
+    \entry{ipfs-js}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{ipfs-js Library}
       \verb{url}
       \verb https://www.npmjs.com/package/ipfs-js
       \endverb
     \endentry
-    \entry{BlockApps}{webpage}{}
+    \entry{BlockApps}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{BlockApps}
       \verb{url}
       \verb http://www.blockapps.net/
       \endverb
     \endentry
-    \entry{ReturnArray}{webpage}{}
+    \entry{ReturnArray}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Ethereum Forum: Plans to Add Dynamic Return Types to Protocol}
       \verb{url}
       \verb https://forum.ethereum.org/discussion/2161/return-an-array-from-a-solidity-function
       \endverb
     \endentry
-    \entry{Embark}{webpage}{}
+    \entry{Embark}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Embark Framework}
       \verb{url}
       \verb https://iurimatias.github.io/embark-framework/
       \endverb
     \endentry
-    \entry{Truffle}{webpage}{}
+    \entry{Truffle}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Truffle Dapp Development Framework}
       \verb{url}
       \verb http://truffle.readthedocs.io/en/latest/
       \endverb
     \endentry
-    \entry{Meteor}{webpage}{}
+    \entry{Meteor}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Meteor Framework}
       \verb{url}
       \verb https://www.meteor.com/
       \endverb
@@ -1342,9 +1437,11 @@
       \verb https://github.com/ethereum/wiki/wiki/Dapp-using-Meteor
       \endverb
     \endentry
-    \entry{jsSchema}{webpage}{}
+    \entry{jsSchema}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{js-schema Library}
       \verb{url}
       \verb https://github.com/molnarg/js-schema
       \endverb
@@ -1364,11 +1461,31 @@
       \verb https://en.wikipedia.org/wiki/Active_record_pattern
       \endverb
     \endentry
-    \entry{Tracker}{webpage}{}
+    \entry{Tracker}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Meteor: Transparent Reactive Programming}
       \verb{url}
       \verb https://github.com/meteor/docs/blob/version-NEXT/long-form/tracker-manual.md
+      \endverb
+    \endentry
+    \entry{dapple}{webpage}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{Dapple}
+      \verb{url}
+      \verb https://github.com/nexusdev/dapple
+      \endverb
+    \endentry
+    \entry{SolTester}{url}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{SolTester}
+      \verb{url}
+      \verb https://github.com/androlo/sol-tester
       \endverb
     \endentry
     \entry{GethStackExchange}{url}{}
@@ -1421,6 +1538,23 @@
       \verb http://ethereum.stackexchange.com/questions/5708/can-proof-of-stake-pos-improve-the-number-of-transactions-per-second/5714#5714
       \endverb
     \endentry
+    \entry{ButerinHypercubes}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=850981945102d0f671b6762173c8988a}{Buterin}{B\bibinitperiod}{Vitalik}{V\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{850981945102d0f671b6762173c8988a}
+      \strng{fullhash}{850981945102d0f671b6762173c8988a}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Scalability, Part 2: Hypercubes}
+      \field{year}{2014}
+      \verb{url}
+      \verb https://blog.ethereum.org/2014/10/21/scalability-part-2-hypercubes/
+      \endverb
+    \endentry
     \entry{HearnBitcoin}{webpage}{}
       \name{author}{1}{}{%
         {{hash=9c489231e2685b9cdeb6a277469e4219}{Hearn}{H\bibinitperiod}{Mike}{M\bibinitperiod}{}{}{}{}}%
@@ -1471,6 +1605,15 @@
       \verb https://www.youtube.com/watch?v=1iNiUasJiEc
       \endverb
     \endentry
+    \entry{ethLightwallet}{url}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{eth-lightwallet}
+      \verb{url}
+      \verb https://github.com/ConsenSys/eth-lightwallet
+      \endverb
+    \endentry
     \entry{EtherCamp}{url}{}
       \field{sortinit}{0}
       \field{sortinithash}{990108227b3316c02842d895999a0165}
@@ -1480,9 +1623,42 @@
       \verb https://morden.ether.camp/
       \endverb
     \endentry
+    \entry{CiviCRM}{url}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{CiviCRM}
+      \verb{url}
+      \verb https://civicrm.org/
+      \endverb
+    \endentry
+    \entry{SalesForce}{url}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labeltitlesource}{title}
+      \field{title}{SalesForce}
+      \verb{url}
+      \verb https://www.salesforce.com/
+      \endverb
+    \endentry
+    \entry{AdeDuke}{webpage}{}
+      \name{author}{1}{}{%
+        {{hash=ba8680d8a933ca93d71f3f7d5eaa608e}{Duke}{D\bibinitperiod}{Ade}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{ba8680d8a933ca93d71f3f7d5eaa608e}
+      \strng{fullhash}{ba8680d8a933ca93d71f3f7d5eaa608e}
+      \field{sortinit}{0}
+      \field{sortinithash}{990108227b3316c02842d895999a0165}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{How To Create A Private Ethereum Chain}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://adeduke.com/2015/08/how-to-create-a-private-ethereum-chain/
+      \endverb
+    \endentry
   \endsortlist
-  \missing{yellowpaper}
-  \missing{Yellowpaper}
 \endrefsection
 \endinput
 

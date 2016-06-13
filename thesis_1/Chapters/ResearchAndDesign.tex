@@ -141,7 +141,7 @@ The transparency of the Ethereum blockchain introduces a couple of obstacles for
 \subsection{Storing Private Data}
 As discussed in \ref{subsec:CooperativeGovernance} , a likely requirement of Go-op is the protected storage of membership information. Cooperative members should have access to the personal information of other members but such information should not generally be accessible to any other party. \\
 
-Private data can be stored on a blockchain by simply encrypting it first. The ciphertext will be publicly visible but the information will be hidden. An Ethereum account address is derived from the public key of a public-private key pair generated using ECC (Elliptic Curve Cryptography) and the SECP-256k1 curve parameters (described in the Yellow Paper \cite{Yellowpaper}). Taking advantage of these key pairs, encryption of member information could potentially be achieved as follows:\\
+Private data can be stored on a blockchain by simply encrypting it first. The ciphertext will be publicly visible but the information will be hidden. An Ethereum account address is derived from the public key of a public-private key pair generated using ECC (Elliptic Curve Cryptography) and the SECP-256k1 curve parameters (described in the Yellow Paper \cite{wood2014ethereum}). Taking advantage of these key pairs, encryption of member information could potentially be achieved as follows:\\
 
 For each intended recipient of the data:\\
 \begin{enumerate}
@@ -155,7 +155,7 @@ For each intended recipient of the data:\\
 
 \end{enumerate}
 
-A nice aspect of this approach is that it doesn't introduce any additional key management complexity and by taking advantage of the 'Web3.0 architecture?'(see \ref{sec:web3Arch}) the process can also be simplified somewhat. The ciphertext can actually be stored in a distributed file system (such as IPFS see  \ref{subsec:ipfs}) and a link (e.g ipfs hash) can be stored in the blockchain instead. \\
+A nice aspect of this approach is that it doesn't introduce any additional key management complexity and by taking advantage of the 'Web3.0 architecture' (see section \ref{sec:web3Arch}) the process can also be simplified somewhat. The ciphertext can actually be stored in a distributed file system (such as IPFS see  \ref{subsec:ipfs}) and a link (e.g. IPFS hash) can be stored in the blockchain instead. \\
 
 Asymmetric encryption techniques such as ECC however, are fairly computationally intensive which could make this approach unwieldy in the face of thousands of users. More importantly, asymmetric encryption schemes are not generally recommended for encrypting large messages and are instead used for the secure exchange of symmetric keys. This form of hybrid approach is thought to be more secure and efficient. For encryption on Ethereum, such a process might look like the following:
 
@@ -169,7 +169,7 @@ Asymmetric encryption techniques such as ECC however, are fairly computationally
 \item Recipient decrypts the symmetric key using their private key and then decrypts the data using the symmetric key.
 \end{enumerate}
 
-This method still requires the same number of asymmetric encryption operations as before but the process is less computationally intensive because the size of the plaintext (i.e the symmetric key) encrypted in this way is constant and much smaller. The encryption of any potentially large amounts of data only needs to be performed once using symmetric encryption.\\
+This method still requires the same number of asymmetric encryption operations as before but the process is less computationally intensive because the size of the plaintext (i.e. the symmetric key) encrypted in this way is constant and much smaller. The encryption of any potentially large amounts of data only needs to be performed once using symmetric encryption.\\
 
 Any change to the encrypted information is relatively easy to handle because, providing a suitable block cipher mode is chosen, the same symmetric key can be reused. Granting access to new accounts is also easy because it only requires one additional encryption of the symmetric key with the public key of the new account. The drawback is that whenever a key needs to be revoked, the symmetric key is compromised and any future encryption would need to repeat the whole process with a new symmetric key. From a security perspective, we must assume that any information encrypted with the old symmetric key is known to the excluded party, it is not possible to enforce forgetfulness. \\
 
@@ -181,7 +181,7 @@ A more complex requirement than the storage of private information is performing
 Provable honest voting systems that protect voter privacy have been widely discussed\cite{PrivacyBlockchain}\cite{HonestElection}. Possible solutions include the use of ring signatures\cite{liu2004linkable}\cite{tsang2005short} and addition through homomorphic encryption\cite{HomoEncryption}.\\
 
 \subsection{A Word on Solidity Access Modifiers}
-Whilst the Ethereum blockchain is transparent, the Solidity language features various visibilities for functions and state variables (see Figure \ref{fig:AccessModifiers}, so what does this mean? \\
+Whilst the Ethereum blockchain is transparent, the Solidity language features various visibilities for functions and state variables (see figure \ref{fig:AccessModifiers}, so what does this mean? \\
 \begin{figure}
 \centering
 \makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/AccessModifiers}}
@@ -228,7 +228,7 @@ This is a more localised approach to trust than e-Residency. The e-Residency car
 There are a couple of interesting design challenges surrounding smart contract applications that need to work with time. Firstly, how can accurate and reliable time measurements be accessed within the blockchain? Secondly, how can contract code react to an event at a specific time? For a governance or democracy application measuring time is important for closing ballots at the correct date. Ideally we would like an accurate notion of time (to make things as fair as possible) that we can react to in order to prevent further voting and to calculate the result.\\
 
 \subsection{Accurate Timestamps}
-For a block to be accepted by a miner, the state transition function has to produce the same output as it did for the block creator. If smart contract code used the host machine's (i.e miners) system time for its logic then this could easily \keyword{not} be the case because blocks are not created and validated at the same time. The only time reference that can be used, because it is consistent, is the timestamp of the block a transaction is included in. Ethereum smart contracts written in Solidity can access this time easily through the \code{block.timestamp} property. The problem with the block timestamp however, is that it is not necessarily accurate. The Ethereum protocol places some restrictions on timestamps but cannot be too strict because is must accommodate for drift in clocks across the network. Whilst this may be a cause for concern in highly time critical applications, in reality, the block timestamp is probably accurate enough for most usages.\\
+For a block to be accepted by a miner, the state transition function has to produce the same output as it did for the block creator. If smart contract code used the host machine's (i.e. miners) system time for its logic then this could easily \keyword{not} be the case because blocks are not created and validated at the same time. The only time reference that can be used, because it is consistent, is the timestamp of the block a transaction is included in. Ethereum smart contracts written in Solidity can access this time easily through the \code{block.timestamp} property. The problem with the block timestamp however, is that it is not necessarily accurate. The Ethereum protocol places some restrictions on timestamps but cannot be too strict because it must accommodate for drift in clocks across the network. Whilst this may be a cause for concern in highly time critical applications, in reality, the block timestamp is probably accurate enough for most usages.\\
 
 \subsection{Scheduled Execution}
 Unfortunately, because smart contract code can only be executed as the result of an external transaction and cannot simply 'wake up', the ability of contracts to schedule execution or react to time based events is limited. There are two possible solutions for smart contracts that need to execute code based on the time - eager and lazy evaluation. \\
@@ -241,9 +241,10 @@ A contract working eagerly will somehow arrange for an external transaction to c
 \caption[Lazy Contract Scheduling]{Timeline of ballot contract calls with lazy evaluation}
 \label{fig:lazy}
 \end{figure}
+
 Figure \ref{fig:lazy} shows an example time frame for a ballot contract. When the ballot closes the contract may need to perform some additional logic to calculate a result or close the voting. Following a lazy approach, this is triggered by the 'read result' transaction which is the next transaction to occur. There are a couple of issues with the approach. Firstly, if no transactions 'naturally' occur after the ballot closes then the evaluation simply can't happen. Secondly, the 'read result' method must become a transaction because it might trigger evaluation code which updates state in the blockchain. Ideally, getting the result should just be a call and the first user to ask for it shouldn't have to pay!\\
 
-To address these problems an 'eager evaluation' solution has been developed by the Ethereum community called the Ethereum Alarm Clock. For a small fee, the Ethereum Alarm Clock service allows contracts to schedule calls by registering their address and the definition of a function they would like to be executed. The Ethereum Alarm Clock service uses this payment to offer a bounty to any user account that makes the transaction at the scheduled time. The service creates a marketplace for function calls that any Ethereum user can participate in. Figure \ref{fig:eager} shows how a ballot would be closed using the Alarm Clock service.\\
+To address these problems an 'eager evaluation' solution has been developed by the Ethereum community called the Ethereum Alarm Clock\cite{EthereumAlarmClock}. For a small fee, the Ethereum Alarm Clock service allows contracts to schedule calls by registering their address and the definition of a function they would like to be executed. The Ethereum Alarm Clock service uses this payment to offer a bounty to any user account that makes the transaction at the scheduled time. The service creates a marketplace for function calls that any Ethereum user can participate in. Figure \ref{fig:eager} shows how a ballot would be closed using the Alarm Clock service.\\
 
 \begin{figure}
 \centering
@@ -258,7 +259,7 @@ The eager evaluation solution also has its flaws. Firstly, calls are scheduled f
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Idealised Web3.0 Architecture}
 \label{sec:web3Arch}
-Dr Gavin Wood, author of the Ethereum yellow paper\cite{Yellowpaper} and lead developer of the c++ client, gave a talk at a Meetup in 2014 called 'The Ethereum Experience' (video\cite{Web3Vid} and slides\cite{Web3Slides} available) in which he outlined an idealised architecture for Web3.0 applications. In addition to Ethereum, Wood presents two complementary technologies (also developed by the Ethereum foundation) called Whisper and Swarm.\\ 
+Dr Gavin Wood, author of the Ethereum yellow paper\cite{wood2014ethereum} and lead developer of the c++ client, gave a talk at a Meetup in 2014 called 'The Ethereum Experience' (video\cite{Web3Vid} and slides\cite{Web3Slides} available) in which he outlined an idealised architecture for Web3.0 applications. In addition to Ethereum, Wood presents two complementary technologies (also developed by the Ethereum foundation) called Whisper and Swarm.\\ 
 
 Swarm is a distributed file system that is very similar in nature to IPFS (see \ref{subsec:ipfs})\\
 
@@ -361,7 +362,7 @@ An additional benefit of the Five Types design pattern is permissioned access. T
 \subsubsection{Critiques}
 Modularity comes at a cost. By introducing extra calls and more processing, the Five Types pattern increases the cost of execution. Modularity also introduces a degree of trust. A modular system must give some agent(s) the power to to update the behaviour of smart contract system. Of course, from a technical standpoint any changes made to the system will be publicly visible but practically, if the system is changed in a malicious way without formal notification, many users could suffer. There is a trade off between the flexibility of smart contract systems and the degree of trust-less ness provided to the user. This is an important practical consideration for pretty much all Ethereum based applications! \\
 
-The Five Types also suffers from some scalability issues. Consider the example system illustrated in Figure \ref{fig:FiveTypesSystem}. If each controller had four functions in it's API and we had 10 controllers, the ALC would need 40 function calls in order to access them all. Furthermore, the addition of a new controller or the modification of an existing one would require the entire ALC to be swapped out. \\
+The Five Types also suffers from some scalability issues. Consider the example system illustrated in figure \ref{fig:FiveTypesSystem}. If each controller had four functions in it's API and we had 10 controllers, the ALC would need 40 function calls in order to access them all. Furthermore, the addition of a new controller or the modification of an existing one would require the entire ALC to be swapped out. \\
 
 The five type model is one example of a smart contract design pattern that is useful for exemplifying important concerns when building smart contract systems. More design patterns such as 'action driven architecture'\cite{ActionDriven}, have already been suggested to address some of the issues surrounding scalability. As the craft of dapp development matures, we will hopefully see many more useful patterns emerge. 
 

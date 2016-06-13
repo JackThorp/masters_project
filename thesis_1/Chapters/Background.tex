@@ -11,7 +11,7 @@
 \subsubsection{Introduction}
 Since the 70's the modus operandi for data encapsulation and management has been SQL (Structured Query Languages) and RDBMS (Relational Database Management Systems). The 90's marked the arrival of the web, mass adoption of the Internet and networking of such database systems all over the world. However, because information is encapsulated in organisation centric forms, there are great inefficiencies communicating it over the network. Data sits in 'silos' and transferring it often requires an inevitable amount of bureaucracy and cost. In this context Blockchain technology offers an alternative approach to information storage. A global database that allows data to exists between organisations. So what are they? (see Vinay \cite{VinayOnBlockchains} for more on blockchains in context) \\
 
-The concepts of a 'blockchain',  'blockchain technology' and 'distributed ledger technology' were first proposed and implemented by the Bitcoin electronic cash system, 2009\cite{nakamoto2008bitcoin}. The terms are used somewhat interchangeably to describe a peer to peer (and therefore decentralised) system that is capable of maintaining shared state in a way that is transparent, secure, permanent and resistant to corruption or attack. Within the Bitcoin cryptocurrency network, blockchains are used to maintain a globally consistent notion of account balances. There are now many more blockchain applications ranging from DNS registries (such as Namecoin\cite{Namecoin}) to alternative crypto currencies or ?altcoins? (such as LiteCoin\cite{Litecoin}, FairCoin\cite{Faircoin}, DogeCoin\cite{Dogecoin}) and even identity management systems (such as Onename\cite{Onename}). \\
+The concepts of a 'blockchain',  'blockchain technology' and 'distributed ledger technology' were first proposed and implemented by the Bitcoin electronic cash system, 2009\cite{nakamoto2008bitcoin}. The terms are used somewhat interchangeably to describe a peer to peer (and therefore decentralised) system that is capable of maintaining shared state in a way that is transparent, secure, permanent and resistant to corruption or attack. Within the Bitcoin cryptocurrency network, blockchains are used to maintain a globally consistent notion of account balances. There are now many more blockchain applications ranging from DNS registries (such as Namecoin\cite{Namecoin}) to alternative crypto currencies or 'altcoins' (such as LiteCoin\cite{Litecoin}, FairCoin\cite{Faircoin}, DogeCoin\cite{Dogecoin}) and even identity management systems (such as Onename\cite{Onename}). \\
 
 The term blockchain is somewhat ambiguous in that it is often used interchangeably to describe both a data structure and a form of distributed database at the same time. A good description would perhaps make the distinction between a) a blockchain network - a peer to peer network that maintains distributed consensus on a blockchain data structure and b) a blockchain - the data structure that is stored by each peer (and therefore replicated across the entire network). Two things of important note are: Firstly the blockchain structure of the shared data is inextricable from the mechanisms used to maintain consensus of that data itself (this is a confusing statement that will be expanded upon shortly). Secondly, the comparison of blockchains to databases is conceptual. To be clear, a blockchain is not a relational database and there is no query language such as SQL. Further to this, sharding of blockchain data is uncommon in practise which is not generally the case in most other distributed database systems\cite{Shard}. \\
 
@@ -31,21 +31,21 @@ Blockchain networks provide both read and write functionality. For the purposes 
 A block is a collection of transactions. The first block in a blockchain is called the genesis block. Each block thereafter represents a discrete update to the shared state. \\
 
 \subsubsection{Blockchains as State Transition Systems}
-A good approach to explaining blockchains is as state transition systems. State transition functions and finite state machines are familiar concepts to computer scientists. In a blockchain we can say that the history of the chain (i.e all previously processed transactions) encapsulates the state of the system. The addition of a new block, updates that history and therefore transitions the blockchain to a new state. This idea is illustrated in Figure \ref{fig:blockchain_transition} \\
+A good approach to explaining blockchains is as state transition systems. State transition functions and finite state machines are familiar concepts to computer scientists. In a blockchain we can say that the history of the chain (i.e all previously processed transactions) encapsulates the state of the system. The addition of a new block, updates that history and therefore transitions the blockchain to a new state. This idea is illustrated in figure \ref{fig:blockchain_transition} \\
 
 \begin{figure}
 \centering
-\includegraphics[width=1.4\textwidth]{Figures/blockchain_transition}
+\makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/blockchain_transition}}
 \decoRule
 \caption[Blockchain As State Transition]{Conceptualisation of a blockchain as a state transition system.}
 \label{fig:blockchain_transition}
 \end{figure}
 
-The state may be encapsulated by the history of the blockchain in many ways. For instance, in the Bitcoin network the state is the sum of each user's unspent bitcoins i.e all account balances. A user's balance is derived by scanning through every previous block to find all received Bitcoins that have not yet been spent (users spend specific coins through the concept of unspent transaction outputs). This is not the case in the Ethereum network (discussed later) in which a user's balance is explicitly stored in every block (i.e no scanning operation required). An example state transition for a Bitcoin network is given in Figure \ref{fig:bitcoin_transition}. There are five unspent transaction outputs in the initial state. The transaction uses two of these to make three payments. This results in a new state with six unspent transaction outputs. \\
+The state may be encapsulated by the history of the blockchain in many ways. For instance, in the Bitcoin network the state is the sum of each user's unspent bitcoins i.e all account balances. A user's balance is derived by scanning through every previous block to find all received Bitcoins that have not yet been spent (users spend specific coins through the concept of unspent transaction outputs). This is not the case in the Ethereum network (discussed later) in which a user's balance is explicitly stored in every block (i.e no scanning operation required). An example state transition for a Bitcoin network is given in figure \ref{fig:bitcoin_transition}. There are five unspent transaction outputs in the initial state. The transaction uses two of these to make three payments. This results in a new state with six unspent transaction outputs. \\
 
 \begin{figure}
 \centering
-\includegraphics[width=1.4\textwidth]{Figures/state_transition}
+\makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/state_transition}}
 \decoRule
 \caption[Bitcoin State Transition]{Bitcoin state transition diagram (taken from the Ethereum Whitepaper\cite{Ethereum})}
 \label{fig:bitcoin_transition}
@@ -113,12 +113,6 @@ When multiple blocks are produced in quick succession, network latency can cause
 
 At some point, one partition of the network will become aware of a longer chain being mined by another partition. Because this chain is longer, it contains a greater amount of work and is more likely to be accepted by the rest of the network. Miners are incentivised to work on the chain that is most likely to be adopted by the rest of the network because it increases the chance that their reward for creating blocks will be permanent.\\
 
-\subsubsection{Proof of Stake}
-
-\subsubsection{Sharding}
-
-\subsubsection{Value Proposition}
-
 \subsection{Ethereum}
 \subsubsection{Introduction}
 Ethereum is a public blockchain platform for running arbitrary applications with extremely low possibility of downtime, censorship, fraud or third party interference. It is a peer to peer network that stores turing complete programs within a blockchain. It has been described as a 'global computer' and a 'globally executed virtual machine'. The idea was first proposed by Vitalik Buterin who formally unveiled the project at the Miami Bitcoin Conference in early 2014. Later that year Ethereum is estimated to have raised over 20 million dollars in less than a month, making it one of the most successful crowdfunds ever\cite{Ethereum_crowdfund}. \\
@@ -127,7 +121,7 @@ The previous section of this report described how blockchains can be considered 
 
 Although the state transition system may be very innovative, the fundamental consensus and proof of work mechanisms are very similar to other blockchain networks. The Ethereum platform still needs to incentivise miners and for this purpose has it's own internal cryptocurrency called Ether. \\
 
-The rest of this subsection provides an introductory explanation to the Ethereum protocol. A more complete introduction has been written by Buterin\cite{Ethereum} and a comprehensive technical specification has been written by Wood\cite{wood2014ethereum}. Practical information and references for navigating the Ethereum ecosystem can be found in Appendix Y. \\
+The rest of this subsection provides an introductory explanation to the Ethereum protocol. A more complete introduction has been written by Buterin\cite{Ethereum} and a comprehensive technical specification has been written by Wood\cite{wood2014ethereum}. Practical information and references for navigating the Ethereum ecosystem can be found in Appendix \ref{AppendixA}. \\
 
 \subsubsection{Ethereum Accounts}
 There are two types of accounts in Ethereum: \keyword{externally owned accounts} and \keyword{contract accounts}. \\
@@ -153,9 +147,9 @@ The consequence of storing the entire state in each block is that it is potentia
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/ethereum_transition}
+\makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{Figures/ethereum_transition}}
 \decoRule
-\caption[Ethereum State Transition Diagram]{Ethereum State Transition Diagram}
+\caption[Ethereum State Transition Diagram]{Ethereum State Transition Diagram (image taken from Etheruem Whitepaper\cite{Ethereum}).}
 \label{fig:ethereum_transition}
 \end{figure}
 
@@ -169,9 +163,9 @@ The miner of a block collects the gas funds, therefore the gasprice functions in
 \subsubsection{Blockchain Mining}
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Figures/ethereum_state_transition}
+\makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{Figures/ethereum_state_transition}}
 \decoRule
-\caption[Ethereum Block Validation Process]{Ethereum block validation process.}
+\caption[Ethereum Block Validation Process]{Ethereum block validation process (image taken from Etheruem Whitepaper\cite{Ethereum}).}
 \label{fig:ethereum_state_transition}
 \end{figure}
 The mining process of Ethereum is similar to the general blockchain process discussed in the previous section. The following steps describe the Ethereum block validation process as described in the Ethereum whitepaper (APPLY function executes transition function as above):
@@ -229,7 +223,7 @@ For space saving purposes, contract code is stored as EVM opcodes in a binary fo
 \centering
 \makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth]{Figures/Simplestorage}}
 \decoRule
-\caption[]{}
+\caption[SimpleStorage Smart Contract]{An example Solidity smart contract called SimpleStorage.}
 \label{fig:Simplestorage}
 \end{figure}
 
