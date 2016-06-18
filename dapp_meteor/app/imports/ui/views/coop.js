@@ -1,17 +1,22 @@
 import './coop.html';
 import { Router }       from 'meteor/iron:router';
 import { ReactiveVar }  from 'meteor/reactive-var';
+import { ReactiveDict } from 'meteor/reactive-dict';
 import { Tracker }      from 'meteor/tracker';
 import contracts        from '/imports/startup/contracts.js';
 import db               from '/imports/api/db.js';
 import _                from 'lodash';
 import { Chartist }     from 'meteor/mfpierre:chartist-js';
+import { EthBlocks }    from 'meteor/ethereum:blocks';
+import Promise          from 'bluebird';
+import "/imports/ui/components/waitModal.js"
 
 Template['views_coop'].onCreated(function() {
   let template = this;
 
-  template.coopVar = new ReactiveVar({});
-  template.proposalVar = new ReactiveVar();
+  template.coopVar      = new ReactiveVar({});
+  template.proposalVar  = new ReactiveVar();
+  template.votesVar     = new ReactiveDict();
   template.charts = {};
 
   template.address = Router.current().params.id;
@@ -22,13 +27,22 @@ Template['views_coop'].onCreated(function() {
       return coop.fetchMembers();
     })
     .then(function(coop) {
-      console.log("fetchint proposals");
       return coop.fetchProposals();
     })
     .then(function(coop) {
       coop.balance = web3.eth.getBalance(coop.address);
       console.log(coop);
       template.coopVar.set(coop);
+      let user = Session.get('user').address;
+      let votesPromises = [];
+      for(var i = 0; i < coop.proposals.length; i++) {
+        let pId   = coop.proposals[i].id; 
+        votesPromises.push(coop.hasVoted(user, pId)); 
+      }
+      return Promise.all(votesPromises);
+    })
+    .map(function(voted, pId) {
+      template.votesVar.set(pId, voted);
     })
     .catch(function(err){
       console.log(err)
@@ -54,11 +68,14 @@ Template['views_coop'].helpers({
       return member.address != user.address;
     });
   },
+  
+  'hasNotVoted': function(proposal) {
+    let user = Session.get('user');
+    return !Template.instance().votesVar.get(proposal.id);
+  },
 
   'selectedProposal': function() {
     return Template.instance().proposalVar.get();
-    //let coop = Template.instance().coopVar.get();
-    //return coop.proposals ? coop.proposals[pId] : {};
   },
 
   'totalVotes': function(proposal) {
@@ -74,15 +91,21 @@ Template['views_coop'].helpers({
   },
 
   'isClosed': function(proposal) {
-    return proposal.passed || proposal.defeated;
+    return proposal.passed || proposal.failed;
   },
 
   'isOpen': function(proposal) {
-    return !(proposal.passed || proposal.defeated);
+    return !(proposal.passed || proposal.failed);
   },
 
   "blockNumber": function() {
-    return web3.eth.blockNumber;
+    let latest = EthBlocks.latest;
+    return latest.number;
+  },
+
+  "blocksRemaining": function(proposal) {
+    let latest = EthBlocks.latest;
+    return proposal.endBlock.toString(10) - latest.number;
   }
 
 });
@@ -90,17 +113,22 @@ Template['views_coop'].helpers({
 Template['views_coop'].events({
 
   'click .btn-join' : function(e, template) {
+    $('#confirmJoinModal').modal('show');
+  },
+
+  'click .btn-agree': function(e, template) {
+    $('#confirmJoinModal').modal('hide');
+    $('#wait-modal').modal('show');
 
     let userAddr = Session.get('user').address;
     let coopAddr = template.address;
 
-    // TODO don't want to set dependecy up for this get even if it is null? ?
     db.coops.get(coopAddr).then(function(coop){
       return coop.addMember(userAddr);
     }).then(function(data) {
+      $('#wait-modal').modal('hide');
       console.log(data);
     });
-
   },
 
   'submit .proposal-form' : function(e, template) {
@@ -117,10 +145,12 @@ Template['views_coop'].events({
     
     let coopAddr = template.address;
     
+    $('#wait-modal').modal('show');
     db.coops.get(coopAddr).then(function(coop) {
       return coop.submitProposal(proposalData, endBlock);
     })
     .then(function(pId) {
+      $('#wait-modal').modal('hide');
       console.log(pId);
     })
     .catch(function(err) {
@@ -158,16 +188,18 @@ Template['views_coop'].events({
 });
 
 var voteOnProposal = function(coopAddr, proposal, vote) {
+  
+  $('#wait-modal').modal('show');
   db.coops.get(coopAddr).then(function(coop) {
     return coop.voteOnProposal(proposal.id, vote);
   })
   .then(function(res) {
+    $('#wait-modal').modal('hide');
     console.log(res);
   })
   .catch(function(err) {
     console.log(err);
   });
-  console.log("VOTED ");
 }
 
 var updateChart = function(charts, coop, proposal) {

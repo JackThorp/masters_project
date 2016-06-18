@@ -1,0 +1,18 @@
+loadScript('./gethScripts/unlockAccounts.js');
+personal.newAccount()
+loadScript('./gethScripts/unlockAccounts.js');
+miner.stop()
+miner.start()
+loadScript('./gethScripts/coopContract.js');
+CoopContract.closeProposal(0, txObj);
+CoopContract.closeProposal(1, txObj);
+personal.newAccount()
+eth.sendTransaction({from:eth.accounts[0], to:eth.accounts[6], value: web3.toWei(50, "ether")});
+web3.eth.getBalance(eth.accounts[6]);
+miner.stop();
+eth.accounts.length
+eth.getBalance(eth.accounts[6])
+eth.getBalance(eth.accounts[7])
+loadScript('./gethScripts/unlockAccounts.js');
+miner.stop
+miner.stop()

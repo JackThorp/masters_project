@@ -2,6 +2,7 @@ import web3 from '../lib/thirdparty/web3.js';
 import { LocalStore }   from 'meteor/frozeman:storage';
 import { Session }      from 'meteor/session';
 import { EthAccounts }  from 'meteor/ethereum:accounts';
+import { EthBlocks }  from 'meteor/ethereum:blocks';
 import db               from '/imports/api/db.js';
 import { Router }       from 'meteor/iron:router';
 
@@ -19,6 +20,7 @@ Meteor.startup(() => {
   db.init(web3);
 
   EthAccounts.init();
+  EthBlocks.init();
   // For now - just go to home on refresh
   //Router.go('/');
   

@@ -4,8 +4,27 @@
   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
   "extraData": "Custom Genesis Block",
   "gasLimit": "0xffffffff",
-  "difficulty": "0x4000",
+  "difficulty": "0x1000",
   "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
   "coinbase": "0xdb575481f1d1b626b9a0ee2f2c6946b3f6526cd4",
-  "alloc": {}
+  "alloc": {
+    "0x7b7ff9978a4cbf3f8c11d6ffadf6045bac85521e": {
+		  "balance": "10000000000000000000"
+    },
+    "0x37f053329b280eb75c9b0a12ea8ce267feb6afc3": {
+		  "balance": "10000000000000000000"
+    },
+    "0xf78eb32c5bc556695fa7d7822bb1349a7a2a7a90": {
+		  "balance": "10000000000000000000"
+    },
+    "0x28c09bdd61eaadda1b28d3ba61d91f279a0e0088": {
+		  "balance": "10000000000000000000"
+    },
+    "0xae757554e37e29e2980cfec2d3fab726091fb7eb": {
+		  "balance": "10000000000000000000"
+    },
+    "0x1ed792607c3563025d3e828421cf538c9ef2ee2e": {
+		  "balance": "10000000000000000000"
+    }
+	}
 }

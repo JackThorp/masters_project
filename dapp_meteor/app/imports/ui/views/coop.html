@@ -43,7 +43,31 @@
           <div class="row">
             <div class="col-xs-12">
               <div class="content-wrapper">
-                
+
+                 <!-- Confirm Join Modal -->
+                <div class="modal fade" id="confirmJoinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      {{#with coopData }}
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Conditions of Membership</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p> By clicking join you agree to pay a fee of <strong> {{toEther fee}} Ether </strong> to <strong>{{data.name}}</strong> and to the terms of membership given below:</p>
+                        <pre> {{data.terms}}</pre>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-agree btn-primary"> Agree </button>
+                      </div>
+                      {{/with}}
+                    </div>
+                  </div>
+                </div>
+                <!-- End of Modal -->
+
+               
                 <!-- New Proposal Modal -->
                 <div class="modal fade" id="newProposalModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                   <div class="modal-dialog" role="document">
@@ -64,7 +88,7 @@
                           </div>
                           <div class="form-group">
                             <label for="endBlockInput" class="control-label">Closing Block</label>
-                            <input type="number" id="endBlockInput" class="form-control"  min="{{blockNow}}"><br>
+                            <input type="number" id="endBlockInput" class="form-control" min="{{blockNumber}}" placeholder="Current Block (+ 10): {{blockNumber}}"><br>
                           </div>
                         </div>
                         <div class="modal-footer">
@@ -76,6 +100,9 @@
                   </div>
                 </div>
                 <!-- End of Modal -->
+
+                <!-- Load Modal -->
+                {{> components_waitModal }} 
 
                 <div class="row">
                   <div class="col-xs-8">
@@ -117,13 +144,19 @@
                               <div class="col-xs-6 col-xs-offset-3">
                                 <div id="chart-{{id}}" class="ct-chart proposal-chart ct-perfect-fourth"></div>
                               </div>
-                              <div class="col-xs-12">
+                              <div class="col-xs-6">
                                 <p> votes for: {{votesFor}} </p>
                                 <p> votes against: {{votesAgainst}} </p>
                                 <p> votes total: {{totalVotes this}} </p>
+                              </div>
+                              <div class="col-xs-6">
                                 {{#if isOpen this }}
                                 <p> votes needed to reach quorum: {{toReachQuorum this}} </p>
+                                <p> blocks before closing: {{blocksRemaining this}} </p>
                                 {{/if}}
+                                <p> current block: {{blockNumber}} </p>
+                              </div>
+                              <div class="col-xs-12">
                                 <h4> Proposal </h4>
                                 <p> {{proposal}} </p>
                               </div>
@@ -132,8 +165,12 @@
                           <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                             {{#if isOpen this }}
+                            {{#if hasNotVoted this }}
                             <button type="button" class="btn btn-danger vote-against" data-dismiss="modal">Against</button>
                             <button type="button" class="btn btn-success vote-for" data-dismiss="modal">For</button>
+                            {{else}}
+                            <button type="button" class="btn btn-default btn-info btn-lg" disabled="disabled">Voted</button>
+                            {{/if}}
                             {{/if}}
                           </div>
                           {{/with}}
@@ -181,7 +218,7 @@
               <div class="content-wrapper">
                 <h3> Coop Rules </h3>
                 {{#with coopData }}
-                <p> <span class="strong-lable">Fee: </span> {{ toEther fee }} </p>
+                <p> <span class="strong-label">Fee: </span> {{ toEther fee }} Ether </p>
                 <p> <span class="strong-label">Quorum:</span> {{quorum}}% </p>
                 <p> <span class="strong-label">Normal Resolution:</span> {{normalRes}}% </p>
                 {{/with}}

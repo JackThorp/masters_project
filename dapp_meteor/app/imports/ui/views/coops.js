@@ -7,6 +7,7 @@ import bs               from 'bootstrap';
 import db               from '/imports/api/db.js';
 
 import './coops.html';
+import '/imports/ui/components/waitModal.js';
 
 Template['views_coops'].onCreated(function() {
   
@@ -67,10 +68,15 @@ Template['views_coops'].events({
     var quorum = e.target.quorum.value;
     var nRes   = e.target.normal.value;
     var eRes   = e.target.extra.value;
+    
+    $('#wait-modal').modal('show');
 
     db.coops.add(coopData, fee, quorum, nRes).then(function(coop) {
       let userAddress = Session.get('user').address;
       return coop.addMember(userAddress);
+    })
+    .then(function(coop) {
+      $('#wait-modal').modal('hide');
     })
     .catch(function(err) {
       console.log(err);

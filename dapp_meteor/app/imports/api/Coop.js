@@ -27,7 +27,7 @@ class Coop {
 
     var txObj = {
       from: userAddr,
-      gas: 400000,
+      gas: 2000000,
       gasPrice: web3.eth.gasPrice,
       value: this.fee
     }
@@ -112,14 +112,18 @@ class Coop {
     })
     .map((votesAgainst, pId) => {
       proposals[pId].votesAgainst = votesAgainst;
-      return coopInstance.hasPassed(pId);
+      return coopInstance.hasPassedAsync(pId);
     })
     .map((passed, pId) => {
       proposals[pId].passed = passed;
-      return coopInstance.hasFailed(pId);
+      return coopInstance.hasFailedAsync(pId);
     })
     .map((failed, pId) => {
       proposals[pId].failed = failed;
+      return coopInstance.endBlockAsync(pId);
+    })
+    .map((endBlock, pId) => {
+      proposals[pId].endBlock = endBlock;
       return proposals[pId];
     })
     .then((proposals) => {
@@ -140,13 +144,25 @@ class Coop {
       gas: 400000,
       gasPrice: web3.eth.gasPrice
     }
-
+    
+    let submittedPromise = {};
+    let thisCoop = this;
     let coopInstance = this.coopInstance;
+
     return this.ipfs.addJsonAsync(proposalData).then((hash) => {
       var ethHash = db.ipfsToEth(hash);
-      console.log("HASH: " + ethHash);
-      console.log("Block: " + endBlock);
+      
+      submittedPromise = coopInstance.newProposalCreatedAsync({
+        _ipfsHash: ethHash
+      });
+
       return coopInstance.newProposalAsync(ethHash, endBlock, txObj);
+    })
+    .then(function() {
+      return submittedPromise;
+    })
+    .then(function() {
+      return thisCoop;
     })
     .catch(function(err) {
       console.log(err);
@@ -155,14 +171,28 @@ class Coop {
   }
 
   voteOnProposal(pId, vote) {
+    let user = Session.get('user').address;
+
     var txObj = {
-      from: Session.get('user').address,
+      from: user,
       gas: 400000,
       gasPrice: web3.eth.gasPrice
     }
 
     let coopInstance = this.coopInstance;
-    return coopInstance.supportProposalAsync(pId, vote, txObj);
+    let votePromise = coopInstance.proposalVoteAsync({
+      _member: user
+    });
+    
+    coopInstance.supportProposalAsync(pId, vote, txObj).catch(function(err) {
+      console.log(err);
+    });
+
+    return votePromise;
+  }
+
+  hasVoted(user, pId) {
+    return this.coopInstance.hasVotedAsync(user, pId);
   }
 }
 

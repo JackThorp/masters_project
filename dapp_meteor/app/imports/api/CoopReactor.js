@@ -36,14 +36,34 @@ class CoopReactor extends EthereumReactor {
 
     instance.proposalVoteAsync({}).then(function(voteEvent) {
      
-      let mId = voteEvent.args._mId;
+      let pId = voteEvent.args._pId;
 
-      console.log("NEW VOTE EVENT (id: " + mId + ")");
+      console.log("NEW VOTE EVENT (id: " + pId + ")");
 
-      reactor.triggerDeps(mId);
+      reactor.triggerDeps(pId);
     })
     .catch(function(err) {
       console.log(err)
+    });
+
+    instance.proposalPassedAsync({}).then(function(closeEvent) {
+
+      let pId = closeEvent.args._pId;
+      console.log("PROPOSAL PASSED: " + pId);
+      reactor.triggerDeps(pId);
+    })
+    .catch(function(err) {
+      console.log(err);
+    });
+
+    instance.proposalDefeatedAsync({}).then(function(closeEvent) {
+
+      let pId = closeEvent.args._pId;
+      console.log("PROPOSAL DEFEATED: " + pId);
+      reactor.triggerDeps(pId);
+    })
+    .catch(function(err) {
+      console.log(err);
     });
   }
  

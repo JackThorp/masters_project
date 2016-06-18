@@ -1,8 +1,8 @@
 var contractLocations = { 
-	CoopRegistry:	'0x1597b4881c49a8c598268c9c1ceaff6b3fb3158d',
-	MembershipRegistry:	'0x412ac67257139e0c8984d78e24998858959956b3',
-	UserController:	'0xfcb4b5612efa29bbfd3e505dcaa04a54f3440853',
-	UserRegistry:	'0x80c2d585677f6dd2c6980d966b10b6f8e15ae622',
-	CMC:	'0xd1c117ec9718289834340e34aa5cff6d6883add0',
+	CoopRegistry:	'0x07a5c7f18a3eed1855d33877057c5d79910e1a8c',
+	MembershipRegistry:	'0xe57e027147e683514e0ff67001d57a0546a3609c',
+	UserController:	'0x7b369c839f63b848db7db424b58490bbe54760d1',
+	UserRegistry:	'0xa099a2c6adde10840f08d46468730fb286dfd22e',
+	CMC:	'0xe453a0492ece0083f149eee9be16d48a97f36dec',
 };
 export default contractLocations

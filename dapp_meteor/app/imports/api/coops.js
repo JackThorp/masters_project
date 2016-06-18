@@ -99,7 +99,6 @@ class Coops extends Collection {
       console.log(err);
     });
 
-    //TODO don't return coop here (evades caching)
     return registeredPromise.then(function(coopEvent) {
       let address = coopEvent.args._coop;
       return new Coop(address, data, fee, quorum, nRes, this.ipfs);
