@@ -1,14 +1,13 @@
-# masters project
-Masters project on Ethereum and the distributed web
+# Go-op
+Go-op is a PoC dapp (distributed application) for cooperative governance built using Ethereum & IPFS. For more information see report.pdf.
 
-ethereum_experiments contains scripts for setting up a private ethereum test network as well as some simple contracts. The keystore is added for personal convenience, it does not hold any sensitive information, the password for the accounts is 'pass'.
+## Prerequisites
+Runnning go-op locally requires installation of:
+- IPFS (see https://ipfs.io/)
+- Geth (see https://github.com/ethereum/go-ethereum) and/or testrpc (see https://github.com/ethereumjs/testrpc)
+- Meteor (see https://www.meteor.com/)
 
-## How to run private network
-- ./startTestNet.sh <stdout channel> runs the go ethereum client with the test genesis block. It is nice to pass the name of a second terminal to redirect stdout from the client. Use tty to obtain this. 
-- once on geth console, miner.start(n) can be used to start the miner with 'n' threads.
-- transactions can be forced processed in the test network via miner.start(1); admin.sleepBlocks(1); miner.stop(). For more on testing tips see the [go-ethereum wiki](https://github.com/ethereum/go-ethereum/wiki/Contracts-and-Transactions)
-
-Credits:
-How to create a private ethereum chain - http://adeduke.com/2015/08/how-to-create-a-private-ethereum-chain/
-
-
+## How to run Go-op
+- Start the IPFS daemon
+- Start an ethereum client using the `startTestNet.sh` script in the `eth_clients` directory.
+- Start the app by running `meteor` inside the `dapp_meteor/app/` directory
