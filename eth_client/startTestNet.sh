@@ -2,18 +2,22 @@
 
 # $1 = net
 # $2 = console redirect.
+# Script for starting an Ethereum Test Network with three options: private, testnet or testrc.
 
 case $1 in
 
+  # Start a private local Ethereum network using test_genesis_block.json
   private )
-    geth --ipcpath /Users/jackthorp/Library/Ethereum/geth.ipc --genesis test_genesis_block.json --datadir ./.ethereum_demobk --networkid 1387 --nodiscover --maxpeers 0  --rpc --rpccorsdomain "*" --mine --minerthreads="1" --verbosity 5 console 2>> $2
+    geth --ipcpath /Users/jackthorp/Library/Ethereum/geth.ipc --genesis test_genesis_block.json --datadir ./.ethereum --networkid 1387 --nodiscover --maxpeers 0  --rpc --rpccorsdomain "*" --mine --minerthreads="1" --verbosity 5 console 2>> $2
     ;;
   
+  # Connect to the live global 'testnet'
   testnet ) 
     geth --testnet --rpc --rpccorsdomain "*" --datadir ~/.ethereum/testnet console 2> $2
     # geth --testnet --rpc --rpccorsdomain "*" --ipcpath /Users/jackthorp/Library/Ethereum/geth.ipc console 2> $2
     ;;
   
+  # Start a local instance of testrpc, an in memory client 'stub'.
   testrpc )
     testrpc \
       --account="0x24745767ecbe8236661524b825d9fee8d1a5a72bdcd9cb7ac314928067ac499c,500000000000000000000000000000000" \
